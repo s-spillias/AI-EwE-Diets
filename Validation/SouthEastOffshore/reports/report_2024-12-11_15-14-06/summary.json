@@ -1,0 +1,8 @@
+{
+  "total_unique_groups": 114,
+  "consistency_by_model": {
+    "claude": 0.20760233918128654,
+    "gemini": 0.33040935672514615
+  },
+  "timestamp": "2024-12-11T15:16:20.843908"
+}

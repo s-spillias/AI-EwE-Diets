@@ -1,0 +1,615 @@
+Validation Report for SouthEastInshore
+Generated on: 2024-12-10_11-43-53
+
+Species Assignment Variability Analysis:
+=====================================
+
+Number of species with variable assignments: 84
+
+All Species with Variable Assignments:
+
+Trematomus bernacchii:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthivores(3), Shallow demersal fish(2)
+
+Cirrhilabrus punctatus:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Planktivores(2), Benthivores(3)
+
+Dactyloptena orientalis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Dactyloptena peterseni:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Eurypegasus draconis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Pegasidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Pegasus:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Pegasus lancifer:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Pegasus volitans:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Shallow demersal fish(2), Benthivores(3)
+
+Ancoratheca australiensis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Candimboides cuneiformis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Cestoplana:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Cestoplana rubrocincta:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Cycloporus:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Euryleptidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Cycloporus australis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Cycloporus variegatus:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Echinoplana celerrima:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Gnesioceros:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Hoploplana rosea:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Leptoplanidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Notoplana australis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Planocera edmondsi:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Polycladida:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Prosthiostomidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Pseudoceros:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Pseudoceros reticulatus:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Pseudocerotidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Thysanozoon:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Thysanozoon australe:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Stylochidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Geoplanidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Procerodes:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Puiteca:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Macrostomida:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Macrostomum mirumnovem:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Microstomum papillosum:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Minona australis:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Minona proculvaginata:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Monocelididae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Serrulina concharum:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Sergia:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Umagilla:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Umagillidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Vorticeros:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthic infaunal carnivores(2), Benthic carnivores(3)
+
+Julidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Macrozoobenthos(3), Deposit feeders(2)
+
+Lissodesmus orarius:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Macrozoobenthos(3), Deposit feeders(2)
+
+Hoplichthys:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Hoplichthys citrinus:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Hoplichthys filamentosus:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Hoplichthys haswelli:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Hoplichthys mimaseanus:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Hoplichthys ogilbyi:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Peristedion:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Peristedion liorhynchus:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Satyrichthys:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Satyrichthys moluccensis:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Satyrichthys welchi:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Scalicus:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Deep demersal fish(4), Benthivores(1)
+
+Ascetosporea:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Microplankton(1), Microzooplankton(4)
+
+Minchinia mercenariae:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Microplankton(1), Microzooplankton(4)
+
+Allas:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Aulacantha scolymantha:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Cryomonadida:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Cryothecomonas:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Protaspa:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Protaspidae:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Gazelletta hexanema:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Thecofilosea:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Cercomonadidae:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Glissomonadida:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Chlorarachnea:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Nano-Picoplankton(4)
+
+Lotharella globosa:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Nano-Picoplankton(4)
+
+Imbricatea:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Marimonadida:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Pseudopirsonia:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Pseudopirsonia mucosa:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Paulinella:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Thaumatomonadida:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Massisteria:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Massisteria marina:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Micrometopion nutans:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Vampyrellidae:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Nanoplankton(1), Microzooplankton(4)
+
+Phytomyxea:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Picoplankton(1), Microzooplankton(4)
+
+Group Stability Analysis:
+=======================
+
+All Groups Stability Metrics (sorted by stability score):
+
+Picoplankton:
+  Stability score: 0.95
+  Total unique members: 5
+  Average members per iteration: 4.2
+
+Nanoplankton:
+  Stability score: 0.97
+  Total unique members: 203
+  Average members per iteration: 185.4
+
+Benthivores:
+  Stability score: 0.97
+  Total unique members: 462
+  Average members per iteration: 448.8
+
+Shallow demersal fish:
+  Stability score: 0.98
+  Total unique members: 221
+  Average members per iteration: 216.2
+
+Microzooplankton:
+  Stability score: 0.99
+  Total unique members: 402
+  Average members per iteration: 397.4
+
+Benthic infaunal carnivores:
+  Stability score: 0.99
+  Total unique members: 664
+  Average members per iteration: 642.4
+
+Deep demersal fish:
+  Stability score: 0.99
+  Total unique members: 516
+  Average members per iteration: 513.6
+
+Nano-Picoplankton:
+  Stability score: 0.99
+  Total unique members: 56
+  Average members per iteration: 55.6
+
+Benthic carnivores:
+  Stability score: 0.99
+  Total unique members: 1651
+  Average members per iteration: 1636.6
+
+Planktivores:
+  Stability score: 1.00
+  Total unique members: 152
+  Average members per iteration: 151.4
+
+Deposit feeders:
+  Stability score: 1.00
+  Total unique members: 553
+  Average members per iteration: 551.8
+
+Macrozoobenthos:
+  Stability score: 1.00
+  Total unique members: 2061
+  Average members per iteration: 2059.8
+
+Microplankton:
+  Stability score: 1.00
+  Total unique members: 737
+  Average members per iteration: 735.4
+
+Jellyfish:
+  Stability score: 1.00
+  Total unique members: 293
+  Average members per iteration: 293.0
+
+Mesozooplankton:
+  Stability score: 1.00
+  Total unique members: 508
+  Average members per iteration: 508.0
+
+Macroalgae:
+  Stability score: 1.00
+  Total unique members: 549
+  Average members per iteration: 549.0
+
+Cephalopods:
+  Stability score: 1.00
+  Total unique members: 196
+  Average members per iteration: 196.0
+
+Meiobenthos:
+  Stability score: 1.00
+  Total unique members: 290
+  Average members per iteration: 290.0
+
+Benthic filter feeders:
+  Stability score: 1.00
+  Total unique members: 3130
+  Average members per iteration: 3130.0
+
+Toothed whales and dolphins:
+  Stability score: 1.00
+  Total unique members: 38
+  Average members per iteration: 38.0
+
+Seagrass:
+  Stability score: 1.00
+  Total unique members: 28
+  Average members per iteration: 28.0
+
+Baleen whales:
+  Stability score: 1.00
+  Total unique members: 14
+  Average members per iteration: 14.0
+
+Pinnipeds:
+  Stability score: 1.00
+  Total unique members: 14
+  Average members per iteration: 14.0
+
+Larvaceans:
+  Stability score: 1.00
+  Total unique members: 16
+  Average members per iteration: 16.0
+
+Marine reptiles:
+  Stability score: 1.00
+  Total unique members: 11
+  Average members per iteration: 11.0
+
+Demersal sharks:
+  Stability score: 1.00
+  Total unique members: 116
+  Average members per iteration: 116.0
+
+Pelagic sharks:
+  Stability score: 1.00
+  Total unique members: 29
+  Average members per iteration: 29.0
+
+Skates and rays:
+  Stability score: 1.00
+  Total unique members: 73
+  Average members per iteration: 73.0
+
+Seabirds:
+  Stability score: 1.00
+  Total unique members: 236
+  Average members per iteration: 236.0
+
+Mesopelagic fish:
+  Stability score: 1.00
+  Total unique members: 251
+  Average members per iteration: 251.0
+
+Herbivorous demersal fish:
+  Stability score: 1.00
+  Total unique members: 74
+  Average members per iteration: 74.0
+
+Oceanic piscivorous fish:
+  Stability score: 1.00
+  Total unique members: 103
+  Average members per iteration: 103.0
+
+Piscivores:
+  Stability score: 1.00
+  Total unique members: 193
+  Average members per iteration: 193.0
+
+Benthic grazers:
+  Stability score: 1.00
+  Total unique members: 1241
+  Average members per iteration: 1241.0
+
+Bacteria:
+  Stability score: 1.00
+  Total unique members: 471
+  Average members per iteration: 471.0
+
+Diet Matrix Analysis:
+===================
+
+Average CV across matrix: 0.032
+Number of high-variance cells (CV > 0.25): 43

@@ -1,0 +1,122 @@
+Validation Report for SouthEastOffshore
+Generated on: 2024-12-09_10-01-35
+
+Species Assignment Variability Analysis:
+=====================================
+
+Number of species with variable assignments: 48
+
+Most Variable Species (assigned to multiple groups):
+
+Trematomus bernacchii:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Benthivores(3), Shallow demersal fish(2)
+
+Julidae:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Macrozoobenthos(3), Deposit feeders(2)
+
+Lissodesmus orarius:
+  Number of different groups: 2
+  Consistency score: 0.60
+  Group assignments: Macrozoobenthos(3), Deposit feeders(2)
+
+Aplacophora:
+  Number of different groups: 2
+  Consistency score: 0.75
+  Group assignments: Benthic grazers(1), Deposit feeders(3)
+
+Ceratomyxa:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic filter feeders(1), Microzooplankton(4)
+
+Chloromyxum:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic filter feeders(1), Microzooplankton(4)
+
+Tylodina:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic grazers(4), Benthic carnivores(1)
+
+Tylodina corticalis:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic grazers(4), Benthic carnivores(1)
+
+Umbraculum:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic grazers(4), Benthic carnivores(1)
+
+Umbraculum umbraculum:
+  Number of different groups: 2
+  Consistency score: 0.80
+  Group assignments: Benthic grazers(4), Benthic carnivores(1)
+
+Group Stability Analysis:
+=======================
+
+Least Stable Groups (Bottom 5):
+
+Benthic infaunal carnivores:
+  Stability score: 0.97
+  Total unique members: 656
+  Average members per iteration: 625.6
+
+Benthic carnivores:
+  Stability score: 0.99
+  Total unique members: 1662
+  Average members per iteration: 1651.2
+
+Deposit feeders:
+  Stability score: 1.00
+  Total unique members: 558
+  Average members per iteration: 556.4
+
+Benthic grazers:
+  Stability score: 1.00
+  Total unique members: 1243
+  Average members per iteration: 1241.4
+
+Shallow demersal fish:
+  Stability score: 1.00
+  Total unique members: 155
+  Average members per iteration: 154.4
+
+Most Stable Groups (Top 5):
+
+Demersal sharks:
+  Stability score: 1.00
+  Total unique members: 114
+  Average members per iteration: 114.0
+
+Pelagic sharks:
+  Stability score: 1.00
+  Total unique members: 27
+  Average members per iteration: 27.0
+
+Skates and rays:
+  Stability score: 1.00
+  Total unique members: 73
+  Average members per iteration: 73.0
+
+Mesopelagic fish:
+  Stability score: 1.00
+  Total unique members: 269
+  Average members per iteration: 269.0
+
+Bacteria:
+  Stability score: 1.00
+  Total unique members: 477
+  Average members per iteration: 477.0
+
+Diet Matrix Analysis:
+===================
+
+Average CV across matrix: 1.257
+Number of high-variance cells (CV > 0.25): 866

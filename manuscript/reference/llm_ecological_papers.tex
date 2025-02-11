@@ -1,0 +1,61 @@
+\section*{Recent Papers on LLMs in Ecological Modeling}
+
+Recent work in applying large language models to ecological and environmental modeling demonstrates significant potential while highlighting key challenges and opportunities. The Environmental large language model Evaluation (ELLE) dataset, introduced by Guo et al. (2025), provides the first benchmark framework specifically designed for assessing generative AI applications in ecological and environmental sciences. Their dataset comprises 1,130 question-answer pairs spanning 16 environmental topics, categorized by domain, difficulty, and type. This comprehensive benchmark enables standardized performance assessment and objective comparisons of generative AI capabilities in environmental applications. The work addresses a critical gap in the field by providing a unified evaluation framework for applications ranging from environmental monitoring and data analysis to education and policy support.
+
+Kommineni et al. (2024) conducted an innovative study combining multiple Large Language Models with Retrieval-Augmented Generation (RAG) to extract methodological details from biodiversity publications. Their approach utilized five different open-source LLMs including Llama-3 70B, Llama-3.1 70B, Mixtral-8x22B-Instruct-v0.1, Mixtral 8x7B, and Gemma 2 9B. By implementing a voting classifier across these models' outputs, they achieved 69.5\% accuracy in extracting deep learning methodological information from scientific publications. This performance is particularly noteworthy as it was achieved using only textual content, compared against human annotators who had access to supplementary materials including code and figures. Their methodology demonstrates the potential for automating information extraction from ecological literature while maintaining scientific rigor.
+
+\subsection*{Marine and Fisheries Applications}
+
+Recent developments in marine science and fisheries management showcase the growing application of specialized LLMs and AI systems. Zheng et al. (2023) introduced MarineGPT, a vision-language model specifically designed for marine domain applications. This model represents a significant advancement in handling multi-modal inputs (visual and textual) for marine science tasks, demonstrating improved performance over general-purpose LLMs in marine-specific applications. The development of MarineGPT highlights the importance of domain-specific training and the potential for specialized LLMs in marine science.
+
+Lim (2024) explored the implementation of artificial intelligence in aquaculture and fisheries management, examining applications ranging from intelligent fish farm systems to smart cage aquaculture management. This work emphasizes the integration of machine learning with Internet of Things (IoT) technologies and robotics, suggesting a framework for comprehensive digital transformation in fisheries management.
+
+Alsharabi et al. (2024) evaluated the integration of AI and blockchain technologies for fisheries management. Their experimental results with YOLOv8 demonstrated strong performance in marine object detection, achieving precision rates between 0.479-0.750 across various marine species and objects. Drawing on previous implementations like the SMARTFISH H2020 project, they discussed how IoT devices in fishing operations can gather real-time data on parameters such as pH, temperature, and salinity. Their analysis suggests that while blockchain technology shows promise for ensuring transparent supply chain traceability, some proposed AI applications for fisheries management still require empirical validation.
+
+Mandal and Ghosh (2024) reviewed the role of artificial intelligence in fish growth and health status monitoring for sustainable aquaculture. Their work demonstrates how AI algorithms can process large amounts of data to provide more accurate and timely insights into aquaculture operations, highlighting the potential for LLMs to contribute to sustainable fisheries management.
+
+Fernandes and D'Mello (2024) conducted a comprehensive analysis of AI applications in aquaculture, examining both technological capabilities and implementation challenges. Their research revealed that AI systems have achieved significant accuracy in critical areas, with disease detection systems reaching 90% accuracy in water quality parameter prediction and biomass estimation systems achieving 95% accuracy in shrimp counting. However, they identified three primary barriers to widespread adoption: acquisition costs, technical expertise requirements, and concerns about system reliability. Their work emphasizes the need for standardized data formats and protocols to reduce implementation costs and improve model training efficiency.
+
+Chen and Xu (2024) demonstrated the application of large language models to marine protected area management, leveraging spaCy NLP capabilities. Their framework integrates LLMs with a modular system for rapid processing of research methodologies, showing how language models can effectively analyze and classify marine conservation approaches. This work represents a significant step toward automated analysis of conservation research methods.
+
+Kuhn et al. (2024) provided a comprehensive examination of machine learning applications in fisheries across multiple scales. Their review revealed how AI technologies are transforming fisheries science from genomics to ecosystem-level analyses. At the genomic level, they highlighted how random forest modeling achieves high accuracy in population assignment and stock discrimination. In biometric applications, they documented how deep learning approaches using convolutional neural networks have achieved 47% accuracy in fish age estimation from otolith images, with an additional 35% of estimates having only one-year error. At the ecosystem level, they emphasized how Bayesian networks enable modeling of complex ecological interactions while maintaining interpretability. Drawing on work by Trifonova et al. (2015, 2019), they demonstrated how dynamic Bayesian networks with hidden variables can detect ecological patterns and illuminate mechanisms behind functional ecosystem changes. Their analysis of ecosystem modeling applications revealed that Bayesian networks are particularly valuable for risk assessment in Ecosystem Based Fisheries Management, capable of handling heterogeneous data with different spatial and temporal resolutions. Their work also identified key challenges in ML applications, including the need for standardization across institutes, the importance of transfer learning for cost-effective model adaptation, and the critical requirement for transparency in automated decision-making systems.
+
+\subsection*{Key References}
+
+\begin{itemize}
+\item Guo, J., Li, N., \& Xu, M. (2025). Environmental large language model Evaluation (ELLE) dataset: A Benchmark for Evaluating Generative AI Applications in Eco-environment Domain. arXiv:2501.06277.
+
+\item Kommineni, V. K., König-Ries, B., \& Samuel, S. (2024). Harnessing multiple LLMs for Information Retrieval: A case study on Deep Learning methodologies in Biodiversity publications. arXiv:2411.09269.
+
+\item Zheng, Z., Zhang, J., Vu, T.A., Diao, S., Tim, Y.H.W., \& Yeung, S.K. (2023). MarineGPT: Unlocking Secrets of Ocean to the Public. arXiv:2310.13596.
+
+\item Lim, L.W.K. (2024). Implementation of artificial intelligence in aquaculture and fisheries: deep learning, machine vision, big data, internet of things, robots and beyond. Journal of Computational and Cognitive Science.
+
+\item Alsharabi, N., Ktari, J., Frikha, T., Alayba, A., Alzahrani, A.J., jadi, A., \& Hamam, H. (2024). Using blockchain and AI technologies for sustainable, biodiverse, and transparent fisheries of the future. Journal of Cloud Computing, 13:135.
+
+\item Chen, M., \& Xu, Z. (2024). A deep learning classification framework for research methods of marine protected area management. Journal of Environmental Management.
+
+\item Fernandes, S., \& D'Mello, A. (2024). Artificial intelligence in the aquaculture industry: Current state, challenges and future directions. Aquaculture, 742048.
+
+\item Kuhn, B., Cayetano, A., \& Fincham, J. (2024). Machine Learning Applications for Fisheries—At Scales from Genomics to Ecosystems. Reviews in Fisheries Science.
+
+\item Mandal, A., \& Ghosh, A.R. (2024). Role of artificial intelligence in fish growth and health status monitoring: A review on sustainable aquaculture. Aquaculture International.
+
+\item Trifonova, N., Kenny, A., Maxwell, D., Duplisea, D., Fernandes, J., & Tucker, A. (2015). Spatio-temporal Bayesian network models with latent variables for revealing trophic dynamics and functional networks in fisheries ecology. Ecological Informatics, 30, 142-158.
+
+\item Trifonova, N., Maxwell, D., Pinnegar, J., Kenny, A., & Tucker, A. (2019). Predicting ecosystem responses to changes in fisheries catch, temperature, and primary productivity with a dynamic Bayesian network model. ICES Journal of Marine Science, 76(4), 920-937.
+\end{itemize}
+
+\subsection*{Research Implications}
+
+The emergence of LLMs in ecological modeling presents several critical considerations:
+
+The development of specialized evaluation frameworks, exemplified by the ELLE dataset, addresses a fundamental need in environmental applications of LLMs. This standardization enables consistent assessment of model performance across diverse environmental topics and applications.
+
+Domain-specific LLM development, as demonstrated by MarineGPT and OceanGPT, represents a significant trend in ecological modeling. These specialized models can better handle the complexity and granularity required in specific scientific domains, suggesting a path forward for developing similar models in other areas of ecological research. Recent work in marine protected area management further demonstrates how LLMs can be adapted to specific conservation and ecological management tasks, providing automated analysis capabilities that span from research methodology classification to ecosystem-wide modeling efforts.
+
+Integration with existing management practices is emerging as a key focus, particularly in fisheries and aquaculture. Recent experimental work demonstrates how combinations of AI, blockchain, and IoT technologies can enable both verifiable resource tracking and automated environmental monitoring. However, research indicates that widespread adoption faces significant barriers including high acquisition costs and technical expertise requirements. The implementation of ML systems in fisheries management requires careful consideration of trust and transparency issues, particularly when automated systems influence management decisions. Addressing these implementation challenges through standardized protocols, improved data sharing frameworks, and careful validation of ML model outputs has become a critical focus for advancing the field.
+
+Methodological transparency becomes paramount when integrating LLMs into ecological modeling workflows. The work by Kommineni et al. demonstrates both the potential and current limitations of using LLMs to extract methodological details from scientific literature. Their multi-model approach with RAG suggests a path forward for improving information extraction while maintaining scientific rigor.
+
+The scalability of LLM applications in ecological sciences shows promise. Current work spans from broad environmental evaluation frameworks to highly specialized domain models, suggesting that LLMs can be effectively adapted to various scales and specificities of ecological research. The development of specialized tools and benchmarks indicates a maturing field that recognizes the unique requirements of environmental and ecological applications.

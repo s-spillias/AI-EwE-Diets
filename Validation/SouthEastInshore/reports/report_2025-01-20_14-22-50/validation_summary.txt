@@ -1,0 +1,453 @@
+Validation Report for SouthEastInshore
+Generated on: 2025-01-20_14-22-50
+
+1. Group Complexity Analysis
+===========================
+Total number of groups: 35
+
+Group Size Statistics:
+
+Benthic filter feeders:
+  Average size: 3130.0 species
+  Size range: 3130 - 3130 species
+  Size variation: 0.00
+
+Benthivores:
+  Average size: 448.8 species
+  Size range: 442 - 461 species
+  Size variation: 6.97
+
+Deep demersal fish:
+  Average size: 513.6 species
+  Size range: 504 - 516 species
+  Size variation: 4.80
+
+Piscivores:
+  Average size: 193.0 species
+  Size range: 193 - 193 species
+  Size variation: 0.00
+
+Planktivores:
+  Average size: 151.4 species
+  Size range: 151 - 152 species
+  Size variation: 0.49
+
+Shallow demersal fish:
+  Average size: 216.2 species
+  Size range: 213 - 220 species
+  Size variation: 3.12
+
+Oceanic piscivorous fish:
+  Average size: 103.0 species
+  Size range: 103 - 103 species
+  Size variation: 0.00
+
+Herbivorous demersal fish:
+  Average size: 74.0 species
+  Size range: 74 - 74 species
+  Size variation: 0.00
+
+Mesopelagic fish:
+  Average size: 251.0 species
+  Size range: 251 - 251 species
+  Size variation: 0.00
+
+Seabirds:
+  Average size: 236.0 species
+  Size range: 236 - 236 species
+  Size variation: 0.00
+
+Skates and rays:
+  Average size: 73.0 species
+  Size range: 73 - 73 species
+  Size variation: 0.00
+
+Pelagic sharks:
+  Average size: 29.0 species
+  Size range: 29 - 29 species
+  Size variation: 0.00
+
+Demersal sharks:
+  Average size: 116.0 species
+  Size range: 116 - 116 species
+  Size variation: 0.00
+
+Marine reptiles:
+  Average size: 11.0 species
+  Size range: 11 - 11 species
+  Size variation: 0.00
+
+Larvaceans:
+  Average size: 16.0 species
+  Size range: 16 - 16 species
+  Size variation: 0.00
+
+Pinnipeds:
+  Average size: 14.0 species
+  Size range: 14 - 14 species
+  Size variation: 0.00
+
+Baleen whales:
+  Average size: 14.0 species
+  Size range: 14 - 14 species
+  Size variation: 0.00
+
+Toothed whales and dolphins:
+  Average size: 38.0 species
+  Size range: 38 - 38 species
+  Size variation: 0.00
+
+Benthic grazers:
+  Average size: 1241.0 species
+  Size range: 1241 - 1241 species
+  Size variation: 0.00
+
+Deposit feeders:
+  Average size: 551.8 species
+  Size range: 551 - 553 species
+  Size variation: 0.98
+
+Benthic infaunal carnivores:
+  Average size: 642.4 species
+  Size range: 628 - 664 species
+  Size variation: 17.64
+
+Cephalopods:
+  Average size: 196.0 species
+  Size range: 196 - 196 species
+  Size variation: 0.00
+
+Benthic carnivores:
+  Average size: 1636.6 species
+  Size range: 1615 - 1651 species
+  Size variation: 17.64
+
+Mesozooplankton:
+  Average size: 508.0 species
+  Size range: 508 - 508 species
+  Size variation: 0.00
+
+Macrozoobenthos:
+  Average size: 2059.8 species
+  Size range: 2058 - 2061 species
+  Size variation: 1.47
+
+Meiobenthos:
+  Average size: 290.0 species
+  Size range: 290 - 290 species
+  Size variation: 0.00
+
+Jellyfish:
+  Average size: 293.0 species
+  Size range: 293 - 293 species
+  Size variation: 0.00
+
+Microzooplankton:
+  Average size: 397.4 species
+  Size range: 379 - 402 species
+  Size variation: 9.20
+
+Microplankton:
+  Average size: 735.4 species
+  Size range: 735 - 737 species
+  Size variation: 0.80
+
+Nanoplankton:
+  Average size: 185.4 species
+  Size range: 181 - 203 species
+  Size variation: 8.80
+
+Macroalgae:
+  Average size: 549.0 species
+  Size range: 549 - 549 species
+  Size variation: 0.00
+
+Picoplankton:
+  Average size: 4.2 species
+  Size range: 4 - 5 species
+  Size variation: 0.40
+
+Nano-Picoplankton:
+  Average size: 55.6 species
+  Size range: 54 - 56 species
+  Size variation: 0.80
+
+Seagrass:
+  Average size: 28.0 species
+  Size range: 28 - 28 species
+  Size variation: 0.00
+
+Bacteria:
+  Average size: 471.0 species
+  Size range: 471 - 471 species
+  Size variation: 0.00
+
+2. Species Assignment Analysis
+============================
+
+Species with low stability (consistency < 0.8): 47
+
+Trematomus bernacchii:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Cirrhilabrus punctatus:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Dactyloptena orientalis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Dactyloptena peterseni:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Eurypegasus draconis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Pegasidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Pegasus:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Pegasus lancifer:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Pegasus volitans:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthivores
+
+Ancoratheca australiensis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Candimboides cuneiformis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Cestoplana:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Cestoplana rubrocincta:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Cycloporus:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Euryleptidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Cycloporus australis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Cycloporus variegatus:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Echinoplana celerrima:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Gnesioceros:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Hoploplana rosea:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Leptoplanidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Notoplana australis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Planocera edmondsi:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Polycladida:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Prosthiostomidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Pseudoceros:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Pseudoceros reticulatus:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Pseudocerotidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Thysanozoon:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Thysanozoon australe:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Stylochidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Geoplanidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Procerodes:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Puiteca:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Macrostomida:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Macrostomum mirumnovem:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Microstomum papillosum:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Minona australis:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Minona proculvaginata:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Monocelididae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Serrulina concharum:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Sergia:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Umagilla:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Umagillidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Vorticeros:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Benthic carnivores
+
+Julidae:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Macrozoobenthos
+
+Lissodesmus orarius:
+  Consistency score: 0.60
+  Number of different groups: 2
+  Most common assignment: Macrozoobenthos
+
+3. Diet Interaction Analysis
+===========================
+Total significant interactions: 120
+Unstable interactions (consistency < 0.7): 5
+
+Nanoplankton -> Larvaceans:
+  Consistency: 0.50
+  Mean proportion: 0.150
+  Variation: 1.00
+
+Microplankton -> Larvaceans:
+  Consistency: 0.50
+  Mean proportion: 0.200
+  Variation: 1.00
+
+Macrozoobenthos -> Skates and rays:
+  Consistency: 0.50
+  Mean proportion: 0.100
+  Variation: 1.00
+
+Picoplankton -> Larvaceans:
+  Consistency: 0.50
+  Mean proportion: 0.100
+  Variation: 1.00
+
+Benthic carnivores -> Skates and rays:
+  Consistency: 0.50
+  Mean proportion: 0.075
+  Variation: 1.00

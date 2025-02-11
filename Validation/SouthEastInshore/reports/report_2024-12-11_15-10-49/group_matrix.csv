@@ -1,0 +1,107 @@
+AI Model,gemini,gemini,gemini,claude,claude,claude
+Iteration,1,2,3,1,2,3
+Baleen Whales,0,0,1,1,1,1
+Bass Strait Pelagic Fish,0,1,0,0,0,0
+Benthic Filter Feeders,0,0,0,0,0,1
+Benthic Invertebrates,0,0,0,1,0,0
+Benthic Invertebrates (Carnivores),1,0,0,0,0,0
+Benthic Invertebrates (Deposit Feeders),1,0,0,0,0,0
+Benthic Invertebrates (Filter Feeders),1,0,0,0,0,0
+Benthic Invertebrates (Grazers),1,0,0,0,0,0
+Benthic Invertebrates (Shelf),0,1,0,0,0,0
+Benthic Invertebrates (Slope/Deep),0,1,0,0,0,0
+Benthic Primary Producers,0,0,0,1,1,0
+Cephalopods,0,0,0,1,1,1
+Cetaceans (Baleen Whales),1,1,0,0,0,0
+Cetaceans (Orcas),0,1,0,0,0,0
+Cetaceans (Small Toothed Whales/Dolphins),0,1,0,0,0,0
+Cetaceans (Sperm Whales),1,1,0,0,0,0
+Cetaceans (Toothed Whales/Dolphins),1,0,0,0,0,0
+Coastal Pelagic Fish,1,0,0,0,0,0
+Commercial Crustaceans,0,0,0,1,1,1
+Continental Shelf Benthos (Invertebrates),0,0,1,0,0,0
+Continental Slope Benthos (Invertebrates),0,0,1,0,0,0
+Demersal Sharks,0,0,0,1,1,1
+Detritus,1,1,1,1,1,1
+Discards,0,0,0,1,1,1
+Discards (Fisheries),1,0,0,0,0,0
+"Fish-eating Pinnipeds (Seals, Sea Lions)",0,0,1,0,0,0
+Flying Fish,0,0,1,0,0,0
+Gelatinous Zooplankton,0,0,0,1,1,1
+Herbivorous Demersal Fish,0,0,1,0,0,0
+Kelp Forests,1,1,0,0,0,0
+Kelp Forests (if present),0,0,1,0,0,0
+Large Benthic Invertebrates,0,0,0,0,0,1
+Large Demersal Fish,0,0,0,0,1,0
+Large Pelagic Fish,0,0,0,1,1,1
+Large Pelagic Piscivores,1,0,0,0,0,0
+Large Pelagic Piscivores (Tuna & Billfish),0,0,1,0,0,0
+Large Phytoplankton,0,0,0,1,0,1
+Large Zooplankton,0,0,0,1,1,1
+Macroalgae,0,0,0,0,0,1
+Marine Reptiles (Sea Snakes/Turtles),1,0,0,0,0,0
+Medium Demersal Fish,0,0,0,0,1,0
+Medium Pelagic Fish,0,0,0,1,1,1
+Medium Pelagic Piscivores,0,0,1,0,0,0
+Mesopelagic Fish,0,0,0,0,0,1
+Mesozooplankton,0,0,1,0,0,1
+Mid-sized Pelagic Piscivores,1,0,0,0,0,0
+Open Tasman Sea Pelagic Fish,0,1,0,0,0,0
+Orcas,0,0,1,0,0,0
+Other Benthic Invertebrates,0,0,0,0,1,0
+Pelagic Bacteria,0,1,0,0,0,0
+Pelagic Cephalopods (Squid),0,0,1,0,0,0
+Pelagic Plankton,0,0,1,0,0,0
+Pelagic Sharks,0,0,1,1,1,1
+Phytoplankton,1,1,0,0,1,0
+Pinnipeds (Fish Eaters),1,0,0,0,0,0
+Pinnipeds (Fish-Eating),0,1,0,0,0,0
+Pinnipeds (Invertebrate Eaters),1,0,0,0,0,0
+Pinnipeds (Invertebrate-Eating),0,1,0,0,0,0
+Planktivores,0,1,0,0,0,0
+Prawns and Shrimp,0,0,0,0,0,1
+Reef-Associated Fish,0,0,0,1,0,1
+Rocky Reefs,1,1,0,0,0,0
+Sandy and Muddy Sediments,1,0,0,0,0,0
+Sandy/Muddy Sediments,0,1,0,0,0,0
+Seabirds,0,0,0,1,1,0
+Seabirds (Nearshore & Pelagic),0,0,1,0,0,0
+Seabirds (Nearshore),1,1,0,0,0,0
+Seabirds (Pelagic),1,1,0,0,0,0
+Seabirds - Coastal,0,0,0,0,0,1
+Seabirds - Large,0,0,0,0,0,1
+Seagrass,1,1,1,0,0,1
+Seals,0,0,0,1,1,1
+Seamount Benthos (if present),0,0,1,0,0,0
+Sedimentary Bacteria,0,1,1,0,0,0
+Shelf Demersal Fish,0,0,0,1,0,0
+Shelf Demersal Fish (Bass Strait),0,1,0,0,0,0
+Shelf Demersal Fish (Benthivores),1,0,0,0,0,0
+Shelf Demersal Fish (Omnivores),1,0,0,0,0,0
+Shelf Demersal Fish (Piscivores),1,0,0,0,0,0
+Shelf Demersal Fish (Tasmanian Coast),0,1,0,0,0,0
+Shelf Demersal Fish - Large,0,0,0,0,0,1
+Shelf Demersal Fish - Medium,0,0,0,0,0,1
+Shelf Demersal Omnivorous Fish,0,0,1,0,0,0
+Shelf Large Piscivores,0,0,1,0,0,0
+Shelf Medium Demersal Piscivores,0,0,1,0,0,0
+Shelf Small Benthivores,0,0,1,0,0,0
+Slope Demersal Fish,0,0,0,1,0,1
+Slope/Deep Demersal Fish,0,1,0,0,0,0
+Slope/Deep Demersal Fish (Benthivores),1,0,0,0,0,0
+Slope/Deep Demersal Fish (Omnivores),1,0,0,0,0,0
+Slope/Deep Demersal Fish (Piscivores),1,0,0,0,0,0
+Slope/Deep Demersal Omnivorous Fish,0,0,1,0,0,0
+Slope/Deep Demersal Piscivores,0,0,1,0,0,0
+Small Benthic Invertebrates,0,0,0,0,0,1
+Small Cetaceans,0,0,0,0,0,1
+Small Demersal Fish,0,0,0,0,1,0
+Small Pelagic Fish,0,0,0,1,1,1
+Small Pelagic Fish (Planktivores),0,0,1,0,0,0
+Small Phytoplankton,0,0,0,1,0,1
+Small Toothed Whales & Dolphins,0,0,1,0,0,0
+Small Zooplankton,0,0,0,1,1,0
+Sperm Whales,0,0,1,0,0,0
+Tasmanian Coastal Fish,0,1,0,0,0,0
+Toothed Whales,0,0,0,1,1,0
+Zooplankton,1,1,0,0,0,0

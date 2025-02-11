@@ -1,0 +1,43 @@
+\subsubsection{Diet Matrix Construction}
+
+We construct diet matrices through a two-stage process designed for efficiency and reliability. The first stage gathers comprehensive diet data using parallel processing and caching mechanisms. We query SeaLifeBase and FishBase \citep{froese2010fishbase} food items databases through DuckDB, enabling efficient processing of PARQUET files without full memory loading. For each species, we extract food items using specific codes that link to standardized diet categories.
+
+We supplement database records with interaction data from the Global Biotic Interactions (GLOBI) database \citep{Poelen2014}. Our GLOBI processing differentiates between direct observations (\texttt{eats}, \texttt{preysOn}) and inverse relationships (\texttt{eatenBy}, \texttt{preyedUponBy}), maintaining separate interaction counts for each type. We further enrich this data through retrieval-augmented generation (RAG) searches of regional literature (detailed in Section~\ref{supp:rag_implementation} of the supplementary material), focusing on specific feeding relationships and dietary preferences.
+
+For each functional group, we combine these data sources into a structured profile. Claude \citep{Anthropic2024} then analyzes this profile using the following prompt:
+
+\begin{prompt}
+Based on the following information about the diet composition of [group], provide a summary of their diet. Include the prey items and their estimated proportions in the diet.
+
+Available functional groups and their details:
+[List of groups with descriptions and top species]
+
+Here is the diet data for [group]:
+[Combined data including RAG search results, compressed food categories, and GLOBI interactions]
+
+Format your response as a list, with each item on a new line in the following format:
+
+Prey Item: Percentage
+
+For example:
+\begin{verbatim}
+Small fish: 40%
+Zooplankton: 30%
+Algae: 20%
+Detritus: 10%
+\end{verbatim}
+
+If exact percentages are not available, estimate percentages based on the information you have been provided.
+Ensure that all percentages add up to approximately 100\%.
+Consider the RAG search results, compressed food categories, and GLOBI data when creating your summary.
+Pay special attention to the GLOBI interaction counts, which indicate frequency of observed feeding relationships.
+Note that some species may feed on juvenile or larval forms of other species, which are often classified in different functional groups than the adults.
+\end{prompt}
+
+We implement an incremental processing system with file locking mechanisms to handle large datasets reliably. The system maintains caches for species-level diet data from databases, combined diet information including literature results, GLOBI interaction networks, and intermediate AI analyses. This caching system enables recovery from interruptions and facilitates parallel processing of different functional groups.
+
+The matrix assembly stage processes the AI's standardized diet descriptions through automated parsing. We convert percentage strings to decimal values and implement a validation system. Our validation ensures that all proportions sum to 1 for each predator, prey items match defined functional groups, and mass-balance requirements are maintained.
+
+When prey items do not exactly match functional group names, we employ a hierarchical matching system. The system first attempts exact matches, then falls back to partial matching using taxonomic information, and logs unmatched items for expert review.
+
+The final output consists of a CSV file containing the complete diet matrix, with predators as rows and prey as columns. Each cell contains the proportion of predator diet comprised by that prey item.

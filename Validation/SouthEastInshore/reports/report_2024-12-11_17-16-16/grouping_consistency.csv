@@ -1,0 +1,1267 @@
+Group,AI Model,Consistency
+Skuas and Giant Petrels,claude,0.0
+Skuas and Giant Petrels,aws_claude,0.0
+Skuas and Giant Petrels,gemini,0.4
+Skuas and Giant Petrels,gemma7,0.0
+Skuas and Giant Petrels,llama3,0.2
+Skuas and Giant Petrels,mixtral,0.0
+Deep-sea Corals,claude,0.0
+Deep-sea Corals,aws_claude,0.2
+Deep-sea Corals,gemini,0.0
+Deep-sea Corals,gemma7,0.0
+Deep-sea Corals,llama3,0.0
+Deep-sea Corals,mixtral,0.0
+Shelf Demersal Fish (Piscivores),claude,0.0
+Shelf Demersal Fish (Piscivores),aws_claude,0.0
+Shelf Demersal Fish (Piscivores),gemini,0.6
+Shelf Demersal Fish (Piscivores),gemma7,0.0
+Shelf Demersal Fish (Piscivores),llama3,0.0
+Shelf Demersal Fish (Piscivores),mixtral,0.0
+Reef Fish-eating Predators,claude,0.0
+Reef Fish-eating Predators,aws_claude,0.0
+Reef Fish-eating Predators,gemini,0.0
+Reef Fish-eating Predators,gemma7,0.0
+Reef Fish-eating Predators,llama3,0.0
+Reef Fish-eating Predators,mixtral,1.0
+Benthic Invertebrate Predators,claude,0.0
+Benthic Invertebrate Predators,aws_claude,0.0
+Benthic Invertebrate Predators,gemini,0.0
+Benthic Invertebrate Predators,gemma7,0.0
+Benthic Invertebrate Predators,llama3,0.0
+Benthic Invertebrate Predators,mixtral,1.0
+Large Phytoplankton,claude,0.6
+Large Phytoplankton,aws_claude,0.0
+Large Phytoplankton,gemini,0.0
+Large Phytoplankton,gemma7,0.0
+Large Phytoplankton,llama3,0.0
+Large Phytoplankton,mixtral,0.0
+Discards (Fisheries),claude,0.0
+Discards (Fisheries),aws_claude,0.0
+Discards (Fisheries),gemini,0.2
+Discards (Fisheries),gemma7,0.0
+Discards (Fisheries),llama3,0.0
+Discards (Fisheries),mixtral,0.0
+Mid-sized Demersal Fish (Slope/Deep),claude,0.0
+Mid-sized Demersal Fish (Slope/Deep),aws_claude,0.0
+Mid-sized Demersal Fish (Slope/Deep),gemini,0.2
+Mid-sized Demersal Fish (Slope/Deep),gemma7,0.0
+Mid-sized Demersal Fish (Slope/Deep),llama3,0.0
+Mid-sized Demersal Fish (Slope/Deep),mixtral,0.0
+Microbial Loop,claude,0.0
+Microbial Loop,aws_claude,0.2
+Microbial Loop,gemini,0.0
+Microbial Loop,gemma7,0.0
+Microbial Loop,llama3,0.0
+Microbial Loop,mixtral,0.0
+Coastal Phytoplankton,claude,0.0
+Coastal Phytoplankton,aws_claude,0.0
+Coastal Phytoplankton,gemini,0.2
+Coastal Phytoplankton,gemma7,0.0
+Coastal Phytoplankton,llama3,0.0
+Coastal Phytoplankton,mixtral,0.0
+Benthic Invertebrates (Carnivores),claude,0.0
+Benthic Invertebrates (Carnivores),aws_claude,0.0
+Benthic Invertebrates (Carnivores),gemini,0.6
+Benthic Invertebrates (Carnivores),gemma7,0.0
+Benthic Invertebrates (Carnivores),llama3,0.0
+Benthic Invertebrates (Carnivores),mixtral,0.0
+Benthic Bacteria and Microalgae,claude,0.0
+Benthic Bacteria and Microalgae,aws_claude,0.0
+Benthic Bacteria and Microalgae,gemini,0.0
+Benthic Bacteria and Microalgae,gemma7,0.0
+Benthic Bacteria and Microalgae,llama3,0.0
+Benthic Bacteria and Microalgae,mixtral,1.0
+Shelf Demersal Omnivorous Fish,claude,0.0
+Shelf Demersal Omnivorous Fish,aws_claude,0.0
+Shelf Demersal Omnivorous Fish,gemini,0.2
+Shelf Demersal Omnivorous Fish,gemma7,0.0
+Shelf Demersal Omnivorous Fish,llama3,0.4
+Shelf Demersal Omnivorous Fish,mixtral,0.0
+Benthic Invertebrates (Shallow),claude,0.0
+Benthic Invertebrates (Shallow),aws_claude,0.0
+Benthic Invertebrates (Shallow),gemini,0.2
+Benthic Invertebrates (Shallow),gemma7,0.0
+Benthic Invertebrates (Shallow),llama3,0.0
+Benthic Invertebrates (Shallow),mixtral,0.0
+Carnivorous Benthic Invertebrates,claude,0.0
+Carnivorous Benthic Invertebrates,aws_claude,0.2
+Carnivorous Benthic Invertebrates,gemini,0.0
+Carnivorous Benthic Invertebrates,gemma7,0.0
+Carnivorous Benthic Invertebrates,llama3,0.0
+Carnivorous Benthic Invertebrates,mixtral,0.0
+Discards,claude,0.0
+Discards,aws_claude,0.0
+Discards,gemini,0.0
+Discards,gemma7,0.0
+Discards,llama3,0.6
+Discards,mixtral,0.0
+Mesozooplankton,claude,0.4
+Mesozooplankton,aws_claude,0.4
+Mesozooplankton,gemini,0.0
+Mesozooplankton,gemma7,0.0
+Mesozooplankton,llama3,1.0
+Mesozooplankton,mixtral,0.0
+Other Phytoplankton,claude,0.0
+Other Phytoplankton,aws_claude,0.2
+Other Phytoplankton,gemini,0.0
+Other Phytoplankton,gemma7,0.0
+Other Phytoplankton,llama3,0.0
+Other Phytoplankton,mixtral,0.0
+Shelf Large Piscivores,claude,0.0
+Shelf Large Piscivores,aws_claude,0.0
+Shelf Large Piscivores,gemini,0.2
+Shelf Large Piscivores,gemma7,0.0
+Shelf Large Piscivores,llama3,0.4
+Shelf Large Piscivores,mixtral,0.0
+Large Demersal Piscivores (Coastal),claude,0.0
+Large Demersal Piscivores (Coastal),aws_claude,0.0
+Large Demersal Piscivores (Coastal),gemini,0.2
+Large Demersal Piscivores (Coastal),gemma7,0.0
+Large Demersal Piscivores (Coastal),llama3,0.0
+Large Demersal Piscivores (Coastal),mixtral,0.0
+Cetaceans (Baleen Whales),claude,0.0
+Cetaceans (Baleen Whales),aws_claude,0.0
+Cetaceans (Baleen Whales),gemini,0.4
+Cetaceans (Baleen Whales),gemma7,0.0
+Cetaceans (Baleen Whales),llama3,0.0
+Cetaceans (Baleen Whales),mixtral,0.0
+Pinnipeds (Fish Eaters),claude,0.0
+Pinnipeds (Fish Eaters),aws_claude,0.0
+Pinnipeds (Fish Eaters),gemini,0.2
+Pinnipeds (Fish Eaters),gemma7,0.0
+Pinnipeds (Fish Eaters),llama3,0.0
+Pinnipeds (Fish Eaters),mixtral,0.0
+Medium Pelagic Fish,claude,0.8
+Medium Pelagic Fish,aws_claude,1.0
+Medium Pelagic Fish,gemini,0.0
+Medium Pelagic Fish,gemma7,0.0
+Medium Pelagic Fish,llama3,0.0
+Medium Pelagic Fish,mixtral,0.0
+Jellyfish,claude,0.0
+Jellyfish,aws_claude,0.2
+Jellyfish,gemini,0.0
+Jellyfish,gemma7,0.0
+Jellyfish,llama3,0.4
+Jellyfish,mixtral,0.0
+Rays and Skates,claude,0.0
+Rays and Skates,aws_claude,0.2
+Rays and Skates,gemini,0.0
+Rays and Skates,gemma7,0.0
+Rays and Skates,llama3,0.0
+Rays and Skates,mixtral,0.0
+Macrozoobenthos,claude,0.0
+Macrozoobenthos,aws_claude,0.2
+Macrozoobenthos,gemini,0.2
+Macrozoobenthos,gemma7,0.0
+Macrozoobenthos,llama3,0.2
+Macrozoobenthos,mixtral,0.0
+Hard Corals,claude,0.0
+Hard Corals,aws_claude,0.0
+Hard Corals,gemini,0.0
+Hard Corals,gemma7,0.0
+Hard Corals,llama3,0.2
+Hard Corals,mixtral,0.0
+Reef Herbivores,claude,0.0
+Reef Herbivores,aws_claude,0.0
+Reef Herbivores,gemini,0.0
+Reef Herbivores,gemma7,0.0
+Reef Herbivores,llama3,0.0
+Reef Herbivores,mixtral,1.0
+Demersal Fish-eating Predators,claude,0.0
+Demersal Fish-eating Predators,aws_claude,0.0
+Demersal Fish-eating Predators,gemini,0.0
+Demersal Fish-eating Predators,gemma7,0.0
+Demersal Fish-eating Predators,llama3,0.0
+Demersal Fish-eating Predators,mixtral,1.0
+Small Pelagic Fish,claude,1.0
+Small Pelagic Fish,aws_claude,1.0
+Small Pelagic Fish,gemini,0.0
+Small Pelagic Fish,gemma7,0.0
+Small Pelagic Fish,llama3,0.0
+Small Pelagic Fish,mixtral,0.0
+Reef Fish,claude,0.0
+Reef Fish,aws_claude,0.0
+Reef Fish,gemini,0.0
+Reef Fish,gemma7,0.0
+Reef Fish,llama3,0.4
+Reef Fish,mixtral,0.0
+Prawns and Shrimp,claude,0.0
+Prawns and Shrimp,aws_claude,0.2
+Prawns and Shrimp,gemini,0.0
+Prawns and Shrimp,gemma7,0.0
+Prawns and Shrimp,llama3,0.0
+Prawns and Shrimp,mixtral,0.0
+Benthic Bacteria,claude,0.0
+Benthic Bacteria,aws_claude,0.2
+Benthic Bacteria,gemini,0.0
+Benthic Bacteria,gemma7,0.0
+Benthic Bacteria,llama3,0.0
+Benthic Bacteria,mixtral,0.0
+Zooplankton (Large Carnivores),claude,0.0
+Zooplankton (Large Carnivores),aws_claude,0.0
+Zooplankton (Large Carnivores),gemini,0.4
+Zooplankton (Large Carnivores),gemma7,0.0
+Zooplankton (Large Carnivores),llama3,0.0
+Zooplankton (Large Carnivores),mixtral,0.0
+Bacteria,claude,0.0
+Bacteria,aws_claude,0.6
+Bacteria,gemini,0.0
+Bacteria,gemma7,0.0
+Bacteria,llama3,0.0
+Bacteria,mixtral,0.0
+Rocky Reefs,claude,0.0
+Rocky Reefs,aws_claude,0.0
+Rocky Reefs,gemini,1.0
+Rocky Reefs,gemma7,0.0
+Rocky Reefs,llama3,0.0
+Rocky Reefs,mixtral,0.0
+Benthic Invertebrates,claude,0.0
+Benthic Invertebrates,aws_claude,0.4
+Benthic Invertebrates,gemini,0.0
+Benthic Invertebrates,gemma7,0.0
+Benthic Invertebrates,llama3,0.4
+Benthic Invertebrates,mixtral,0.0
+Deep-sea Glass Sponges,claude,0.0
+Deep-sea Glass Sponges,aws_claude,0.0
+Deep-sea Glass Sponges,gemini,0.0
+Deep-sea Glass Sponges,gemma7,0.0
+Deep-sea Glass Sponges,llama3,0.2
+Deep-sea Glass Sponges,mixtral,0.0
+Large Benthic Invertebrates,claude,0.6
+Large Benthic Invertebrates,aws_claude,0.0
+Large Benthic Invertebrates,gemini,0.0
+Large Benthic Invertebrates,gemma7,0.0
+Large Benthic Invertebrates,llama3,0.0
+Large Benthic Invertebrates,mixtral,0.0
+Pinnipeds,claude,0.0
+Pinnipeds,aws_claude,0.8
+Pinnipeds,gemini,0.0
+Pinnipeds,gemma7,0.0
+Pinnipeds,llama3,1.0
+Pinnipeds,mixtral,0.0
+Shelf Demersal Fish (Small Benthivores),claude,0.0
+Shelf Demersal Fish (Small Benthivores),aws_claude,0.0
+Shelf Demersal Fish (Small Benthivores),gemini,0.4
+Shelf Demersal Fish (Small Benthivores),gemma7,0.0
+Shelf Demersal Fish (Small Benthivores),llama3,0.0
+Shelf Demersal Fish (Small Benthivores),mixtral,0.0
+Slope/Deep Medium Demersal Piscivores,claude,0.0
+Slope/Deep Medium Demersal Piscivores,aws_claude,0.0
+Slope/Deep Medium Demersal Piscivores,gemini,0.2
+Slope/Deep Medium Demersal Piscivores,gemma7,0.0
+Slope/Deep Medium Demersal Piscivores,llama3,0.4
+Slope/Deep Medium Demersal Piscivores,mixtral,0.0
+Cetaceans (Sperm Whales),claude,0.0
+Cetaceans (Sperm Whales),aws_claude,0.0
+Cetaceans (Sperm Whales),gemini,0.4
+Cetaceans (Sperm Whales),gemma7,0.0
+Cetaceans (Sperm Whales),llama3,0.0
+Cetaceans (Sperm Whales),mixtral,0.0
+Demersal Fish,claude,0.0
+Demersal Fish,aws_claude,0.0
+Demersal Fish,gemini,0.0
+Demersal Fish,gemma7,0.0
+Demersal Fish,llama3,0.8
+Demersal Fish,mixtral,0.0
+Deposit Feeders,claude,0.0
+Deposit Feeders,aws_claude,0.0
+Deposit Feeders,gemini,0.0
+Deposit Feeders,gemma7,0.0
+Deposit Feeders,llama3,0.8
+Deposit Feeders,mixtral,0.0
+Phytoplankton (Small),claude,0.2
+Phytoplankton (Small),aws_claude,0.0
+Phytoplankton (Small),gemini,0.0
+Phytoplankton (Small),gemma7,0.0
+Phytoplankton (Small),llama3,0.0
+Phytoplankton (Small),mixtral,0.0
+Seabirds,claude,0.8
+Seabirds,aws_claude,1.0
+Seabirds,gemini,0.0
+Seabirds,gemma7,0.0
+Seabirds,llama3,1.0
+Seabirds,mixtral,0.0
+Sandy/Muddy Sediments,claude,0.0
+Sandy/Muddy Sediments,aws_claude,0.0
+Sandy/Muddy Sediments,gemini,0.6
+Sandy/Muddy Sediments,gemma7,0.0
+Sandy/Muddy Sediments,llama3,0.0
+Sandy/Muddy Sediments,mixtral,0.0
+Zooplankton (Herbivores),claude,0.0
+Zooplankton (Herbivores),aws_claude,0.0
+Zooplankton (Herbivores),gemini,0.4
+Zooplankton (Herbivores),gemma7,0.0
+Zooplankton (Herbivores),llama3,0.0
+Zooplankton (Herbivores),mixtral,0.0
+Pinnipeds (Invertebrate Eaters),claude,0.0
+Pinnipeds (Invertebrate Eaters),aws_claude,0.0
+Pinnipeds (Invertebrate Eaters),gemini,0.2
+Pinnipeds (Invertebrate Eaters),gemma7,0.0
+Pinnipeds (Invertebrate Eaters),llama3,0.0
+Pinnipeds (Invertebrate Eaters),mixtral,0.0
+Sandy/Muddy Bottoms,claude,0.0
+Sandy/Muddy Bottoms,aws_claude,0.0
+Sandy/Muddy Bottoms,gemini,0.2
+Sandy/Muddy Bottoms,gemma7,0.0
+Sandy/Muddy Bottoms,llama3,0.0
+Sandy/Muddy Bottoms,mixtral,0.0
+Benthic Primary Producers,claude,0.8
+Benthic Primary Producers,aws_claude,0.4
+Benthic Primary Producers,gemini,0.0
+Benthic Primary Producers,gemma7,0.0
+Benthic Primary Producers,llama3,0.0
+Benthic Primary Producers,mixtral,0.0
+Pelagic Bacteria,claude,0.0
+Pelagic Bacteria,aws_claude,0.2
+Pelagic Bacteria,gemini,0.2
+Pelagic Bacteria,gemma7,0.0
+Pelagic Bacteria,llama3,0.4
+Pelagic Bacteria,mixtral,0.0
+Benthic Invertebrates (Deep),claude,0.0
+Benthic Invertebrates (Deep),aws_claude,0.0
+Benthic Invertebrates (Deep),gemini,0.2
+Benthic Invertebrates (Deep),gemma7,0.0
+Benthic Invertebrates (Deep),llama3,0.0
+Benthic Invertebrates (Deep),mixtral,0.0
+Slope/Deep Demersal Fish (Piscivores),claude,0.0
+Slope/Deep Demersal Fish (Piscivores),aws_claude,0.0
+Slope/Deep Demersal Fish (Piscivores),gemini,0.6
+Slope/Deep Demersal Fish (Piscivores),gemma7,0.0
+Slope/Deep Demersal Fish (Piscivores),llama3,0.0
+Slope/Deep Demersal Fish (Piscivores),mixtral,0.0
+Oceanic Seabirds,claude,0.2
+Oceanic Seabirds,aws_claude,0.0
+Oceanic Seabirds,gemini,0.0
+Oceanic Seabirds,gemma7,0.0
+Oceanic Seabirds,llama3,0.0
+Oceanic Seabirds,mixtral,0.0
+Mangroves,claude,0.0
+Mangroves,aws_claude,0.0
+Mangroves,gemini,0.0
+Mangroves,gemma7,0.0
+Mangroves,llama3,0.2
+Mangroves,mixtral,0.0
+Shelf Medium Demersal Piscivores,claude,0.0
+Shelf Medium Demersal Piscivores,aws_claude,0.0
+Shelf Medium Demersal Piscivores,gemini,0.2
+Shelf Medium Demersal Piscivores,gemma7,0.0
+Shelf Medium Demersal Piscivores,llama3,0.4
+Shelf Medium Demersal Piscivores,mixtral,0.0
+Pelagic Sharks,claude,1.0
+Pelagic Sharks,aws_claude,1.0
+Pelagic Sharks,gemini,0.4
+Pelagic Sharks,gemma7,0.0
+Pelagic Sharks,llama3,0.4
+Pelagic Sharks,mixtral,1.0
+Crown-of-thorns Starfish,claude,0.0
+Crown-of-thorns Starfish,aws_claude,0.0
+Crown-of-thorns Starfish,gemini,0.0
+Crown-of-thorns Starfish,gemma7,0.0
+Crown-of-thorns Starfish,llama3,0.2
+Crown-of-thorns Starfish,mixtral,0.0
+Seals and Sea Lions,claude,0.0
+Seals and Sea Lions,aws_claude,0.2
+Seals and Sea Lions,gemini,0.0
+Seals and Sea Lions,gemma7,0.0
+Seals and Sea Lions,llama3,0.0
+Seals and Sea Lions,mixtral,0.0
+Phytoplankton (Large),claude,0.2
+Phytoplankton (Large),aws_claude,0.0
+Phytoplankton (Large),gemini,0.0
+Phytoplankton (Large),gemma7,0.0
+Phytoplankton (Large),llama3,0.0
+Phytoplankton (Large),mixtral,0.0
+Pinnipeds (Fish-Eaters),claude,0.0
+Pinnipeds (Fish-Eaters),aws_claude,0.0
+Pinnipeds (Fish-Eaters),gemini,0.2
+Pinnipeds (Fish-Eaters),gemma7,0.0
+Pinnipeds (Fish-Eaters),llama3,0.0
+Pinnipeds (Fish-Eaters),mixtral,0.0
+Fish-Eating Pinnipeds,claude,0.0
+Fish-Eating Pinnipeds,aws_claude,0.0
+Fish-Eating Pinnipeds,gemini,0.0
+Fish-Eating Pinnipeds,gemma7,0.0
+Fish-Eating Pinnipeds,llama3,0.2
+Fish-Eating Pinnipeds,mixtral,0.0
+Sedimentary Bacteria,claude,0.0
+Sedimentary Bacteria,aws_claude,0.0
+Sedimentary Bacteria,gemini,0.4
+Sedimentary Bacteria,gemma7,0.0
+Sedimentary Bacteria,llama3,0.8
+Sedimentary Bacteria,mixtral,0.0
+Slope Demersal Fish,claude,0.8
+Slope Demersal Fish,aws_claude,0.0
+Slope Demersal Fish,gemini,0.0
+Slope Demersal Fish,gemma7,0.0
+Slope Demersal Fish,llama3,0.0
+Slope Demersal Fish,mixtral,0.0
+Sea Snakes,claude,0.0
+Sea Snakes,aws_claude,0.0
+Sea Snakes,gemini,0.0
+Sea Snakes,gemma7,0.0
+Sea Snakes,llama3,0.6
+Sea Snakes,mixtral,0.0
+Planktivores (Coastal),claude,0.0
+Planktivores (Coastal),aws_claude,0.0
+Planktivores (Coastal),gemini,0.2
+Planktivores (Coastal),gemma7,0.0
+Planktivores (Coastal),llama3,0.0
+Planktivores (Coastal),mixtral,0.0
+Tasman Sea Pelagic Fish,claude,0.0
+Tasman Sea Pelagic Fish,aws_claude,0.0
+Tasman Sea Pelagic Fish,gemini,0.8
+Tasman Sea Pelagic Fish,gemma7,0.0
+Tasman Sea Pelagic Fish,llama3,0.0
+Tasman Sea Pelagic Fish,mixtral,0.0
+Sharks (Reef),claude,0.0
+Sharks (Reef),aws_claude,0.0
+Sharks (Reef),gemini,0.2
+Sharks (Reef),gemma7,0.0
+Sharks (Reef),llama3,0.0
+Sharks (Reef),mixtral,0.0
+Gelatinous Zooplankton,claude,1.0
+Gelatinous Zooplankton,aws_claude,0.6
+Gelatinous Zooplankton,gemini,0.0
+Gelatinous Zooplankton,gemma7,0.0
+Gelatinous Zooplankton,llama3,0.0
+Gelatinous Zooplankton,mixtral,0.0
+Fish-eating Pinnipeds,claude,0.0
+Fish-eating Pinnipeds,aws_claude,0.0
+Fish-eating Pinnipeds,gemini,0.2
+Fish-eating Pinnipeds,gemma7,0.0
+Fish-eating Pinnipeds,llama3,0.0
+Fish-eating Pinnipeds,mixtral,0.0
+Small Benthic Fish (Coastal),claude,0.0
+Small Benthic Fish (Coastal),aws_claude,0.0
+Small Benthic Fish (Coastal),gemini,0.2
+Small Benthic Fish (Coastal),gemma7,0.0
+Small Benthic Fish (Coastal),llama3,0.0
+Small Benthic Fish (Coastal),mixtral,0.0
+Benthic Infaunal Carnivores,claude,0.0
+Benthic Infaunal Carnivores,aws_claude,0.0
+Benthic Infaunal Carnivores,gemini,0.0
+Benthic Infaunal Carnivores,gemma7,0.0
+Benthic Infaunal Carnivores,llama3,0.6
+Benthic Infaunal Carnivores,mixtral,0.0
+Small Zooplankton,claude,0.6
+Small Zooplankton,aws_claude,0.0
+Small Zooplankton,gemini,0.0
+Small Zooplankton,gemma7,0.0
+Small Zooplankton,llama3,0.0
+Small Zooplankton,mixtral,0.0
+"Zooplankton (Copepods, Krill, etc.):",claude,0.0
+"Zooplankton (Copepods, Krill, etc.):",aws_claude,0.0
+"Zooplankton (Copepods, Krill, etc.):",gemini,0.2
+"Zooplankton (Copepods, Krill, etc.):",gemma7,0.0
+"Zooplankton (Copepods, Krill, etc.):",llama3,0.0
+"Zooplankton (Copepods, Krill, etc.):",mixtral,0.0
+Mesopelagic Benthivores,claude,0.0
+Mesopelagic Benthivores,aws_claude,0.0
+Mesopelagic Benthivores,gemini,0.0
+Mesopelagic Benthivores,gemma7,0.0
+Mesopelagic Benthivores,llama3,0.0
+Mesopelagic Benthivores,mixtral,1.0
+Reef-associated Fish,claude,0.0
+Reef-associated Fish,aws_claude,0.8
+Reef-associated Fish,gemini,0.0
+Reef-associated Fish,gemma7,0.0
+Reef-associated Fish,llama3,0.0
+Reef-associated Fish,mixtral,0.0
+Orcas,claude,0.0
+Orcas,aws_claude,0.0
+Orcas,gemini,0.6
+Orcas,gemma7,0.0
+Orcas,llama3,0.2
+Orcas,mixtral,0.0
+Cetaceans (Small Toothed Whales),claude,0.0
+Cetaceans (Small Toothed Whales),aws_claude,0.0
+Cetaceans (Small Toothed Whales),gemini,0.2
+Cetaceans (Small Toothed Whales),gemma7,0.0
+Cetaceans (Small Toothed Whales),llama3,0.0
+Cetaceans (Small Toothed Whales),mixtral,0.0
+Small Phytoplankton,claude,0.6
+Small Phytoplankton,aws_claude,0.0
+Small Phytoplankton,gemini,0.0
+Small Phytoplankton,gemma7,0.0
+Small Phytoplankton,llama3,0.0
+Small Phytoplankton,mixtral,0.0
+Deep-sea Benthivores,claude,0.0
+Deep-sea Benthivores,aws_claude,0.0
+Deep-sea Benthivores,gemini,0.0
+Deep-sea Benthivores,gemma7,0.0
+Deep-sea Benthivores,llama3,0.0
+Deep-sea Benthivores,mixtral,1.0
+Coastal Pelagic Fish,claude,0.0
+Coastal Pelagic Fish,aws_claude,0.0
+Coastal Pelagic Fish,gemini,0.6
+Coastal Pelagic Fish,gemma7,0.0
+Coastal Pelagic Fish,llama3,0.0
+Coastal Pelagic Fish,mixtral,0.0
+Large Zooplankton,claude,1.0
+Large Zooplankton,aws_claude,0.2
+Large Zooplankton,gemini,0.0
+Large Zooplankton,gemma7,0.0
+Large Zooplankton,llama3,0.0
+Large Zooplankton,mixtral,0.0
+Detritus,claude,1.0
+Detritus,aws_claude,1.0
+Detritus,gemini,1.0
+Detritus,gemma7,0.0
+Detritus,llama3,0.6
+Detritus,mixtral,0.0
+Microalgae,claude,0.0
+Microalgae,aws_claude,0.0
+Microalgae,gemini,0.0
+Microalgae,gemma7,0.0
+Microalgae,llama3,0.4
+Microalgae,mixtral,0.0
+Phytoplankton,claude,0.2
+Phytoplankton,aws_claude,0.8
+Phytoplankton,gemini,0.2
+Phytoplankton,gemma7,0.0
+Phytoplankton,llama3,1.0
+Phytoplankton,mixtral,0.0
+Reef Sharks,claude,0.0
+Reef Sharks,aws_claude,0.0
+Reef Sharks,gemini,0.0
+Reef Sharks,gemma7,0.0
+Reef Sharks,llama3,0.4
+Reef Sharks,mixtral,0.0
+Macroalgae,claude,0.2
+Macroalgae,aws_claude,0.8
+Macroalgae,gemini,0.0
+Macroalgae,gemma7,0.0
+Macroalgae,llama3,1.0
+Macroalgae,mixtral,0.0
+Herbivorous Demersal Fish,claude,0.0
+Herbivorous Demersal Fish,aws_claude,0.0
+Herbivorous Demersal Fish,gemini,0.0
+Herbivorous Demersal Fish,gemma7,0.0
+Herbivorous Demersal Fish,llama3,0.4
+Herbivorous Demersal Fish,mixtral,0.0
+Crocodiles,claude,0.0
+Crocodiles,aws_claude,0.0
+Crocodiles,gemini,0.0
+Crocodiles,gemma7,0.0
+Crocodiles,llama3,0.6
+Crocodiles,mixtral,0.0
+Pelagic Bacteria and Phytoplankton,claude,0.0
+Pelagic Bacteria and Phytoplankton,aws_claude,0.0
+Pelagic Bacteria and Phytoplankton,gemini,0.0
+Pelagic Bacteria and Phytoplankton,gemma7,0.0
+Pelagic Bacteria and Phytoplankton,llama3,0.0
+Pelagic Bacteria and Phytoplankton,mixtral,1.0
+Microphytobenthos,claude,0.0
+Microphytobenthos,aws_claude,0.4
+Microphytobenthos,gemini,0.0
+Microphytobenthos,gemma7,0.0
+Microphytobenthos,llama3,0.0
+Microphytobenthos,mixtral,0.0
+Shelf Demersal Fish,claude,0.8
+Shelf Demersal Fish,aws_claude,0.0
+Shelf Demersal Fish,gemini,0.0
+Shelf Demersal Fish,gemma7,0.0
+Shelf Demersal Fish,llama3,0.0
+Shelf Demersal Fish,mixtral,0.0
+Slope Piscivores,claude,0.2
+Slope Piscivores,aws_claude,0.0
+Slope Piscivores,gemini,0.0
+Slope Piscivores,gemma7,0.0
+Slope Piscivores,llama3,0.0
+Slope Piscivores,mixtral,0.0
+Seamount Communities,claude,0.0
+Seamount Communities,aws_claude,0.2
+Seamount Communities,gemini,0.0
+Seamount Communities,gemma7,0.0
+Seamount Communities,llama3,0.0
+Seamount Communities,mixtral,0.0
+Coastal Zooplankton,claude,0.0
+Coastal Zooplankton,aws_claude,0.0
+Coastal Zooplankton,gemini,0.2
+Coastal Zooplankton,gemma7,0.0
+Coastal Zooplankton,llama3,0.0
+Coastal Zooplankton,mixtral,0.0
+Shrimps and Small Crustaceans,claude,0.0
+Shrimps and Small Crustaceans,aws_claude,0.4
+Shrimps and Small Crustaceans,gemini,0.0
+Shrimps and Small Crustaceans,gemma7,0.0
+Shrimps and Small Crustaceans,llama3,0.0
+Shrimps and Small Crustaceans,mixtral,0.0
+Filter-feeding Invertebrates,claude,0.0
+Filter-feeding Invertebrates,aws_claude,0.4
+Filter-feeding Invertebrates,gemini,0.0
+Filter-feeding Invertebrates,gemma7,0.0
+Filter-feeding Invertebrates,llama3,0.0
+Filter-feeding Invertebrates,mixtral,0.0
+Shelf Demersal Fish (Benthivores),claude,0.0
+Shelf Demersal Fish (Benthivores),aws_claude,0.0
+Shelf Demersal Fish (Benthivores),gemini,0.2
+Shelf Demersal Fish (Benthivores),gemma7,0.0
+Shelf Demersal Fish (Benthivores),llama3,0.0
+Shelf Demersal Fish (Benthivores),mixtral,0.0
+Deep-sea Demersal Fish,claude,0.0
+Deep-sea Demersal Fish,aws_claude,0.0
+Deep-sea Demersal Fish,gemini,0.0
+Deep-sea Demersal Fish,gemma7,0.0
+Deep-sea Demersal Fish,llama3,0.0
+Deep-sea Demersal Fish,mixtral,1.0
+Benthic Microalgae,claude,0.0
+Benthic Microalgae,aws_claude,0.2
+Benthic Microalgae,gemini,0.0
+Benthic Microalgae,gemma7,0.0
+Benthic Microalgae,llama3,0.0
+Benthic Microalgae,mixtral,0.0
+Shelf Small Benthivores,claude,0.0
+Shelf Small Benthivores,aws_claude,0.0
+Shelf Small Benthivores,gemini,0.2
+Shelf Small Benthivores,gemma7,0.0
+Shelf Small Benthivores,llama3,0.2
+Shelf Small Benthivores,mixtral,0.0
+Benthic Deposit Feeders,claude,0.2
+Benthic Deposit Feeders,aws_claude,0.2
+Benthic Deposit Feeders,gemini,0.0
+Benthic Deposit Feeders,gemma7,0.0
+Benthic Deposit Feeders,llama3,0.0
+Benthic Deposit Feeders,mixtral,0.0
+Slope/Deep Water Benthivores,claude,0.0
+Slope/Deep Water Benthivores,aws_claude,0.0
+Slope/Deep Water Benthivores,gemini,0.2
+Slope/Deep Water Benthivores,gemma7,0.0
+Slope/Deep Water Benthivores,llama3,0.4
+Slope/Deep Water Benthivores,mixtral,0.0
+Tuna and Billfish,claude,0.0
+Tuna and Billfish,aws_claude,0.0
+Tuna and Billfish,gemini,0.0
+Tuna and Billfish,gemma7,0.0
+Tuna and Billfish,llama3,0.2
+Tuna and Billfish,mixtral,0.0
+Sea Urchins,claude,0.0
+Sea Urchins,aws_claude,0.0
+Sea Urchins,gemini,0.0
+Sea Urchins,gemma7,0.0
+Sea Urchins,llama3,0.4
+Sea Urchins,mixtral,0.0
+Filter Feeders,claude,0.2
+Filter Feeders,aws_claude,0.2
+Filter Feeders,gemini,0.0
+Filter Feeders,gemma7,0.0
+Filter Feeders,llama3,0.0
+Filter Feeders,mixtral,0.0
+Coastal Reef Communities,claude,0.0
+Coastal Reef Communities,aws_claude,0.2
+Coastal Reef Communities,gemini,0.0
+Coastal Reef Communities,gemma7,0.0
+Coastal Reef Communities,llama3,0.0
+Coastal Reef Communities,mixtral,0.0
+Discards and Detritus,claude,0.0
+Discards and Detritus,aws_claude,0.0
+Discards and Detritus,gemini,0.0
+Discards and Detritus,gemma7,0.0
+Discards and Detritus,llama3,0.0
+Discards and Detritus,mixtral,1.0
+Benthic Invertebrates (excluding Cephalopods),claude,0.0
+Benthic Invertebrates (excluding Cephalopods),aws_claude,0.0
+Benthic Invertebrates (excluding Cephalopods),gemini,0.2
+Benthic Invertebrates (excluding Cephalopods),gemma7,0.0
+Benthic Invertebrates (excluding Cephalopods),llama3,0.0
+Benthic Invertebrates (excluding Cephalopods),mixtral,0.0
+Cetaceans (Toothed Whales),claude,0.0
+Cetaceans (Toothed Whales),aws_claude,0.0
+Cetaceans (Toothed Whales),gemini,0.2
+Cetaceans (Toothed Whales),gemma7,0.0
+Cetaceans (Toothed Whales),llama3,0.0
+Cetaceans (Toothed Whales),mixtral,0.0
+Kelp Forests,claude,0.0
+Kelp Forests,aws_claude,0.0
+Kelp Forests,gemini,1.0
+Kelp Forests,gemma7,0.0
+Kelp Forests,llama3,0.0
+Kelp Forests,mixtral,0.0
+Slope/Deep Large Piscivores,claude,0.0
+Slope/Deep Large Piscivores,aws_claude,0.0
+Slope/Deep Large Piscivores,gemini,0.2
+Slope/Deep Large Piscivores,gemma7,0.0
+Slope/Deep Large Piscivores,llama3,0.4
+Slope/Deep Large Piscivores,mixtral,0.0
+Shelf Piscivores,claude,0.2
+Shelf Piscivores,aws_claude,0.0
+Shelf Piscivores,gemini,0.0
+Shelf Piscivores,gemma7,0.0
+Shelf Piscivores,llama3,0.0
+Shelf Piscivores,mixtral,0.0
+Phytoplankton (Diatoms),claude,0.0
+Phytoplankton (Diatoms),aws_claude,0.0
+Phytoplankton (Diatoms),gemini,0.4
+Phytoplankton (Diatoms),gemma7,0.0
+Phytoplankton (Diatoms),llama3,0.0
+Phytoplankton (Diatoms),mixtral,0.0
+Pelagic Tunicates,claude,0.0
+Pelagic Tunicates,aws_claude,0.0
+Pelagic Tunicates,gemini,0.0
+Pelagic Tunicates,gemma7,0.0
+Pelagic Tunicates,llama3,0.4
+Pelagic Tunicates,mixtral,0.0
+Small Toothed Whales and Dolphins,claude,0.0
+Small Toothed Whales and Dolphins,aws_claude,0.0
+Small Toothed Whales and Dolphins,gemini,0.4
+Small Toothed Whales and Dolphins,gemma7,0.0
+Small Toothed Whales and Dolphins,llama3,0.2
+Small Toothed Whales and Dolphins,mixtral,0.0
+Albatrosses,claude,0.0
+Albatrosses,aws_claude,0.0
+Albatrosses,gemini,0.4
+Albatrosses,gemma7,0.0
+Albatrosses,llama3,0.2
+Albatrosses,mixtral,0.0
+Pelagic Herbivores,claude,0.0
+Pelagic Herbivores,aws_claude,0.0
+Pelagic Herbivores,gemini,0.0
+Pelagic Herbivores,gemma7,0.0
+Pelagic Herbivores,llama3,0.0
+Pelagic Herbivores,mixtral,1.0
+Benthic Invertebrates (Filter Feeders),claude,0.0
+Benthic Invertebrates (Filter Feeders),aws_claude,0.0
+Benthic Invertebrates (Filter Feeders),gemini,0.6
+Benthic Invertebrates (Filter Feeders),gemma7,0.0
+Benthic Invertebrates (Filter Feeders),llama3,0.0
+Benthic Invertebrates (Filter Feeders),mixtral,0.0
+Sea Cucumbers,claude,0.0
+Sea Cucumbers,aws_claude,0.0
+Sea Cucumbers,gemini,0.0
+Sea Cucumbers,gemma7,0.0
+Sea Cucumbers,llama3,0.4
+Sea Cucumbers,mixtral,0.0
+Bass Strait Pelagic Fish,claude,0.0
+Bass Strait Pelagic Fish,aws_claude,0.0
+Bass Strait Pelagic Fish,gemini,0.8
+Bass Strait Pelagic Fish,gemma7,0.0
+Bass Strait Pelagic Fish,llama3,0.0
+Bass Strait Pelagic Fish,mixtral,0.0
+Invertebrate-Eating Pinnipeds,claude,0.0
+Invertebrate-Eating Pinnipeds,aws_claude,0.0
+Invertebrate-Eating Pinnipeds,gemini,0.0
+Invertebrate-Eating Pinnipeds,gemma7,0.0
+Invertebrate-Eating Pinnipeds,llama3,0.2
+Invertebrate-Eating Pinnipeds,mixtral,0.0
+Pelagic Fish,claude,0.0
+Pelagic Fish,aws_claude,0.0
+Pelagic Fish,gemini,0.0
+Pelagic Fish,gemma7,0.0
+Pelagic Fish,llama3,0.8
+Pelagic Fish,mixtral,0.0
+Planktivores (Pelagic),claude,0.0
+Planktivores (Pelagic),aws_claude,0.0
+Planktivores (Pelagic),gemini,0.2
+Planktivores (Pelagic),gemma7,0.0
+Planktivores (Pelagic),llama3,0.0
+Planktivores (Pelagic),mixtral,0.0
+Benthic Invertebrates (Large),claude,0.2
+Benthic Invertebrates (Large),aws_claude,0.0
+Benthic Invertebrates (Large),gemini,0.0
+Benthic Invertebrates (Large),gemma7,0.0
+Benthic Invertebrates (Large),llama3,0.0
+Benthic Invertebrates (Large),mixtral,0.0
+Small Demersal Fish,claude,0.0
+Small Demersal Fish,aws_claude,1.0
+Small Demersal Fish,gemini,0.0
+Small Demersal Fish,gemma7,0.0
+Small Demersal Fish,llama3,0.0
+Small Demersal Fish,mixtral,0.0
+Migratory Mesopelagic Fish,claude,0.0
+Migratory Mesopelagic Fish,aws_claude,0.0
+Migratory Mesopelagic Fish,gemini,0.4
+Migratory Mesopelagic Fish,gemma7,0.0
+Migratory Mesopelagic Fish,llama3,0.2
+Migratory Mesopelagic Fish,mixtral,0.0
+Reef-Associated Fish,claude,0.2
+Reef-Associated Fish,aws_claude,0.0
+Reef-Associated Fish,gemini,0.0
+Reef-Associated Fish,gemma7,0.0
+Reef-Associated Fish,llama3,0.0
+Reef-Associated Fish,mixtral,0.0
+Large Demersal Piscivores (Slope/Deep),claude,0.0
+Large Demersal Piscivores (Slope/Deep),aws_claude,0.0
+Large Demersal Piscivores (Slope/Deep),gemini,0.2
+Large Demersal Piscivores (Slope/Deep),gemma7,0.0
+Large Demersal Piscivores (Slope/Deep),llama3,0.0
+Large Demersal Piscivores (Slope/Deep),mixtral,0.0
+Seabirds (Pelagic),claude,0.0
+Seabirds (Pelagic),aws_claude,0.0
+Seabirds (Pelagic),gemini,0.6
+Seabirds (Pelagic),gemma7,0.0
+Seabirds (Pelagic),llama3,0.0
+Seabirds (Pelagic),mixtral,0.0
+Coral,claude,0.0
+Coral,aws_claude,0.0
+Coral,gemini,0.0
+Coral,gemma7,0.0
+Coral,llama3,0.2
+Coral,mixtral,0.0
+Mesopelagic Fish,claude,1.0
+Mesopelagic Fish,aws_claude,0.4
+Mesopelagic Fish,gemini,0.0
+Mesopelagic Fish,gemma7,0.0
+Mesopelagic Fish,llama3,0.2
+Mesopelagic Fish,mixtral,0.0
+Large Carnivorous Zooplankton,claude,0.0
+Large Carnivorous Zooplankton,aws_claude,0.0
+Large Carnivorous Zooplankton,gemini,0.0
+Large Carnivorous Zooplankton,gemma7,0.0
+Large Carnivorous Zooplankton,llama3,0.6
+Large Carnivorous Zooplankton,mixtral,0.0
+Slope/Deep Demersal Omnivorous Fish,claude,0.0
+Slope/Deep Demersal Omnivorous Fish,aws_claude,0.0
+Slope/Deep Demersal Omnivorous Fish,gemini,0.2
+Slope/Deep Demersal Omnivorous Fish,gemma7,0.0
+Slope/Deep Demersal Omnivorous Fish,llama3,0.4
+Slope/Deep Demersal Omnivorous Fish,mixtral,0.0
+Nearshore and Smaller Seabirds,claude,0.0
+Nearshore and Smaller Seabirds,aws_claude,0.0
+Nearshore and Smaller Seabirds,gemini,0.2
+Nearshore and Smaller Seabirds,gemma7,0.0
+Nearshore and Smaller Seabirds,llama3,0.0
+Nearshore and Smaller Seabirds,mixtral,0.0
+Benthic Invertebrates (Small),claude,0.2
+Benthic Invertebrates (Small),aws_claude,0.0
+Benthic Invertebrates (Small),gemini,0.0
+Benthic Invertebrates (Small),gemma7,0.0
+Benthic Invertebrates (Small),llama3,0.0
+Benthic Invertebrates (Small),mixtral,0.0
+Benthic Carnivores,claude,0.2
+Benthic Carnivores,aws_claude,0.2
+Benthic Carnivores,gemini,0.0
+Benthic Carnivores,gemma7,0.0
+Benthic Carnivores,llama3,0.2
+Benthic Carnivores,mixtral,0.0
+Small Benthic Fish (Slope/Deep),claude,0.0
+Small Benthic Fish (Slope/Deep),aws_claude,0.0
+Small Benthic Fish (Slope/Deep),gemini,0.2
+Small Benthic Fish (Slope/Deep),gemma7,0.0
+Small Benthic Fish (Slope/Deep),llama3,0.0
+Small Benthic Fish (Slope/Deep),mixtral,0.0
+Pinnipeds (Fish-eating),claude,0.0
+Pinnipeds (Fish-eating),aws_claude,0.0
+Pinnipeds (Fish-eating),gemini,0.4
+Pinnipeds (Fish-eating),gemma7,0.0
+Pinnipeds (Fish-eating),llama3,0.0
+Pinnipeds (Fish-eating),mixtral,0.0
+Cephalopod-eating Fish,claude,0.0
+Cephalopod-eating Fish,aws_claude,0.0
+Cephalopod-eating Fish,gemini,0.0
+Cephalopod-eating Fish,gemma7,0.0
+Cephalopod-eating Fish,llama3,0.2
+Cephalopod-eating Fish,mixtral,0.0
+Benthic Filter Feeders,claude,0.6
+Benthic Filter Feeders,aws_claude,0.0
+Benthic Filter Feeders,gemini,0.2
+Benthic Filter Feeders,gemma7,0.0
+Benthic Filter Feeders,llama3,1.0
+Benthic Filter Feeders,mixtral,0.0
+Picoplankton,claude,0.0
+Picoplankton,aws_claude,0.0
+Picoplankton,gemini,0.0
+Picoplankton,gemma7,0.0
+Picoplankton,llama3,0.4
+Picoplankton,mixtral,0.0
+Planktivores,claude,0.0
+Planktivores,aws_claude,0.0
+Planktivores,gemini,0.2
+Planktivores,gemma7,0.0
+Planktivores,llama3,0.0
+Planktivores,mixtral,0.0
+Large Pelagic Fish,claude,1.0
+Large Pelagic Fish,aws_claude,1.0
+Large Pelagic Fish,gemini,0.0
+Large Pelagic Fish,gemma7,0.0
+Large Pelagic Fish,llama3,0.0
+Large Pelagic Fish,mixtral,0.0
+Meiobenthos,claude,0.0
+Meiobenthos,aws_claude,0.4
+Meiobenthos,gemini,0.0
+Meiobenthos,gemma7,0.0
+Meiobenthos,llama3,0.6
+Meiobenthos,mixtral,0.0
+Diatoms,claude,0.0
+Diatoms,aws_claude,0.2
+Diatoms,gemini,0.0
+Diatoms,gemma7,0.0
+Diatoms,llama3,0.4
+Diatoms,mixtral,0.0
+Slope/Deep Demersal Fish (Omnivores),claude,0.0
+Slope/Deep Demersal Fish (Omnivores),aws_claude,0.0
+Slope/Deep Demersal Fish (Omnivores),gemini,0.6
+Slope/Deep Demersal Fish (Omnivores),gemma7,0.0
+Slope/Deep Demersal Fish (Omnivores),llama3,0.0
+Slope/Deep Demersal Fish (Omnivores),mixtral,0.0
+Sharks and Rays,claude,0.0
+Sharks and Rays,aws_claude,0.0
+Sharks and Rays,gemini,0.0
+Sharks and Rays,gemma7,0.0
+Sharks and Rays,llama3,0.8
+Sharks and Rays,mixtral,0.0
+Cetaceans (Orcas),claude,0.0
+Cetaceans (Orcas),aws_claude,0.0
+Cetaceans (Orcas),gemini,0.4
+Cetaceans (Orcas),gemma7,0.0
+Cetaceans (Orcas),llama3,0.0
+Cetaceans (Orcas),mixtral,0.0
+Description,claude,0.0
+Description,aws_claude,0.0
+Description,gemini,0.0
+Description,gemma7,0.6
+Description,llama3,0.0
+Description,mixtral,0.0
+Small Benthivores,claude,0.0
+Small Benthivores,aws_claude,0.0
+Small Benthivores,gemini,0.0
+Small Benthivores,gemma7,0.0
+Small Benthivores,llama3,0.2
+Small Benthivores,mixtral,0.0
+Cold Seep Communities,claude,0.0
+Cold Seep Communities,aws_claude,0.0
+Cold Seep Communities,gemini,0.0
+Cold Seep Communities,gemma7,0.0
+Cold Seep Communities,llama3,0.2
+Cold Seep Communities,mixtral,0.0
+Pelagic Zooplankton,claude,0.0
+Pelagic Zooplankton,aws_claude,0.0
+Pelagic Zooplankton,gemini,0.2
+Pelagic Zooplankton,gemma7,0.0
+Pelagic Zooplankton,llama3,0.0
+Pelagic Zooplankton,mixtral,0.0
+Pelagic Invertebrate Predators,claude,0.0
+Pelagic Invertebrate Predators,aws_claude,0.0
+Pelagic Invertebrate Predators,gemini,0.0
+Pelagic Invertebrate Predators,gemma7,0.0
+Pelagic Invertebrate Predators,llama3,0.0
+Pelagic Invertebrate Predators,mixtral,1.0
+Reef Invertebrate Predators,claude,0.0
+Reef Invertebrate Predators,aws_claude,0.0
+Reef Invertebrate Predators,gemini,0.0
+Reef Invertebrate Predators,gemma7,0.0
+Reef Invertebrate Predators,llama3,0.0
+Reef Invertebrate Predators,mixtral,1.0
+Benthic Invertebrates (Deposit Feeders),claude,0.0
+Benthic Invertebrates (Deposit Feeders),aws_claude,0.0
+Benthic Invertebrates (Deposit Feeders),gemini,0.6
+Benthic Invertebrates (Deposit Feeders),gemma7,0.0
+Benthic Invertebrates (Deposit Feeders),llama3,0.0
+Benthic Invertebrates (Deposit Feeders),mixtral,0.0
+Small Benthic Invertebrates,claude,0.6
+Small Benthic Invertebrates,aws_claude,0.0
+Small Benthic Invertebrates,gemini,0.0
+Small Benthic Invertebrates,gemma7,0.0
+Small Benthic Invertebrates,llama3,0.0
+Small Benthic Invertebrates,mixtral,0.0
+Prawns,claude,0.0
+Prawns,aws_claude,0.0
+Prawns,gemini,0.0
+Prawns,gemma7,0.0
+Prawns,llama3,0.2
+Prawns,mixtral,0.0
+Marine Mammals,claude,0.0
+Marine Mammals,aws_claude,0.0
+Marine Mammals,gemini,0.0
+Marine Mammals,gemma7,0.0
+Marine Mammals,llama3,0.4
+Marine Mammals,mixtral,0.0
+Reef Corals,claude,0.0
+Reef Corals,aws_claude,0.0
+Reef Corals,gemini,0.0
+Reef Corals,gemma7,0.0
+Reef Corals,llama3,0.0
+Reef Corals,mixtral,1.0
+Lobsters and Large Crabs,claude,0.0
+Lobsters and Large Crabs,aws_claude,0.6
+Lobsters and Large Crabs,gemini,0.0
+Lobsters and Large Crabs,gemma7,0.0
+Lobsters and Large Crabs,llama3,0.0
+Lobsters and Large Crabs,mixtral,0.0
+Large Demersal Fish,claude,0.0
+Large Demersal Fish,aws_claude,1.0
+Large Demersal Fish,gemini,0.0
+Large Demersal Fish,gemma7,0.0
+Large Demersal Fish,llama3,0.0
+Large Demersal Fish,mixtral,0.0
+Sharks (Coastal),claude,0.0
+Sharks (Coastal),aws_claude,0.0
+Sharks (Coastal),gemini,0.2
+Sharks (Coastal),gemma7,0.0
+Sharks (Coastal),llama3,0.0
+Sharks (Coastal),mixtral,0.0
+Sharks (Demersal),claude,0.0
+Sharks (Demersal),aws_claude,0.0
+Sharks (Demersal),gemini,0.6
+Sharks (Demersal),gemma7,0.0
+Sharks (Demersal),llama3,0.0
+Sharks (Demersal),mixtral,0.0
+Small Crustaceans,claude,0.0
+Small Crustaceans,aws_claude,0.2
+Small Crustaceans,gemini,0.0
+Small Crustaceans,gemma7,0.0
+Small Crustaceans,llama3,0.0
+Small Crustaceans,mixtral,0.0
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",claude,0.0
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",aws_claude,0.0
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",gemini,0.2
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",gemma7,0.0
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",llama3,0.0
+"Phytoplankton (Diatoms, Dinoflagellates, etc.):",mixtral,0.0
+Hydrothermal Vent Communities,claude,0.0
+Hydrothermal Vent Communities,aws_claude,0.0
+Hydrothermal Vent Communities,gemini,0.0
+Hydrothermal Vent Communities,gemma7,0.0
+Hydrothermal Vent Communities,llama3,0.2
+Hydrothermal Vent Communities,mixtral,0.0
+Coral Communities,claude,0.0
+Coral Communities,aws_claude,0.2
+Coral Communities,gemini,0.0
+Coral Communities,gemma7,0.0
+Coral Communities,llama3,0.0
+Coral Communities,mixtral,0.0
+Nanoplankton,claude,0.0
+Nanoplankton,aws_claude,0.0
+Nanoplankton,gemini,0.0
+Nanoplankton,gemma7,0.0
+Nanoplankton,llama3,0.4
+Nanoplankton,mixtral,0.0
+Medium Demersal Fish,claude,0.0
+Medium Demersal Fish,aws_claude,1.0
+Medium Demersal Fish,gemini,0.0
+Medium Demersal Fish,gemma7,0.0
+Medium Demersal Fish,llama3,0.0
+Medium Demersal Fish,mixtral,0.0
+Demersal Sharks,claude,1.0
+Demersal Sharks,aws_claude,1.0
+Demersal Sharks,gemini,0.4
+Demersal Sharks,gemma7,0.0
+Demersal Sharks,llama3,0.4
+Demersal Sharks,mixtral,0.0
+Toothed Whales/Dolphins,claude,0.0
+Toothed Whales/Dolphins,aws_claude,0.0
+Toothed Whales/Dolphins,gemini,0.2
+Toothed Whales/Dolphins,gemma7,0.0
+Toothed Whales/Dolphins,llama3,0.0
+Toothed Whales/Dolphins,mixtral,0.0
+Phytoplankton (Dinoflagellates),claude,0.0
+Phytoplankton (Dinoflagellates),aws_claude,0.0
+Phytoplankton (Dinoflagellates),gemini,0.4
+Phytoplankton (Dinoflagellates),gemma7,0.0
+Phytoplankton (Dinoflagellates),llama3,0.0
+Phytoplankton (Dinoflagellates),mixtral,0.0
+Mid-sized Demersal Fish (Coastal),claude,0.0
+Mid-sized Demersal Fish (Coastal),aws_claude,0.0
+Mid-sized Demersal Fish (Coastal),gemini,0.2
+Mid-sized Demersal Fish (Coastal),gemma7,0.0
+Mid-sized Demersal Fish (Coastal),llama3,0.0
+Mid-sized Demersal Fish (Coastal),mixtral,0.0
+Pelagic Phytoplankton,claude,0.0
+Pelagic Phytoplankton,aws_claude,0.0
+Pelagic Phytoplankton,gemini,0.2
+Pelagic Phytoplankton,gemma7,0.0
+Pelagic Phytoplankton,llama3,0.0
+Pelagic Phytoplankton,mixtral,0.0
+Zooplankton,claude,0.0
+Zooplankton,aws_claude,0.6
+Zooplankton,gemini,0.2
+Zooplankton,gemma7,0.0
+Zooplankton,llama3,1.0
+Zooplankton,mixtral,1.0
+Large Crustaceans,claude,0.0
+Large Crustaceans,aws_claude,0.2
+Large Crustaceans,gemini,0.0
+Large Crustaceans,gemma7,0.0
+Large Crustaceans,llama3,0.0
+Large Crustaceans,mixtral,0.0
+Group,claude,0.0
+Group,aws_claude,0.0
+Group,gemini,0.0
+Group,gemma7,1.0
+Group,llama3,0.0
+Group,mixtral,0.0
+Toothed Whales,claude,1.0
+Toothed Whales,aws_claude,1.0
+Toothed Whales,gemini,0.0
+Toothed Whales,gemma7,0.0
+Toothed Whales,llama3,0.4
+Toothed Whales,mixtral,0.0
+Benthic Grazers,claude,0.0
+Benthic Grazers,aws_claude,0.0
+Benthic Grazers,gemini,0.0
+Benthic Grazers,gemma7,0.0
+Benthic Grazers,llama3,1.0
+Benthic Grazers,mixtral,0.0
+Microzooplankton,claude,0.0
+Microzooplankton,aws_claude,0.4
+Microzooplankton,gemini,0.0
+Microzooplankton,gemma7,0.0
+Microzooplankton,llama3,1.0
+Microzooplankton,mixtral,0.0
+Shelf Demersal Fish (Omnivores),claude,0.0
+Shelf Demersal Fish (Omnivores),aws_claude,0.0
+Shelf Demersal Fish (Omnivores),gemini,0.6
+Shelf Demersal Fish (Omnivores),gemma7,0.0
+Shelf Demersal Fish (Omnivores),llama3,0.0
+Shelf Demersal Fish (Omnivores),mixtral,0.0
+Slope/Deep Demersal Fish (Benthivores),claude,0.0
+Slope/Deep Demersal Fish (Benthivores),aws_claude,0.0
+Slope/Deep Demersal Fish (Benthivores),gemini,0.6
+Slope/Deep Demersal Fish (Benthivores),gemma7,0.0
+Slope/Deep Demersal Fish (Benthivores),llama3,0.0
+Slope/Deep Demersal Fish (Benthivores),mixtral,0.0
+Detritivores,claude,0.0
+Detritivores,aws_claude,0.0
+Detritivores,gemini,0.0
+Detritivores,gemma7,0.0
+Detritivores,llama3,1.0
+Detritivores,mixtral,0.0
+Seals,claude,1.0
+Seals,aws_claude,0.0
+Seals,gemini,0.0
+Seals,gemma7,0.0
+Seals,llama3,0.0
+Seals,mixtral,0.0
+Sea Turtles,claude,0.0
+Sea Turtles,aws_claude,0.4
+Sea Turtles,gemini,0.2
+Sea Turtles,gemma7,0.0
+Sea Turtles,llama3,1.0
+Sea Turtles,mixtral,0.0
+Seabirds (Nearshore),claude,0.0
+Seabirds (Nearshore),aws_claude,0.0
+Seabirds (Nearshore),gemini,0.6
+Seabirds (Nearshore),gemma7,0.0
+Seabirds (Nearshore),llama3,0.0
+Seabirds (Nearshore),mixtral,0.0
+Large Pelagic Piscivores,claude,0.0
+Large Pelagic Piscivores,aws_claude,0.0
+Large Pelagic Piscivores,gemini,0.2
+Large Pelagic Piscivores,gemma7,0.0
+Large Pelagic Piscivores,llama3,0.0
+Large Pelagic Piscivores,mixtral,0.0
+Soft Corals,claude,0.0
+Soft Corals,aws_claude,0.0
+Soft Corals,gemini,0.0
+Soft Corals,gemma7,0.0
+Soft Corals,llama3,0.2
+Soft Corals,mixtral,0.0
+Nearshore Seabirds,claude,0.0
+Nearshore Seabirds,aws_claude,0.0
+Nearshore Seabirds,gemini,0.2
+Nearshore Seabirds,gemma7,0.0
+Nearshore Seabirds,llama3,0.2
+Nearshore Seabirds,mixtral,0.0
+Seagrass,claude,0.2
+Seagrass,aws_claude,0.6
+Seagrass,gemini,1.0
+Seagrass,gemma7,0.0
+Seagrass,llama3,1.0
+Seagrass,mixtral,0.0
+Soft Corals and Sea Anemones,claude,0.0
+Soft Corals and Sea Anemones,aws_claude,0.0
+Soft Corals and Sea Anemones,gemini,0.0
+Soft Corals and Sea Anemones,gemma7,0.0
+Soft Corals and Sea Anemones,llama3,0.0
+Soft Corals and Sea Anemones,mixtral,1.0
+Pinnipeds (Invertebrate-Eaters),claude,0.0
+Pinnipeds (Invertebrate-Eaters),aws_claude,0.0
+Pinnipeds (Invertebrate-Eaters),gemini,0.2
+Pinnipeds (Invertebrate-Eaters),gemma7,0.0
+Pinnipeds (Invertebrate-Eaters),llama3,0.0
+Pinnipeds (Invertebrate-Eaters),mixtral,0.0
+Fisheries Discards,claude,0.0
+Fisheries Discards,aws_claude,0.0
+Fisheries Discards,gemini,0.2
+Fisheries Discards,gemma7,0.0
+Fisheries Discards,llama3,0.0
+Fisheries Discards,mixtral,0.0
+Baleen Whales,claude,1.0
+Baleen Whales,aws_claude,1.0
+Baleen Whales,gemini,0.6
+Baleen Whales,gemma7,0.0
+Baleen Whales,llama3,0.6
+Baleen Whales,mixtral,0.0
+Crustaceans,claude,0.0
+Crustaceans,aws_claude,0.2
+Crustaceans,gemini,0.0
+Crustaceans,gemma7,0.0
+Crustaceans,llama3,0.0
+Crustaceans,mixtral,0.0
+Non-Migratory Mesopelagic Fish,claude,0.0
+Non-Migratory Mesopelagic Fish,aws_claude,0.0
+Non-Migratory Mesopelagic Fish,gemini,0.4
+Non-Migratory Mesopelagic Fish,gemma7,0.0
+Non-Migratory Mesopelagic Fish,llama3,0.2
+Non-Migratory Mesopelagic Fish,mixtral,0.0
+Coastal Seabirds,claude,0.2
+Coastal Seabirds,aws_claude,0.0
+Coastal Seabirds,gemini,0.0
+Coastal Seabirds,gemma7,0.0
+Coastal Seabirds,llama3,0.0
+Coastal Seabirds,mixtral,0.0
+Sea Anemones,claude,0.0
+Sea Anemones,aws_claude,0.0
+Sea Anemones,gemini,0.0
+Sea Anemones,gemma7,0.0
+Sea Anemones,llama3,0.2
+Sea Anemones,mixtral,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",claude,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",aws_claude,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",gemini,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",gemma7,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",llama3,0.0
+"Seagrass, Mangroves, and Salt Marsh Plants",mixtral,1.0
+Benthic Invertebrates (Grazers),claude,0.0
+Benthic Invertebrates (Grazers),aws_claude,0.0
+Benthic Invertebrates (Grazers),gemini,0.6
+Benthic Invertebrates (Grazers),gemma7,0.0
+Benthic Invertebrates (Grazers),llama3,0.0
+Benthic Invertebrates (Grazers),mixtral,0.0
+Cephalopods,claude,1.0
+Cephalopods,aws_claude,1.0
+Cephalopods,gemini,0.6
+Cephalopods,gemma7,0.0
+Cephalopods,llama3,1.0
+Cephalopods,mixtral,0.0
+Pelagic Fish-eating Predators,claude,0.0
+Pelagic Fish-eating Predators,aws_claude,0.0
+Pelagic Fish-eating Predators,gemini,0.0
+Pelagic Fish-eating Predators,gemma7,0.0
+Pelagic Fish-eating Predators,llama3,0.0
+Pelagic Fish-eating Predators,mixtral,1.0
+Sperm Whales,claude,0.0
+Sperm Whales,aws_claude,0.0
+Sperm Whales,gemini,0.2
+Sperm Whales,gemma7,0.0
+Sperm Whales,llama3,0.2
+Sperm Whales,mixtral,0.0
+Dinoflagellates,claude,0.0
+Dinoflagellates,aws_claude,0.0
+Dinoflagellates,gemini,0.0
+Dinoflagellates,gemma7,0.0
+Dinoflagellates,llama3,0.4
+Dinoflagellates,mixtral,0.0
+Macrozooplankton,claude,0.0
+Macrozooplankton,aws_claude,0.2
+Macrozooplankton,gemini,0.0
+Macrozooplankton,gemma7,0.0
+Macrozooplankton,llama3,0.0
+Macrozooplankton,mixtral,0.0
+Benthic Herbivores,claude,0.0
+Benthic Herbivores,aws_claude,0.6
+Benthic Herbivores,gemini,0.0
+Benthic Herbivores,gemma7,0.0
+Benthic Herbivores,llama3,0.0
+Benthic Herbivores,mixtral,1.0
+Pinnipeds (Invertebrate-eating),claude,0.0
+Pinnipeds (Invertebrate-eating),aws_claude,0.0
+Pinnipeds (Invertebrate-eating),gemini,0.4
+Pinnipeds (Invertebrate-eating),gemma7,0.0
+Pinnipeds (Invertebrate-eating),llama3,0.0
+Pinnipeds (Invertebrate-eating),mixtral,0.0
+Sharks (Pelagic),claude,0.0
+Sharks (Pelagic),aws_claude,0.0
+Sharks (Pelagic),gemini,0.6
+Sharks (Pelagic),gemma7,0.0
+Sharks (Pelagic),llama3,0.0
+Sharks (Pelagic),mixtral,0.0

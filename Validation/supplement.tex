@@ -1,0 +1,115 @@
+\section*{Supplementary Material}
+
+\subsection*{Research Focus Specification}
+The validation process was conducted with the research focus specification: ``Future of Seafood''. This focus was consistently applied across all three study regions (Northern Territory, South East Inshore, and South East Offshore) to ensure comparability of results.
+
+\subsection*{AI Prompting Protocol}
+The following prompt was used to generate ecosystem descriptions from each AI model:
+
+\begin{verbatim}
+Given a marine area bounded by these coordinates:
+Latitude: [min_lat]° to [max_lat]°
+Longitude: [min_lon]° to [max_lon]°
+
+Please provide a detailed description of this marine area, including:
+1. The general geographic location and any notable features
+2. The type of marine environment (e.g., coastal, pelagic, reef)
+3. Typical oceanographic conditions
+4. Major habitat types present
+5. Key ecological characteristics
+
+Focus on aspects that would be relevant for ecosystem modeling.
+\end{verbatim}
+
+\subsection*{Grouping Template}
+The following table presents the complete grouping template provided to the AI models. This template served as a reference for potential functional groups, though models were not restricted to these groups and could create new ones based on regional characteristics.
+
+\begin{longtable}{p{0.3\textwidth}p{0.7\textwidth}}
+\caption{Complete Functional Group Template} \\
+\hline
+\textbf{Group Name} & \textbf{Description} \\
+\hline
+\endfirsthead
+\multicolumn{2}{c}{{\tablename} \thetable{} -- Continued} \\
+\hline
+\textbf{Group Name} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\multicolumn{2}{r}{{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+Skates and rays & Bottom-dwelling cartilaginous fish that play a role in controlling benthic prey populations \\
+Nearshore and smaller seabirds & Small gulls, terns etc that feed near shore (possibly include penguins here too) - avian predators that link marine and terrestrial ecosystems \\
+Albatrosses & Large seabirds that forage exclusively at sea, feeding on marine prey (fishes, squids, gelatinous organisms) \\
+Skuas and giant petrels & Large predatory seabirds that feed both at sea and on land, including predation on other birds \\
+Fish-eating pinnipeds & Marine mammals (seals, sea lions) that primarily prey on fish in coastal and pelagic ecosystems \\
+Invertebrate-eating pinnipeds & Marine mammals (particularly Antarctic seals) that primarily feed on krill and other invertebrates \\
+Baleen whales & Large filter-feeding marine mammals that regulate zooplankton populations and contribute to nutrient cycling \\
+Orcas & Apex predators that uniquely prey upon other top predators including marine mammals, sharks, and large fish \\
+Sperm whales & Deep-diving cetaceans that primarily feed on deep-water squid and fish \\
+Small toothed whales and dolphins & Smaller cetaceans that primarily feed on fish and squid in surface and mid-waters \\
+Sea snakes & Marine reptiles that prey primarily on fish, particularly eels and fish eggs \\
+Crocodiles & Large predatory reptiles in coastal and estuarine waters that prey on fish, birds, and mammals \\
+Turtles & Herbivores and omnivores that breed on land \\
+Planktivores & Small fishes that feed on plankton, crucial in transferring energy from plankton to larger predators \\
+Flying fish & Epipelagic fish capable of gliding above the water surface, important prey for many predators \\
+Remoras & Fish that form commensal relationships with larger marine animals, feeding on parasites and food scraps \\
+Large oceanic piscivorous fish & Fish-eating predators in open ocean environments, mid-sized non-migratory species (e.g. barracuda) \\
+Tuna and Billfish & Large oceanic predatory fish, highly mobile, often dive to feed deeper into the water column \\
+Shelf small benthivores & Small bodied fish that feed on benthic organisms, playing a key role in benthic-pelagic coupling, live in shelf waters \\
+Shelf demersal omnivorous fish & Medium sized demersal fish that feed on invertebrates as well as smaller fish, live in shelf waters \\
+Shelf medium demersal piscivores & Medium sized demersal fish living near the bottom in shallow waters, often important in benthic food webs, feed on other fish primarily, live in shelf waters \\
+Shelf large piscivores & Fish-eating predatory fishes found in various marine habitats, important in controlling prey fish populations \\
+Herbivorous demersal fish & Bottom-associated fish that primarily feed on plants, important in controlling algal growth \\
+Slope/deep water benthivores & Small to mid sized fish that feed on benthic organisms and live on the shelf or seamounts \\
+Slope/deep demersal omnivorous fish & Medium sized demersal fish that feed on invertebrates as well as smaller fish, live in slope or seamount waters \\
+Slope/deep medium demersal piscivores & Medium sized demersal fish that feed on other fish primarily, live in slope or seamount waters \\
+Slope/deep large piscivores & Fish-eating predatory fishes found in various marine habitats in deeper water, live in slope or seamount waters \\
+Migratory mesopelagic fish & Fish living in the mesopelagic zone, undertake diel vertical migration, important in energy transfer between depths \\
+Non-migratory mesopelagic fish & Fish living in the mesopelagic zone, non-migratory species, important in energy transfer between depths \\
+Reef sharks & Top predators in coral reef ecosystems, controlling fish populations and maintaining reef health \\
+Pelagic sharks & Open-ocean predators that help regulate populations of fishes and squids \\
+Demersal sharks & Bottom-dwelling sharks, including dogfishes, that control populations of fishes and invertebrates on and near the seafloor \\
+Cephalopods & Intelligent mollusks like squid and octopus, important predators in many marine ecosystems \\
+Hard corals & Reef-building colonial animals that create complex habitat structure through calcium carbonate deposition \\
+Soft corals & Colonial animals that contribute to reef habitat complexity without building calcium carbonate structures \\
+Sea anemones & Predatory anthozoans that can form symbiotic relationships with fish and crustaceans \\
+Hydrothermal vent communities & Specialized organisms living around deep-sea vents, including chemosynthetic bacteria and associated fauna \\
+Cold seep communities & Organisms adapted to methane and sulfide-rich environments on the seafloor \\
+Deep-sea glass sponges & Filter-feeding animals that create complex deep-water habitats and are important in silicon cycling \\
+Sea cucumbers & Deposit-feeding echinoderms important in sediment processing and bioturbation \\
+Sea urchins & Herbivorous echinoderms that can control macroalgal abundance and affect reef structure \\
+Crown-of-thorns starfish & Coral-eating sea stars that can significantly impact reef health during population outbreaks \\
+Benthic filter feeders & Bottom-dwelling organisms that filter water for food, important in nutrient cycling and regulating water quality in various depths - bivalves, crinoids, sponges \\
+Macrozoobenthos & Mobile large bottom-dwelling invertebrates in both shallow and deep waters, important in benthic food webs and bioturbation (predatory or omnivorous) \\
+Benthic grazers & Bottom-dwelling organisms that graze on algae and detritus, influencing benthic community structure \\
+Prawns & Small crustaceans that are important in benthic and pelagic food webs \\
+Meiobenthos & Tiny bottom-dwelling organisms, important in sediment processes and as food for larger animals \\
+Deposit feeders & Animals that feed on organic matter in sediments, important in nutrient cycling \\
+Benthic infaunal carnivores & Predatory animals living within the seafloor sediments \\
+Sedimentary Bacteria & Microscopic organisms crucial in nutrient cycling and the microbial loop in marine ecosystems \\
+Large carnivorous zooplankton & Fish larvae, arrow worms and other large predatory zooplankton \\
+Antarctic krill & Key species in Antarctic food webs, particularly important as prey for whales, seals, and seabirds \\
+Ice-associated algae & Microalgae living within and on the underside of sea ice, important primary producers in polar regions \\
+Ice-associated fauna & Specialized invertebrates living in association with sea ice, important in polar food webs \\
+Mesozooplankton & Medium-sized zooplankton (200 µm to 2 cm) that feed on smaller plankton and serve as food for larger animals \\
+Microzooplankton & Tiny zooplankton (20 µm to 200 µm) that graze on phytoplankton and bacteria, forming a crucial link in the microbial food web \\
+Pelagic tunicates & Including larvaceans, salps, and pyrosomes, important in marine snow formation and carbon cycling \\
+Jellyfish & Predatory gelatinous species \\
+Diatoms & Larger phytoplankton (20 µm to 200 µm), silica dependent important primary producers in marine ecosystems \\
+Dinoflagellates & Mixotrophic species (20 µm to 200 µm) that can switch between primary production and consumption as needed \\
+Nanoplankton & Plankton ranging from 2 µm to 20 µm in size, including small algae and protozoans \\
+Picoplankton & Plankton ranging from 0.2 µm to 2 µm in size, including both photosynthetic and heterotrophic organisms \\
+Microalgae (microphytobenthos) & Microscopic algae that live on the seafloor or attached to other organisms \\
+Pelagic bacteria & Watercolumn dwelling bacteria, consume marine snow amongst other things \\
+Seagrass & Marine flowering plants that form important coastal habitats and nursery areas \\
+Mangroves & Salt-tolerant trees forming critical coastal nursery habitats and protecting shorelines \\
+Salt marsh plants & Coastal vegetation adapted to periodic flooding, important in nutrient cycling and shoreline protection \\
+Macroalgae & Seaweeds of various sizes that provide habitat and food for many species, including both canopy and understory forms \\
+Symbiotic zooxanthellae & Photosynthetic dinoflagellates living within coral and other marine invertebrates \\
+Cleaner fish and shrimp & Species that remove parasites from other marine animals, important in reef health \\
+Discards & Carrion and freshly discarded material from fisheries activities \\
+Detritus & Labile components of natural death and waste \\
+\end{longtable}

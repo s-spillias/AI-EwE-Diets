@@ -1,0 +1,130 @@
+# Manuscript Organization
+
+## Main Manuscript Structure
+
+1. Introduction [DONE]
+   - Context: EwE models and diet matrix challenges
+   - Challenge: Need for automated, validated approaches
+   - Framework Overview: AI-assisted diet matrix parameterization
+   - Key Aims:
+     * Present AI-assisted framework
+     * Validate AI decision-making steps
+     * Assess framework adaptability
+   - Validation Regions:
+     * Northern Territory
+     * South East Inshore
+     * South East Offshore
+
+2. Methods [DONE]
+   - AI-Assisted Framework Overview
+     * Species identification and grouping pipeline
+     * Data integration approach
+     * Parameter estimation process
+   - Validation Framework
+     * Multi-region validation design
+     * Consistency metrics
+     * Ecological validity assessment
+   - Study Regions
+     * Environmental characteristics
+     * Data availability
+     * Known ecological patterns
+
+3. Results [DONE]
+   - Regional Ecosystem Understanding
+     * AI-generated ecosystem descriptions
+     * Comparison with known characteristics
+   - Functional Group Consistency
+     * Cross-region comparisons
+     * Inter-model variation
+     * Stability metrics
+   - Ecological Validity
+     * Alignment with established principles
+     * Regional specialization
+     * Expert assessment results
+
+4. Discussion [IN PROGRESS]
+   - Framework Validation Insights
+   - Regional Adaptation Capabilities
+   - Limitations and Uncertainties
+   - Applications for EBFM
+   - Future Directions
+     * Extension to other regions
+     * Integration with Western Australian shelf model
+     * Framework improvements
+
+## Supplement Structure
+
+1. Technical Implementation [TODO]
+   - AI Framework Details
+   - Data Processing Methods
+   - Validation Metrics
+
+2. Regional Analysis [TODO]
+   - Detailed Regional Characteristics
+   - Complete Validation Results
+   - Statistical Analyses
+
+3. Model Documentation [TODO]
+   - Regional Group Definitions
+   - Consistency Matrices
+   - Parameter Sets
+
+4. Technical Appendices [TODO]
+   - Implementation Code
+   - Validation Scripts
+   - Data Processing Pipelines
+
+# Implementation Tasks
+
+## Phase 1: Setup [IN PROGRESS]
+- [x] Create supplement.tex in manuscript folder
+- [x] Set up cross-referencing between main and supplement
+- [x] Update manuscript.tex to include supplement
+- [ ] Fix LaTeX compilation errors:
+  * Update figure paths in results.tex
+  * Fix math mode in supplement.tex
+
+## Phase 2: Content Reorganization [TODO]
+- [ ] Revise introduction.tex with new aims
+- [ ] Create new methods.tex focused on validation
+- [ ] Update results.tex with validation findings
+- [ ] Revise discussion.tex with future work section
+- [ ] Move technical details to supplement
+
+## Phase 3: Regional Integration [TODO]
+- [ ] Integrate Northern Territory analysis
+- [ ] Integrate South East Inshore analysis
+- [ ] Integrate South East Offshore analysis
+- [ ] Add cross-region comparisons
+
+## Phase 4: Technical Documentation [TODO]
+- [ ] Document AI implementation details
+- [ ] Document validation framework
+- [ ] Include code references
+- [ ] Add data processing workflows
+
+## Phase 5: Review and Refinement [TODO]
+- [ ] Check cross-references
+- [ ] Verify citations
+- [ ] Review figure placements
+- [ ] Ensure consistent terminology
+
+# Progress Tracking
+
+Current Status: Methods and Results complete, moving to Discussion
+Next Step: Develop discussion section focusing on validation insights and regional adaptation capabilities
+Last Updated: [Current Date]
+
+Issues to Address:
+1. Figure paths in results.tex need to be updated (defer to final phase)
+2. Math mode markers missing in supplement.tex (defer to final phase)
+3. Need to ensure all referenced files are in correct locations
+4. Methods section needs to be reorganized to:
+   - Present framework steps clearly
+   - Detail validation approach
+   - Describe study regions
+
+Notes:
+- Keep track of any decisions or changes here
+- Document any challenges or questions that arise
+- Note any dependencies between tasks

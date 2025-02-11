@@ -1,0 +1,8 @@
+{
+  "base_name": "NorthernTerritory",
+  "num_iterations": 1,
+  "iteration_dirs": [
+    "MODELS\\NorthernTerritory_validation_1"
+  ],
+  "timestamp": "2025-01-20_15-41-20"
+}

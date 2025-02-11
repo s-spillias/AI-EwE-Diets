@@ -1,0 +1,87 @@
+{
+  "growth_rate": {
+    "definition": "The rate at which individuals in the group increase in biomass over time",
+    "units": "per year",
+    "notes": "Can be derived from von Bertalanffy growth parameters in fish"
+  },
+  "mortality_rate": {
+    "definition": "Natural mortality rate excluding fishing mortality",
+    "units": "per year",
+    "notes": "Can be estimated using empirical relationships or life history parameters"
+  },
+  "consumption_rate": {
+    "definition": "The amount of prey consumed per unit of biomass per time",
+    "units": "per year",
+    "notes": "Often expressed as Q/B (consumption/biomass) ratio"
+  },
+  "production_rate": {
+    "definition": "The rate of biomass production per unit of biomass",
+    "units": "per year",
+    "notes": "Often expressed as P/B (production/biomass) ratio"
+  },
+  "trophic_level": {
+    "definition": "Position of the group in the food web based on number of feeding links from primary producers",
+    "units": "dimensionless",
+    "notes": "Primary producers = 1, primary consumers ≈ 2, etc."
+  },
+  "aging_rate": {
+    "definition": "The rate at which individuals progress through age classes or life stages",
+    "units": "per year",
+    "notes": "Important for age-structured populations and life history modeling"
+  },
+  "carrying_capacity": {
+    "definition": "Maximum sustainable population size in a given environment",
+    "units": "biomass per area",
+    "notes": "Depends on resource availability and environmental conditions"
+  },
+  "linear_mortality": {
+    "definition": "Death rate that is directly proportional to population density",
+    "units": "per year",
+    "notes": "First-order mortality term in population dynamics"
+  },
+  "quadratic_mortality": {
+    "definition": "Death rate that increases with the square of population density",
+    "units": "per biomass per year",
+    "notes": "Represents density-dependent mortality effects"
+  },
+  "inflexion_point_of_the_density_dependent_local_recruitment_term": {
+    "definition": "Population density at which recruitment rate changes from increasing to decreasing",
+    "units": "biomass per area",
+    "notes": "Critical point in stock-recruitment relationships"
+  },
+  "clearing_rate": {
+    "definition": "Volume of water cleared of prey items per unit time",
+    "units": "volume per time",
+    "notes": "Important for filter feeders and planktivorous species"
+  },
+  "assimilation_rate": {
+    "definition": "Proportion of consumed energy that is absorbed and available for growth and metabolism",
+    "units": "dimensionless",
+    "notes": "Typically expressed as a fraction between 0 and 1"
+  },
+  "coefficient_of_external_recruitment": {
+    "definition": "Rate of population increase due to immigration from outside the system",
+    "units": "per year",
+    "notes": "Important for open marine populations"
+  },
+  "coefficient_of_self_recruitment": {
+    "definition": "Rate of population increase due to local reproduction",
+    "units": "per year",
+    "notes": "Represents the contribution of local spawning to population growth"
+  },
+  "coefficient_of_advection_recruitment": {
+    "definition": "Rate of population change due to transport by water currents",
+    "units": "per year",
+    "notes": "Important for planktonic stages and passive dispersal"
+  },
+  "coefficient_of_light_absorption": {
+    "definition": "Rate at which light intensity decreases with water depth",
+    "units": "per meter",
+    "notes": "Critical for photosynthetic organisms and visual predators"
+  },
+  "the_half_saturation_constant_of_light_absorption": {
+    "definition": "Light intensity at which photosynthetic rate is half of its maximum",
+    "units": "μmol photons per m² per second",
+    "notes": "Key parameter in photosynthesis-irradiance relationships"
+  }
+}

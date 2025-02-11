@@ -1,0 +1,36 @@
+group,stability_score,total_unique_members,avg_members_per_iteration
+Picoplankton,0.95,5,4.2
+Nanoplankton,0.9729064039408867,203,185.4
+Benthivores,0.9732398825565854,462,448.8
+Shallow demersal fish,0.9750411353352529,221,216.2
+Microzooplankton,0.9856965174129353,402,397.4
+Benthic infaunal carnivores,0.9864457831325302,664,642.4
+Deep demersal fish,0.9883720930232558,516,513.6
+Nano-Picoplankton,0.9910714285714286,56,55.6
+Benthic carnivores,0.9945487583282859,1651,1636.6
+Planktivores,0.9950657894736843,152,151.4
+Deposit feeders,0.9963833634719711,553,551.8
+Macrozoobenthos,0.9985443959243085,2061,2059.8
+Microplankton,0.9993215739484396,737,735.4
+Jellyfish,1.0,293,293.0
+Mesozooplankton,1.0,508,508.0
+Macroalgae,1.0,549,549.0
+Cephalopods,1.0,196,196.0
+Meiobenthos,1.0,290,290.0
+Benthic filter feeders,1.0,3130,3130.0
+Toothed whales and dolphins,1.0,38,38.0
+Seagrass,1.0,28,28.0
+Baleen whales,1.0,14,14.0
+Pinnipeds,1.0,14,14.0
+Larvaceans,1.0,16,16.0
+Marine reptiles,1.0,11,11.0
+Demersal sharks,1.0,116,116.0
+Pelagic sharks,1.0,29,29.0
+Skates and rays,1.0,73,73.0
+Seabirds,1.0,236,236.0
+Mesopelagic fish,1.0,251,251.0
+Herbivorous demersal fish,1.0,74,74.0
+Oceanic piscivorous fish,1.0,103,103.0
+Piscivores,1.0,193,193.0
+Benthic grazers,1.0,1241,1241.0
+Bacteria,1.0,471,471.0

@@ -1,0 +1,116 @@
+AI Model,gemini,gemini,gemini,claude,claude,claude
+Iteration,1,2,3,1,2,3
+Albatrosses,0,0,1,0,0,0
+Albatrosses and Large Petrels,0,0,0,0,1,0
+Antarctic Krill,0,1,0,0,0,0
+Baleen Whales,1,1,1,1,1,1
+Benthic Filter Feeders,0,1,1,0,1,0
+Benthic Grazers,0,1,1,0,0,0
+Benthic Infaunal Carnivores,0,1,0,0,0,0
+Benthic Invertebrates,0,0,0,1,0,0
+Benthic Invertebrates (Commercial),0,0,0,0,1,1
+Benthic Invertebrates (Macrozoobenthos),0,0,1,0,0,0
+Benthic Invertebrates (Other),0,0,0,0,1,1
+Benthic Primary Producers,0,0,0,0,1,0
+Billfish,0,0,0,0,1,0
+Cephalopods,1,1,0,1,0,1
+Cephalopods (Squid & Octopus),0,0,1,0,0,0
+Coastal Pelagic Piscivorous Fish,1,0,0,0,0,0
+Coastal Pelagic Planktivorous Fish,1,0,0,0,0,0
+Coastal Seabirds,0,0,0,0,0,1
+Crown-of-Thorns Starfish (if applicable),0,1,0,0,0,0
+Deep-Sea Benthivores,1,0,0,0,0,0
+Demersal Sharks,0,1,1,1,1,1
+Deposit Feeders,0,1,0,0,0,0
+Detritus,1,1,1,1,1,1
+Discards,0,1,0,0,0,0
+Filter Feeders,0,0,0,0,0,1
+Fish-eating Pinnipeds,0,1,1,0,0,0
+Flying Fish,0,0,1,0,0,0
+Gelatinous Zooplankton,0,0,0,1,1,1
+Invertebrate-eating Pinnipeds,0,1,1,0,0,0
+Kelp Forests,1,0,0,0,0,0
+Large Carnivorous Zooplankton,0,1,1,0,0,0
+Large Demersal Fish,0,0,0,0,1,0
+Large Diatoms,0,0,0,1,1,0
+Large Oceanic Piscivorous Fish,0,1,0,0,0,0
+Large Oceanic Piscivorous Fish (Mid-Sized),0,0,1,0,0,0
+Large Pelagic Fish,0,0,0,1,0,1
+Large Pelagic Piscivorous Fish,1,0,0,0,0,0
+Large Pelagic Sharks,0,0,0,0,1,0
+Large Seabirds,0,0,0,0,0,1
+Large Squid,0,0,0,0,1,0
+Large Zooplankton,0,0,0,1,1,1
+Macroalgae,0,0,0,0,0,1
+Macrozoobenthos (Predatory/Omnivorous),0,1,0,0,0,0
+Medium Demersal Fish,0,0,0,0,1,0
+Medium Pelagic Fish,0,0,0,1,0,1
+Meiobenthos,0,1,1,0,0,0
+Mesopelagic Fish,0,0,0,1,1,1
+Mesopelagic Fish (Migratory),1,0,0,0,0,0
+Mesopelagic Fish (Non-Migratory),1,0,0,0,0,0
+Mesozooplankton,0,1,0,1,1,0
+Microphytobenthos,0,0,1,0,0,0
+Microzooplankton,0,1,1,0,0,0
+Migratory Mesopelagic Fish,0,1,1,0,0,0
+Non-Migratory Mesopelagic Fish,0,1,1,0,0,0
+Orcas,1,1,1,0,0,0
+Other Tunas,0,0,0,1,0,0
+Pelagic Sharks,0,1,1,1,0,1
+Pelagic Zooplankton,1,0,0,0,0,0
+Phytoplankton,0,0,0,0,0,1
+Phytoplankton (Diatoms & Dinoflagellates),0,0,1,0,0,0
+Pinnipeds (Fish-eating),1,0,0,0,0,0
+Pinnipeds (Invertebrate-eating),1,0,0,0,0,0
+Planktivores (Coastal),0,1,0,0,0,0
+Planktivores (Pelagic),0,1,0,0,0,0
+Planktivores (Small Pelagic Fish),0,0,1,0,0,0
+Primary Producers (Coastal),0,1,0,0,0,0
+Primary Producers (Ice-associated),0,1,0,0,0,0
+Primary Producers (Pelagic),0,1,0,0,0,0
+Reef Sharks (if applicable),0,1,0,0,0,0
+Reef-Associated Fish,0,0,0,0,1,1
+Rocky Reefs,1,0,0,0,0,0
+Sea Cucumbers,0,1,0,0,0,0
+Sea Ice Algae (if applicable),0,0,1,0,0,0
+Sea Ice Fauna (if applicable),0,0,1,0,0,0
+Sea Urchins,0,1,0,0,0,0
+Seabirds (Nearshore & Smaller),0,0,1,0,0,0
+Seabirds (Nearshore),1,1,0,0,0,0
+Seabirds (Pelagic),1,1,0,0,0,0
+Seabirds (Predatory),0,1,0,0,0,0
+Seagrass,1,0,0,0,0,0
+Seals,0,0,0,1,1,1
+Sedimentary Bacteria,0,0,1,0,0,0
+Shelf Demersal Benthic Invertebrates,1,0,0,0,0,0
+Shelf Demersal Fish,0,0,0,1,0,1
+Shelf Demersal Omnivorous Fish,1,1,1,0,0,0
+Shelf Demersal Piscivorous Fish,1,0,0,0,0,0
+Shelf Demersal Small Benthivorous Fish,1,0,0,0,0,0
+Shelf Large Piscivores,0,1,1,0,0,0
+Shelf Medium Demersal Piscivores,0,1,1,0,0,0
+Shelf Small Benthivores,0,1,1,0,0,0
+Skuas and Giant Petrels,0,0,1,0,0,0
+Slope Demersal Benthivores,1,0,0,0,0,0
+Slope Demersal Fish,0,0,0,1,0,1
+Slope Demersal Piscivores,1,0,0,0,0,0
+Slope/Deep Demersal Omnivorous Fish,0,1,1,0,0,0
+Slope/Deep Large Piscivores,0,1,1,0,0,0
+Slope/Deep Medium Demersal Piscivores,0,1,1,0,0,0
+Slope/Deep Water Benthivores,0,1,1,0,0,0
+Small Pelagic Fish,0,0,0,1,1,1
+Small Pelagic Fish (Planktivorous),1,0,0,0,0,0
+Small Phytoplankton,0,0,0,1,1,0
+Small Seabirds,0,0,0,0,1,0
+Small Squid,0,0,0,0,1,0
+Small Toothed Whales and Dolphins,0,0,1,0,0,0
+Small Zooplankton,0,0,0,0,0,1
+Soft Sediments,1,0,0,0,0,0
+Southern Bluefin Tuna,0,0,0,1,0,0
+Sperm Whales,1,1,1,0,0,0
+Subantarctic Zooplankton,0,0,1,0,0,0
+Temperate Zooplankton,0,0,1,0,0,0
+Toothed Whales,0,0,0,1,1,1
+Toothed Whales (Small),1,1,0,0,0,0
+Tuna,0,0,0,0,1,0
+Tuna and Billfish,0,1,1,0,0,0

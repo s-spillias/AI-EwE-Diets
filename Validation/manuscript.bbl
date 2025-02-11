@@ -1,0 +1,94 @@
+\begin{thebibliography}{12}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Christensen and Walters(2004)]{Christensen2004}
+Villy Christensen and Carl~J Walters.
+\newblock Ecopath with ecosim: methods, capabilities and limitations.
+\newblock \emph{Ecological Modelling}, 172\penalty0 (2-4):\penalty0 109--139,
+  2004.
+
+\bibitem[Coll et~al.(2015)Coll, Akoglu, Arregu{\'\i}n-S{\'a}nchez, Fulton,
+  Gascuel, Heymans, Libralato, Mackinson, Palomera, Piroddi, et~al.]{Coll2015}
+Marta Coll, Ekin Akoglu, Francisco Arregu{\'\i}n-S{\'a}nchez, Elizabeth~A
+  Fulton, Didier Gascuel, Johanna~J Heymans, Simone Libralato, Steven
+  Mackinson, Isabel Palomera, Chiara Piroddi, et~al.
+\newblock Modelling dynamic ecosystems: venturing beyond boundaries with the
+  ecopath approach.
+\newblock \emph{Reviews in Fish Biology and Fisheries}, 25\penalty0
+  (2):\penalty0 413--424, 2015.
+
+\bibitem[Coll{\'e}ter et~al.(2015)Coll{\'e}ter, Valls, Guitton, Gascuel, Pauly,
+  and Christensen]{Colleter2015}
+Mathieu Coll{\'e}ter, Audrey Valls, J{\'e}r{\^o}me Guitton, Didier Gascuel,
+  Daniel Pauly, and Villy Christensen.
+\newblock Global overview of the applications of the ecopath with ecosim
+  modeling approach using the ecobase models repository.
+\newblock \emph{Ecological Modelling}, 302:\penalty0 42--53, 2015.
+
+\bibitem[Collie et~al.(2016)Collie, Botsford, Hastings, Kaplan, Largier,
+  Livingston, Plagányi, Rose, Wells, and Werner]{Collie2016}
+Jeremy~S Collie, Louis~W Botsford, Alan Hastings, Isaac~C Kaplan, John~L
+  Largier, Patricia~A Livingston, Éva Plagányi, Kenneth~A Rose, Brian~K
+  Wells, and Francisco~E Werner.
+\newblock Ecosystem models for fisheries management: finding the sweet spot.
+\newblock \emph{Fish and Fisheries}, 17:\penalty0 101--125, 2016.
+\newblock \doi{10.1111/faf.12093}.
+
+\bibitem[{European Commission}(2013)]{EuropeanCommission2013}
+{European Commission}.
+\newblock Regulation (eu) no 1380/2013 of the european parliament and of the
+  council of 11 december 2013 on the common fisheries policy.
+\newblock Technical report, Official Journal of the European Union, 2013.
+
+\bibitem[FAO(2003)]{FAO2003}
+FAO.
+\newblock The ecosystem approach to fisheries: issues, terminology, principles,
+  institutional foundations, implementation and outlook.
+\newblock Technical Report 443, Food and Agriculture Organization of the United
+  Nations, 2003.
+
+\bibitem[Heymans et~al.(2016)Heymans, Coll, Link, Mackinson, Steenbeek,
+  Walters, and Christensen]{Heymans2016}
+Johanna~J Heymans, Marta Coll, Jason~S Link, Steven Mackinson, Jeroen
+  Steenbeek, Carl Walters, and Villy Christensen.
+\newblock Best practice in ecopath with ecosim food-web models for
+  ecosystem-based management.
+\newblock \emph{Ecological Modelling}, 331:\penalty0 173--184, 2016.
+
+\bibitem[Link(2010)]{Link2010}
+Jason~S Link.
+\newblock Adding rigor to ecological network models by evaluating a set of
+  pre-balance diagnostics: a plea for prebal.
+\newblock \emph{Ecological Modelling}, 221\penalty0 (12):\penalty0 1582--1593,
+  2010.
+
+\bibitem[{National Oceanic and Atmospheric Administration}(2016)]{NOAA2016}
+{National Oceanic and Atmospheric Administration}.
+\newblock Ecosystem-based fisheries management policy.
+\newblock Technical report, NOAA Fisheries, 2016.
+
+\bibitem[Plagányi(2007)]{Plaganyi2007}
+{\'E}va~E Plagányi.
+\newblock Models for an ecosystem approach to fisheries.
+\newblock \emph{FAO Fisheries Technical Paper}, 477, 2007.
+
+\bibitem[Plagányi and Butterworth(2004)]{PlaganyiButterworth2004}
+{\'E}va~E Plagányi and Doug~S Butterworth.
+\newblock A critical look at the potential of ecopath with ecosim to assist in
+  practical fisheries management.
+\newblock \emph{African Journal of Marine Science}, 26\penalty0 (1):\penalty0
+  261--287, 2004.
+
+\bibitem[Villasante et~al.(2016)Villasante, Arregu{\'\i}n-S{\'a}nchez, Heymans,
+  Libralato, Piroddi, Christensen, and Coll]{Villasante2016}
+Sebastian Villasante, Francisco Arregu{\'\i}n-S{\'a}nchez, Johanna~J Heymans,
+  Simone Libralato, Chiara Piroddi, Villy Christensen, and Marta Coll.
+\newblock Modelling complex systems of multiple species for ecosystem based
+  management.
+\newblock \emph{Ecological Modelling}, 326:\penalty0 68--76, 2016.
+
+\end{thebibliography}

@@ -1,0 +1,191 @@
+Group,AI Model,Consistency
+Coral Reef Fish (Piscivores),gemini,0.3333333333333333
+Coral Reef Fish (Piscivores),claude,0.0
+Sedimentary Bacteria,gemini,0.3333333333333333
+Sedimentary Bacteria,claude,0.0
+Demersal Fish (Shallow),gemini,0.3333333333333333
+Demersal Fish (Shallow),claude,0.0
+Phytoplankton,gemini,0.0
+Phytoplankton,claude,1.0
+Cephalopods,gemini,0.6666666666666666
+Cephalopods,claude,1.0
+Small Pelagic Fish (Invertebrate Feeders),gemini,0.3333333333333333
+Small Pelagic Fish (Invertebrate Feeders),claude,0.0
+Benthic Primary Producers,gemini,0.0
+Benthic Primary Producers,claude,0.6666666666666666
+Zooplankton (Herbivores),gemini,0.3333333333333333
+Zooplankton (Herbivores),claude,0.0
+Demersal Fishes (Omnivores),gemini,0.3333333333333333
+Demersal Fishes (Omnivores),claude,0.0
+Mangrove Associated Fauna,gemini,0.3333333333333333
+Mangrove Associated Fauna,claude,0.0
+Large Pelagic Fish,gemini,0.0
+Large Pelagic Fish,claude,1.0
+Crocodiles,gemini,0.3333333333333333
+Crocodiles,claude,0.0
+Benthic Invertivores,gemini,0.0
+Benthic Invertivores,claude,0.6666666666666666
+Large Crustaceans,gemini,0.0
+Large Crustaceans,claude,0.6666666666666666
+Demersal Fishes (Benthivores),gemini,0.3333333333333333
+Demersal Fishes (Benthivores),claude,0.0
+Pelagic Planktivores,gemini,0.0
+Pelagic Planktivores,claude,0.3333333333333333
+Mangrove Forests,gemini,0.3333333333333333
+Mangrove Forests,claude,0.0
+Pelagic Plankton (Phytoplankton),gemini,0.3333333333333333
+Pelagic Plankton (Phytoplankton),claude,0.0
+Small Pelagic Fish (Planktivores),gemini,0.6666666666666666
+Small Pelagic Fish (Planktivores),claude,0.0
+Reef Fishes (Herbivores),gemini,0.3333333333333333
+Reef Fishes (Herbivores),claude,0.0
+Reef Fish (Planktivores),gemini,0.3333333333333333
+Reef Fish (Planktivores),claude,0.0
+Coral Reef Fish (Herbivores),gemini,0.3333333333333333
+Coral Reef Fish (Herbivores),claude,0.0
+Other Marine Reptiles (Sea Snakes),gemini,0.3333333333333333
+Other Marine Reptiles (Sea Snakes),claude,0.0
+Demersal Piscivores,gemini,0.0
+Demersal Piscivores,claude,0.6666666666666666
+Soft Corals and Other Benthic Invertebrates,gemini,0.3333333333333333
+Soft Corals and Other Benthic Invertebrates,claude,0.0
+Medium Pelagic Fish (Piscivores),gemini,0.3333333333333333
+Medium Pelagic Fish (Piscivores),claude,0.0
+Reef-Building Corals,gemini,0.6666666666666666
+Reef-Building Corals,claude,0.0
+Large Zooplankton,gemini,0.0
+Large Zooplankton,claude,1.0
+Dolphins and Small Toothed Whales,gemini,0.0
+Dolphins and Small Toothed Whales,claude,1.0
+Large Pelagic Fish (Piscivores),gemini,0.3333333333333333
+Large Pelagic Fish (Piscivores),claude,0.0
+Benthic Deposit Feeders,gemini,0.0
+Benthic Deposit Feeders,claude,0.3333333333333333
+Seagrass,gemini,0.3333333333333333
+Seagrass,claude,1.0
+Zooplankton (Large Carnivores),gemini,0.3333333333333333
+Zooplankton (Large Carnivores),claude,0.0
+Coral Reef Fish (Planktivores),gemini,0.3333333333333333
+Coral Reef Fish (Planktivores),claude,0.0
+Benthic Invertebrates (Carnivores),gemini,0.3333333333333333
+Benthic Invertebrates (Carnivores),claude,0.0
+Reef Fish (Herbivores),gemini,0.3333333333333333
+Reef Fish (Herbivores),claude,0.0
+Reef Fishes (Omnivores),gemini,0.3333333333333333
+Reef Fishes (Omnivores),claude,0.0
+Marine Mammals (Pinnipeds),gemini,1.0
+Marine Mammals (Pinnipeds),claude,0.0
+Reef Sharks,gemini,1.0
+Reef Sharks,claude,1.0
+Demersal Fish (Deep),gemini,0.3333333333333333
+Demersal Fish (Deep),claude,0.0
+Small Zooplankton,gemini,0.0
+Small Zooplankton,claude,0.6666666666666666
+Sea Turtles,gemini,1.0
+Sea Turtles,claude,1.0
+Medium-sized Pelagic Fish (Piscivores),gemini,0.3333333333333333
+Medium-sized Pelagic Fish (Piscivores),claude,0.0
+Commercial Prawns,gemini,0.0
+Commercial Prawns,claude,0.3333333333333333
+Herbivorous Reef Fish,gemini,0.0
+Herbivorous Reef Fish,claude,1.0
+Demersal Fishes (Piscivores),gemini,0.3333333333333333
+Demersal Fishes (Piscivores),claude,0.0
+Hard Corals,gemini,0.3333333333333333
+Hard Corals,claude,0.6666666666666666
+Demersal Fish (Omnivores),gemini,0.3333333333333333
+Demersal Fish (Omnivores),claude,0.0
+Reef Fishes (Piscivores),gemini,0.3333333333333333
+Reef Fishes (Piscivores),claude,0.0
+Benthic Filter Feeders,gemini,0.3333333333333333
+Benthic Filter Feeders,claude,1.0
+Baleen Whales,gemini,0.0
+Baleen Whales,claude,1.0
+Demersal Fish (Piscivores),gemini,0.3333333333333333
+Demersal Fish (Piscivores),claude,0.0
+Seabirds (Pelagic),gemini,1.0
+Seabirds (Pelagic),claude,0.0
+Seagrasses,gemini,0.6666666666666666
+Seagrasses,claude,0.0
+Reef Fish (Piscivores),gemini,0.3333333333333333
+Reef Fish (Piscivores),claude,0.0
+Coral Reef Builders,gemini,0.0
+Coral Reef Builders,claude,0.3333333333333333
+Microzooplankton,gemini,0.3333333333333333
+Microzooplankton,claude,0.0
+Macrozoobenthos (Predatory/Omnivorous),gemini,0.3333333333333333
+Macrozoobenthos (Predatory/Omnivorous),claude,0.0
+Apex Predatory Sharks,gemini,0.0
+Apex Predatory Sharks,claude,1.0
+Marine Mammals (Cetaceans),gemini,1.0
+Marine Mammals (Cetaceans),claude,0.0
+Benthic Invertebrates (Grazers),gemini,0.3333333333333333
+Benthic Invertebrates (Grazers),claude,0.0
+Reef-Associated Piscivores,gemini,0.0
+Reef-Associated Piscivores,claude,1.0
+Medium Pelagic Fish,gemini,0.0
+Medium Pelagic Fish,claude,0.3333333333333333
+Large Pelagic Fish (Tuna & Billfish),gemini,0.3333333333333333
+Large Pelagic Fish (Tuna & Billfish),claude,0.0
+Demersal Fish,gemini,0.0
+Demersal Fish,claude,0.3333333333333333
+Mesozooplankton,gemini,0.3333333333333333
+Mesozooplankton,claude,0.3333333333333333
+Detritus,gemini,1.0
+Detritus,claude,1.0
+Coral Reef Fish (Invertebrate Feeders),gemini,0.3333333333333333
+Coral Reef Fish (Invertebrate Feeders),claude,0.0
+Phytoplankton (Diatoms),gemini,0.3333333333333333
+Phytoplankton (Diatoms),claude,0.0
+Fisheries Discards,gemini,0.3333333333333333
+Fisheries Discards,claude,0.0
+Reef Fish (Invertebrate Feeders),gemini,0.3333333333333333
+Reef Fish (Invertebrate Feeders),claude,0.0
+Benthic Invertebrates (Filter Feeders),gemini,0.3333333333333333
+Benthic Invertebrates (Filter Feeders),claude,0.0
+Benthic Invertebrates (Shallow),gemini,0.3333333333333333
+Benthic Invertebrates (Shallow),claude,0.0
+Reef-Associated Planktivores,gemini,0.0
+Reef-Associated Planktivores,claude,0.6666666666666666
+Macroalgae,gemini,0.0
+Macroalgae,claude,0.3333333333333333
+Phytoplankton (Dinoflagellates),gemini,0.3333333333333333
+Phytoplankton (Dinoflagellates),claude,0.0
+Seagrass Associated Fauna,gemini,0.3333333333333333
+Seagrass Associated Fauna,claude,0.0
+Seabirds (Nearshore),gemini,1.0
+Seabirds (Nearshore),claude,0.0
+Pelagic Plankton (Zooplankton),gemini,0.3333333333333333
+Pelagic Plankton (Zooplankton),claude,0.0
+Coral-Associated Fish,gemini,0.0
+Coral-Associated Fish,claude,0.6666666666666666
+Dugongs,gemini,0.0
+Dugongs,claude,0.3333333333333333
+Zooxanthellae,gemini,0.3333333333333333
+Zooxanthellae,claude,0.0
+Reef Planktivores,gemini,0.0
+Reef Planktivores,claude,0.3333333333333333
+Pelagic Fish (Planktivores),gemini,0.3333333333333333
+Pelagic Fish (Planktivores),claude,0.0
+Planktonic Primary Producers,gemini,0.3333333333333333
+Planktonic Primary Producers,claude,0.0
+Sea Snakes,gemini,0.6666666666666666
+Sea Snakes,claude,0.0
+Benthic Invertebrates (Deposit Feeders),gemini,0.3333333333333333
+Benthic Invertebrates (Deposit Feeders),claude,0.0
+Demersal Fish (Benthivores),gemini,0.3333333333333333
+Demersal Fish (Benthivores),claude,0.0
+Benthic Invertebrates (Deep),gemini,0.3333333333333333
+Benthic Invertebrates (Deep),claude,0.0
+Soft Corals,gemini,0.3333333333333333
+Soft Corals,claude,1.0
+Mangroves,gemini,0.6666666666666666
+Mangroves,claude,0.0
+Pelagic Sharks,gemini,1.0
+Pelagic Sharks,claude,0.0
+Pelagic Fish (Piscivores),gemini,0.3333333333333333
+Pelagic Fish (Piscivores),claude,0.0
+Other Reef Invertebrates,gemini,0.3333333333333333
+Other Reef Invertebrates,claude,0.0
+Small Pelagic Fish,gemini,0.0
+Small Pelagic Fish,claude,0.6666666666666666

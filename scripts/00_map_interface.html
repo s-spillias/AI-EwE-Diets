@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EwE Map Interface</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: var(--primary-color);
+        }
+        #map {
+            height: 600px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #status {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid var(--secondary-color);
+            background-color: var(--background-color);
+            border-radius: 4px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select, input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+        }
+        #customDirectory, #groupingJsonUpload, #ecobaseSearchInput {
+            display: none;
+            margin-top: 10px;
+        }
+        .note {
+            font-size: 0.9em;
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 768px) {
+            #map {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EwE Map Interface</h1>
+    </header>
+    <main>
+        <section class="input-group">
+            <label for="researchFocus">Research Focus of EwE model:</label>
+            <input type="text" id="researchFocus" placeholder="Enter research focus" aria-required="true">
+        </section>
+        <section class="input-group">
+            <label for="outputDirectory">Output Directory:</label>
+            <select id="outputDirectory" aria-required="true">
+                <option value="">Loading directories...</option>
+            </select>
+            <input type="text" id="customDirectory" placeholder="Enter custom directory name">
+        </section>
+        <section class="input-group">
+            <label for="shapefileUpload">Upload Shapefile .zip (must contain all related files (.shp, .shx, .dbf, etc.)):</label>
+            <input type="file" id="shapefileUpload" accept=".zip" multiple>
+            <p class="note">Note: Please upload your shapefile as a zip file containing all related files (.shp, .shx, .dbf, etc.)</p>
+        </section>
+        <section id="map" aria-label="Map for drawing regions"></section>
+        
+        <h2>Grouping Template</h2>
+        <section class="input-group">
+            <label for="groupingTemplate">Select Grouping Template:</label>
+            <select id="groupingTemplate" aria-required="true">
+                <option value="default">Use Default Grouping</option>
+                <option value="upload">Upload Custom Grouping JSON</option>
+                <option value="ecobase">Search Ecobase for Template</option>
+                <option value="geojson">Generate from Selected Area</option>
+            </select>
+            <input type="file" id="groupingJsonUpload" accept=".json">
+            <input type="text" id="ecobaseSearchInput" placeholder="Enter Ecobase search term">
+            <p id="geojsonNote" class="note" style="display: none;">This option will use AI to analyze the selected area and generate appropriate functional groups based on the marine ecosystem characteristics of that region.</p>
+        </section>
+        
+        <section class="input-group">
+            <label for="forceGrouping">
+                <input type="checkbox" id="forceGrouping" name="forceGrouping">
+                Force Grouping (Skip adding new groups to reference groups)
+            </label>
+        </section>
+        
+        <h2>AI Model Selection</h2>
+        <section class="input-group">
+            <label for="groupSpeciesAI">AI for Group Species:</label>
+            <select id="groupSpeciesAI" aria-required="true">
+                <option value="claude" selected>Claude</option>
+                <option value="aws_claude">AWS Claude</option>
+                <option value="gemini">Gemini</option>
+                <option value="gemma2">Gemma2</option>
+                <option value="llama3">Llama3</option>
+                <option value="mixtral">Mixtral</option>
+            </select>
+        </section>
+        <section class="input-group">
+            <label for="constructDietMatrixAI">AI for Construct Diet Matrix:</label>
+            <select id="constructDietMatrixAI" aria-required="true">
+                <option value="claude" selected>Claude</option>
+                <option value="aws_claude">AWS Claude</option>
+                <option value="gemini">Gemini</option>
+                <option value="gemma2">Gemma2</option>
+                <option value="llama3">Llama3</option>
+                <option value="mixtral">Mixtral</option>
+            </select>
+        </section>
+        <section class="input-group">
+            <label for="eweParamsAI">AI for EwE Parameters:</label>
+            <select id="eweParamsAI" aria-required="true">
+                <option value="claude" selected>Claude</option>
+                <option value="aws_claude">AWS Claude</option>
+                <option value="gemini">Gemini</option>
+                <option value="gemma2">Gemma2</option>
+                <option value="llama3">Llama3</option>
+                <option value="mixtral">Mixtral</option>
+            </select>
+        </section>
+        <section class="input-group">
+            <label for="ragSearchAI">AI for RAG Search:</label>
+            <select id="ragSearchAI" aria-required="true">
+                <option value="claude" selected>Claude</option>
+                <option value="aws_claude">AWS Claude</option>
+                <option value="azure_openai">Azure OpenAI</option>
+                <option value="openai">OpenAI</option>
+            </select>
+        </section>
+        
+        <button id="generateModel">Generate Model</button>
+        <div id="status" role="status" aria-live="polite"></div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+    <script src="/scripts/map_interface.js"></script>
+    <script>
+        document.getElementById('groupingTemplate').addEventListener('change', function() {
+            document.getElementById('groupingJsonUpload').style.display = this.value === 'upload' ? 'block' : 'none';
+            document.getElementById('ecobaseSearchInput').style.display = this.value === 'ecobase' ? 'block' : 'none';
+            document.getElementById('geojsonNote').style.display = this.value === 'geojson' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

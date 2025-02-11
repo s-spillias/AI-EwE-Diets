@@ -1,0 +1,160 @@
+\begin{thebibliography}{}
+
+\bibitem[{Anthropic}, 2024]{Anthropic2024}
+{Anthropic} (2024).
+\newblock Claude 3 model card.
+\newblock Technical documentation, Anthropic.
+
+\bibitem[Chamberlain, 2020]{robis}
+Chamberlain, S. (2020).
+\newblock {\em {robis}: An {R} Client for the Ocean Biodiversity Information
+  System}.
+\newblock R package version 0.2.0.
+
+\bibitem[Chen and Xu, 2024]{Chen2024}
+Chen, M. and Xu, Z. (2024).
+\newblock A deep learning classification framework for research methods of
+  marine protected area management.
+\newblock {\em Journal of Environmental Management}.
+
+\bibitem[Christensen and Walters, 2004]{Christensen2004}
+Christensen, V. and Walters, C.~J. (2004).
+\newblock {Ecopath} with {Ecosim}: methods, capabilities and limitations.
+\newblock {\em Ecological Modelling}, 172(2-4):109--139.
+
+\bibitem[{Chroma}, 2024]{Chroma2024}
+{Chroma} (2024).
+\newblock Chroma - the ai-native open-source embedding database.
+\newblock Accessed: 2024.
+
+\bibitem[Coll et~al., 2015]{Coll2015}
+Coll, M., Akoglu, E., Arregu{\'\i}n-S{\'a}nchez, F., Fulton, E.~A., Gascuel,
+  D., Heymans, J.~J., Libralato, S., Mackinson, S., Palomera, I., Piroddi, C.,
+  et~al. (2015).
+\newblock Modelling dynamic ecosystems: venturing beyond boundaries with the
+  {Ecopath} approach.
+\newblock {\em Reviews in Fish Biology and Fisheries}, 25(2):413--424.
+
+\bibitem[Coll{\'e}ter et~al., 2015]{Colleter2015}
+Coll{\'e}ter, M., Valls, A., Guitton, J., Gascuel, D., Pauly, D., and
+  Christensen, V. (2015).
+\newblock Global overview of the applications of the {Ecopath} with {Ecosim}
+  modeling approach using the {EcoBase} models repository.
+\newblock {\em Ecological Modelling}, 302:42--53.
+
+\bibitem[Fernandes and D'Mello, 2024]{Fernandes2024}
+Fernandes, S. and D'Mello, A. (2024).
+\newblock Artificial intelligence in the aquaculture industry: Current state,
+  challenges and future directions.
+\newblock {\em Aquaculture}, page 742048.
+
+\bibitem[Froese et~al., 2010]{froese2010fishbase}
+Froese, R., Pauly, D., et~al. (2010).
+\newblock {FishBase}.
+
+\bibitem[{GBIF}, 2024]{GBIF2024}
+{GBIF} (2024).
+\newblock {GBIF}: The global biodiversity information facility.
+\newblock {\em Global Biodiversity Information Facility}.
+\newblock What is GBIF?
+
+\bibitem[Geary et~al., 2020]{Geary2020}
+Geary, W.~L., Bode, M., Doherty, T.~S., Fulton, E.~A., Nimmo, D.~G., Tulloch,
+  A.~I., Tulloch, V.~J., and Ritchie, E.~G. (2020).
+\newblock A guide to ecosystem models and their environmental applications.
+\newblock {\em Nature Ecology \& Evolution}, 4:1459--1471.
+
+\bibitem[Grassle and Stocks, 1999]{Grassle1999}
+Grassle, J.~F. and Stocks, K. (1999).
+\newblock A global ocean biogeographic information system ({OBIS}) for the
+  census of marine life.
+\newblock {\em Oceanography}, 12(3):12--14.
+
+\bibitem[Guo et~al., 2025]{Guo2025}
+Guo, J., Li, N., and Xu, M. (2025).
+\newblock Environmental large language model evaluation ({ELLE}) dataset: A
+  benchmark for evaluating generative {AI} applications in eco-environment
+  domain.
+\newblock {\em arXiv preprint arXiv:2501.06277}.
+
+\bibitem[Holden et~al., 2024a]{Holden2024a}
+Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J.,
+  and Chad{\`e}s, I. (2024a).
+\newblock Why shouldn't {I} collect more data? {Reconciling} disagreements
+  between intuition and value of information analyses.
+\newblock {\em Methods in Ecology and Evolution}, 15:1580--1592.
+
+\bibitem[Holden et~al., 2024b]{Holden2024b}
+Holden, M.~H., Plag{\'a}nyi, {\'E}.~E., Fulton, E.~A., Campbell, A.~B., Janes,
+  R., Lovett, R.~A., Wickens, M., Adams, M.~P., Botelho, L.~L., Dichmont,
+  C.~M., et~al. (2024b).
+\newblock Cost--benefit analysis of ecosystem modeling to support fisheries
+  management.
+\newblock {\em Journal of Fish Biology}, 104:1667--1674.
+
+\bibitem[Karniadakis et~al., 2021]{Karniadakis2021}
+Karniadakis, G.~E., Kevrekidis, I.~G., Lu, L., Perdikaris, P., Wang, S., and
+  Yang, L. (2021).
+\newblock Physics-informed machine learning.
+\newblock {\em Nature Reviews Physics}, 3(6):422--440.
+
+\bibitem[Kelling et~al., 2009]{Kelling2009}
+Kelling, S., Hochachka, W.~M., Fink, D., Riedewald, M., Caruana, R., Ballard,
+  G., and Hooker, G. (2009).
+\newblock Data-intensive science: a new paradigm for biodiversity studies.
+\newblock {\em BioScience}, 59(7):613--620.
+
+\bibitem[Kommineni et~al., 2024]{Kommineni2024}
+Kommineni, V.~K., K{\"o}nig-Ries, B., and Samuel, S. (2024).
+\newblock Harnessing multiple {LLMs} for information retrieval: A case study on
+  deep learning methodologies in biodiversity publications.
+\newblock {\em arXiv preprint arXiv:2411.09269}.
+
+\bibitem[Kuhn et~al., 2024]{Kuhn2024}
+Kuhn, B., Cayetano, A., and Fincham, J. (2024).
+\newblock Machine learning applications for fisheries—at scales from genomics
+  to ecosystems.
+\newblock {\em Reviews in Fisheries Science}.
+
+\bibitem[Lapeyrolerie et~al., 2022]{Lapeyrolerie2022}
+Lapeyrolerie, M., Chapman, M.~S., Norman, K.~E., and Boettiger, C. (2022).
+\newblock Deep reinforcement learning for conservation decisions.
+\newblock {\em Methods in Ecology and Evolution}, 13:2649--2662.
+
+\bibitem[Li et~al., 2024]{Li2024}
+Li, H., Liu, J., Wang, Z., Luo, S., Jia, X., and Yao, H. (2024).
+\newblock Lite: Modeling environmental ecosystems with multimodal large
+  language models.
+\newblock {\em Conference on Language Models (COLM)}.
+
+\bibitem[Michener and Jones, 2012]{Michener2012}
+Michener, W.~K. and Jones, M.~B. (2012).
+\newblock Ecoinformatics: supporting ecology as a data-intensive science.
+\newblock {\em Trends in Ecology \& Evolution}, 27(2):85--93.
+
+\bibitem[Poelen et~al., 2014]{Poelen2014}
+Poelen, J.~H., Simons, J.~D., and Mungall, C.~J. (2014).
+\newblock Global biotic interactions: An open infrastructure to share and
+  analyze species-interaction datasets.
+\newblock {\em Ecological Informatics}, 24:148--159.
+
+\bibitem[Tuia et~al., 2022]{Tuia2022}
+Tuia, D., Kellenberger, B., Beery, S., Costelloe, B.~R., Zuffi, S., Risse, B.,
+  Mathis, A., Mathis, M.~W., van Langevelde, F., Burghardt, T., et~al. (2022).
+\newblock Perspectives in machine learning for wildlife conservation.
+\newblock {\em Nature Communications}, 13:1--15.
+
+\bibitem[Villasante et~al., 2016]{Villasante2016}
+Villasante, S., Arregu{\'\i}n-S{\'a}nchez, F., Heymans, J.~J., Libralato, S.,
+  Piroddi, C., Christensen, V., and Coll, M. (2016).
+\newblock Modelling complex systems of multiple species for ecosystem based
+  management.
+\newblock {\em Ecological Modelling}, 326:68--76.
+
+\bibitem[Zheng et~al., 2023]{Zheng2023}
+Zheng, Z., Zhang, J., Vu, T.~A., Diao, S., Tim, Y. H.~W., and Yeung, S.~K.
+  (2023).
+\newblock {MarineGPT}: Unlocking secrets of ocean to the public.
+\newblock {\em arXiv preprint arXiv:2310.13596}.
+
+\end{thebibliography}

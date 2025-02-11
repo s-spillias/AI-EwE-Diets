@@ -1,0 +1,97 @@
+AI Model,gemini,gemini,gemini,claude,claude,claude
+Iteration,1,2,3,1,2,3
+Apex Predatory Sharks,0,0,0,1,1,1
+Baleen Whales,0,0,0,1,1,1
+Benthic Deposit Feeders,0,0,0,0,0,1
+Benthic Filter Feeders,0,0,1,1,1,1
+Benthic Invertebrates (Carnivores),1,0,0,0,0,0
+Benthic Invertebrates (Deep),0,1,0,0,0,0
+Benthic Invertebrates (Deposit Feeders),1,0,0,0,0,0
+Benthic Invertebrates (Filter Feeders),1,0,0,0,0,0
+Benthic Invertebrates (Grazers),1,0,0,0,0,0
+Benthic Invertebrates (Shallow),0,1,0,0,0,0
+Benthic Invertivores,0,0,0,0,1,1
+Benthic Primary Producers,0,0,0,1,1,0
+Cephalopods,1,0,1,1,1,1
+Commercial Prawns,0,0,0,0,0,1
+Coral Reef Builders,0,0,0,0,0,1
+Coral Reef Fish (Herbivores),1,0,0,0,0,0
+Coral Reef Fish (Invertebrate Feeders),1,0,0,0,0,0
+Coral Reef Fish (Piscivores),1,0,0,0,0,0
+Coral Reef Fish (Planktivores),1,0,0,0,0,0
+Coral-Associated Fish,0,0,0,1,1,0
+Crocodiles,1,0,0,0,0,0
+Demersal Fish,0,0,0,1,0,0
+Demersal Fish (Benthivores),1,0,0,0,0,0
+Demersal Fish (Deep),0,1,0,0,0,0
+Demersal Fish (Omnivores),1,0,0,0,0,0
+Demersal Fish (Piscivores),1,0,0,0,0,0
+Demersal Fish (Shallow),0,1,0,0,0,0
+Demersal Fishes (Benthivores),0,0,1,0,0,0
+Demersal Fishes (Omnivores),0,0,1,0,0,0
+Demersal Fishes (Piscivores),0,0,1,0,0,0
+Demersal Piscivores,0,0,0,0,1,1
+Detritus,1,1,1,1,1,1
+Dolphins and Small Toothed Whales,0,0,0,1,1,1
+Dugongs,0,0,0,0,1,0
+Fisheries Discards,0,1,0,0,0,0
+Hard Corals,1,0,0,1,1,0
+Herbivorous Reef Fish,0,0,0,1,1,1
+Large Crustaceans,0,0,0,1,1,0
+Large Pelagic Fish,0,0,0,1,1,1
+Large Pelagic Fish (Piscivores),0,1,0,0,0,0
+Large Pelagic Fish (Tuna & Billfish),0,0,1,0,0,0
+Large Zooplankton,0,0,0,1,1,1
+Macroalgae,0,0,0,0,0,1
+Macrozoobenthos (Predatory/Omnivorous),0,0,1,0,0,0
+Mangrove Associated Fauna,0,1,0,0,0,0
+Mangrove Forests,0,1,0,0,0,0
+Mangroves,1,0,1,0,0,0
+Marine Mammals (Cetaceans),1,1,1,0,0,0
+Marine Mammals (Pinnipeds),1,1,1,0,0,0
+Medium Pelagic Fish,0,0,0,1,0,0
+Medium Pelagic Fish (Piscivores),0,1,0,0,0,0
+Medium-sized Pelagic Fish (Piscivores),0,0,1,0,0,0
+Mesozooplankton,0,0,1,0,1,0
+Microzooplankton,0,0,1,0,0,0
+Other Marine Reptiles (Sea Snakes),0,1,0,0,0,0
+Other Reef Invertebrates,0,1,0,0,0,0
+Pelagic Fish (Piscivores),1,0,0,0,0,0
+Pelagic Fish (Planktivores),1,0,0,0,0,0
+Pelagic Planktivores,0,0,0,0,0,1
+Pelagic Plankton (Phytoplankton),0,1,0,0,0,0
+Pelagic Plankton (Zooplankton),0,1,0,0,0,0
+Pelagic Sharks,1,1,1,0,0,0
+Phytoplankton,0,0,0,1,1,1
+Phytoplankton (Diatoms),1,0,0,0,0,0
+Phytoplankton (Dinoflagellates),1,0,0,0,0,0
+Planktonic Primary Producers,0,0,1,0,0,0
+Reef Fish (Herbivores),0,1,0,0,0,0
+Reef Fish (Invertebrate Feeders),0,1,0,0,0,0
+Reef Fish (Piscivores),0,1,0,0,0,0
+Reef Fish (Planktivores),0,1,0,0,0,0
+Reef Fishes (Herbivores),0,0,1,0,0,0
+Reef Fishes (Omnivores),0,0,1,0,0,0
+Reef Fishes (Piscivores),0,0,1,0,0,0
+Reef Planktivores,0,0,0,0,0,1
+Reef Sharks,1,1,1,1,1,1
+Reef-Associated Piscivores,0,0,0,1,1,1
+Reef-Associated Planktivores,0,0,0,1,1,0
+Reef-Building Corals,0,1,1,0,0,0
+Sea Snakes,1,0,1,0,0,0
+Sea Turtles,1,1,1,1,1,1
+Seabirds (Nearshore),1,1,1,0,0,0
+Seabirds (Pelagic),1,1,1,0,0,0
+Seagrass,0,1,0,1,1,1
+Seagrass Associated Fauna,0,1,0,0,0,0
+Seagrasses,1,0,1,0,0,0
+Sedimentary Bacteria,0,0,1,0,0,0
+Small Pelagic Fish,0,0,0,1,1,0
+Small Pelagic Fish (Invertebrate Feeders),0,1,0,0,0,0
+Small Pelagic Fish (Planktivores),0,1,1,0,0,0
+Small Zooplankton,0,0,0,1,0,1
+Soft Corals,1,0,0,1,1,1
+Soft Corals and Other Benthic Invertebrates,0,0,1,0,0,0
+Zooplankton (Herbivores),1,0,0,0,0,0
+Zooplankton (Large Carnivores),1,0,0,0,0,0
+Zooxanthellae,0,1,0,0,0,0
