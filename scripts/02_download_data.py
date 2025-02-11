@@ -138,11 +138,6 @@ def load_database_data(species_df):
     """Load only necessary data from databases based on species list"""
     logging.info("Loading database data for species list...")
     
-    # Print species list for debugging
-    print("\nSpecies List:")
-    for name in species_df['scientificName']:
-        print(f"  {name}")
-    
     # Extract unique genera from species list
     genera = set()
     for name in species_df['scientificName']:
@@ -153,7 +148,6 @@ def load_database_data(species_df):
             genera.add(parts[0])
     
     genera_list = list(genera)
-    print("\nUnique Genera:", genera_list)
     genera_conditions = ",".join([f"'{g}'" for g in genera_list])
     
     # Load only relevant species from SeaLifeBase
@@ -164,12 +158,6 @@ def load_database_data(species_df):
     WHERE Genus IN ({genera_conditions})
     """
     sealifebase_data = duckdb.query(slb_query).df()
-    print("\nSeaLifeBase Data Structure:")
-    print("Columns:", sealifebase_data.columns.tolist())
-    print("Found records:")
-    for _, row in sealifebase_data.iterrows():
-        print(f"  {row['Genus']} {row['Species']}")
-    
     # Load only relevant species from FishBase
     logging.info("Loading filtered FishBase data...")
     fb_query = f"""
@@ -178,11 +166,6 @@ def load_database_data(species_df):
     WHERE Genus IN ({genera_conditions})
     """
     fishbase_data = duckdb.query(fb_query).df()
-    print("\nFishBase Data Structure:")
-    print("Columns:", fishbase_data.columns.tolist())
-    print("Found records:")
-    for _, row in fishbase_data.iterrows():
-        print(f"  {row['Genus']} {row['Species']}")
     
     return sealifebase_data, fishbase_data
 
@@ -339,10 +322,8 @@ def get_species_info(species_df, sealifebase_df, fishbase_df, sealifebase_foodit
                 if species_name not in [name for name, _ in batch]:
                     continue
                     
-                print(f"\nProcessing SeaLifeBase data for: {species_name}")
                 if not pd.isna(slb_row['SpecCode']):
                     spec_codes.append(slb_row['SpecCode'])
-                    print(f"Found SpecCode: {slb_row['SpecCode']}")
                 
                 ecology_data = {
                     'habitat': {
@@ -367,21 +348,17 @@ def get_species_info(species_df, sealifebase_df, fishbase_df, sealifebase_foodit
                     'commonName': slb_row.get('FBname'),
                     'source': 'SeaLifeBase'
                 }
-                print("Ecology data structure:", json.dumps(ecology_data, indent=2))
                 species_data[species_name]['ecology']['SeaLifeBase'] = ecology_data
         
         # Batch get diet data
         if spec_codes:
-            print(f"\nFetching diet data for SpecCodes: {spec_codes}")
             diet_items = get_food_items_for_speccodes(sealifebase_fooditems_df, spec_codes)
             if not diet_items.empty:
-                print(f"Found {len(diet_items)} diet items")
                 for _, diet_row in diet_items.iterrows():
                     spec_code = diet_row['SpecCode']
                     # Find species name for this SpecCode
                     for species_name in species_data:
                         if species_data[species_name].get('ecology', {}).get('SeaLifeBase', {}).get('specCode') == spec_code:
-                            print(f"Adding diet item for {species_name} (SpecCode: {spec_code})")
                             if 'SeaLifeBase' not in species_data[species_name]['diet']:
                                 species_data[species_name]['diet']['SeaLifeBase'] = []
                             species_data[species_name]['diet']['SeaLifeBase'].append(diet_row.to_dict())

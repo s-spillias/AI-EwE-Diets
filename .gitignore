@@ -13,6 +13,8 @@ corpus.pdf
 TippingPoints/
 UnintendedConsequences/
 References/
+tests/
+MODELS/
 
 # C extensions
 *.so

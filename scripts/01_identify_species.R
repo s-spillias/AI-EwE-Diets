@@ -35,7 +35,7 @@ fetch_species_data <- function(bbox, max_retries = 3, retry_delay = 5) {
       # Set timeout for the request
       options(timeout = 60)  # 60 second timeout
       
-      species_data <- occurrence(geometry = polygon_string)
+      species_data <- checklist(geometry = polygon_string)
       
       if (is.null(species_data) || nrow(species_data) == 0) {
         stop("No data returned from OBIS API")
@@ -57,50 +57,6 @@ fetch_species_data <- function(bbox, max_retries = 3, retry_delay = 5) {
   }
 }
 
-# Function to filter species by coverage threshold
-filter_by_coverage <- function(species_data, coverage_threshold = 1.0) {
-  # Count occurrences per species
-  species_counts <- species_data %>%
-    group_by(scientificName) %>%
-    summarise(n = n(), .groups = 'drop')
-  
-  # Calculate total occurrences
-  total_occurrences <- sum(species_counts$n)
-  
-  # Sort species by occurrence count in descending order
-  sorted_species <- species_counts %>%
-    arrange(desc(n))
-  
-  # Calculate cumulative percentage
-  sorted_species$cumulative_sum <- cumsum(sorted_species$n)
-  sorted_species$cumulative_percentage <- sorted_species$cumulative_sum / total_occurrences
-  
-  # Find threshold that gives desired coverage
-  threshold_species <- sorted_species %>%
-    filter(cumulative_percentage <= coverage_threshold) %>%
-    summarise(
-      min_occurrences = min(n),
-      species_count = n(),
-      total_species = nrow(sorted_species),
-      coverage = sum(n) / total_occurrences
-    )
-  
-  # Filter species data based on threshold
-  filtered_species <- species_data %>%
-    group_by(scientificName) %>%
-    filter(n() >= threshold_species$min_occurrences) %>%
-    ungroup()
-  
-  # Print filtering summary
-  cat("\nCoverage-based filtering summary:\n")
-  cat(sprintf("Original species count: %d\n", nrow(species_data)))
-  cat(sprintf("Filtered species count: %d\n", nrow(filtered_species)))
-  cat(sprintf("Occurrence threshold: >= %d\n", threshold_species$min_occurrences))
-  cat(sprintf("Actual coverage achieved: %.2f%%\n", threshold_species$coverage * 100))
-  
-  return(filtered_species)
-}
-
 # Function to remove more general entries efficiently
 remove_general_entries <- function(species_data) {
   cat("Removing more general entries...\n")
@@ -110,23 +66,43 @@ remove_general_entries <- function(species_data) {
   
   # Function to determine the most specific rank for each entry
   get_rank_value <- function(row) {
+    # First check if scientificName matches any of the higher taxonomic ranks
+    scientific_name <- row[["scientificName"]]
+    for (rank in ranks[-1]) {  # Exclude scientificName from the check
+      if (!is.na(row[[rank]]) && !is.na(scientific_name) && 
+          row[[rank]] != "" && scientific_name != "" && 
+          scientific_name == row[[rank]]) {
+        # If scientificName matches a higher rank, return that rank's position
+        return(which(ranks == rank))
+      }
+    }
+    
+    # If no match found with higher ranks, count the number of words in scientificName
+    if (!is.na(scientific_name) && scientific_name != "") {
+      word_count <- length(strsplit(scientific_name, " ")[[1]])
+      if (word_count == 2) {
+        return(1)  # Species level (two words)
+      } else if (word_count == 1) {
+        return(2)  # Genus level (one word)
+      }
+    }
+    
+    # If scientificName is NA or empty, find the most specific filled rank
     for (i in seq_along(ranks)) {
       if (!is.na(row[[ranks[i]]]) && row[[ranks[i]]] != "") {
         return(i)
       }
     }
+    
     return(length(ranks) + 1)  # Return highest value if no rank is found
   }
   
   # Add rank value column
   species_data$rank_value <- apply(species_data, 1, get_rank_value)
   
-  # Group by all taxonomic levels and keep only the most specific entry
+  # Keep only rank 1 entries (species level)
   filtered_data <- species_data %>%
-    group_by(across(all_of(ranks))) %>%
-    slice_min(rank_value) %>%
-    ungroup() %>%
-    select(everything())  # Preserve all columns including occurrence_count
+    filter(rank_value == 1)
   
   cat(sprintf("Removed %d general entries\n", nrow(species_data) - nrow(filtered_data)))
   return(filtered_data)
@@ -175,7 +151,7 @@ create_histogram <- function(species_data, filename, title_suffix = "") {
 }
 
 # Function to process and save species list
-process_and_save_species <- function(species_data, output_file, coverage_threshold = 1.0) {
+process_and_save_species <- function(species_data, output_file) {
   if (is.null(species_data) || nrow(species_data) == 0) {
     cat("No species data to process.\n")
     stop("No species data available to process")
@@ -194,11 +170,6 @@ process_and_save_species <- function(species_data, output_file, coverage_thresho
   # Create histogram before filtering
   create_histogram(marine_species, "manuscript/figures/species_occurrence_histogram_raw.png", " (Raw)")
   
-  # Apply coverage-based filtering if threshold < 1.0
-  if (coverage_threshold < 1.0) {
-    marine_species <- filter_by_coverage(marine_species, coverage_threshold)
-    create_histogram(marine_species, "manuscript/figures/species_occurrence_histogram_filtered.png", " (Filtered)")
-  }
   
   # Group and count occurrences
   unique_species <- marine_species %>%
@@ -224,20 +195,16 @@ process_and_save_species <- function(species_data, output_file, coverage_thresho
     cat(sprintf("Species list saved to %s\n", output_file))
     cat(sprintf("Total unique species: %d\n", nrow(unique_species)))
     
-    # Print summary of species
-    cat("\nSpecies summary:\n")
-    print(head(unique_species))
   }, error = function(e) {
     stop(paste("Error saving species list:", e$message))
   })
 }
 
 # Main function
-main <- function(geojson_path, output_file, coverage_threshold = 1.0) {
+main <- function(geojson_path, output_file) {
   cat("Starting main function...\n")
   cat("GeoJSON path:", geojson_path, "\n")
   cat("Output file:", output_file, "\n")
-  cat("Coverage threshold:", coverage_threshold, "\n")
   
   bbox <- get_bounding_box(geojson_path)
   cat("Bounding Box:", bbox, "\n")
@@ -246,7 +213,7 @@ main <- function(geojson_path, output_file, coverage_threshold = 1.0) {
     species_data <- fetch_species_data(bbox)
     if (!is.null(species_data) && nrow(species_data) > 0) {
       cat("Processing and saving species data...\n")
-      process_and_save_species(species_data, output_file, coverage_threshold)
+      process_and_save_species(species_data, output_file)
     } else {
       stop("No species data available to process")
     }
@@ -258,21 +225,16 @@ main <- function(geojson_path, output_file, coverage_threshold = 1.0) {
 # Get command-line arguments
 args <- commandArgs(trailingOnly = TRUE)
 
-if (length(args) < 2 || length(args) > 3) {
-  stop("Usage: Rscript 01_identify_species.R <geojson_path> <output_file> [coverage_threshold]")
+if (length(args) != 2) {
+  stop("Usage: Rscript 01_identify_species.R <geojson_path> <output_file>")
 }
 
 geojson_path <- args[1]
 output_file <- args[2]
-coverage_threshold <- if (length(args) == 3) as.numeric(args[3]) else 1.0
-
-if (coverage_threshold <= 0 || coverage_threshold > 1) {
-  stop("Coverage threshold must be between 0 and 1")
-}
 
 # Run the script with error handling
 tryCatch({
-  main(geojson_path, output_file, coverage_threshold)
+  main(geojson_path, output_file)
 }, error = function(e) {
   cat("\nFatal error occurred:\n")
   cat(e$message, "\n")

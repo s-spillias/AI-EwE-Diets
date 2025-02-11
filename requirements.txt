@@ -29,6 +29,7 @@ chromadb==0.5.15
 suds-py3==1.4.5.0
 groq==0.9.0
 requests==2.32.3
+httpx==0.27.2
 tiktoken==0.8.0
 boto3==1.35.54 
 geopandas==1.0.1

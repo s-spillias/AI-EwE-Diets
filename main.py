@@ -36,7 +36,7 @@ def parse_r_error(error_message):
     if error_match:
         return error_match.group(0)
     return error_message
-def run_r_script(script_path, shapefile_path, output_file, coverage_threshold=None):
+def run_r_script(script_path, shapefile_path, output_file):
     if not check_r_packages():
         return False
 
@@ -53,8 +53,6 @@ def run_r_script(script_path, shapefile_path, output_file, coverage_threshold=No
             return False
 
         cmd = ['Rscript', '--vanilla', script_path, abs_shapefile_path, abs_output_file]
-        if coverage_threshold is not None:
-            cmd.append(str(coverage_threshold))
 
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         print(result.stdout)
@@ -148,7 +146,7 @@ def run_python_script(script_path, *args):
         return False
 
 
-def identify_species(geojson_path, output_file, coverage_threshold=None):
+def identify_species(geojson_path, output_file):
     script_path = os.path.join('scripts', '01_identify_species.R')
     if not os.path.exists(script_path):
         print_red(f"Error: {script_path} not found.")
@@ -156,8 +154,11 @@ def identify_species(geojson_path, output_file, coverage_threshold=None):
         print_red(f"Full path of script: {os.path.abspath(script_path)}")
         return False
     
-    return run_r_script(script_path, geojson_path, output_file, coverage_threshold)
+    return run_r_script(script_path, geojson_path, output_file)
 
+def generate_ai_groups(output_dir):
+    script_path = os.path.join('scripts', '00_generate_ai_groups.py')
+    return run_python_script(script_path, '--output_dir', output_dir)
 
 def harvest_sealifebase_data(species_file, output_dir):
     script_path = os.path.join('scripts', '02_download_data.py')
@@ -285,8 +286,6 @@ def parse_arguments():
     parser.add_argument('--model_name', help='Name of the model directory in MODELS/')
     parser.add_argument('--geojson_path', help='Path to the GeoJSON or ZIP file')
     parser.add_argument('--research_focus', help='Research focus for the model')
-    parser.add_argument('--coverage_threshold', type=float, default=1.0,
-                      help='Value between 0 and 1 to filter species by occurrence coverage (default: 1.0)')
     parser.add_argument('--grouping_template', choices=['default', 'upload', 'ecobase', 'geojson'], default='default', 
                       help='Grouping template option (default: generate from area, upload: custom JSON, ecobase: search template)')
     parser.add_argument('--ecobase_search', help='Ecobase search term (if grouping_template is "ecobase")')
@@ -307,8 +306,6 @@ def process_input_file(input_path, output_dir):
 def main():
     args = parse_arguments()
 
-    if args.coverage_threshold <= 0 or args.coverage_threshold > 1:
-        print_red("Error: Coverage threshold must be between 0 and 1")
           # Change to the EwE directory
     ewe_dir = os.path.dirname(os.path.abspath(__file__))
     os.chdir(ewe_dir)
@@ -404,7 +401,7 @@ def main():
         print_green("\nStep 1: Identifying Species (R version)")
         start_time = time.time()
 
-        success = identify_species(geojson_path, species_output, args.coverage_threshold)
+        success = identify_species(geojson_path, species_output)
 
         timing = time.time() - start_time
         update_progress(output_dir, 'identify_species', success, timing)

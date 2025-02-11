@@ -58,7 +58,7 @@ def run_model_iteration(args):
         sys.executable,
         'main.py',
         '--resume',
-        '--model_name', f"{base_name}_{iteration}",
+        '--model_name', f"{base_name}/{base_name}_{iteration}",
     ]
     
     try:

@@ -89,27 +89,41 @@ def save_json_with_lock(data, file_path, max_retries=5, retry_delay=1):
             time.sleep(retry_delay)
     return False
 
-def get_top_species_by_occurrence(species_list_df, group_data):
-    """Get the top 3 species by occurrence count from species_list_df for a given group"""
+def get_representative_species(species_list_df, group_data):
+    """Get representative species from the most common genera in the group"""
     try:
-        # Extract unique species names from nested structure
+        # Extract species names from nested structure
         group_species_names = list(set(extract_species_from_nested(group_data)))
         
         if not group_species_names:
             return []
         
-        # Get occurrence counts from species_list_df
-        species_occurrences = []
+        # Get genus counts from species_list_df
+        genus_counts = {}
+        species_by_genus = {}
         for species in group_species_names:
-            occurrence = species_list_df[species_list_df['scientificName'] == species]['occurrence_count'].iloc[0] if len(species_list_df[species_list_df['scientificName'] == species]) > 0 else 0
-            species_occurrences.append((species, occurrence))
+            species_info = species_list_df[species_list_df['scientificName'] == species]
+            if len(species_info) > 0:
+                genus = species_info['genus'].iloc[0]
+                if genus and not pd.isna(genus):  # Check if genus is valid
+                    if genus not in genus_counts:
+                        genus_counts[genus] = 0
+                        species_by_genus[genus] = []
+                    genus_counts[genus] += 1
+                    species_by_genus[genus].append(species)
         
-        # Sort by occurrence count and get top 3
-        top_species = [s[0] for s in sorted(species_occurrences, key=lambda x: x[1], reverse=True)[:3]]
+        # Get top 3 genera by number of species
+        top_genera = sorted(genus_counts.items(), key=lambda x: x[1], reverse=True)[:3]
         
-        return top_species
+        # Get one example species from each top genus
+        representative_species = []
+        for genus, count in top_genera:
+            if species_by_genus[genus]:
+                representative_species.append(f"{species_by_genus[genus][0]} (1 of {count} species in genus {genus})")
+        
+        return representative_species
     except Exception as e:
-        logging.warning(f"Error getting top species: {str(e)}")
+        logging.warning(f"Error getting representative species: {str(e)}")
         return []
 
 def remove_empty_fields(data):
@@ -194,7 +208,7 @@ def gather_all_diet_data(directory, grouped_species_data, species_data, globi_da
         available_groups[clean_group_name_str] = {
             'name': group,
             'description': group_descriptions.get(group, ''),
-            'top_species': get_top_species_by_occurrence(species_list_df, grouped_species_data[group])
+            'top_species': get_representative_species(species_list_df, grouped_species_data[group])
         }
     
     # Add Detritus to available groups
@@ -212,7 +226,7 @@ def gather_all_diet_data(directory, grouped_species_data, species_data, globi_da
         
         species_in_group = extract_species_names(json.dumps(grouped_species_data[group]))
         top_species = available_groups[clean_group_str]['top_species']
-        species_examples = ", ".join(top_species) if top_species else clean_group_str
+        species_examples = "; ".join(top_species) if top_species else clean_group_str
         rag_query = f"What do {clean_group_str} (for example: {species_examples}) eat?"
         try:
             rag_results, _ = rag_search(rag_query, directory)

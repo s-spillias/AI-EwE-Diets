@@ -35,7 +35,7 @@ def setup_logging(output_dir):
     
     return logger
 
-def run_initial_steps(base_name, geojson_path, research_focus, grouping_template='default', coverage_threshold=1.0):
+def run_initial_steps(base_name, geojson_path, research_focus, grouping_template='default'):
     """Run steps 1-2 of the model workflow"""
     output_dir = f"MODELS/{base_name}/{base_name}_base"
     os.makedirs(output_dir, exist_ok=True)
@@ -71,7 +71,6 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
         '--geojson_path', geojson_path,
         '--research_focus', research_focus,
         '--grouping_template', grouping_template,
-        '--coverage_threshold', str(coverage_threshold),
         '--early_stop', '2'
     ]
     
@@ -85,27 +84,21 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
             bufsize=1  # Line buffered
         )
         
-        # Capture and process output with timeout
-        try:
-            output, _ = process.communicate(timeout=300)  # 5 minute timeout
+        output, _ = process.communicate()  # No timeout
+        
+        # Log the output
+        for line in output.splitlines():
+            logger.info(line.rstrip())
             
-            # Log the output
-            for line in output.splitlines():
-                logger.info(line.rstrip())
-                
-            # Check for errors in output
-            if "Failed to connect to the OBIS API" in output or "Error in main function:" in output:
-                logger.error("Critical error detected in R script output")
-                raise RuntimeError("R script failed with critical error")
-                
-            if process.returncode != 0:
-                logger.error(f"Error running initial steps: Process returned {process.returncode}")
-                raise RuntimeError(f"Initial steps failed with return code {process.returncode}")
-                
-        except subprocess.TimeoutExpired:
-            process.kill()
-            logger.error("Process timed out after 5 minutes")
-            raise RuntimeError("Process timed out")
+        # Check for errors in output
+        if "Failed to connect to the OBIS API" in output or "Error in main function:" in output:
+            logger.error("Critical error detected in R script output")
+            raise RuntimeError("R script failed with critical error")
+            
+        if process.returncode != 0:
+            logger.error(f"Error running initial steps: Process returned {process.returncode}")
+            raise RuntimeError(f"Initial steps failed with return code {process.returncode}")
+            
         logger.info("Initial steps completed successfully")
         return True
         
@@ -118,20 +111,18 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python 01a_run_initial_steps.py <base_name> <geojson_path> <research_focus> [grouping_template] [coverage_threshold]")
+        print("Usage: python 01a_run_initial_steps.py <base_name> <geojson_path> <research_focus> [grouping_template]")
         print("\nGrouping template options:")
         print("  default    - Use Default Grouping (default if not specified)")
         print("  upload     - Upload Custom Grouping JSON")
         print("  ecobase    - Search Ecobase for Template")
         print("  geojson    - Generate from Selected Area")
-        print("\nCoverage threshold: Value between 0 and 1 to filter species by occurrence coverage (default: 1.0)")
         sys.exit(1)
     
     base_name = sys.argv[1]
     geojson_path = sys.argv[2]
     research_focus = sys.argv[3]
     grouping_template = sys.argv[4] if len(sys.argv) > 4 else 'default'
-    coverage_threshold = float(sys.argv[5]) if len(sys.argv) > 5 else 1.0
     
     # Validate grouping template choice
     valid_templates = ['default', 'upload', 'ecobase', 'geojson']
@@ -140,10 +131,6 @@ def main():
         print("Valid options are:", ", ".join(valid_templates))
         sys.exit(1)
     
-    # Validate coverage threshold
-    if coverage_threshold <= 0 or coverage_threshold > 1:
-        print(f"Error: Coverage threshold must be between 0 and 1")
-        sys.exit(1)
     
     # Set up base directory and logging
     base_dir = f"MODELS/{base_name}/{base_name}_base"
@@ -155,8 +142,7 @@ def main():
             base_name=base_name,
             geojson_path=geojson_path,
             research_focus=research_focus,
-            grouping_template=grouping_template,
-            coverage_threshold=coverage_threshold
+            grouping_template=grouping_template
         )
         
         if not success:

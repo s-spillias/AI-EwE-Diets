@@ -33,7 +33,7 @@ def setup_logging(output_dir):
     
     return logger
 
-def run_validation(base_name, geojson_path, research_focus, num_iterations=5, num_processes=3, grouping_template='default', coverage_threshold=1.0, base_dir=None):
+def run_validation(base_name, geojson_path, research_focus, num_iterations=5, num_processes=3, grouping_template='default', base_dir=None):
     """Run the complete validation process"""
     # Use provided base directory or create new one
     if base_dir is None:
@@ -57,8 +57,7 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
         base_name,
         geojson_path,
         research_focus,
-        grouping_template,
-        str(coverage_threshold)
+        grouping_template
     ]
     
     try:
@@ -71,13 +70,8 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
             bufsize=1  # Line buffered
         )
         
-        # Capture and process output with timeout
-        try:
-            output, _ = process.communicate(timeout=300)  # 5 minute timeout
-        except subprocess.TimeoutExpired:
-            process.kill()
-            logger.error("Process timed out after 5 minutes")
-            return False
+        # Capture and process output
+        output, _ = process.communicate()
         
         # Log the output
         for line in output.splitlines():
@@ -119,13 +113,8 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
             bufsize=1  # Line buffered
         )
         
-        # Capture and process output with timeout
-        try:
-            output, _ = process.communicate(timeout=300)  # 5 minute timeout
-        except subprocess.TimeoutExpired:
-            process.kill()
-            logger.error("Process timed out after 5 minutes")
-            return False
+        # Capture and process output
+        output, _ = process.communicate()
         
         # Log the output
         for line in output.splitlines():
@@ -146,7 +135,7 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python 01_run_validation_iterations.py <base_name> <geojson_path> <research_focus> [num_iterations] [num_processes] [grouping_template] [coverage_threshold] [base_dir]")
+        print("Usage: python 01_run_validation_iterations.py <base_name> <geojson_path> <research_focus> [num_iterations] [num_processes] [grouping_template] [base_dir]")
         print("\nGrouping template options:")
         print("  default    - Use Default Grouping (default if not specified)")
         print("  upload     - Upload Custom Grouping JSON")
@@ -160,12 +149,8 @@ def main():
     num_iterations = int(sys.argv[4]) if len(sys.argv) > 4 else 5
     num_processes = int(sys.argv[5]) if len(sys.argv) > 5 else 5
     grouping_template = sys.argv[6] if len(sys.argv) > 6 else 'default'
-    coverage_threshold = float(sys.argv[7]) if len(sys.argv) > 7 else 1.0
     base_dir = sys.argv[8] if len(sys.argv) > 8 else None
-    
-    if coverage_threshold <= 0 or coverage_threshold > 1:
-        print(f"Error: Coverage threshold must be between 0 and 1")
-        sys.exit(1)
+
     
     # Validate grouping template choice
     valid_templates = ['default', 'upload', 'ecobase', 'geojson']
@@ -185,7 +170,6 @@ def main():
         num_iterations=num_iterations,
         num_processes=num_processes,
         grouping_template=grouping_template,
-        coverage_threshold=coverage_threshold,
         base_dir=base_dir
     )
     
