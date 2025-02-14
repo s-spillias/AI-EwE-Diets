@@ -170,46 +170,63 @@ Return the final consensus grouping in the exact same JSON format as the input g
     {{"Group2": "Description2"}}
 ]"""
 
-    synthesis_response = ask_ai(synthesis_prompt, ai_model)
-    if isinstance(synthesis_response, list) and len(synthesis_response) > 0:
-        synthesis_response = synthesis_response[0].text
-
-    # Extract JSON from the synthesis response
-    json_match = re.search(r'\[.*\]', synthesis_response, re.DOTALL)
-    if json_match:
-        json_str = json_match.group(0)
+    # Try synthesis multiple times if needed
+    max_synthesis_attempts = 3
+    for attempt in range(max_synthesis_attempts):
         try:
-            final_groups = json.loads(json_str)
-            
-            # Save the ecosystem description to ai_config.json
-            ai_config_path = os.path.join(output_dir, 'ai_config.json')
-            with open(ai_config_path, 'w') as f:
-                json.dump({
-                    'ecosystemDescription': area_description,
-                    'groupSpeciesAI': ai_model,
-                    'iterations': num_iterations,
-                    'allGroupings': all_groups
-                }, f, indent=2)
+            synthesis_response = ask_ai(synthesis_prompt, ai_model)
+            if isinstance(synthesis_response, list) and len(synthesis_response) > 0:
+                synthesis_response = synthesis_response[0].text
 
-            # Save the final groups to a file
-            output_path = os.path.join(output_dir, 'ai_reference_groups.json')
-            with open(output_path, 'w') as f:
-                json.dump(final_groups, f, indent=2)
-            
-            # Convert to the format expected by load_reference_groups
-            group_names = []
-            group_dict = {}
-            for item in final_groups:
-                group_dict.update(item)
-                group_names.extend(item.keys())
-            
-            return group_names, group_dict
-        except json.JSONDecodeError as e:
-            logging.error(f"Error decoding synthesis response: {e}")
+            # Extract JSON from the synthesis response
+            json_match = re.search(r'\[.*\]', synthesis_response, re.DOTALL)
+            if not json_match:
+                if attempt < max_synthesis_attempts - 1:
+                    logging.warning(f"No valid JSON found in synthesis response (attempt {attempt + 1}/{max_synthesis_attempts}). Retrying...")
+                    continue
+                logging.error("No valid JSON found in synthesis response after all attempts")
+                raise ValueError("Failed to generate valid reference groups")
+
+            json_str = json_match.group(0)
+            try:
+                final_groups = json.loads(json_str)
+                
+                # Save the ecosystem description to ai_config.json
+                ai_config_path = os.path.join(output_dir, 'ai_config.json')
+                with open(ai_config_path, 'w') as f:
+                    json.dump({
+                        'ecosystemDescription': area_description,
+                        'groupSpeciesAI': ai_model,
+                        'iterations': num_iterations,
+                        'allGroupings': all_groups
+                    }, f, indent=2)
+
+                # Save the final groups to a file
+                output_path = os.path.join(output_dir, 'ai_reference_groups.json')
+                with open(output_path, 'w') as f:
+                    json.dump(final_groups, f, indent=2)
+                
+                # Convert to the format expected by load_reference_groups
+                group_names = []
+                group_dict = {}
+                for item in final_groups:
+                    group_dict.update(item)
+                    group_names.extend(item.keys())
+                
+                return group_names, group_dict
+            except json.JSONDecodeError as e:
+                if attempt < max_synthesis_attempts - 1:
+                    logging.warning(f"Error decoding synthesis response (attempt {attempt + 1}/{max_synthesis_attempts}): {e}. Retrying...")
+                    continue
+                logging.error(f"Error decoding synthesis response after all attempts: {e}")
+                raise
+
+        except Exception as e:
+            if attempt < max_synthesis_attempts - 1:
+                logging.warning(f"Error in synthesis attempt {attempt + 1}/{max_synthesis_attempts}: {str(e)}. Retrying...")
+                continue
+            logging.error(f"Error in synthesis after all attempts: {str(e)}")
             raise
-    else:
-        logging.error("No valid JSON found in synthesis response")
-        raise ValueError("Failed to generate valid reference groups")
 
 # Initialize the class attribute
 get_ai_reference_groups.last_description = None
@@ -332,8 +349,16 @@ def preprocess_data(data):
     for species, info in data.items():
         # Get taxonomy data
         taxonomy = info.get('taxonomy', {})
-        cleaned_item = {k: v for k, v in taxonomy.items() if v is not None}
+        # Filter out None, NaN, and empty string values
+        cleaned_item = {k: v for k, v in taxonomy.items() 
+                      if v is not None 
+                      and str(v).strip() != '' 
+                      and str(v).lower() != 'nan'}
         
+        if not cleaned_item:  # Skip if no valid taxonomy data
+            logging.warning(f"Skipping species {species} - no valid taxonomy data")
+            continue
+            
         # Add species name
         cleaned_item['Species'] = species
         
@@ -350,18 +375,22 @@ def create_hierarchical_json(data):
     for item in data:
         current = hierarchical
         for level in ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species']:
-            if level in item:
-                if item[level] not in current:
-                    current[item[level]] = {}
-                current = current[item[level]]
+            if level in item and item[level] is not None and str(item[level]).lower() != 'nan':
+                value = str(item[level]).strip()
+                if value:  # Only process non-empty strings
+                    if value not in current:
+                        current[value] = {}
+                    current = current[value]
         current['specCode'] = item.get('SpecCode', 'Unknown')
         if 'Ecology' in item:
             current['ecology'] = item['Ecology']
     return hierarchical
 
-@retry(stop=stop_after_attempt(3), wait=wait_exponential(multiplier=1, min=4, max=10), 
-       retry=retry_if_exception_type((requests.exceptions.RequestException, json.JSONDecodeError)))
-def assign_groups_with_retry(taxa, rank, reference_group_dict, is_leaf_level, research_focus=None, ai_model='claude'):
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=60), 
+       retry=retry_if_exception_type((requests.exceptions.RequestException, json.JSONDecodeError, TypeError)))
+def process_taxa_chunk(taxa_chunk, rank, reference_group_dict, research_focus, ai_model):
+    """Process a small chunk of taxa and return their assignments"""
+    logging.info(f"Starting to process chunk with taxa: {taxa_chunk}")
     newline = "\n"
     
     research_focus_guidance = ""
@@ -390,9 +419,10 @@ Rules for assignment:
 - If all members of a taxon share similar ecological roles, assign to an appropriate group
 - Only consider the adult phase of the organisms, larvae and juveniles will be organized separately
 - Only assign a definite group if you are confident ALL members of that taxon belong to that group
+- If the members of the taxon do not fit into any of the exising groups, assign them to a group that is not already present. 
 
 Taxa to classify:
-{newline.join(taxa)}
+{newline.join(taxa_chunk)}
 
 Available ecological groups (name: description):
 {available_groups}
@@ -404,27 +434,74 @@ Return only a JSON object with taxa as keys and assigned groups as values. Examp
     "Taxon3": "Group2"
 }}"""
 
-    response = ask_ai(prompt, ai_model)
-    
     try:
-        # Extract JSON from the response
-        if isinstance(response, list) and len(response) > 0:
-            response = response[0].text
+        logging.info("Sending request to AI model...")
+        response = ask_ai(prompt, ai_model)
+        logging.info(f"Received response type: {type(response)}")
+        logging.info(f"Response length: {len(str(response))}")
         
-        json_match = re.search(r'\{.*\}', response, re.DOTALL)
-        if json_match:
-            json_str = json_match.group(0)
-            assignments = json.loads(json_str)
-            return assignments
-        else:
-            logging.error(f"No valid JSON found in the response: {response}")
+        logging.info("Attempting to extract JSON from response...")
+        json_match = re.search(r'\{.*\}', str(response), re.DOTALL)
+        if not json_match:
+            error_msg = f"No valid JSON found in the response: {response}"
+            logging.error(error_msg)
             return {}
-    except json.JSONDecodeError:
-        logging.error(f"Error decoding JSON response: {response}")
+            
+        json_str = json_match.group(0)
+        logging.info(f"Extracted JSON string: {json_str}")
+        
+        try:
+            result = json.loads(json_str)
+            logging.info(f"Successfully parsed JSON with {len(result)} assignments")
+            return result
+        except json.JSONDecodeError as e:
+            logging.error(f"JSON decode error: {str(e)}")
+            raise
+    except TypeError as e:
+        logging.error(f"TypeError in process_taxa_chunk: {str(e)}")
+        logging.error(f"Response type: {type(response)}")
+        logging.error(f"Response content: {response}")
         raise
     except Exception as e:
-        logging.error(f"Unexpected error in assign_groups: {str(e)}")
+        logging.error(f"Unexpected error in process_taxa_chunk: {str(e)}")
+        logging.error(f"Error type: {type(e)}")
         raise
+
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=60), 
+       retry=retry_if_exception_type((requests.exceptions.RequestException, json.JSONDecodeError, TypeError)))
+def assign_groups_with_retry(taxa, rank, reference_group_dict, is_leaf_level, research_focus=None, ai_model='claude'):
+    """Process taxa in chunks of 5 elements"""
+    # Filter out None and NaN values
+    filtered_taxa = [t for t in taxa if t is not None and str(t).lower() != 'nan']
+    if len(filtered_taxa) != len(taxa):
+        logging.info(f"Filtered out {len(taxa) - len(filtered_taxa)} invalid taxa entries")
+    
+    if not filtered_taxa:
+        logging.warning("No valid taxa to process after filtering")
+        return {}
+    
+    chunk_size = 5
+    all_assignments = {}
+    
+    total_chunks = (len(filtered_taxa) + chunk_size - 1) // chunk_size
+    logging.info(f"Starting to process {len(filtered_taxa)} taxa in {total_chunks} chunks")
+    
+    # Process taxa in chunks
+    for i in range(0, len(filtered_taxa), chunk_size):
+        chunk = filtered_taxa[i:i + chunk_size]
+        chunk_num = i//chunk_size + 1
+        logging.info(f"Processing chunk {chunk_num} of {total_chunks} ({len(chunk)} taxa)")
+        
+        try:
+            chunk_assignments = process_taxa_chunk(chunk, rank, reference_group_dict, research_focus, ai_model)
+            logging.info(f"Successfully processed chunk {chunk_num} with {len(chunk_assignments)} assignments")
+            all_assignments.update(chunk_assignments)
+        except Exception as e:
+            logging.error(f"Error processing chunk {chunk_num}: {str(e)}")
+            logging.error(f"Chunk content: {chunk}")
+            raise
+    
+    return all_assignments
 
 # Replace the original assign_groups function with this new one
 assign_groups = assign_groups_with_retry
