@@ -361,9 +361,14 @@ def analyze_region(base_name):
     matrix_iteration_dirs = []
     incomplete_iterations = []
     
-    for dir_name in os.listdir(models_dir):
-        if dir_name.startswith(f"{base_name}_validation_"):
-            full_path = os.path.join(models_dir, dir_name)
+    region_dir = os.path.join(models_dir, base_name)
+    if not os.path.exists(region_dir):
+        print(f"  Error: Region directory {region_dir} not found")
+        return None
+        
+    for dir_name in os.listdir(region_dir):
+        if dir_name.startswith(base_name) and dir_name != f"{base_name}_base" and "_" in dir_name:
+            full_path = os.path.join(region_dir, dir_name)
             if os.path.isdir(full_path):
                 has_matrix = os.path.exists(os.path.join(full_path, '05_diet_matrix.csv'))
                 has_groups = os.path.exists(os.path.join(full_path, '03_grouped_species_assignments.json'))
@@ -522,7 +527,7 @@ def main():
     os.makedirs('manuscript/figures', exist_ok=True)
     
     # Analyze all regions
-    base_names = ['NorthernTerritory', 'SouthEastInshore', 'SouthEastOffshore']
+    base_names = ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']
     results = []
     
     for base_name in base_names:
@@ -550,9 +555,9 @@ def main():
     
     # Generate timing analysis
     species_counts = {
-        'NorthernTerritory': 11362,
-        'SouthEastInshore': 13901,
-        'SouthEastOffshore': 15821
+        'v2_NorthernTerritory': 11362,
+        'v2_SouthEastInshore': 13901,
+        'v2_SouthEastOffshore': 15821
     }
     timing_summary, timing_table = generate_timing_summary(species_counts)
     

@@ -32,15 +32,6 @@ Available ecological groups (name: description):
 Return only a JSON object with taxa as keys and assigned groups as values.
 \end{prompt}
 
-We implement several reliability mechanisms in the classification process:
-
-\begin{itemize}
-\item Exponential backoff retry system for handling temporary AI service interruptions
-\item Incremental progress tracking with file locking for concurrent processing
-\item Validation of group assignments against template definitions
-\item Separate handling of AI-suggested groups not in the original template
-\end{itemize}
-
 When the research focus indicates areas requiring higher resolution (e.g., commercial fisheries species), we modify the classification process with additional guidance:
 
 \begin{prompt}

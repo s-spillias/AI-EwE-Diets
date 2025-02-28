@@ -294,7 +294,7 @@ def parse_arguments():
     parser.add_argument('--ewe_params_ai', choices=['claude', 'aws_claude', 'gemini', 'gemma2', 'llama3', 'mixtral'], default='claude', help='AI model for EwE Parameters')
     parser.add_argument('--rag_search_ai', choices=['aws_claude', 'azure_openai', 'openai', 'anthropic'], default='aws_claude', help='AI model for RAG Search')
     parser.add_argument('--resume', action='store_true', help='Resume processing from last successful step')
-    parser.add_argument('--early_stop', type=int, help='Stop after specified step number (0-7)')
+    parser.add_argument('--early_stop', default=5, type=int, help='Stop after specified step number (0-7)')
     parser.add_argument('--force_grouping', action='store_true', help='Force grouping without adding new groups to reference groups')
     return parser.parse_args()
 

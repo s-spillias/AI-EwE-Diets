@@ -1,6 +1,6 @@
-PWD c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EwE-with-AI\manuscript
+PWD c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EWE-FRESHER\manuscript
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EwE-with-AI\manuscript\manuscript.tex
+INPUT c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EWE-FRESHER\manuscript\manuscript.tex
 OUTPUT manuscript.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
@@ -379,11 +379,6 @@ INPUT .\diet_matrix_method.tex
 INPUT .\diet_matrix_method.tex
 INPUT .\diet_matrix_method.tex
 INPUT diet_matrix_method.tex
-INPUT .\parameter_estimation_method.tex
-INPUT .\parameter_estimation_method.tex
-INPUT .\parameter_estimation_method.tex
-INPUT .\parameter_estimation_method.tex
-INPUT parameter_estimation_method.tex
 INPUT .\validation_framework.tex
 INPUT .\validation_framework.tex
 INPUT .\validation_framework.tex
@@ -514,5 +509,3 @@ INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb

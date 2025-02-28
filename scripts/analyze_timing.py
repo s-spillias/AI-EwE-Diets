@@ -29,16 +29,17 @@ def analyze_regional_timing():
     """Analyze timing data across all validation regions."""
     models_dir = Path("MODELS")
     validation_dirs = []
-    for region in ['NorthernTerritory', 'SouthEastInshore', 'SouthEastOffshore']:
+    for region in ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']:
+        base_dir = models_dir / region
         for i in range(1, 6):  # Validation runs 1 through 5
-            validation_dir = models_dir / f"{region}_validation_{i}"
+            validation_dir = base_dir / f"{region}_{i}"
             if validation_dir.exists():
                 validation_dirs.append(validation_dir)
     
     timing_data = []
     
     for region_dir in validation_dirs:
-        region_name = region_dir.name.split("_validation")[0]
+        region_name = str(region_dir).split("\\")[-2]  # Get the parent directory name which contains the full region name
         timing = get_region_timing_data(region_dir)
         
         if timing:
@@ -57,7 +58,7 @@ def analyze_regional_timing():
     # Group by region to get average timings
     region_stats = df.groupby('region').agg({
         'identify_species': 'mean',
-        'download_data': 'mean',
+        'harvest_sealifebase_data': 'mean',
         'group_species': 'mean',
         'gather_diet_data': 'mean',
         'construct_diet_matrix': 'mean',
@@ -113,14 +114,13 @@ def generate_timing_table(df, region_stats, species_counts):
     )
     
     # Add a row for each region in a specific order
-    region_order = ['NorthernTerritory', 'SouthEastInshore', 'SouthEastOffshore']
+    region_order = ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']
     for region in region_order:
         if region in region_means.index:
             species_count = species_counts.get(region, 0)
             # Add asterisk to download time for SouthEastInshore
-            download_time = format_time(region_means.loc[region, 'download_data'])
-            if region == 'SouthEastInshore':
-                download_time += '*'
+            download_time = format_time(region_means.loc[region, 'harvest_sealifebase_data'])
+
             
             row = (
                 f"{region.replace('_', ' ')} & "
@@ -138,7 +138,6 @@ def generate_timing_table(df, region_stats, species_counts):
         "\\hline\n"
         "\\end{tabular}\n"
         "\\vspace{1ex}\n"
-        "\\raggedright\\footnotesize{*Includes periods of system inactivity between processing batches}\n"
         "\\end{table}\n"
     )
     
@@ -160,7 +159,7 @@ def generate_timing_summary(species_counts=None):
     # Get runs with at least species identification and data download completed
     completed_runs = df[
         (df['identify_species'] > 0) & 
-        (df['download_data'] > 0)
+        (df['harvest_sealifebase_data'] > 0)
     ]
     
     if completed_runs.empty:
@@ -168,7 +167,7 @@ def generate_timing_summary(species_counts=None):
     
     # Calculate means for each stage by region and create DataFrame
     region_means = pd.DataFrame(index=completed_runs['region'].unique())
-    for stage in ['identify_species', 'download_data', 'group_species',
+    for stage in ['identify_species', 'harvest_sealifebase_data', 'group_species',
                  'gather_diet_data', 'construct_diet_matrix', 'generate_ewe_params']:
         region_means[stage] = completed_runs.groupby('region')[stage].apply(safe_mean)
     
@@ -188,7 +187,7 @@ def generate_timing_summary(species_counts=None):
     max_total = region_totals.max()
     
     # Calculate percentage for downloading data
-    total_download = region_means['download_data'].sum()
+    total_download = region_means['harvest_sealifebase_data'].sum()
     total_time = region_totals.sum()
     download_percentage = (total_download / total_time * 100) if total_time > 0 else 0
     
@@ -199,9 +198,9 @@ def generate_timing_summary(species_counts=None):
     }
     
     # Calculate average per-species processing times for key stages
-    avg_download_time = np.mean([times['download_data']
+    avg_download_time = np.mean([times['harvest_sealifebase_data']
                                for times in per_species_times.values()
-                               if times['download_data'] > 0])
+                               if times['harvest_sealifebase_data'] > 0])
     avg_diet_time = np.mean([times['gather_diet_data'] 
                             for times in per_species_times.values() 
                             if times['gather_diet_data'] > 0])
@@ -232,9 +231,9 @@ def generate_timing_summary(species_counts=None):
 if __name__ == "__main__":
     # Example species counts - these should be provided by the analysis script
     species_counts = {
-        'NorthernTerritory': 11362,
-        'SouthEastInshore': 13901,
-        'SouthEastOffshore': 15821
+        'v2_NorthernTerritory': 11362,
+        'v2_SouthEastInshore': 13901,
+        'v2_SouthEastOffshore': 15821
     }
     summary, table = generate_timing_summary(species_counts)
     print("\nSummary:")

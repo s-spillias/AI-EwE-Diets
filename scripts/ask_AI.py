@@ -17,8 +17,13 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 load_dotenv()
 
-session = boto3.Session(profile_name='bedrockprofile')
-brt = boto3.client(service_name='bedrock-runtime',region_name="us-east-1")
+session = boto3.Session(
+    aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
+    aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY')
+)
+# print("Session credentials:", session.get_credentials().get_frozen_credentials())
+brt = session.client(service_name='bedrock-runtime', region_name='us-west-2')
+
 
 def is_retryable_error(e):
     """Determine if an error should trigger a retry"""
@@ -125,7 +130,7 @@ def ask_aws_claude(prompt, max_tokens=200000):
         raise
 
 @exponential_backoff
-def ask_claude(prompt, max_tokens=10000):
+def ask_claude(prompt, max_tokens=8192):
     client = anthropic.Anthropic(
         api_key=os.environ.get("ANTHROPIC_API_KEY")
     )
@@ -133,7 +138,7 @@ def ask_claude(prompt, max_tokens=10000):
     try:
         message = client.messages.create(
             model="claude-3-5-sonnet-20241022",
-            max_tokens=int(max_tokens) if max_tokens is not None else 1000,
+            max_tokens=int(max_tokens) if max_tokens is not None else 8192,
             temperature=0,
             messages=[
                 {"role": "user", "content": prompt}

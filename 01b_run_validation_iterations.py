@@ -71,30 +71,24 @@ def run_model_iteration(args):
             bufsize=1  # Line buffered
         )
         
-        # Capture and process output with timeout
-        try:
-            output, _ = process.communicate(timeout=300)  # 5 minute timeout
+        # Capture and process output
+        output, _ = process.communicate()
+        
+        # Log the output
+        for line in output.splitlines():
+            logger.info(line.rstrip())
             
-            # Log the output
-            for line in output.splitlines():
-                logger.info(line.rstrip())
-                
-            # Check for errors in output
-            if "Failed to connect to the OBIS API" in output or "Error in main function:" in output:
-                logger.error(f"Critical error detected in iteration {iteration}")
-                raise RuntimeError(f"Iteration {iteration} failed with critical error")
-                
-            if process.returncode != 0:
-                logger.error(f"Error in iteration {iteration}: Process returned {process.returncode}")
-                raise RuntimeError(f"Iteration {iteration} failed with return code {process.returncode}")
-                
-            logger.info(f"Completed iteration {iteration}")
-            return output_dir
+        # Check for errors in output
+        if "Failed to connect to the OBIS API" in output or "Error in main function:" in output:
+            logger.error(f"Critical error detected in iteration {iteration}")
+            raise RuntimeError(f"Iteration {iteration} failed with critical error")
             
-        except subprocess.TimeoutExpired:
-            process.kill()
-            logger.error(f"Iteration {iteration} timed out after 5 minutes")
-            raise RuntimeError(f"Iteration {iteration} timed out")
+        if process.returncode != 0:
+            logger.error(f"Error in iteration {iteration}: Process returned {process.returncode}")
+            raise RuntimeError(f"Iteration {iteration} failed with return code {process.returncode}")
+            
+        logger.info(f"Completed iteration {iteration}")
+        return output_dir
         
     except subprocess.CalledProcessError as e:
         logger.error(f"Error in iteration {iteration}: {e}")

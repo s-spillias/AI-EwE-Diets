@@ -1,0 +1,116 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    auto,
+    block/.style={
+        rectangle,
+        draw=gray!60,
+        fill=gray!5,
+        text width=6cm,
+        align=center,
+        rounded corners,
+        minimum height=1cm
+    },
+    validated/.style={
+        rectangle,
+        draw=gray!60,
+        draw=blue!40,
+        line width=1.5pt,
+        fill=blue!5,
+        text width=6cm,
+        align=center,
+        rounded corners,
+        minimum height=1cm
+    },
+    subblock/.style={
+        rectangle,
+        draw=gray!40,
+        fill=white,
+        text width=5.2cm,
+        align=left,
+        rounded corners,
+        minimum height=0.8cm,
+        font=\small
+    },
+    arrow/.style={
+        ->,
+        >=stealth,
+        thick,
+        draw=gray!60
+    },
+    ai_node/.style={
+        circle,
+        draw=violet!60,
+        fill=violet!10,
+        minimum size=0.8cm,
+        font=\small\bfseries
+    }
+]
+
+% Main process blocks with increased spacing
+\node [block] (species) {1. Species Identification};
+\node [block, below=2cm of species] (data) {2. Biological Data Collection};
+\node [validated, below=2cm of data] (grouping) {3. Functional Group Organization};
+\node [validated, below=2cm of grouping] (diet) {4. Interaction Determination};
+
+% Legend
+\node [validated, scale=0.5, right=8cm of species] (legend_val) {Validated Stage};
+\node [block, scale=0.5, right=8cm of data] (legend_reg) {Regular Stage};
+\node [ai_node, scale=0.7, right=8cm of grouping] (legend_ai) {AI};
+\node [right=0.3cm of legend_val] {\small Stages with systematic validation};
+\node [right=0.3cm of legend_reg] {\small Other framework stages};
+\node [right=0.3cm of legend_ai] {\small AI assistance (Claude)};
+
+% AI nodes in the flow
+\node [ai_node] (ai1) at ($(data)!0.5!(species)$) {AI};
+\node [ai_node] (ai2) at ($(grouping)!0.5!(data)$) {AI};
+\node [ai_node] (ai3) at ($(diet)!0.5!(grouping)$) {AI};
+
+% Modify main flow arrows to go through AI nodes
+\draw [arrow] (species) -- (ai1);
+\draw [arrow] (ai1) -- (data);
+\draw [arrow] (data) -- (ai2);
+\draw [arrow] (ai2) -- (grouping);
+\draw [arrow] (grouping) -- (ai3);
+\draw [arrow] (ai3) -- (diet);
+
+% Sub-processes for Species Identification
+\node [subblock, right=2cm of species] (species1) {
+    • OBIS queries\\
+    • GBIF occurrence records\\
+    • Temporal distributions\\
+    • Regional abundance data
+};
+
+% Sub-processes for Data Collection
+\node [subblock, right=2cm of data] (data1) {
+    • FishBase/SeaLifeBase integration\\
+    • Ecobase parameters\\
+    • Literature mining\\
+    • NLP data extraction
+};
+
+% Sub-processes for Grouping
+\node [subblock, right=2cm of grouping] (grouping1) {
+    • Vector database (Chroma)\\
+    • Ecological embeddings\\
+    • Trophic level validation\\
+    • Group coherence analysis
+};
+
+% Sub-processes for Diet Matrix
+\node [subblock, right=2cm of diet] (diet1) {
+    • Diet composition synthesis\\
+    • Interaction confidence scoring\\
+    • Parameter estimation\\
+    • Data quality metrics
+};
+
+
+% Connecting arrows to sub-processes
+\draw [arrow] (species) -- (species1);
+\draw [arrow] (data) -- (data1);
+\draw [arrow] (grouping) -- (grouping1);
+\draw [arrow] (diet) -- (diet1);
+
+\end{tikzpicture}
