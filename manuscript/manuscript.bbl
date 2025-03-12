@@ -98,6 +98,12 @@ Karniadakis, G.~E., Kevrekidis, I.~G., Lu, L., Perdikaris, P., Wang, S., and
 \newblock Physics-informed machine learning.
 \newblock {\em Nature Reviews Physics}, 3(6):422--440.
 
+\bibitem[Keck et~al., 2025]{keck2025extracting}
+Keck, F., Broadbent, H., and Altermatt, F. (2025).
+\newblock Extracting massive ecological data on state and interactions of
+  species using large language models.
+\newblock {\em bioRxiv}, pages 2025--01.
+
 \bibitem[Kelling et~al., 2009]{Kelling2009}
 Kelling, S., Hochachka, W.~M., Fink, D., Riedewald, M., Caruana, R., Ballard,
   G., and Hooker, G. (2009).
@@ -137,6 +143,26 @@ Poelen, J.~H., Simons, J.~D., and Mungall, C.~J. (2014).
 \newblock Global biotic interactions: An open infrastructure to share and
   analyze species-interaction datasets.
 \newblock {\em Ecological Informatics}, 24:148--159.
+
+\bibitem[Spillias et~al., 2024a]{spillias2024evaluating}
+Spillias, S., Ollerhead, K., Andreotta, M., Annand-Jones, R., Boschetti, F.,
+  Duggan, J., Karcher, D., Paris, C., Shellock, R., and Trebilco, R. (2024a).
+\newblock Evaluating generative ai to extract qualitative data from
+  peer-reviewed documents.
+
+\bibitem[Spillias et~al., 2024b]{spilliasfuture}
+Spillias, S., Trebilco, R., Adams, M.~P., Boschetti, F., Constable, A.,
+  Dunstan, P., Ferrier, S., Porobic, J., Grimberg, E., Grigg, N., et~al.
+  (2024b).
+\newblock The future of artificial intelligence in ecosystem modelling.
+\newblock {\em SSRN preprint}.
+
+\bibitem[Spillias et~al., 2024c]{spillias2024human}
+Spillias, S., Tuohy, P., Andreotta, M., Annand-Jones, R., Boschetti, F.,
+  Cvitanovic, C., Duggan, J., Fulton, E.~A., Karcher, D.~B., Paris, C., et~al.
+  (2024c).
+\newblock Human-ai collaboration to identify literature for evidence synthesis.
+\newblock {\em Cell Reports Sustainability}, 1(7).
 
 \bibitem[Tuia et~al., 2022]{Tuia2022}
 Tuia, D., Kellenberger, B., Beery, S., Costelloe, B.~R., Zuffi, S., Risse, B.,

@@ -1,0 +1,85 @@
+Validation Framework Summary Statistics
+====================================
+Generated: 2025-02-28
+
+1. Species Grouping Consistency
+-----------------------------
+
+Cross-Region Summary:
+Region                  Mean Consistency   Median Consistency   Unstable Species (<0.95)   Total Species
+Northern Territory      0.997             1.000               103 (0.99%)                10374
+South East Inshore     0.997             1.000               125 (1.06%)                11796
+South East Offshore    0.998             1.000               87 (0.73%)                 12013
+
+2. Group Stability Analysis
+-------------------------
+
+Jaccard Similarity Coefficients (averaged across consecutive iteration pairs):
+
+Northern Territory:
+- Most stable groups:
+  * Benthic infaunal carnivores (0.999)
+  * Benthic filter feeders (0.992)
+  * Benthic grazers (0.989)
+- Least stable groups:
+  * Deposit feeders (0.953)
+  * Planktivores (0.956)
+  * Nanoplankton (0.969)
+
+South East Inshore:
+- Most stable groups:
+  * Macrozoobenthos (1.000)
+  * Deposit feeders (0.999)
+  * Benthic grazers (0.997)
+- Least stable groups:
+  * Piscivores (0.867)
+  * Oceanic piscivorous fish (0.897)
+  * Shallow demersal fish (0.928)
+
+South East Offshore:
+- Most stable groups:
+  * Benthic filter feeders (1.000)
+  * Mesozooplankton (0.998)
+  * Benthic carnivores (0.998)
+- Least stable groups:
+  * Nanoplankton (0.855)
+  * Piscivores (0.941)
+  * Shallow demersal fish (0.923)
+
+3. Diet Matrix Reliability
+------------------------
+
+Significant Interactions Analysis (>5% of predator's diet):
+
+Region                  Total Interactions   Unstable (>0.3)   Stability Rate
+Northern Territory      358                 148               58.7% stable
+South East Inshore     380                 185               51.3% stable
+South East Offshore    477                 210               56.0% stable
+
+Diet Stability Patterns:
+- Most stable interactions: Detritus-based and primary producer connections
+- Most variable: Predator-prey relationships in higher trophic levels
+- Intermediate stability: Benthic feeding relationships
+
+4. Statistical Analysis Results
+----------------------------
+
+Group Consistency Tests:
+- Chi-square tests confirm non-random group assignments (p < 0.001 across all regions)
+- Coefficients of variation for species assignments:
+  * Northern Territory: 1.47-15.20%
+  * South East Inshore: 0.40-24.49%
+  * South East Offshore: 0.80-14.15%
+
+Trophic Structure Analysis:
+- One-way ANOVA results show significant regional differences in group characteristics
+- Cohen's f effect sizes range from small (0.1-0.3) for species-level metrics to 
+  large (>0.4) for group-level comparisons
+
+Diet Matrix Reliability:
+- Spearman correlations between iterations for significant interactions (>0.05):
+  * Northern Territory: ρ = 0.72-0.89
+  * South East Inshore: ρ = 0.68-0.85
+  * South East Offshore: ρ = 0.70-0.87
+
+Note: All statistics derived from 5 independent iterations per region.

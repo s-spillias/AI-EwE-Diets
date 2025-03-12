@@ -405,7 +405,6 @@ INPUT .\results\timing_table.tex
 INPUT .\results\timing_table.tex
 INPUT .\results\timing_table.tex
 INPUT results\timing_table.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\figures\regional_group_analysis.png
 INPUT .\figures\regional_group_analysis.png
 INPUT .\figures\regional_group_analysis.png
@@ -425,7 +424,13 @@ INPUT .\results\unstable_species_table.tex
 INPUT .\results\unstable_species_table.tex
 INPUT .\results\unstable_species_table.tex
 INPUT results\unstable_species_table.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti0800.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
 INPUT .\figures\stability_score_distribution.png
 INPUT .\figures\stability_score_distribution.png
 INPUT .\figures\stability_score_distribution.png
@@ -448,6 +453,7 @@ INPUT discussion.tex
 INPUT .\manuscript.bbl
 INPUT .\manuscript.bbl
 INPUT manuscript.bbl
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1200.tfm
 INPUT .\supplement.tex
 INPUT .\supplement.tex
 INPUT .\supplement.tex
@@ -463,10 +469,10 @@ INPUT .\figures\diet_interaction_heatmap.png
 INPUT manuscript.aux
 INPUT .\manuscript.out
 INPUT .\manuscript.out
-INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
-INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0800.pk
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1200.pk
+INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
+INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1200.pk
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk

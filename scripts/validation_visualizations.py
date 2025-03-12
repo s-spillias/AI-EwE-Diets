@@ -10,49 +10,11 @@ def create_regional_group_distribution(results, output_path):
     Create a multi-panel figure showing group size distributions by region
     and their relationship with trophic levels and consistency.
     """
-    # Set up the figure with a 2x2 grid
-    fig = plt.figure(figsize=(15, 12))
-    gs = GridSpec(2, 2, figure=fig)
+    # Set up the figure
+    fig = plt.figure(figsize=(8, 6))
     
-    # Panel A: Group size distributions by region (top left)
-    ax1 = fig.add_subplot(gs[0, 0])
-    region_data = {}
-    
-    for result in results:
-        region = result['name'].replace('_', ' ')
-        sizes = []
-        for stats in result['group_stability'].values():
-            sizes.extend([stats['avg_size']] * len(stats['member_sets']))
-        region_data[region] = sizes
-    
-    ax1.boxplot(region_data.values(), labels=region_data.keys())
-    ax1.set_title('A) Functional Group Size Distribution')
-    ax1.set_ylabel('Species Count per Group')
-    ax1.set_xlabel('Region')
-    plt.setp(ax1.get_xticklabels(), rotation=45, ha='right')
-    ax1.grid(True)
-    
-    # Panel B: Consistency scores by region (top right)
-    ax2 = fig.add_subplot(gs[0, 1])
-    consistency_data = {}
-    
-    for result in results:
-        region = result['name'].replace('_', ' ')
-        scores = [m['consistency_score'] for m in result['consistency_metrics'].values()]
-        consistency_data[region] = scores
-    
-    ax2.violinplot([data for data in consistency_data.values()], 
-                   positions=range(1, len(consistency_data) + 1))
-    ax2.set_xticks(range(1, len(consistency_data) + 1))
-    ax2.set_xticklabels(consistency_data.keys())
-    ax2.set_title('B) Species Classification Consistency')
-    ax2.set_xlabel('Region')
-    ax2.set_ylabel('Consistency Score (0-1)')
-    plt.setp(ax2.get_xticklabels(), rotation=45, ha='right')
-    ax2.grid(True)
-    
-    # Panel C: Group stability (Jaccard similarity) by region (bottom left)
-    ax3 = fig.add_subplot(gs[1, 0])
+    # Group stability (Jaccard similarity) by region
+    ax3 = fig.add_subplot(111)
     stability_data = {}
     
     for result in results:
@@ -62,27 +24,11 @@ def create_regional_group_distribution(results, output_path):
         stability_data[region] = similarities
     
     ax3.boxplot(stability_data.values(), labels=stability_data.keys())
-    ax3.set_title('C) Group Membership Stability')
+    ax3.set_title('Group Membership Stability')
     ax3.set_xlabel('Region')
     ax3.set_ylabel('Jaccard Similarity Index')
     plt.setp(ax3.get_xticklabels(), rotation=45, ha='right')
     ax3.grid(True)
-    
-    # Panel D: Group size variation (bottom right)
-    ax4 = fig.add_subplot(gs[1, 1])
-    variation_data = {}
-    
-    for result in results:
-        region = result['name'].replace('_', ' ')
-        variations = [stats['size_std'] for stats in result['group_stability'].values()]
-        variation_data[region] = variations
-    
-    ax4.boxplot(variation_data.values(), labels=variation_data.keys())
-    ax4.set_title('D) Group Size Variability')
-    ax4.set_xlabel('Region')
-    ax4.set_ylabel('Standard Deviation of Group Size')
-    plt.setp(ax4.get_xticklabels(), rotation=45, ha='right')
-    ax4.grid(True)
     
     # Adjust layout and save
     plt.tight_layout()

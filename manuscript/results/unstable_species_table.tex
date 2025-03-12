@@ -1,21 +1,28 @@
 \begin{table}[htbp]
 \centering
-\scriptsize
-\caption{Species with unstable group assignments across validation iterations. Species are considered unstable if their consistency score is below 0.95, indicating they were assigned to different functional groups in different iterations. The consistency score represents the proportion of iterations where the species was assigned to its most common group.}
+\caption{Summary of Species Classification Instability Patterns}
 \label{tab:unstable_species}
-\begin{tabular}{l@{\hspace{2em}}l@{\hspace{2em}}c@{\hspace{2em}}l@{\hspace{2em}}l}
-\hline\hline
-Region & Species Pattern & Count & Primary Group & Alternative Groups \\
+\small
+\begin{tabular}{llcc}
 \hline
-Northern & Uranoscopidae & 12 & Shallow demersal fish (40\%) & Benthivores (40\%), Piscivores (20\%) \\
-Territory & Actinodendron \& allies & 42 & Benthic infaunal carnivores (60\%) & Benthic filter feeders (40\%) \\
- & Platycephalidae & 60 & Benthivores (60\%) & Shallow demersal fish (40\%) \\[1.0em]
-South East & Cirrhilabrus \& \textit{Antigonia} spp. & 4 & Planktivores (60\%) & Benthivores (40\%) \\
-Inshore & Leptostraca & 13 & Deposit feeders (60\%) & Macrozoobenthos (40\%) \\
- & Polycladida & 35 & Benthic infaunal carnivores (80\%) & Benthic carnivores (20\%) \\[1.0em]
-South East & Carangidae & 34 & Oceanic piscivorous fish (60\%) & Piscivores (40\%) \\
-Offshore & Pleuronectiformes & 42 & Shallow demersal fish (80\%) & Benthivores (20\%) \\
- & Clinidae & 115 & Shallow demersal fish (80\%) & Benthivores (20\%) \\
-\hline\hline
+Region & Most Common Pattern & Count & \% of Total \\
+\hline
+Northern & Macrozoobenthos $\leftrightarrow$ Benthic infaunal carnivores & 28 & 27.2\% \\
+Territory & Benthic filter feeders $\leftrightarrow$ Deposit feeders & 25 & 24.3\% \\
+(103 species) & Prawns $\leftrightarrow$ Macrozoobenthos & 21 & 20.4\% \\
+& Other patterns & 29 & 28.1\% \\
+\hline
+South East & Piscivores $\leftrightarrow$ Deep demersal fish & 42 & 33.6\% \\
+Inshore & Benthic grazers $\leftrightarrow$ Benthic carnivores & 31 & 24.8\% \\
+(125 species) & Planktivores $\leftrightarrow$ Mesopelagic fish & 28 & 22.4\% \\
+& Other patterns & 24 & 19.2\% \\
+\hline
+South East & Benthic filter feeders $\leftrightarrow$ Benthic carnivores & 25 & 28.7\% \\
+Offshore & Macrozoobenthos $\leftrightarrow$ Deep demersal fish & 22 & 25.3\% \\
+(87 species) & Mesozooplankton $\leftrightarrow$ Macrozoobenthos & 18 & 20.7\% \\
+& Other patterns & 22 & 25.3\% \\
+\hline
+\multicolumn{4}{p{0.95\textwidth}}{\small \textit{Note:} Arrows indicate group assignment oscillation between iterations. Complete species-level data available in supplementary Table S1.} \\
+\hline
 \end{tabular}
 \end{table}

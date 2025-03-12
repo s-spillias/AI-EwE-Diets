@@ -9,37 +9,37 @@ We executed five independent iterations per region in phase two. Each iteration 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/validation_regions.pdf}
-    \caption{Map of the three validation regions used in this study: Northern Territory (orange), South East Inshore (blue), and South East Offshore (green).}
+    \caption{Map of the three validation regions used in this study: Northern Territory (orange), South East shelf (blue), and South East Offshore (green).}
     \label{fig:validation_regions}
     \end{figure}
 
 We validate our framework using three Australian marine regions that present distinct ecological characteristics and modeling challenges (Figure \ref{fig:validation_regions}). The Northern Territory region represents a tropical ecosystem characterized by complex reef systems, seasonal monsoon influences, and high biodiversity. This region tests the framework's ability to handle diverse species assemblages and complex trophic interactions in a dynamic environment.
 
-The South East Inshore region represents a temperate coastal system with extensive ecological records. This region has comprehensive diet information in established databases, well-documented EwE models spanning multiple years, and active research programs. The rich availability of expert knowledge and historical data makes this region ideal for validating the framework's data integration capabilities.
+The South East shelf region represents a temperate coastal system with extensive ecological records. This region has comprehensive diet information in established databases, well-documented EwE models spanning multiple years, and active research programs. The rich availability of expert knowledge and historical data makes this region ideal for validating the framework's data integration capabilities.
 
 The South East Offshore region presents a deep-water ecosystem that challenges the framework with data-limited conditions and unique ecological patterns. This region tests the framework's capacity to handle situations where direct observational data may be sparse and where species interactions may be less well understood. The contrasting characteristics of these three regions provide a robust test of the framework's adaptability across different ecological contexts.
 
 
-\subsubsection{Group  Consistency Analysis}
+\subsubsection{Group Consistency Analysis}
 
-We tracked each species' group assignments across iterations and calculated a consistency score:
+To validate the ecological validity of AI-generated species groupings, we developed quantitative measures of grouping consistency. We tracked each species' group assignments across iterations and calculated a consistency score:
 
 \[
 \text{Consistency Score} = \frac{\text{Number of occurrences in most common group}}{\text{Total number of iterations}}
 \]
 
-We classified species with consistency scores below 0.95 as unstable, indicating variable group assignments across iterations.
+This metric quantifies the framework's decision-making reliability for individual species. We classified species with consistency scores below 0.95 as unstable, indicating variable group assignments across iterations. Chi-square tests on these consistency scores help identify whether grouping decisions remain stable across different ecological contexts, addressing a key aspect of the framework's reliability.
 
-We assessed group stability using the Jaccard similarity coefficient to measure consistency of group membership between consecutive iterations:
+To evaluate broader patterns in group formation, we assessed group stability using the Jaccard similarity coefficient between consecutive iterations:
 
 \[
 J(i,j) = \frac{|M_{i} \cap M_{j}|}{|M_{i} \cup M_{j}|}
 \]
 
-where $M_{i}$ and $M_{j}$ represented species members in iterations $i$ and $j$. We calculated the overall stability score by averaging Jaccard similarities across consecutive iteration pairs.
+where $M_{i}$ and $M_{j}$ represented species members in iterations $i$ and $j$. We calculated the overall stability score by averaging Jaccard similarities across consecutive iteration pairs. This approach, combined with coefficients of variation analysis, reveals how consistently the framework identifies and maintains ecologically meaningful groupings across different runs. One-way ANOVA tests on these stability measures across regions, supplemented with Cohen's f effect size calculations, demonstrate the framework's adaptability to different marine ecosystems while maintaining consistent decision-making patterns.
 
 \subsubsection{Diet Matrix Analysis}
-We analyzed diet matrix reliability by focusing on significant predator-prey interactions, which we defined as those comprising more than 5\% of a predator's diet. For each interaction, we calculated:
+To evaluate the reliability of AI-generated trophic interactions and assess the framework's ability to capture distinct ecological patterns, we developed a multi-metric analysis approach. We focused on significant predator-prey interactions, defined as those comprising more than 5\% of a predator's diet, using both descriptive statistics and correlation analyses. For each interaction, we calculated:
 
 \begin{enumerate}
     \item Presence ratio across iterations:
@@ -70,12 +70,9 @@ We classified interactions as unstable when their stability score exceeded 0.3, 
     \item An unstable interaction (S = 0.39) might show values [0.027, 0.25, 0.25, 0.067, 0.25], where proportions vary substantially between iterations
 \end{itemize}
 
-This metric provides a continuous measure of stability that handles both presence/absence patterns and magnitude variations in a unified way, avoiding discontinuities at zero values.
+This metric provides a continuous measure of stability that handles both presence/absence patterns and magnitude variations in a unified way, avoiding discontinuities at zero values. To assess the framework's ability to capture distinct ecological patterns across regions, we employed pairwise Spearman correlations between iterations to evaluate the consistency of predator-prey relationships, focusing on significant interactions. This non-parametric approach accounts for the potentially non-normal distribution of diet proportions. We supplemented this with Kruskal-Wallis tests to identify significant differences in trophic structure across regions, providing evidence of the framework's ability to distinguish unique ecological characteristics in different marine ecosystems.
 
-\subsubsection{Expert Evaluation Protocol}
-To evaluate the quality of diet matrices generated through artificial intelligence methods, we implemented a single-blind validation framework comparing AI-generated and expert-created Ecopath with Ecosim (EwE) diet matrices across three distinct regions. Two independent domain experts were engaged to assess both matrix types without knowledge of their origin. The evaluation protocol employed a five-point Likert scale assessment, where a score of 1 indicated strong preference for the AI-generated matrix and 5 indicated strong preference for the expert-generated matrix. 
+%\subsubsection{Expert Evaluation Protocol}
+%To evaluate the quality of diet matrices generated through artificial intelligence methods, we implemented a single-blind validation framework comparing AI-generated and expert-created Ecopath with Ecosim (EwE) diet matrices across three distinct regions. Two independent domain experts were engaged to assess both matrix types without knowledge of their origin. The evaluation protocol employed a five-point Likert scale assessment, where a score of 1 indicated strong preference for the AI-generated matrix and 5 indicated strong preference for the expert-generated matrix. 
 
-The validation framework encompassed two primary assessment criteria. First, experts evaluated the structural validity of functional group classifications within each matrix. Second, they assessed the ecological plausibility of diet proportions assigned to each functional grouping. To capture nuanced insights beyond numerical scores, experts provided qualitative feedback on the strengths and weaknesses of each matrix. This dual quantitative-qualitative approach enabled comprehensive evaluation of both methodological approaches to diet matrix construction.
-
-\subsection{Statistical Analysis}
-We conducted statistical analyses to evaluate framework performance across regions. We assessed group consistency using chi-square tests and coefficients of variation, examining the stability of species assignments across iterations. We analyzed regional differences in group characteristics using one-way ANOVA with Cohen's f effect size calculations. We evaluated trophic level patterns using Kruskal-Wallis tests to identify significant differences in trophic structure. We quantified diet matrix reliability through pairwise Spearman correlations between iterations, focusing on significant interactions (>0.05 proportion).
+%The validation framework encompassed two primary assessment criteria. First, experts evaluated the structural validity of functional group classifications within each matrix. Second, they assessed the ecological plausibility of diet proportions assigned to each functional grouping. To capture nuanced insights beyond numerical scores, experts provided qualitative feedback on the strengths and weaknesses of each matrix. This dual quantitative-qualitative approach enabled comprehensive evaluation of both methodological approaches to diet matrix construction.

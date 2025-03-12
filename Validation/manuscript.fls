@@ -1,6 +1,6 @@
-PWD c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EwE-with-AI\Validation
+PWD c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EWE-FRESHER\Validation
 INPUT C:\Users\spi085\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EwE-with-AI\Validation\manuscript.tex
+INPUT c:\Users\spi085\OneDrive - CSIRO\Documents\_Projects\EWE-FRESHER\Validation\manuscript.tex
 OUTPUT manuscript.log
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
@@ -107,9 +107,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\manuscript.aux
-INPUT .\manuscript.aux
-INPUT manuscript.aux
 OUTPUT manuscript.aux
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -119,14 +116,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
-INPUT .\manuscript.out
-INPUT .\manuscript.out
-INPUT manuscript.out
-INPUT manuscript.out
-OUTPUT manuscript.pdf
-INPUT .\manuscript.out
-INPUT .\manuscript.out
 OUTPUT manuscript.out
+OUTPUT manuscript.pdf
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
@@ -146,7 +137,6 @@ INPUT .\introduction.tex
 INPUT .\introduction.tex
 INPUT introduction.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT .\methods.tex
 INPUT .\methods.tex
 INPUT .\methods.tex
@@ -154,13 +144,8 @@ INPUT .\methods.tex
 INPUT methods.tex
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
-INPUT .\validation_regions.png
+INPUT C:\Users\spi085\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
@@ -196,7 +181,6 @@ INPUT .\supplement.tex
 INPUT .\supplement.tex
 INPUT .\supplement.tex
 INPUT supplement.tex
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmtt.fd
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmtt.fd

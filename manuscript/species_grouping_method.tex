@@ -1,6 +1,6 @@
 \subsubsection{Species Grouping}
 
-We implement species grouping through a flexible system that adapts to regional ecological contexts. The framework supports three approaches for defining functional groups: using templates from existing EcoBase models, generating region-specific groups through AI analysis of geographic characteristics, or applying a predefined template (provided in Section~\ref{sec:group_templates} of the supplementary material). For geographic regions, we analyze oceanographic conditions, habitat types, and ecological characteristics to inform group definitions.
+We implement species grouping through a flexible system that adapts to regional ecological contexts. The framework supports three approaches for defining functional groups: using templates from existing EcoBase models, generating region-specific groups through AI analysis of geographic characteristics, or applying a predefined template (provided in Section~\ref{tab:functional_groups} of the supplementary material). For geographic regions, we analyze oceanographic conditions, habitat types, and ecological characteristics to inform group definitions.
 
 We process taxa hierarchically from kingdom to species level, implementing an incremental system with progress tracking to handle large datasets reliably. At each taxonomic level, Claude evaluates taxa against the selected grouping template using the following prompt:
 

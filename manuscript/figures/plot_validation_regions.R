@@ -27,8 +27,8 @@ p <- ggplot() +
   labs(title = "Validation Regions") +
   # Add region labels with adjusted positions
   annotate("text", x = 132.5, y = -13, label = "Northern Territory", color = "#cc6000", fontface = "bold") +
-  annotate("text", x = 143, y = -37, label = "South East\nInshore", color = "#1a5c8c", fontface = "bold") +
-  annotate("text", x = 152, y = -42, label = "South East\nOffshore", color = "#1e8449", fontface = "bold") +
+  annotate("text", x = 143, y = -37, label = "South East\nshelf", color = "#1a5c8c", fontface = "bold") +
+  annotate("text", x = 152, y = -42, label = "South East\noffshore", color = "#1e8449", fontface = "bold") +
   # Set appropriate map bounds for Australia
   coord_sf(xlim = c(110, 155), ylim = c(-45, -10)) +
   # Customize theme

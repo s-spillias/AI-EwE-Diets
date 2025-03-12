@@ -430,6 +430,7 @@ def analyze_region(base_name):
     
     return result
 
+
 def generate_validation_report(results, output_file):
     """Generate a comprehensive validation report for all regions"""
     os.makedirs('manuscript/results', exist_ok=True)
@@ -520,6 +521,59 @@ def generate_validation_report(results, output_file):
                 f.write("\n2. Diet Interaction Analysis\n")
                 f.write("--------------------------\n")
                 f.write("No diet matrix data available for analysis\n")
+                
+def generate_supplementary_table(results):
+    """Generate a detailed LaTeX table of unstable species for the supplement"""
+    table_content = [
+        r"\begin{longtable}{llcll}",
+        r"\caption{Complete List of Species with Low Classification Stability (Consistency < 0.95)} \label{tab:supp_unstable_species} \\",
+        r"\hline",
+        r"Region & Species & Consistency & Group & Assignment \% \\",
+        r"\hline",
+        r"\endhead",
+        ""
+    ]
+
+    for result in results:
+        region_name = result['name'].replace('v2_', '')
+        consistency_metrics = result['consistency_metrics']
+        
+        # Get unstable species
+        unstable_species = [(species, metrics) for species, metrics in consistency_metrics.items() 
+                           if metrics['consistency_score'] < 0.95]
+        
+        # Sort by consistency score
+        unstable_species.sort(key=lambda x: (x[1]['consistency_score'], x[0]))
+        
+        # Add region header
+        table_content.append(r"\multicolumn{5}{l}{\textbf{" + region_name + r"}} \\")
+        table_content.append(r"\hline")
+        
+        # Add species data
+        for species, metrics in unstable_species:
+            first_row = True
+            for group, count in sorted(metrics['group_counts'].items(), key=lambda x: x[1], reverse=True):
+                percentage = (count / metrics['total_iterations']) * 100
+                if first_row:
+                    table_content.append(f"{region_name} & {species} & {metrics['consistency_score']:.2f} & {group} & {percentage:.1f}\\% \\\\")
+                    first_row = False
+                else:
+                    table_content.append(f"& & & {group} & {percentage:.1f}\\% \\\\")
+            table_content.append(r"\hline")
+        
+        table_content.append(r"\hline")
+    
+    # Close the table
+    table_content.extend([
+        r"\end{longtable}"
+    ])
+    
+    # Write to file
+    table_file = 'manuscript/results/supplementary_unstable_species.tex'
+    with open(table_file, 'w') as f:
+        f.write('\n'.join(table_content))
+    
+    print(f"Supplementary table generated: {table_file}")
 
 def main():
     # Create output directories
@@ -543,6 +597,9 @@ def main():
     report_file = 'manuscript/results/validation_analysis.txt'
     generate_validation_report(results, report_file)
     print(f"\nValidation report generated: {report_file}")
+    
+    # Generate supplementary table
+    generate_supplementary_table(results)
     
     # Create combined heatmap
     heatmap_file = 'manuscript/figures/diet_interaction_heatmap.png'
