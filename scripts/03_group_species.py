@@ -149,14 +149,13 @@ def main(species_data_file, output_file_hierarchy, output_file_assignments, outp
         logging.info(f"Using grouping template: {grouping_template['type']} from {grouping_template['path']}")
         logging.info(f"Force grouping: {force_grouping}")
 
+        # Load reference groups with taxonomic classification
+        logging.info("Loading reference groups with taxonomic classification...")
+        reference_groups, reference_group_dict = load_reference_groups(output_dir, json_file_path, ai_model)
+
         logging.info(f"Loading species data from {species_data_file}...")
         species_data = load_species_data(species_data_file)
         logging.info(f"Loaded {len(species_data)} species")
-        
-        logging.info("Loading reference groups...")
-        
-        # Load reference groups using the updated function from group_species_utils
-        reference_groups, reference_group_dict = load_reference_groups(output_dir, json_file_path)
         
         logging.info(f"Loaded {len(reference_groups)} reference groups")
         

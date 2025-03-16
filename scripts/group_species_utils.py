@@ -388,10 +388,47 @@ def create_hierarchical_json(data):
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=60), 
        retry=retry_if_exception_type((requests.exceptions.RequestException, json.JSONDecodeError, TypeError)))
+def get_taxonomic_classification(group_name, ai_model):
+    """Get the most specific taxonomic classification that covers a functional group"""
+    prompt = f"""For the marine functional group '{group_name}', determine the most specific taxonomic classification that:
+1. Includes ALL species that would belong to this group
+2. Excludes species that would NOT belong to this group
+3. Uses standard taxonomic ranks (Kingdom, Phylum, Class, Order, Family, Genus)
+
+For example:
+- "Abalone" would return "Family: Haliotidae" as this family includes all abalone species and nothing else
+- "Baleen whales" would return "Suborder: Mysticeti" as this includes all baleen whales
+- "Piscivores" would return "None" as this is a feeding strategy that occurs across many unrelated taxa
+
+Return ONLY the classification in this format:
+"Rank: Name" (e.g., "Family: Haliotidae")
+Or "None" if no single taxonomic group applies."""
+
+    response = ask_ai(prompt, ai_model)
+    if isinstance(response, list) and len(response) > 0:
+        response = response[0].text.strip()
+        if response.lower() == "none":
+            return None
+        if ":" in response:
+            rank, name = response.split(":", 1)
+            return {"rank": rank.strip(), "name": name.strip()}
+    return None
+
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=60), 
+       retry=retry_if_exception_type((requests.exceptions.RequestException, json.JSONDecodeError, TypeError)))
 def process_taxa_chunk(taxa_chunk, rank, reference_group_dict, research_focus, ai_model):
     """Process a small chunk of taxa and return their assignments"""
     logging.info(f"Starting to process chunk with taxa: {taxa_chunk}")
     newline = "\n"
+
+    # First, get taxonomic classifications for all groups if not already cached
+    if not hasattr(process_taxa_chunk, 'taxonomic_cache'):
+        process_taxa_chunk.taxonomic_cache = {}
+        for group in reference_group_dict.keys():
+            if group not in process_taxa_chunk.taxonomic_cache:
+                classification = get_taxonomic_classification(group, ai_model)
+                process_taxa_chunk.taxonomic_cache[group] = classification
+                logging.info(f"Group '{group}' taxonomic classification: {classification}")
     
     research_focus_guidance = ""
     if research_focus:
