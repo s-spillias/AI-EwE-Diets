@@ -33,7 +33,7 @@ def setup_logging(output_dir):
     
     return logger
 
-def run_validation(base_name, geojson_path, research_focus, num_iterations=5, num_processes=3, grouping_template='default', base_dir=None):
+def run_validation(base_name, geojson_path, research_focus, num_iterations=5, num_processes=3, grouping_template='default', template_file=None, base_dir=None, force_grouping=False):
     """Run the complete validation process"""
     # Use provided base directory or create new one
     if base_dir is None:
@@ -59,6 +59,12 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
         research_focus,
         grouping_template
     ]
+    
+    if template_file:
+        initial_cmd.append(template_file)
+    
+    if force_grouping:
+        initial_cmd.append('--force_grouping')
     
     try:
         # Run initial steps and capture output
@@ -135,10 +141,10 @@ def run_validation(base_name, geojson_path, research_focus, num_iterations=5, nu
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python 01_run_validation_iterations.py <base_name> <geojson_path> <research_focus> [num_iterations] [num_processes] [grouping_template] [base_dir]")
+        print("Usage: python 01_run_validation_iterations.py <base_name> <geojson_path> <research_focus> [num_iterations] [num_processes] [grouping_template] [template_file] [base_dir] [--force_grouping]")
         print("\nGrouping template options:")
         print("  default    - Use Default Grouping (default if not specified)")
-        print("  upload     - Upload Custom Grouping JSON")
+        print("  upload     - Upload Custom Grouping JSON (specify template file path)")
         print("  ecobase    - Search Ecobase for Template")
         print("  geojson    - Generate from Selected Area")
         sys.exit(1)
@@ -149,7 +155,9 @@ def main():
     num_iterations = int(sys.argv[4]) if len(sys.argv) > 4 else 5
     num_processes = int(sys.argv[5]) if len(sys.argv) > 5 else 5
     grouping_template = sys.argv[6] if len(sys.argv) > 6 else 'default'
+    template_file = sys.argv[7] if len(sys.argv) > 7 else None
     base_dir = sys.argv[8] if len(sys.argv) > 8 else None
+    force_grouping = '--force_grouping' in sys.argv
 
     
     # Validate grouping template choice
@@ -163,6 +171,21 @@ def main():
     logger = setup_logging(base_dir or f"MODELS/{base_name}/{base_name}_base")
     logger.info(f"Starting complete validation workflow for {base_name}")
     
+    # Validate grouping template choice and template file
+    valid_templates = ['default', 'upload', 'ecobase', 'geojson']
+    if grouping_template not in valid_templates:
+        print(f"Error: Invalid grouping template '{grouping_template}'")
+        print("Valid options are:", ", ".join(valid_templates))
+        sys.exit(1)
+        
+    if grouping_template == 'upload':
+        if not template_file:
+            print("Error: When using 'upload' template, you must specify the template file path")
+            sys.exit(1)
+        if not os.path.exists(template_file):
+            print(f"Error: Template file '{template_file}' not found")
+            sys.exit(1)
+            
     success = run_validation(
         base_name=base_name,
         geojson_path=geojson_path,
@@ -170,7 +193,9 @@ def main():
         num_iterations=num_iterations,
         num_processes=num_processes,
         grouping_template=grouping_template,
-        base_dir=base_dir
+        template_file=template_file,
+        base_dir=base_dir,
+        force_grouping=force_grouping
     )
     
     if success:

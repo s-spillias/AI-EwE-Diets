@@ -35,7 +35,7 @@ def setup_logging(output_dir):
     
     return logger
 
-def run_initial_steps(base_name, geojson_path, research_focus, grouping_template='default'):
+def run_initial_steps(base_name, geojson_path, research_focus, grouping_template='default', template_file=None, force_grouping=False):
     """Run steps 1-2 of the model workflow"""
     output_dir = f"MODELS/{base_name}/{base_name}_base"
     os.makedirs(output_dir, exist_ok=True)
@@ -48,13 +48,13 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
     ai_config = {
         'groupingTemplate': {
             'type': grouping_template,
-            'path': '03_grouping_template.json' if grouping_template == 'default' else None
+            'path': template_file if grouping_template == 'upload' else ('03_grouping_template.json' if grouping_template == 'default' else None)
         },
         'groupSpeciesAI': 'claude',
         'constructDietMatrixAI': 'claude',
         'eweParamsAI': 'claude',
         'ragSearchAI': 'aws_claude',
-        'forceGrouping': False,
+        'forceGrouping': force_grouping,
         'researchFocus': research_focus
     }
     
@@ -73,6 +73,12 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
         '--grouping_template', grouping_template,
         '--early_stop', '2'
     ]
+    
+    if force_grouping:
+        cmd_args.append('--force_grouping')
+    
+    if template_file and grouping_template == 'upload':
+        cmd_args.extend(['--template_file', template_file])
     
     try:
         # Run the command and capture output
@@ -111,10 +117,10 @@ def run_initial_steps(base_name, geojson_path, research_focus, grouping_template
 
 def main():
     if len(sys.argv) < 4:
-        print("Usage: python 01a_run_initial_steps.py <base_name> <geojson_path> <research_focus> [grouping_template]")
+        print("Usage: python 01a_run_initial_steps.py <base_name> <geojson_path> <research_focus> [grouping_template] [template_file] [--force_grouping]")
         print("\nGrouping template options:")
         print("  default    - Use Default Grouping (default if not specified)")
-        print("  upload     - Upload Custom Grouping JSON")
+        print("  upload     - Upload Custom Grouping JSON (specify template file path)")
         print("  ecobase    - Search Ecobase for Template")
         print("  geojson    - Generate from Selected Area")
         sys.exit(1)
@@ -123,6 +129,8 @@ def main():
     geojson_path = sys.argv[2]
     research_focus = sys.argv[3]
     grouping_template = sys.argv[4] if len(sys.argv) > 4 else 'default'
+    template_file = sys.argv[5] if len(sys.argv) > 5 else None
+    force_grouping = '--force_grouping' in sys.argv
     
     # Validate grouping template choice
     valid_templates = ['default', 'upload', 'ecobase', 'geojson']
@@ -142,7 +150,9 @@ def main():
             base_name=base_name,
             geojson_path=geojson_path,
             research_focus=research_focus,
-            grouping_template=grouping_template
+            grouping_template=grouping_template,
+            template_file=template_file,
+            force_grouping=force_grouping
         )
         
         if not success:
