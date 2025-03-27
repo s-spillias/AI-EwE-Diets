@@ -288,6 +288,7 @@ def parse_arguments():
     parser.add_argument('--research_focus', help='Research focus for the model')
     parser.add_argument('--grouping_template', choices=['default', 'upload', 'ecobase', 'geojson'], default='default', 
                       help='Grouping template option (default: generate from area, upload: custom JSON, ecobase: search template)')
+    parser.add_argument('--template_file', help='Path to custom grouping template JSON file (when using --grouping_template upload)')
     parser.add_argument('--ecobase_search', help='Ecobase search term (if grouping_template is "ecobase")')
     parser.add_argument('--group_species_ai', choices=['claude', 'aws_claude', 'gemini', 'gemma2', 'llama3', 'mixtral'], default='claude', help='AI model for Group Species')
     parser.add_argument('--construct_diet_matrix_ai', choices=['claude', 'aws_claude', 'gemini', 'gemma2', 'llama3', 'mixtral'], default='claude', help='AI model for Construct Diet Matrix')
@@ -340,7 +341,7 @@ def main():
         ai_config = {
             'groupingTemplate': {
                 'type': args.grouping_template,
-                'path': '03_grouping_template.json' if args.grouping_template == 'default' else None
+                'path': args.template_file if args.grouping_template == 'upload' else ('03_grouping_template.json' if args.grouping_template == 'default' else None)
             },
             'groupSpeciesAI': args.group_species_ai,
             'constructDietMatrixAI': args.construct_diet_matrix_ai,

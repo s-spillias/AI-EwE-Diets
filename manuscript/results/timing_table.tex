@@ -1,19 +1,20 @@
 \begin{table}[htbp]
-\centering
-\footnotesize
-\caption{Computational requirements by region and processing stage}
-\label{tab:timing_analysis}
-\begin{tabular}{lccccccc}
-\hline
-Region & Species & \multicolumn{6}{c}{Processing Time (hours)} \\
-\cline{3-8}
- & Count & Identification & Data & Grouping & Diet & Matrix & Parameter \\
- & & & Download & & Collection & Construction & Estimation \\
-\hline
-v2 Northern Territory & 11,362 & 0.01 & 2.2 & 0.2 & 0.2 & 0.04 & 0.2 \\
-v2 South East shelf & 13,901 & 0.01 & 2.8 & 0.2 & 1.6 & 0.04 & 0.2 \\
-v2 South East offshore & 15,821 & 0.01 & 3.3 & 0.4 & 0.3 & 0.04 & --- \\
-\hline
-\end{tabular}
-\vspace{1ex}
-\end{table}
+    \centering
+    \footnotesize
+    \caption{Computational requirements by region and processing stage}
+    \label{tab:timing_analysis}
+    \begin{tabular}{lcccccc}
+    \hline
+    Region & Species & \multicolumn{5}{c}{Processing Time (hours)} \\
+    \cline{3-7}
+     & Count & Identification & Data & Grouping & Diet & Matrix \\
+     & & & Download & & Collection & Construction \\
+    \hline
+    Northern Territory & 10,621 & 0.01 & 2.2 & 0.2 & 0.2 & 0.04 \\
+    South East Shelf & 17,068 & 0.01 & 2.8 & 0.2 & 1.6 & 0.04 \\
+    South East Offshore & 12,033 & 0.01 & 3.3 & 0.4 & 0.3 & 0.04 \\
+    \hline
+    \end{tabular}
+    \vspace{1ex}
+    \end{table}
+    

@@ -1,16 +1,16 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{palatino}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+% Configure hyperref (must be loaded last)
+\usepackage{hyperref}
 \usepackage{longtable}
 \usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-\usepackage[round,authoryear]{natbib}  % Specify author-year citation style
-\usepackage{hyperref}
-\usepackage{xr}                % For cross-referencing between documents
-\usepackage{cleveref}          % For intelligent cross-referencing
+\usepackage[round,authoryear]{natbib}
 \usepackage{pdflscape}         % For landscape pages
 \usepackage{mdframed}          % For creating boxed environments
 \usepackage{xcolor}            % For custom colors
@@ -36,24 +36,30 @@
     skipbelow=1em
 ]{prompt}
 
-% Configure hyperref after other packages
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,
-    urlcolor=cyan,
-    citecolor=blue
-}
+
+
+
 
 \title{Automated Diet Matrix Construction for Marine Ecosystem Models Using Generative AI}
 
 \author{Scott Spillias\textsuperscript{1,2}\thanks{Corresponding author: scott.spillias@csiro.au} \and
 Beth Fulton\textsuperscript{1,2} \and
 Fabio Boschetti\textsuperscript{2,3} \and
+Cathy Bulman\textsuperscript{1} \and
 Joanna Strzelecki\textsuperscript{3} \and
 Rowan Trebilco\textsuperscript{1,2}}
 
 \date{\today}  % Use current date or remove for no date
+
+\newcommand{\keywords}{%
+Artificial Intelligence \and
+Ecological Modeling \and
+Ecopath with Ecosim \and
+Large Language Models \and
+Diet Interaction \and 
+Large Language Models
+}
+
 
 % Author affiliations
 \newcommand{\affiliations}{
@@ -64,27 +70,27 @@ Rowan Trebilco\textsuperscript{1,2}}
 }
 
 \begin{document}
-\linenumbers
+% \linenumbers
 \maketitle
 \affiliations
 
 \begin{abstract}
-This study introduces and validates a novel AI-driven framework for automated species grouping and diet matrix generation in Ecopath with Ecosim (EwE) ecosystem models, addressing a critical bottleneck in model development. We evaluate the framework across three contrasting Australian marine regions (Shelf and Offshore regions of South-East Tasmania and the Northern Territory), processing over 41,000 species through multiple validation iterations. The framework successfully condensed 63 potential functional groups into 34-36 region-specific groups, achieving high classification stability (>99\% consistency) for most species. Notably, the framework demonstrated robust performance in the South East offshore region with only 0.03\% inconsistent classifications, while showing greater variability in complex tropical systems (1\% inconsistent classifications). Higher trophic level species maintained consistent classifications across all runs, with the framework identifying 235-327 significant predator-prey interactions per region at >70\% consistency. This systematic validation reveals that while the framework can reliably automate species grouping, its performance varies predictably with ecosystem complexity and data availability. These findings provide quantitative evidence for the framework's ability to create repeatable components for ecosystem model development. Our results demonstrate the potential for AI to significantly reduce model development time, offering a practical pathway to expand the application of ecosystem-based management across diverse marine environments. We offer a pathway towards further validation of this framework to ensure ecological accuracy.
+This study introduces and validates a novel LLM-driven framework for automated species grouping and diet matrix generation in Ecopath with Ecosim (EwE) ecosystem models, addressing a critical bottleneck in model development. The framework uses large language models to classify marine species into functional groups and synthesize trophic interactions from diverse data sources including global biodiversity databases, species interaction repositories, and unstructured local text. We evaluate the framework across four large Australian marine regions to assess both consistency and ecological accuracy of the resulting functional groups and diet proportions. The framework demonstrated high reproducibility in species grouping decisions (>99.7\% consistency) and diet matrix construction, with 51-59\% of predator-prey interactions showing consistent diet proportions across multiple runs. Validation against expert-derived matrices for the Great Australian Bight ecosystem revealed strong ecological alignment, with the framework matching 77.6\% of functional groups and correctly identifying 85\% of trophic interactions, while estimating diet proportions within 0.2 of expert values for 80\% of interactions. These findings demonstrate the framework's potential to generate reproducible, ecologically meaningful components for ecosystem model development while significantly reducing development time.
 \end{abstract}
 
-\input{introduction}
-\input{methods}
-\input{results}
-\input{discussion}
+\input{1_introduction}
+\input{2_methods}
+\input{3_results}
+\input{4_discussion}
 
 \section*{Acknowledgements}
-[Add acknowledgements here]
+SS was funded by a CSIRO R+ Postdoctoral Fellowship.
 
 \section*{Data Availability}
 The complete codebase, including all scripts, configuration files, and analysis tools, is available at [GitHub repository URL]. The validation framework, including reference group definitions and classification rules, is documented in the project repository to ensure reproducibility.
 
 \section*{Author Contributions}
-SS: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data Curation, Writing - Original Draft, Writing - Review \& Editing, Visualization, Project administration. BF: Validation, Writing - Review \& Editing, Supervision, Funding acquisition. FB: Methodology, Software, Validation, Writing - Review \& Editing, Supervision. CB: Investigation, Validation, Writing - Review \& Editing. RB: Investigation, Validation, Writing - Review \& Editing. JPG: Investigation, Validation, Writing - Review \& Editing. JS: Conceptualization, Validation, Investigation, Writing - Review \& Editing. RS: Investigation, Validation, Writing - Review \& Editing. RT: Methodology, Software, Validation, Investigation, Writing - Review \& Editing, Supervision, Funding acquisition.
+SS: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data Curation, Writing - Original Draft, Writing - Review \& Editing, Visualization, Project administration. BF: Validation, Writing - Review \& Editing, Supervision, Funding acquisition. FB: Methodology, Software, Validation, Writing - Review \& Editing, Supervision. CB: Investigation, Data Curation, Validation, Writing - Review \& Editing. JS: Conceptualization, Validation, Investigation, Writing - Review \& Editing. RT: Methodology, Software, Validation, Investigation, Writing - Review \& Editing, Supervision, Funding acquisition.
 
 \section*{Statement on the Use of Generative AI}
 Generative AI tools, specifically Claude Sonnet 3.5, were utilized in the preparation of this manuscript to assist with tasks such as language refinement, text structuring, and summarization. All scientific content, data interpretation, and conclusions were independently developed and verified by the authors to ensure accuracy and integrity.
@@ -93,6 +99,8 @@ Generative AI tools, specifically Claude Sonnet 3.5, were utilized in the prepar
 \bibliography{references}
 
 \clearpage
-\input{supplement}
+\input{5_supplement}
 
+\end{document}
+\end{document}
 \end{document}

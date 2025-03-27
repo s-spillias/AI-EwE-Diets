@@ -205,9 +205,48 @@ def get_worms_data(species_names):
     return worms_data
 
 def get_globi_data_for_species(species_names, batch_size=10):
-    """Fetch GLOBI data for multiple species in parallel using requests"""
+    """Fetch and clean GLOBI data for multiple species in parallel using requests"""
     import requests
     from concurrent.futures import ThreadPoolExecutor
+    from io import StringIO
+    
+    def clean_globi_data(df):
+        """Clean and format GLOBI interaction data"""
+        if df.empty:
+            return df
+            
+        # Remove rows with missing critical data
+        df = df.dropna(subset=['sourceTaxonName', 'interactionTypeName', 'targetTaxonName'])
+        
+        # Clean interaction types
+        df['interactionTypeName'] = df['interactionTypeName'].str.lower()
+        
+        # # Filter for relevant interactions (focusing on diet-related)
+        # diet_interactions = ['eats', 'preys on', 'feeds on', 'preysOn']
+        # df = df[df['interactionTypeName'].isin(diet_interactions)]
+        
+        # Clean species names and taxonomic paths
+        for col in ['sourceTaxonName', 'targetTaxonName']:
+            df[col] = df[col].str.strip()
+        
+        # Clean taxonomic paths by removing 'root |' prefix
+        for col in ['sourceTaxonPath', 'targetTaxonPath']:
+            if col in df.columns:
+                df[col] = df[col].apply(lambda x: x.replace('root | ', '').strip() if isinstance(x, str) else x)
+        
+        # Select relevant columns
+        relevant_cols = [
+            'sourceTaxonName', 'sourceTaxonPath',
+            'interactionTypeName',
+            'targetTaxonName', 'targetTaxonPath',
+            'sourceBodyPartName', 'targetBodyPartName',
+            'eventDate', 'decimalLatitude', 'decimalLongitude',
+            'localityName', 'referenceDoi', 'referenceCitation',
+            'studyTitle'
+        ]
+        df = df[relevant_cols]
+        
+        return df
     
     def fetch_single_species(species_name):
         prepared_name = species_name.replace(' ', '%20')
@@ -215,13 +254,72 @@ def get_globi_data_for_species(species_names, batch_size=10):
         try:
             response = requests.get(url)
             if response.status_code == 200:
-                return species_name, {'raw_data': response.text}
+                # Print raw data for debugging
+                print(f"\nRaw GLOBI data for {species_name}:")
+                print(response.text[:1000])  # Print first 500 chars to avoid flooding terminal
+                # Check if response only contains header
+                if len(response.text.strip().split('\n')) <= 1:
+                    logging.info(f"No interaction data for {species_name} (header only)")
+                    return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
+                
+                try:
+                    # Parse CSV data
+                    df = pd.read_csv(StringIO(response.text))
+                    
+                    # Map column names to match our expected format
+                    column_mapping = {
+                        'source_taxon_name': 'sourceTaxonName',
+                        'source_taxon_path': 'sourceTaxonPath',
+                        'interaction_type': 'interactionTypeName',
+                        'target_taxon_name': 'targetTaxonName',
+                        'target_taxon_path': 'targetTaxonPath',
+                        'source_specimen_life_stage': 'sourceBodyPartName',
+                        'target_specimen_life_stage': 'targetBodyPartName',
+                        'source_specimen_occurrence_id': 'eventDate',
+                        'latitude': 'decimalLatitude',
+                        'longitude': 'decimalLongitude',
+                        'source_specimen_institution_code': 'localityName',
+                        'reference_doi': 'referenceDoi',
+                        'reference_citation': 'referenceCitation',
+                        'study_title': 'studyTitle'
+                    }
+                    
+                    # Rename columns that exist in our data
+                    existing_columns = [col for col in column_mapping.keys() if col in df.columns]
+                    df = df.rename(columns={col: column_mapping[col] for col in existing_columns})
+                    
+                    # Add missing columns with None values
+                    for new_col in column_mapping.values():
+                        if new_col not in df.columns:
+                            df[new_col] = None
+                    
+                    if not df.empty:
+                        # Clean and format the data
+                        cleaned_df = clean_globi_data(df)
+                        if not cleaned_df.empty:
+                            # Convert to dict format for JSON serialization
+                            return species_name, {
+                                'interactions': cleaned_df.to_dict(orient='records'),
+                                'metadata': {
+                                    'total_interactions': len(cleaned_df),
+                                    'unique_prey': cleaned_df['targetTaxonName'].nunique(),
+                                    'data_sources': cleaned_df['referenceCitation'].nunique() if 'referenceCitation' in cleaned_df.columns else 0
+                                }
+                            }
+                except pd.errors.EmptyDataError:
+                    logging.info(f"Empty CSV data for {species_name}")
+                    return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
+                except Exception as e:
+                    logging.error(f"Error parsing CSV data for {species_name}: {str(e)}")
+                    return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
+                
+                return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
             else:
                 logging.info(f"No GLOBI data found for {species_name}")
-                return species_name, {'raw_data': None}
+                return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
         except Exception as e:
             logging.error(f"Exception while fetching GLOBI data for {species_name}: {str(e)}")
-            return species_name, {'raw_data': None}
+            return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
     
     results = {}
     with ThreadPoolExecutor(max_workers=5) as executor:
@@ -367,7 +465,13 @@ def get_species_info(species_df, sealifebase_df, fishbase_df, sealifebase_foodit
         species_names = [name for name, _ in batch]
         globi_results = get_globi_data_for_species(species_names)
         for species_name, globi_data in globi_results.items():
-            species_data[species_name]['diet']['GLOBI'] = globi_data
+            if globi_data['interactions']:
+                species_data[species_name]['diet']['GLOBI'] = globi_data
+            else:
+                species_data[species_name]['diet']['GLOBI'] = {
+                    'interactions': [],
+                    'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}
+                }
         
         # Save after each batch
         save_json_with_lock(species_data, output_file)

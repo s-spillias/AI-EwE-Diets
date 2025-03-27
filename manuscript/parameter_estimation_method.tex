@@ -4,11 +4,11 @@ The final stage estimates the required Ecopath \citep{Christensen2004} parameter
 
 We implement parameter-specific validation checks. For biomass densities, we verify values fall within expected ranges for each functional group type. For P/B and Q/B ratios, we check consistency with known allometric relationships and life history characteristics. EE values must fall between 0 and 1, with additional validation against typical ranges for similar species groups.
 
-Claude \citep{Anthropic2024} analyzes these parameter sets using standardized criteria. The analysis considers the relevance of each model to the group in question, the consistency of values across different models, trends or patterns in the data that might indicate suitable values, and the ecological context provided by model metadata.
+Claude \citep{Anthropic2024} analyses these parameter sets using standardised criteria. The analysis considers the relevance of each model to the group in question, the consistency of values across different models, trends or patterns in the data that might indicate suitable values, and the ecological context provided by model metadata.
 
 For each parameter assignment, Claude provides a structured response containing the suggested parameter value, detailed reasoning for the selection, references to source models, and any assumptions or caveats.
 
-When EcoBase data is insufficient or parameter values show high variability, we employ a hierarchical fallback system. First, we search for parameters from taxonomically similar groups. Next, we apply empirical relationships where available. Finally, if automated methods are unsuitable, we flag the parameter for manual parameterization.
+When EcoBase data is insufficient or parameter values show high variability, we employ a hierarchical fallback system. First, we search for parameters from taxonomically similar groups. Next, we apply empirical relationships where available. Finally, if automated methods are unsuitable, we flag the parameter for manual parameterisation.
 
 The system maintains comprehensive logging of parameter assignments. This includes search queries and results, parameter validation checks, AI reasoning and decisions, source model references, and data quality assessments.
 

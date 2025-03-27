@@ -1,0 +1,96 @@
+1. Groups Present in One Matrix but Not the Other
+==============================================
+
+Groups only in Human matrix:
+- Abalone
+- Bight redfish
+- Deepwater flathead
+- Discards
+- Farmed crustacea
+- Farmed finfish
+- King George whiting
+- Microphytobenthos
+- Nanozooplankton
+- Offshore pelagic invertivore large
+- Sardine
+- Shelf demersal piscivorous shark
+- Slope large demersal invertivores
+- Slope large demersal piscivores
+- Snapper
+- Southern Bluefin Tuna
+- Terns
+
+Groups only in AI matrix:
+- Detritus
+- Offshore pelagic invertivores large
+- Slope large demersal omnivores
+
+
+2. Overall Kappa for Mean Matrix Comparison
+=====================================
+
+Overall Kappa coefficient: 0.381
+
+3. Distribution of Errors in Diet Interactions
+=========================================
+
+Overall Agreement Statistics:
+- Total number of potential interactions: 3481
+- Matching absence of interaction: 2545 (73.1%)
+- Matching presence of interaction: 296 (8.5%)
+- Interactions only in Human matrix: 135 (3.9%)
+- Interactions only in AI matrix: 505 (14.5%)
+
+For interactions present in both matrices:
+- Number of common diet links: 296
+- Correlation coefficient: 0.385
+- Correlation p-value: 0.000
+
+4. Additional Summary Statistics
+============================
+
+Match/Non-match Summary:
+- Total matching cells: 2841 (81.6%)
+  * Matching zeros (both absent): 2545 (73.1%)
+  * Matching ones (both present): 296 (8.5%)
+- Total non-matching cells: 640 (18.4%)
+  * Only in Human: 135 (3.9%)
+  * Only in AI: 505 (14.5%)
+
+Agreement Rates:
+- Overall agreement rate: 0.816
+- True positive rate (sensitivity): 0.687
+- True negative rate (specificity): 0.834
+- Precision: 0.370
+
+5. Distribution of Differences in Common Diet Links
+==========================================
+
+For interactions present in both matrices, the distribution of absolute differences:
+- Mean difference: 0.110
+- Median difference: 0.058
+- Standard deviation: 0.150
+- Minimum difference: 0.000
+- Maximum difference: 0.865
+- 25th percentile: 0.021
+- 75th percentile: 0.128
+
+
+6. Quantitative Summary of Group Agreement
+====================================
+
+Group Coverage Statistics:
+- Total groups in Human matrix: 76
+- Total groups in AI matrix: 62
+- Number of matched groups: 59
+- Groups only in Human matrix: 17
+- Groups only in AI matrix: 3
+- Total unique groups across both matrices: 79
+- Total different groups between matrices: 20
+
+Group Agreement Rates:
+- Percentage of Human groups matched in AI: 77.6%
+- Percentage of AI groups matched in Human: 95.2%
+- Overall group agreement rate: 74.7%
+- Jaccard similarity coefficient: 2.950
+- Percentage of groups that differ: 25.3%

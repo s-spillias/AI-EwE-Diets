@@ -5,6 +5,17 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from matplotlib.gridspec import GridSpec
 
+# Mapping for region display names
+REGION_DISPLAY_NAMES = {
+    'v2_NorthernTerritory': 'Northern Territory',
+    'v2_SouthEastInshore': 'South East Shelf',
+    'v2_SouthEastOffshore': 'South East Offshore'
+}
+
+def get_display_name(region_name):
+    """Convert region name to its display name"""
+    return REGION_DISPLAY_NAMES.get(region_name, region_name)
+
 def create_regional_group_distribution(results, output_path):
     """
     Create a multi-panel figure showing group size distributions by region
@@ -15,20 +26,77 @@ def create_regional_group_distribution(results, output_path):
     
     # Group stability (Jaccard similarity) by region
     ax3 = fig.add_subplot(111)
-    stability_data = {}
     
+    # Prepare data for seaborn boxplot
+    plot_data = []
     for result in results:
-        region = result['name'].replace('_', ' ')
-        similarities = [stats['avg_jaccard_similarity'] 
-                       for stats in result['group_stability'].values()]
-        stability_data[region] = similarities
+        region = get_display_name(result['name'])
+        for group, stats in result['group_stability'].items():
+            plot_data.append({
+                'Region': region,
+                'Similarity': stats['avg_jaccard_similarity'],
+                'Group': group
+            })
     
-    ax3.boxplot(stability_data.values(), labels=stability_data.keys())
+    df = pd.DataFrame(plot_data)
+    
+    # Create boxplot with region-specific colors
+    palette = {
+        'Northern Territory': '#f9ba7b',
+        'South East Shelf': '#99bfdd',
+        'South East Offshore': '#9ad6ae'
+    }
+    sns.boxplot(data=df, x='Region', y='Similarity', ax=ax3, palette=palette)
+    
+    # Add outlier labels
+    for i, region in enumerate(df['Region'].unique()):
+        region_data = df[df['Region'] == region]
+        
+        # Calculate outlier thresholds
+        q1 = region_data['Similarity'].quantile(0.25)
+        q3 = region_data['Similarity'].quantile(0.75)
+        iqr = q3 - q1
+        lower_bound = q1 - 1.5 * iqr
+        upper_bound = q3 + 1.5 * iqr
+        
+        # Find outliers
+        outliers = region_data[
+            (region_data['Similarity'] < lower_bound) | 
+            (region_data['Similarity'] > upper_bound)
+        ]
+        
+        # Sort outliers by similarity value
+        outliers = outliers.sort_values('Similarity', ascending=True)
+        
+        # Add labels with smart placement
+        for j, (_, outlier) in enumerate(outliers.iterrows()):
+            # Alternate between left and right, above and below
+            side = -1 if j % 2 == 0 else 1  # -1 for left, 1 for right
+            vert = -1 if outlier['Similarity'] > 0.95 else 1  # -1 for below, 1 for above
+            
+            x_offset = 15 * side
+            y_offset = 10 * vert
+            
+            ax3.annotate(
+                outlier['Group'],
+                xy=(i, outlier['Similarity']),
+                xytext=(x_offset, y_offset),
+                textcoords='offset points',
+                ha='right' if side < 0 else 'left',
+                va='top' if vert < 0 else 'bottom',
+                fontsize=8,
+                arrowprops=dict(
+                    arrowstyle='-',
+                    connectionstyle='arc3,rad=0.2',
+                    color='gray',
+                    alpha=0.6
+                )
+            )
+    
     ax3.set_title('Group Membership Stability')
     ax3.set_xlabel('Region')
     ax3.set_ylabel('Jaccard Similarity Index')
     plt.setp(ax3.get_xticklabels(), rotation=45, ha='right')
-    ax3.grid(True)
     
     # Adjust layout and save
     plt.tight_layout()
@@ -45,7 +113,7 @@ def create_group_stability_heatmap(results, output_path):
     all_groups = set()
     
     for result in results:
-        region = result['name'].replace('_', ' ')
+        region = get_display_name(result['name'])
         stability_data[region] = {}
         
         for group, stats in result['group_stability'].items():
@@ -63,10 +131,14 @@ def create_group_stability_heatmap(results, output_path):
     
     # Create the heatmap
     fig, ax = plt.subplots(figsize=(15, 8))
+    # Create custom colormap from white to pastel blue
+    colors = ['#ffffff', '#99bfdd']
+    custom_cmap = sns.light_palette('#99bfdd', as_cmap=True)
+    
     sns.heatmap(matrix,
                 xticklabels=groups,
                 yticklabels=regions,
-                cmap='viridis',
+                cmap=custom_cmap,
                 annot=False,
                 cbar_kws={'label': 'Jaccard Similarity Index (0-1)'},
                 ax=ax)
@@ -100,8 +172,12 @@ def create_diet_matrices_heatmap(results, output_path):
     all_predators = sorted(list(all_predators))
     all_prey = sorted(list(all_prey))
     
-    # Create figure with shared y-axis
-    fig, axes = plt.subplots(1, len(diet_results), figsize=(24, 12), sharey=True)
+    # Create figure with GridSpec for better control over spacing
+    fig = plt.figure(figsize=(24, 12))
+    gs = GridSpec(1, len(diet_results), figure=fig, wspace=0)
+    # Add more top margin for subplot labels
+    gs.update(top=0.95)
+    axes = [fig.add_subplot(gs[0, i]) for i in range(len(diet_results))]
     if len(diet_results) == 1:
         axes = [axes]
     
@@ -113,15 +189,13 @@ def create_diet_matrices_heatmap(results, output_path):
             if stats['stability_score'] > 0:
                 all_stability_values.append(stats['stability_score'])
     
-    stability_min = 0
-    stability_max = max(all_stability_values) if all_stability_values else 1
-    stability_norm = plt.Normalize(vmin=stability_min, vmax=stability_max)
+    stability_norm = plt.Normalize(vmin=0, vmax=1)
     
     # Create heatmaps
     for idx, result in enumerate(diet_results):
         ax = axes[idx]
         interaction_consistency = result['interaction_consistency']
-        region_name = result['name'].replace('_', ' ')
+        region_name = get_display_name(result['name'])
         
         # Create matrices using complete predator/prey lists
         mean_matrix = np.zeros((len(all_predators), len(all_prey)))
@@ -138,17 +212,19 @@ def create_diet_matrices_heatmap(results, output_path):
         # Create mask for empty cells
         mask = (mean_matrix == 0) & (stability_matrix == 0)
         
-        # Create heatmap
+        # Create heatmap with custom colormap
+        custom_cmap = sns.light_palette('#99bfdd', as_cmap=True)
+        
         sns.heatmap(stability_matrix,
                    xticklabels=all_prey,
                    yticklabels=all_predators,  # Show y labels on all plots
-                   cmap='viridis',
+                   cmap=custom_cmap,
                    norm=stability_norm,
                    mask=mask,
                    annot=mean_matrix,
                    fmt='.2f',
                    annot_kws={'size': 4},
-                   cbar_kws={'label': 'Stability Score (0=stable, 1=unstable)'},
+                   cbar_kws={'label': 'Stability Score (1=stable, 0=unstable)'},
                    ax=ax)
         
         # Hide y-axis labels for all but the first plot
@@ -156,10 +232,12 @@ def create_diet_matrices_heatmap(results, output_path):
             ax.yaxis.set_visible(False)
         
         ax.patch.set_facecolor('white')
-        ax.set_title(f'{region_name}')
+        # Add subplot label (a, b, etc.)
+        ax.text(-0.1, 1.05, chr(97 + idx), transform=ax.transAxes, 
+                size=10, weight='bold')
         plt.setp(ax.get_xticklabels(), rotation=45, ha='right')
+        ax.set_xlabel('')  # Remove x-axis label
     
-    plt.tight_layout()
     plt.savefig(output_path, dpi=300, bbox_inches='tight')
     plt.close()
 
@@ -170,7 +248,7 @@ def create_stability_score_distribution(results, output_path):
     for result in results:
         if 'interaction_consistency' not in result:
             continue
-        region = result['name'].replace('_', ' ')
+        region = get_display_name(result['name'])
         for (pred, prey), stats in result['interaction_consistency'].items():
             if stats['mean'] > 0.05:  # Only include significant interactions
                 stability_data.append({
@@ -190,12 +268,18 @@ def create_stability_score_distribution(results, output_path):
     # Create figure
     fig, ax = plt.subplots(figsize=(10, 6))
     
-    # Create half violin plot with box plot
+    # Create half violin plot with box plot using region-specific colors
+    palette = {
+        'Northern Territory': '#f9ba7b',
+        'South East Shelf': '#99bfdd',
+        'South East Offshore': '#9ad6ae'
+    }
     sns.violinplot(data=df, x='region', y='stability', ax=ax,
                   inner='box',  # Show box plot inside violin
                   cut=0,  # Cut off at the bounds of the data
                   split=True,  # Only show right half of violin
-                  density_norm='width')  # Scale each violin to same width
+                  density_norm='width',  # Scale each violin to same width
+                  palette=palette)
     
     # Add individual points
     sns.stripplot(data=df, x='region', y='stability', color='black', 
@@ -207,7 +291,7 @@ def create_stability_score_distribution(results, output_path):
     # Customize plot
     ax.set_title('Distribution of Diet Interaction Stability Scores')
     ax.set_xlabel('Region')
-    ax.set_ylabel('Stability Score (0=stable, 1=unstable)')
+    ax.set_ylabel('Stability Score (1=stable, 0=unstable)')
     plt.xticks(rotation=45, ha='right')
     
     # Add horizontal line at mean
@@ -227,7 +311,7 @@ def create_predator_stability_boxplots(results, output_path):
     for result in results:
         if 'interaction_consistency' not in result:
             continue
-        region = result['name'].replace('_', ' ')
+        region = get_display_name(result['name'])
         for (pred, prey), stats in result['interaction_consistency'].items():
             if stats['mean'] > 0.05:  # Only include significant interactions
                 stability_data.append({
@@ -252,13 +336,18 @@ def create_predator_stability_boxplots(results, output_path):
     fig_height = max(8, len(sorted_predators) * 0.3)
     fig, ax = plt.subplots(figsize=(12, fig_height))
     
-    # Create box plot
+    # Create box plot with region-specific colors
+    palette = {
+        'Northern Territory': '#f9ba7b',
+        'South East Shelf': '#99bfdd',
+        'South East Offshore': '#9ad6ae'
+    }
     sns.boxplot(data=df, x='stability', y='predator', hue='region',
-                order=sorted_predators, ax=ax)
+                order=sorted_predators, ax=ax, palette=palette)
     
     # Customize plot
     ax.set_title('Diet Stability Scores by Predator')
-    ax.set_xlabel('Stability Score (0=stable, 1=unstable)')
+    ax.set_xlabel('Stability Score (1=stable, 0=unstable)')
     ax.set_ylabel('Predator')
     
     # Add vertical line at mean

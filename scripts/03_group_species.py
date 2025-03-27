@@ -151,7 +151,7 @@ def main(species_data_file, output_file_hierarchy, output_file_assignments, outp
 
         # Load reference groups with taxonomic classification
         logging.info("Loading reference groups with taxonomic classification...")
-        reference_groups, reference_group_dict = load_reference_groups(output_dir, json_file_path, ai_model)
+        reference_groups, reference_group_dict = load_reference_groups(output_dir, json_file_path)
 
         logging.info(f"Loading species data from {species_data_file}...")
         species_data = load_species_data(species_data_file)

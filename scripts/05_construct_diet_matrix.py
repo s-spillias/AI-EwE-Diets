@@ -31,7 +31,7 @@ def load_species_list(filename):
 def load_diet_data(filename):
     with open(filename, 'r') as f:
         data = json.load(f)
-    return {species: group_data.get('ai_summary', {}) for species, group_data in data.items()}
+    return {species: group_data.get('diet_proportions', {}) for species, group_data in data.items()}
 
 def extract_proportions_from_ai_response(response):
     """Extract diet proportions from AI response, handling both direct JSON and text formats"""
@@ -83,6 +83,8 @@ def get_diet_proportions(ai_summary, species_list, ai_model):
     
     If a range of proportions is given, use the average. 
     Estimate any items that don't have clear numeric values. The sum of all proportions should not exceed 1.
+
+    If a prey item isn't present in the list of groups provided above, interpret as the closest likely functional group.
     
     Format your response as a simple JSON object with prey items as keys and decimal numbers as values, like this:
     {{"Prey1": 0.4, "Prey2": 0.3, "Prey3": 0.3}}
@@ -184,8 +186,10 @@ def main(species_file, diet_file, output_file, intermediate_file, output_dir):
         # Ensure numeric data for the diet matrix
         diet_matrix = diet_matrix.astype(float)
 
-        # Save the transposed diet matrix to CSV, preserving the indices
-        diet_matrix.T.to_csv(output_file, index=True)
+        # Save the transposed diet matrix to CSV with a label clarifying predators are columns
+        diet_matrix_t = diet_matrix.T
+        diet_matrix_t.index.name = "Prey_rows/Predator_columns"  # This will appear in the top-left cell
+        diet_matrix_t.to_csv(output_file, index=True)
         print(f"\nDiet matrix saved to '{output_file}'")
         return True
     except Exception as e:

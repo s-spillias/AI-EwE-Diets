@@ -121,7 +121,7 @@ I have an example template of marine functional groups. For this {ecosystem_type
 
 2. Then, considering the research focus: {researchFocus}
 
-Please provide a refined list of forty functional groups that:
+Please provide a refined list of forty to seventy functional groups that:
 - Includes groups likely to exist in this ecosystem type
 - If the research is focussed on specific species, these should have their own group
 - Adds any location-specific groups not in the template
@@ -366,6 +366,11 @@ def preprocess_data(data):
         ecology = info.get('ecology', {})
         if ecology:
             cleaned_item['Ecology'] = ecology
+            
+        # Add diet data if available
+        diet = info.get('diet', {})
+        if diet:
+            cleaned_item['diet'] = diet
         
         cleaned_data.append(cleaned_item)
     return cleaned_data
@@ -384,6 +389,8 @@ def create_hierarchical_json(data):
         current['specCode'] = item.get('SpecCode', 'Unknown')
         if 'Ecology' in item:
             current['ecology'] = item['Ecology']
+        if 'diet' in item:
+            current['diet'] = item['diet']
     return hierarchical
 
 @retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=2, min=4, max=60), 
@@ -544,8 +551,51 @@ def assign_groups_with_retry(taxa, rank, reference_group_dict, is_leaf_level, re
 assign_groups = assign_groups_with_retry
 
 def save_assignments(assignments, file_path):
-    with open(file_path, 'w') as f:
-        json.dump(assignments, f, indent=2)
+    # Get the directory path to locate species data file
+    output_dir = os.path.dirname(file_path)
+    species_data_file = os.path.join(output_dir, "02_species_data.json")
+    
+    try:
+        # Load the complete species data
+        with open(species_data_file, 'r') as f:
+            all_species_data = json.load(f)
+        
+        # Create new assignments with complete species data
+        complete_assignments = {}
+        for group, group_species in assignments.items():
+            complete_assignments[group] = {}
+            for species_name, current_data in group_species.items():
+                # If this species exists in the species data file, use that data
+                if species_name in all_species_data:
+                    # Ensure we preserve the complete data structure including all diet information
+                    species_data = all_species_data[species_name]
+                    # Make sure we have all the necessary keys
+                    if 'taxonomy' not in species_data:
+                        species_data['taxonomy'] = {}
+                    if 'ecology' not in species_data:
+                        species_data['ecology'] = {}
+                    if 'diet' not in species_data:
+                        species_data['diet'] = {
+                            'SeaLifeBase': [],
+                            'FishBase': [],
+                            'GLOBI': {'interactions': []}
+                        }
+                    elif 'GLOBI' not in species_data['diet']:
+                        species_data['diet']['GLOBI'] = {'interactions': []}
+                    
+                    complete_assignments[group][species_name] = species_data
+                else:
+                    # If not found, keep whatever data we currently have
+                    complete_assignments[group][species_name] = current_data
+        
+        # Save the complete assignments
+        with open(file_path, 'w') as f:
+            json.dump(complete_assignments, f, indent=2)
+            
+    except FileNotFoundError:
+        logging.warning(f"Species data file not found at {species_data_file}, saving assignments without complete species data")
+        with open(file_path, 'w') as f:
+            json.dump(assignments, f, indent=2)
 
 def load_assignments(file_path):
     try:

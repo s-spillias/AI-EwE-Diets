@@ -100,41 +100,47 @@ def load_documents(input_files):
     parser = LlamaParse(result_type="markdown")
     documents = []
     try:
+        def process_json_file(file_path):
+            with open(file_path, 'r') as f:
+                json_data = json.load(f)
+            # Convert JSON to string with consistent formatting
+            text = json.dumps(json_data, indent=2)
+            doc = Document(text=text, metadata={"file_name": file_path})
+            # Check if document needs chunking
+            doc_tokens = num_tokens_from_string(text)
+            if doc_tokens > MAX_CHUNK_SIZE:
+                return split_document(doc)
+            return [doc]
+
         if isinstance(input_files, str) and os.path.isdir(input_files):
             for root, _, files in os.walk(input_files):
                 for file in files:
                     file_path = os.path.join(root, file)
                     if file.endswith('.json'):
-                        with open(file_path, 'r') as f:
-                            json_data = json.load(f)
-                        doc = Document(text=json.dumps(json_data, indent=2), metadata={"file_name": file_path})
-                        documents.append(doc)
+                        documents.extend(process_json_file(file_path))
                     elif file.endswith('.pdf'):
                         pdf_docs = parser.load_data(file_path)
-                        documents.extend(pdf_docs)
+                        for doc in pdf_docs:
+                            doc_tokens = num_tokens_from_string(doc.text)
+                            if doc_tokens > MAX_CHUNK_SIZE:
+                                documents.extend(split_document(doc))
+                            else:
+                                documents.append(doc)
         else:
             for file in input_files:
                 if file.endswith('.json'):
-                    with open(file, 'r') as f:
-                        json_data = json.load(f)
-                    doc = Document(text=json.dumps(json_data, indent=2), metadata={"file_name": file})
-                    documents.append(doc)
+                    documents.extend(process_json_file(file))
                 elif file.endswith('.pdf'):
                     pdf_docs = parser.load_data(file)
-                    documents.extend(pdf_docs)
+                    for doc in pdf_docs:
+                        doc_tokens = num_tokens_from_string(doc.text)
+                        if doc_tokens > MAX_CHUNK_SIZE:
+                            documents.extend(split_document(doc))
+                        else:
+                            documents.append(doc)
         
-        processed_documents = []
-        for doc in documents:
-            doc_tokens = num_tokens_from_string(doc.text)
-            logging.debug(f"Document '{doc.metadata.get('file_name', 'Unknown')}' has {doc_tokens} tokens")
-            if doc_tokens > MAX_CHUNK_SIZE:
-                split_docs = split_document(doc)
-                logging.debug(f"Split into {len(split_docs)} chunks")
-                processed_documents.extend(split_docs)
-            else:
-                processed_documents.append(doc)
-        logging.info(f"Loaded {len(processed_documents)} document chunks")
-        return processed_documents
+        logging.info(f"Loaded {len(documents)} document chunks")
+        return documents
     except Exception as e:
         logging.error(f"Error loading documents: {e}")
         logging.error(f"Input files: {input_files}")

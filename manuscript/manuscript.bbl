@@ -52,11 +52,11 @@ Fernandes, S. and D'Mello, A. (2024).
 Froese, R., Pauly, D., et~al. (2010).
 \newblock {FishBase}.
 
-\bibitem[{GBIF}, 2024]{GBIF2024}
-{GBIF} (2024).
-\newblock {GBIF}: The global biodiversity information facility.
-\newblock {\em Global Biodiversity Information Facility}.
-\newblock What is GBIF?
+\bibitem[Fulton et~al., 2018]{Fulton2018}
+Fulton, E., Bulman, C., Pethybridge, H., and Goldsworthy, S. (2018).
+\newblock Modelling the {Great Australian Bight} ecosystem.
+\newblock {\em Deep Sea Research Part II: Topical Studies in Oceanography},
+  157-158:211--235.
 
 \bibitem[Geary et~al., 2020]{Geary2020}
 Geary, W.~L., Bode, M., Doherty, T.~S., Fulton, E.~A., Nimmo, D.~G., Tulloch,
@@ -69,13 +69,6 @@ Grassle, J.~F. and Stocks, K. (1999).
 \newblock A global ocean biogeographic information system ({OBIS}) for the
   census of marine life.
 \newblock {\em Oceanography}, 12(3):12--14.
-
-\bibitem[Guo et~al., 2025]{Guo2025}
-Guo, J., Li, N., and Xu, M. (2025).
-\newblock Environmental large language model evaluation ({ELLE}) dataset: A
-  benchmark for evaluating generative {AI} applications in eco-environment
-  domain.
-\newblock {\em arXiv preprint arXiv:2501.06277}.
 
 \bibitem[Holden et~al., 2024a]{Holden2024a}
 Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J.,
@@ -104,23 +97,11 @@ Keck, F., Broadbent, H., and Altermatt, F. (2025).
   species using large language models.
 \newblock {\em bioRxiv}, pages 2025--01.
 
-\bibitem[Kelling et~al., 2009]{Kelling2009}
-Kelling, S., Hochachka, W.~M., Fink, D., Riedewald, M., Caruana, R., Ballard,
-  G., and Hooker, G. (2009).
-\newblock Data-intensive science: a new paradigm for biodiversity studies.
-\newblock {\em BioScience}, 59(7):613--620.
-
 \bibitem[Kommineni et~al., 2024]{Kommineni2024}
 Kommineni, V.~K., K{\"o}nig-Ries, B., and Samuel, S. (2024).
 \newblock Harnessing multiple {LLMs} for information retrieval: A case study on
   deep learning methodologies in biodiversity publications.
 \newblock {\em arXiv preprint arXiv:2411.09269}.
-
-\bibitem[Kuhn et~al., 2024]{Kuhn2024}
-Kuhn, B., Cayetano, A., and Fincham, J. (2024).
-\newblock Machine learning applications for fisheries—at scales from genomics
-  to ecosystems.
-\newblock {\em Reviews in Fisheries Science}.
 
 \bibitem[Lapeyrolerie et~al., 2022]{Lapeyrolerie2022}
 Lapeyrolerie, M., Chapman, M.~S., Norman, K.~E., and Boettiger, C. (2022).
@@ -132,11 +113,6 @@ Li, H., Liu, J., Wang, Z., Luo, S., Jia, X., and Yao, H. (2024).
 \newblock Lite: Modeling environmental ecosystems with multimodal large
   language models.
 \newblock {\em Conference on Language Models (COLM)}.
-
-\bibitem[Michener and Jones, 2012]{Michener2012}
-Michener, W.~K. and Jones, M.~B. (2012).
-\newblock Ecoinformatics: supporting ecology as a data-intensive science.
-\newblock {\em Trends in Ecology \& Evolution}, 27(2):85--93.
 
 \bibitem[Poelen et~al., 2014]{Poelen2014}
 Poelen, J.~H., Simons, J.~D., and Mungall, C.~J. (2014).

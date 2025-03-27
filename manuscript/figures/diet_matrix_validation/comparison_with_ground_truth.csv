@@ -1,0 +1,596 @@
+Matrix,Agreement Rate,Matching Diet Links,Overall Correlation,Nonzero Correlation
+GAB_1,"Albatross                            0.013789
+Anchovy and other small pelagics     0.014938
+Australian fur seal                  0.012927
+Australian sea lion                  0.012353
+Baleen whales                        0.014651
+Benthic carnivores (infauna)         0.016087
+Benthic detritivore                  0.015800
+Benthic grazers                      0.016375
+Bottlenose dolphins                  0.014076
+Common dolphins                      0.014364
+Crabs & bugs                         0.013789
+Deep demersal sharks                 0.013215
+Deep filter feeders                  0.012927
+Deep macrozoobenthos                 0.012927
+Deep squid                           0.012927
+Detritus POM                         0.016949
+Gannets                              0.015226
+Garfish                              0.015513
+Gelatinous zooplankton               0.015800
+Gulls                                0.012927
+Import                               0.016662
+Large phytoplankton                  0.016087
+Large zooplankton                    0.014938
+Little Penguins                      0.013215
+Long-nosed fur seal                  0.012065
+Mackerels                            0.014938
+Macroalgae                           0.016662
+Meiobenthos                          0.015513
+Mesozooplankton                      0.016375
+Microzooplankton                     0.015800
+Migratory mesopelagics               0.015226
+Non-migrating mesopelagics           0.014651
+Octopus shelf                        0.013789
+Offshore pelagic piscivores          0.012927
+Offshore pelagic sharks              0.012065
+Pelagic bacteria                     0.016087
+Redbait                              0.015513
+Rock lobster                         0.016375
+Seagrass                             0.016662
+Shags and cormorants                 0.014364
+Shearwaters                          0.013789
+Shelf demersal sharks                0.013502
+Shelf filter feeders                 0.015226
+Shelf large demersal omnivores       0.012927
+Shelf large demersal piscivores      0.012065
+Shelf large pelagic piscivores       0.011491
+Shelf macrozoobenthos                0.013502
+Shelf pelagic sharks                 0.008905
+Shelf small demersal omnivores       0.013502
+Shelf small demersal piscivores      0.013215
+Skates and rays                      0.011491
+Slope small demersal invertivores    0.014364
+Slope small demersal piscivores      0.014651
+Small petrels                        0.014364
+Small phytoplankton                  0.015800
+Squid & cuttlefish shelf             0.012640
+Toothed whales                       0.011778
+Tunas and billfish                   0.013789
+Western king prawn                   0.014651
+dtype: float64","Albatross                             3
+Anchovy and other small pelagics      3
+Australian fur seal                   7
+Australian sea lion                   8
+Baleen whales                         1
+Benthic carnivores (infauna)          0
+Benthic detritivore                   2
+Benthic grazers                       1
+Bottlenose dolphins                   7
+Common dolphins                       8
+Crabs & bugs                          4
+Deep demersal sharks                  6
+Deep filter feeders                   0
+Deep macrozoobenthos                  3
+Deep squid                            2
+Detritus POM                          0
+Gannets                               7
+Garfish                               1
+Gelatinous zooplankton                5
+Gulls                                 6
+Import                                0
+Large phytoplankton                   0
+Large zooplankton                     4
+Little Penguins                       4
+Long-nosed fur seal                  10
+Mackerels                             4
+Macroalgae                            0
+Meiobenthos                           0
+Mesozooplankton                       4
+Microzooplankton                      3
+Migratory mesopelagics                5
+Non-migrating mesopelagics            5
+Octopus shelf                         3
+Offshore pelagic piscivores          10
+Offshore pelagic sharks               3
+Pelagic bacteria                      0
+Redbait                               3
+Rock lobster                          3
+Seagrass                              0
+Shags and cormorants                  3
+Shearwaters                           5
+Shelf demersal sharks                 9
+Shelf filter feeders                  1
+Shelf large demersal omnivores        8
+Shelf large demersal piscivores       4
+Shelf large pelagic piscivores        4
+Shelf macrozoobenthos                 3
+Shelf pelagic sharks                 13
+Shelf small demersal omnivores       10
+Shelf small demersal piscivores       3
+Skates and rays                       2
+Slope small demersal invertivores     4
+Slope small demersal piscivores       6
+Small petrels                         2
+Small phytoplankton                   0
+Squid & cuttlefish shelf              3
+Toothed whales                        4
+Tunas and billfish                    7
+Western king prawn                    0
+dtype: int64",0.27525975234332006,0.3015051201549662
+GAB_2,"Albatross                            0.013789
+Anchovy and other small pelagics     0.014651
+Australian fur seal                  0.013789
+Australian sea lion                  0.012353
+Baleen whales                        0.014651
+Benthic carnivores (infauna)         0.016087
+Benthic detritivore                  0.015800
+Benthic grazers                      0.016087
+Bottlenose dolphins                  0.014651
+Common dolphins                      0.014076
+Crabs & bugs                         0.014651
+Deep demersal sharks                 0.013215
+Deep filter feeders                  0.013215
+Deep macrozoobenthos                 0.013215
+Deep squid                           0.013215
+Detritus POM                         0.016949
+Gannets                              0.015513
+Garfish                              0.015800
+Gelatinous zooplankton               0.015800
+Gulls                                0.013215
+Import                               0.016949
+Large phytoplankton                  0.016087
+Large zooplankton                    0.014076
+Little Penguins                      0.013789
+Long-nosed fur seal                  0.011491
+Mackerels                            0.014938
+Macroalgae                           0.016662
+Meiobenthos                          0.015800
+Mesozooplankton                      0.015800
+Microzooplankton                     0.015800
+Migratory mesopelagics               0.015226
+Non-migrating mesopelagics           0.014651
+Octopus shelf                        0.013215
+Offshore pelagic piscivores          0.013215
+Offshore pelagic sharks              0.012927
+Pelagic bacteria                     0.016949
+Redbait                              0.015513
+Rock lobster                         0.015226
+Seagrass                             0.016662
+Shags and cormorants                 0.014364
+Shearwaters                          0.013789
+Shelf demersal sharks                0.013215
+Shelf filter feeders                 0.015226
+Shelf large demersal omnivores       0.012353
+Shelf large demersal piscivores      0.012640
+Shelf large pelagic piscivores       0.011778
+Shelf macrozoobenthos                0.014076
+Shelf pelagic sharks                 0.009193
+Shelf small demersal omnivores       0.013789
+Shelf small demersal piscivores      0.012927
+Skates and rays                      0.012640
+Slope small demersal invertivores    0.014364
+Slope small demersal piscivores      0.014076
+Small petrels                        0.014364
+Small phytoplankton                  0.015800
+Squid & cuttlefish shelf             0.013502
+Toothed whales                       0.012927
+Tunas and billfish                   0.013789
+Western king prawn                   0.014651
+dtype: float64","Albatross                             2
+Anchovy and other small pelagics      3
+Australian fur seal                   7
+Australian sea lion                   8
+Baleen whales                         1
+Benthic carnivores (infauna)          0
+Benthic detritivore                   2
+Benthic grazers                       2
+Bottlenose dolphins                   5
+Common dolphins                       5
+Crabs & bugs                          4
+Deep demersal sharks                  6
+Deep filter feeders                   0
+Deep macrozoobenthos                  3
+Deep squid                            2
+Detritus POM                          0
+Gannets                               8
+Garfish                               1
+Gelatinous zooplankton                5
+Gulls                                 8
+Import                                0
+Large phytoplankton                   0
+Large zooplankton                     4
+Little Penguins                       3
+Long-nosed fur seal                  14
+Mackerels                             4
+Macroalgae                            0
+Meiobenthos                           0
+Mesozooplankton                       4
+Microzooplankton                      3
+Migratory mesopelagics                5
+Non-migrating mesopelagics            5
+Octopus shelf                         2
+Offshore pelagic piscivores          10
+Offshore pelagic sharks               4
+Pelagic bacteria                      1
+Redbait                               3
+Rock lobster                          2
+Seagrass                              0
+Shags and cormorants                  3
+Shearwaters                           6
+Shelf demersal sharks                10
+Shelf filter feeders                  1
+Shelf large demersal omnivores        9
+Shelf large demersal piscivores       8
+Shelf large pelagic piscivores        6
+Shelf macrozoobenthos                 3
+Shelf pelagic sharks                 12
+Shelf small demersal omnivores        8
+Shelf small demersal piscivores       3
+Skates and rays                       2
+Slope small demersal invertivores     4
+Slope small demersal piscivores       6
+Small petrels                         2
+Small phytoplankton                   0
+Squid & cuttlefish shelf              5
+Toothed whales                        4
+Tunas and billfish                    8
+Western king prawn                    0
+dtype: int64",0.30817120138616994,0.3747526168772207
+GAB_3,"Albatross                            0.013502
+Anchovy and other small pelagics     0.014651
+Australian fur seal                  0.012640
+Australian sea lion                  0.013502
+Baleen whales                        0.014938
+Benthic carnivores (infauna)         0.016087
+Benthic detritivore                  0.015800
+Benthic grazers                      0.016087
+Bottlenose dolphins                  0.013789
+Common dolphins                      0.014364
+Crabs & bugs                         0.014651
+Deep demersal sharks                 0.012640
+Deep filter feeders                  0.012927
+Deep macrozoobenthos                 0.012927
+Deep squid                           0.012927
+Detritus POM                         0.016949
+Gannets                              0.015513
+Garfish                              0.015226
+Gelatinous zooplankton               0.016087
+Gulls                                0.012065
+Import                               0.016662
+Large phytoplankton                  0.016662
+Large zooplankton                    0.014651
+Little Penguins                      0.013789
+Long-nosed fur seal                  0.011491
+Mackerels                            0.014938
+Macroalgae                           0.016662
+Meiobenthos                          0.015800
+Mesozooplankton                      0.016087
+Microzooplankton                     0.015800
+Migratory mesopelagics               0.015513
+Non-migrating mesopelagics           0.013789
+Octopus shelf                        0.014076
+Offshore pelagic piscivores          0.013789
+Offshore pelagic sharks              0.012353
+Pelagic bacteria                     0.016662
+Redbait                              0.015226
+Rock lobster                         0.015513
+Seagrass                             0.016662
+Shags and cormorants                 0.014076
+Shearwaters                          0.014076
+Shelf demersal sharks                0.012640
+Shelf filter feeders                 0.015226
+Shelf large demersal omnivores       0.011778
+Shelf large demersal piscivores      0.011778
+Shelf large pelagic piscivores       0.011491
+Shelf macrozoobenthos                0.013789
+Shelf pelagic sharks                 0.010916
+Shelf small demersal omnivores       0.014076
+Shelf small demersal piscivores      0.013502
+Skates and rays                      0.011491
+Slope small demersal invertivores    0.014938
+Slope small demersal piscivores      0.014364
+Small petrels                        0.014364
+Small phytoplankton                  0.015800
+Squid & cuttlefish shelf             0.013502
+Toothed whales                       0.012927
+Tunas and billfish                   0.012927
+Western king prawn                   0.014651
+dtype: float64","Albatross                             4
+Anchovy and other small pelagics      3
+Australian fur seal                   4
+Australian sea lion                  11
+Baleen whales                         2
+Benthic carnivores (infauna)          0
+Benthic detritivore                   2
+Benthic grazers                       2
+Bottlenose dolphins                   5
+Common dolphins                       9
+Crabs & bugs                          4
+Deep demersal sharks                  6
+Deep filter feeders                   0
+Deep macrozoobenthos                  3
+Deep squid                            2
+Detritus POM                          0
+Gannets                               8
+Garfish                               1
+Gelatinous zooplankton                5
+Gulls                                 5
+Import                                0
+Large phytoplankton                   0
+Large zooplankton                     4
+Little Penguins                       4
+Long-nosed fur seal                   8
+Mackerels                             4
+Macroalgae                            0
+Meiobenthos                           0
+Mesozooplankton                       4
+Microzooplankton                      3
+Migratory mesopelagics                5
+Non-migrating mesopelagics            5
+Octopus shelf                         3
+Offshore pelagic piscivores           9
+Offshore pelagic sharks               5
+Pelagic bacteria                      1
+Redbait                               2
+Rock lobster                          3
+Seagrass                              0
+Shags and cormorants                  2
+Shearwaters                           6
+Shelf demersal sharks                 6
+Shelf filter feeders                  1
+Shelf large demersal omnivores        9
+Shelf large demersal piscivores      10
+Shelf large pelagic piscivores        4
+Shelf macrozoobenthos                 3
+Shelf pelagic sharks                 19
+Shelf small demersal omnivores        8
+Shelf small demersal piscivores       3
+Skates and rays                       2
+Slope small demersal invertivores     4
+Slope small demersal piscivores       6
+Small petrels                         2
+Small phytoplankton                   0
+Squid & cuttlefish shelf              5
+Toothed whales                        3
+Tunas and billfish                    5
+Western king prawn                    0
+dtype: int64",0.3054708323648025,0.38676732732478436
+GAB_4,"Albatross                            0.013502
+Anchovy and other small pelagics     0.015800
+Australian fur seal                  0.014076
+Australian sea lion                  0.012640
+Baleen whales                        0.014938
+Benthic carnivores (infauna)         0.016087
+Benthic detritivore                  0.015800
+Benthic grazers                      0.015800
+Bottlenose dolphins                  0.013789
+Common dolphins                      0.014076
+Crabs & bugs                         0.013502
+Deep demersal sharks                 0.014651
+Deep filter feeders                  0.012927
+Deep macrozoobenthos                 0.014076
+Deep squid                           0.012927
+Detritus POM                         0.016949
+Gannets                              0.015513
+Garfish                              0.015513
+Gelatinous zooplankton               0.016087
+Gulls                                0.012353
+Import                               0.016662
+Large phytoplankton                  0.015800
+Large zooplankton                    0.014076
+Little Penguins                      0.013789
+Long-nosed fur seal                  0.010629
+Mackerels                            0.014938
+Macroalgae                           0.015800
+Meiobenthos                          0.015800
+Mesozooplankton                      0.015513
+Microzooplankton                     0.016087
+Migratory mesopelagics               0.015226
+Non-migrating mesopelagics           0.014076
+Octopus shelf                        0.014076
+Offshore pelagic piscivores          0.013502
+Offshore pelagic sharks              0.012065
+Pelagic bacteria                     0.016375
+Redbait                              0.015513
+Rock lobster                         0.016087
+Seagrass                             0.016662
+Shags and cormorants                 0.014076
+Shearwaters                          0.014364
+Shelf demersal sharks                0.012065
+Shelf filter feeders                 0.014938
+Shelf large demersal omnivores       0.012353
+Shelf large demersal piscivores      0.011778
+Shelf large pelagic piscivores       0.010916
+Shelf macrozoobenthos                0.014364
+Shelf pelagic sharks                 0.010916
+Shelf small demersal omnivores       0.013789
+Shelf small demersal piscivores      0.012927
+Skates and rays                      0.012927
+Slope small demersal invertivores    0.014076
+Slope small demersal piscivores      0.014076
+Small petrels                        0.014364
+Small phytoplankton                  0.015800
+Squid & cuttlefish shelf             0.012065
+Toothed whales                       0.014076
+Tunas and billfish                   0.013789
+Western king prawn                   0.014938
+dtype: float64","Albatross                             4
+Anchovy and other small pelagics      3
+Australian fur seal                   9
+Australian sea lion                   9
+Baleen whales                         2
+Benthic carnivores (infauna)          0
+Benthic detritivore                   2
+Benthic grazers                       2
+Bottlenose dolphins                   4
+Common dolphins                       7
+Crabs & bugs                          4
+Deep demersal sharks                  6
+Deep filter feeders                   0
+Deep macrozoobenthos                  3
+Deep squid                            2
+Detritus POM                          0
+Gannets                               7
+Garfish                               1
+Gelatinous zooplankton                5
+Gulls                                 6
+Import                                0
+Large phytoplankton                   0
+Large zooplankton                     4
+Little Penguins                       2
+Long-nosed fur seal                   7
+Mackerels                             4
+Macroalgae                            0
+Meiobenthos                           0
+Mesozooplankton                       4
+Microzooplankton                      3
+Migratory mesopelagics                5
+Non-migrating mesopelagics            5
+Octopus shelf                         3
+Offshore pelagic piscivores          11
+Offshore pelagic sharks               2
+Pelagic bacteria                      0
+Redbait                               3
+Rock lobster                          3
+Seagrass                              0
+Shags and cormorants                  2
+Shearwaters                           7
+Shelf demersal sharks                10
+Shelf filter feeders                  1
+Shelf large demersal omnivores        9
+Shelf large demersal piscivores       3
+Shelf large pelagic piscivores        4
+Shelf macrozoobenthos                 3
+Shelf pelagic sharks                 18
+Shelf small demersal omnivores        9
+Shelf small demersal piscivores       3
+Skates and rays                       2
+Slope small demersal invertivores     4
+Slope small demersal piscivores       6
+Small petrels                         2
+Small phytoplankton                   0
+Squid & cuttlefish shelf              0
+Toothed whales                        4
+Tunas and billfish                    6
+Western king prawn                    0
+dtype: int64",0.3220226326684052,0.4298094549296032
+GAB_5,"Albatross                            0.013502
+Anchovy and other small pelagics     0.014651
+Australian fur seal                  0.013502
+Australian sea lion                  0.012065
+Baleen whales                        0.015226
+Benthic carnivores (infauna)         0.016087
+Benthic detritivore                  0.015800
+Benthic grazers                      0.015800
+Bottlenose dolphins                  0.013789
+Common dolphins                      0.013215
+Crabs & bugs                         0.014364
+Deep demersal sharks                 0.012927
+Deep filter feeders                  0.013789
+Deep macrozoobenthos                 0.014364
+Deep squid                           0.012927
+Detritus POM                         0.016949
+Gannets                              0.015226
+Garfish                              0.015513
+Gelatinous zooplankton               0.015800
+Gulls                                0.012065
+Import                               0.016662
+Large phytoplankton                  0.016662
+Large zooplankton                    0.014651
+Little Penguins                      0.012640
+Long-nosed fur seal                  0.011204
+Mackerels                            0.014938
+Macroalgae                           0.016949
+Meiobenthos                          0.015800
+Mesozooplankton                      0.015513
+Microzooplankton                     0.015800
+Migratory mesopelagics               0.015226
+Non-migrating mesopelagics           0.014076
+Octopus shelf                        0.014076
+Offshore pelagic piscivores          0.014364
+Offshore pelagic sharks              0.012640
+Pelagic bacteria                     0.016087
+Redbait                              0.015226
+Rock lobster                         0.015800
+Seagrass                             0.016662
+Shags and cormorants                 0.013215
+Shearwaters                          0.014651
+Shelf demersal sharks                0.012640
+Shelf filter feeders                 0.014651
+Shelf large demersal omnivores       0.013215
+Shelf large demersal piscivores      0.011778
+Shelf large pelagic piscivores       0.012065
+Shelf macrozoobenthos                0.014076
+Shelf pelagic sharks                 0.011778
+Shelf small demersal omnivores       0.014076
+Shelf small demersal piscivores      0.013502
+Skates and rays                      0.013215
+Slope small demersal invertivores    0.014076
+Slope small demersal piscivores      0.014076
+Small petrels                        0.014076
+Small phytoplankton                  0.015513
+Squid & cuttlefish shelf             0.012927
+Toothed whales                       0.012927
+Tunas and billfish                   0.014076
+Western king prawn                   0.014651
+dtype: float64","Albatross                             6
+Anchovy and other small pelagics      3
+Australian fur seal                   5
+Australian sea lion                   8
+Baleen whales                         2
+Benthic carnivores (infauna)          0
+Benthic detritivore                   2
+Benthic grazers                       2
+Bottlenose dolphins                   3
+Common dolphins                       5
+Crabs & bugs                          5
+Deep demersal sharks                  6
+Deep filter feeders                   0
+Deep macrozoobenthos                  3
+Deep squid                            2
+Detritus POM                          0
+Gannets                               7
+Garfish                               1
+Gelatinous zooplankton                5
+Gulls                                 6
+Import                                0
+Large phytoplankton                   0
+Large zooplankton                     4
+Little Penguins                       2
+Long-nosed fur seal                   8
+Mackerels                             4
+Macroalgae                            0
+Meiobenthos                           0
+Mesozooplankton                       4
+Microzooplankton                      3
+Migratory mesopelagics                5
+Non-migrating mesopelagics            5
+Octopus shelf                         3
+Offshore pelagic piscivores          10
+Offshore pelagic sharks               3
+Pelagic bacteria                      0
+Redbait                               2
+Rock lobster                          3
+Seagrass                              0
+Shags and cormorants                  2
+Shearwaters                           8
+Shelf demersal sharks                 6
+Shelf filter feeders                  1
+Shelf large demersal omnivores        9
+Shelf large demersal piscivores       4
+Shelf large pelagic piscivores        6
+Shelf macrozoobenthos                 3
+Shelf pelagic sharks                 21
+Shelf small demersal omnivores        8
+Shelf small demersal piscivores       4
+Skates and rays                       2
+Slope small demersal invertivores     3
+Slope small demersal piscivores       6
+Small petrels                         2
+Small phytoplankton                   0
+Squid & cuttlefish shelf              3
+Toothed whales                        3
+Tunas and billfish                    8
+Western king prawn                    0
+dtype: int64",0.2803697135655022,0.30952597615101307

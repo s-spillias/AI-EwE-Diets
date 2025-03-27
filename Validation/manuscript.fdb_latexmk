@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex manuscript"] 1736138815.42028 "manuscript.aux" "manuscript.bbl" "manuscript" 1740715474.72052 0
+["bibtex manuscript"] 1742272998.15583 "manuscript.aux" "manuscript.bbl" "manuscript" 1742273000.76081 0
   "./references.bib" 1739253265 4090 8b281e85b522ae8f46e7360078affa79 ""
   "C:/Users/spi085/AppData/Roaming/MiKTeX/bibtex/bst/natbib/plainnat.bst" 1284455456 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "manuscript.aux" 1740715473 4919 e7e3aa4585eb40e3352e004f7c0cde95 "pdflatex"
+  "manuscript.aux" 1742273000 4919 3705156ad6da79b5c9587389c5c250d5 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1740715471.24242 "c:/Users/spi085/OneDrive - CSIRO/Documents/_Projects/EWE-FRESHER/Validation/manuscript.tex" "manuscript.pdf" "manuscript" 1740715474.72165 2
+["pdflatex"] 1742272998.46933 "c:/Users/spi085/OneDrive - CSIRO/Documents/_Projects/EWE-FRESHER/Validation/manuscript.tex" "manuscript.pdf" "manuscript" 1742273000.76143 0
   "../Validation/NorthernTerritory/reports/report_2024-12-11_16-58-03/group_matrix_heatmap.png" 1739253267 166901 b61bdea6a873941533d487972536be95 ""
   "../Validation/SouthEastInshore/reports/report_2024-12-11_17-16-16/group_matrix_heatmap.png" 1739253269 180481 2de8bae53ea8b8785e217c82b2d3ef1a ""
   "../Validation/SouthEastOffshore/reports/report_2024-12-11_17-35-20/group_matrix_heatmap.png" 1739253276 161474 c8a809c95744d7d529dfe019f3e687f1 ""
@@ -97,14 +97,14 @@
   "C:/Users/spi085/AppData/Roaming/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1657800696 9714 ba3194bd52c8499b3f1e3eb91d409670 ""
   "c:/Users/spi085/OneDrive - CSIRO/Documents/_Projects/EWE-FRESHER/Validation/manuscript.tex" 1739253265 539 b210748ca8bb9a47e91a90578b720824 ""
   "introduction.tex" 1739253264 4375 2592b686d2b78b5cbd5bee320657d993 ""
-  "manuscript.aux" 1740715473 4919 e7e3aa4585eb40e3352e004f7c0cde95 "pdflatex"
-  "manuscript.bbl" 1739253265 4493 a02461a125d6fa83773c62039db40e05 "bibtex manuscript"
-  "manuscript.out" 1740715473 1971 23bec6b8d2193409d85af7e7759345a3 "pdflatex"
+  "manuscript.aux" 1742273000 4919 3705156ad6da79b5c9587389c5c250d5 "pdflatex"
+  "manuscript.bbl" 1742272998 4493 a02461a125d6fa83773c62039db40e05 "bibtex manuscript"
+  "manuscript.out" 1742273000 1971 23bec6b8d2193409d85af7e7759345a3 "pdflatex"
   "manuscript.tex" 1739253265 539 b210748ca8bb9a47e91a90578b720824 ""
   "methods.tex" 1739253265 4823 c23b1b0984fac20a25b10a98ed83d8e2 ""
-  "results.tex" 1739253266 4869 275c0fa88f0ef7da17dfa689e01a0c3d ""
+  "results.tex" 1742272994 4869 275c0fa88f0ef7da17dfa689e01a0c3d ""
   "supplement.tex" 1739253266 10409 6e1b0eaa2b817de9dd25c5b7b80e53f4 ""
-  "validation_regions.png" 0 -1 0 ""
+  "validation_regions.png" 1741745690 261283 9fd5cc9a640da9563f3854fb8bbb6dc5 ""
   (generated)
   "manuscript.aux"
   "manuscript.log"

@@ -117,24 +117,24 @@ def analyze_group_consistency(iteration_dirs):
 def calculate_stability_score(values):
     """Calculate stability score for a set of values.
     
-    The score is based on the average normalized absolute deviation from the mean.
-    A score of 0 indicates perfect stability (all values identical),
-    while a score approaching 1 indicates high instability.
+    The score is based on 1 minus the average normalized absolute deviation from the mean.
+    A score of 1 indicates perfect stability (all values identical),
+    while a score approaching 0 indicates high instability.
     """
     if not values or all(v == 0 for v in values):
-        return 0.0
+        return 1.0
         
     mean_val = np.mean(values)
     max_val = max(values)
     
     if max_val == 0:
-        return 0.0
+        return 1.0
         
     # Calculate normalized deviations from mean
     deviations = [abs(v - mean_val) / max_val for v in values]
     
-    # Average the deviations to get final score
-    return np.mean(deviations)
+    # Average the deviations and invert so 1 = stable
+    return 1 - np.mean(deviations)
 
 def analyze_diet_matrices(iteration_dirs):
     """Analyze diet matrices across iterations"""
@@ -176,7 +176,7 @@ def analyze_diet_matrices(iteration_dirs):
             print(f"\nValues for {pred} -> {prey}:")
             print(f"Raw values: {values}")
             print(f"Mean: {mean_val:.3f}")
-            print(f"Stability score: {stability_score:.3f} (0=stable, 1=unstable)")
+            print(f"Stability score: {stability_score:.3f} (1=stable, 0=unstable)")
             
             interaction_consistency[(pred, prey)] = {
                 'mean': mean_val,
@@ -241,7 +241,7 @@ def create_diet_interaction_heatmap(interaction_consistency, output_path, region
         # Add a second colorbar for stability
         ax2 = fig.add_axes([0.95, 0.15, 0.03, 0.7])
         cb2 = plt.colorbar(plt.cm.ScalarMappable(norm=norm, cmap='viridis'), 
-                          cax=ax2, label='Stability Score (0=stable, 1=unstable)')
+                          cax=ax2, label='Stability Score (1=stable, 0=unstable)')
     
     if region_name:
         plt.title(f'Diet Interaction Matrix - {region_name}\nCell Values: Mean Diet Proportion\nCell Borders: Stability')
@@ -339,7 +339,7 @@ def create_combined_heatmap(results, output_path):
                    norm=stability_norm,
                    mask=mask,
                    annot=False,
-                   cbar_kws={'label': 'Stability Score (0=stable, 1=unstable)'},
+                   cbar_kws={'label': 'Stability Score (1=stable, 0=unstable)'},
                    ax=ax)
         
         ax.patch.set_facecolor('white')

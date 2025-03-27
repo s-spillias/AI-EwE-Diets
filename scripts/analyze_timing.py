@@ -25,16 +25,39 @@ def get_region_timing_data(region_path):
     
     return timing_data
 
+def get_species_count(region_dir):
+    """Get the number of species from the 01_species_list.csv file."""
+    species_file = Path(region_dir) / "01_species_list.csv"
+    if not species_file.exists():
+        return 0
+    
+    try:
+        df = pd.read_csv(species_file)
+        return len(df)
+    except:
+        return 0
+
 def analyze_regional_timing():
     """Analyze timing data across all validation regions."""
     models_dir = Path("MODELS")
     validation_dirs = []
+    species_counts = {}
+    
     for region in ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']:
         base_dir = models_dir / region
+        region_species_counts = []
+        
         for i in range(1, 6):  # Validation runs 1 through 5
             validation_dir = base_dir / f"{region}_{i}"
             if validation_dir.exists():
                 validation_dirs.append(validation_dir)
+                species_count = get_species_count(validation_dir)
+                if species_count > 0:
+                    region_species_counts.append(species_count)
+        
+        # Use the maximum species count across validation runs
+        if region_species_counts:
+            species_counts[region] = max(region_species_counts)
     
     timing_data = []
     
@@ -66,7 +89,7 @@ def analyze_regional_timing():
         'total_hours': ['mean', 'std']
     }).round(2)
     
-    return df, region_stats
+    return df, region_stats, species_counts
 
 def format_time(value):
     """Format time values, handling NaN and missing values."""
@@ -104,12 +127,12 @@ def generate_timing_table(df, region_stats, species_counts):
         "\\footnotesize\n"
         "\\caption{Computational requirements by region and processing stage}\n"
         "\\label{tab:timing_analysis}\n"
-        "\\begin{tabular}{lccccccc}\n"
+        "\\begin{tabular}{lcccccc}\n"
         "\\hline\n"
-        "Region & Species & \\multicolumn{6}{c}{Processing Time (hours)} \\\\\n"
-        "\\cline{3-8}\n"
-        " & Count & Identification & Data & Grouping & Diet & Matrix & Parameter \\\\\n"
-        " & & & Download & & Collection & Construction & Estimation \\\\\n"
+        "Region & Species & \\multicolumn{5}{c}{Processing Time (hours)} \\\\\n"
+        "\\cline{3-7}\n"
+        " & Count & Identification & Data & Grouping & Diet & Matrix \\\\\n"
+        " & & & Download & & Collection & Construction \\\\\n"
         "\\hline\n"
     )
     
@@ -120,17 +143,25 @@ def generate_timing_table(df, region_stats, species_counts):
             species_count = species_counts.get(region, 0)
             # Add asterisk to download time for SouthEastInshore
             download_time = format_time(region_means.loc[region, 'harvest_sealifebase_data'])
-
+            
+            
+            # Clean up region name for display
+            display_name = region.replace('v2_', '')
+            if display_name == 'NorthernTerritory':
+                display_name = 'Northern Territory'
+            elif display_name == 'SouthEastInshore':
+                display_name = 'South East Shelf'
+            elif display_name == 'SouthEastOffshore':
+                display_name = 'South East Offshore'
             
             row = (
-                f"{region.replace('_', ' ')} & "
+                f"{display_name} & "
                 f"{species_count:,d} & "
                 f"{format_time(region_means.loc[region, 'identify_species'])} & "
                 f"{download_time} & "
                 f"{format_time(region_means.loc[region, 'group_species'])} & "
                 f"{format_time(region_means.loc[region, 'gather_diet_data'])} & "
-                f"{format_time(region_means.loc[region, 'construct_diet_matrix'])} & "
-                f"{format_time(region_means.loc[region, 'generate_ewe_params'])} \\\\\n"
+                f"{format_time(region_means.loc[region, 'construct_diet_matrix'])} \\\\\n"
             )
             table += row
     
@@ -143,13 +174,13 @@ def generate_timing_table(df, region_stats, species_counts):
     
     return table
 
-def generate_timing_summary(species_counts=None):
+def generate_timing_summary():
     """Generate a summary of timing analysis for the manuscript."""
     result = analyze_regional_timing()
     if result is None:
         return "Insufficient timing data available for analysis."
     
-    df, region_stats = result
+    df, region_stats, species_counts = result
     
     # Filter for completed runs and calculate means
     def safe_mean(series, min_threshold=0.001):  # Ignore very small values that might be errors
@@ -229,13 +260,7 @@ def generate_timing_summary(species_counts=None):
     return summary
 
 if __name__ == "__main__":
-    # Example species counts - these should be provided by the analysis script
-    species_counts = {
-        'v2_NorthernTerritory': 11362,
-        'v2_SouthEastInshore': 13901,
-        'v2_SouthEastOffshore': 15821
-    }
-    summary, table = generate_timing_summary(species_counts)
+    summary, table = generate_timing_summary()
     print("\nSummary:")
     print(summary)
     print("\nTable:")

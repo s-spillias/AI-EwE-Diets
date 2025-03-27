@@ -1,0 +1,5817 @@
+{
+  "Group Statistics": {
+    "Total Groups in Human": 76,
+    "Total Groups in AI": 62,
+    "Number of Matched Groups": 59,
+    "Groups Only in Human": [
+      "Abalone",
+      "Bight redfish",
+      "Deepwater flathead",
+      "Discards",
+      "Farmed crustacea",
+      "Farmed finfish",
+      "King George whiting",
+      "Microphytobenthos",
+      "Nanozooplankton",
+      "Offshore pelagic invertivore large",
+      "Sardine",
+      "Shelf demersal piscivorous shark",
+      "Slope large demersal invertivores",
+      "Slope large demersal piscivores",
+      "Snapper",
+      "Southern Bluefin Tuna",
+      "Terns"
+    ],
+    "Groups Only in AI": [
+      "Detritus",
+      "Offshore pelagic invertivores large",
+      "Slope large demersal omnivores"
+    ]
+  },
+  "Individual Matrices": {
+    "AI_1": {
+      "Overall Statistics": {
+        "Binary Statistics": {
+          "Total Cells": 3481,
+          "Matching Zeros": 2695,
+          "Matching Diet Links": 226,
+          "Only in Human": 205,
+          "Only in AI": 355,
+          "Agreement Rate": 0.8391266877334099,
+          "Kappa": 0.3549330730157678
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 226,
+          "Correlation": 0.3015051201549662,
+          "P-value": 3.92458265478822e-06
+        }
+      },
+      "Per-predator Statistics": {
+        "Albatross": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 3,
+            "Only in Human": 6,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.24447031431897584
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.254777994273903,
+            "P-value": 0.8359952147612145
+          }
+        },
+        "Anchovy and other small pelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 49,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.41584158415841577
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.9960717378752935,
+            "P-value": 0.0564465784087435
+          }
+        },
+        "Australian fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 7,
+            "Only in Human": 5,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.3485804416403785
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.005457608416651915,
+            "P-value": 0.9907350141748268
+          }
+        },
+        "Australian sea lion": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 35,
+            "Matching Diet Links": 8,
+            "Only in Human": 15,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.3595658073270012
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.3217415953830549,
+            "P-value": 0.43707402056585265
+          }
+        },
+        "Baleen whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 1,
+            "Only in Human": 1,
+            "Only in AI": 7,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.15412186379928336
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic carnivores (infauna)": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 3,
+            "Only in AI": 0,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic detritivore": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.46363636363636324
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Benthic grazers": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 1,
+            "Only in Human": 1,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9661016949152542,
+            "Kappa": 0.482456140350877
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Bottlenose dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 7,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.48516579406631766
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": -0.5021391633925292,
+            "P-value": 0.2508162804924507
+          }
+        },
+        "Common dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 8,
+            "Only in Human": 2,
+            "Only in AI": 7,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.5480851063829786
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": -0.19174590320220106,
+            "P-value": 0.6491915126345531
+          }
+        },
+        "Crabs & bugs": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 4,
+            "Only in Human": 4,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.3132275132275133
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9980050367968022,
+            "P-value": 0.001994963203197919
+          }
+        },
+        "Deep demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 6,
+            "Only in Human": 1,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.37285363859362236
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.43479576265257935,
+            "P-value": 0.38890485051643614
+          }
+        },
+        "Deep filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": -0.03250000000000035
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.21482889733840305
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep squid": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 14,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Detritus POM": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gannets": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 7,
+            "Only in Human": 2,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.639511201629328
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.415107072043048,
+            "P-value": 0.3544045504518631
+          }
+        },
+        "Garfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 1,
+            "Only in Human": 2,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.24164524421593797
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gelatinous zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 5,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.6767123287671231
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.2788013283191797,
+            "P-value": 0.6496730786976057
+          }
+        },
+        "Gulls": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 39,
+            "Matching Diet Links": 6,
+            "Only in Human": 9,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.3139534883720928
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.11693476594101895,
+            "P-value": 0.8253973188516199
+          }
+        },
+        "Import": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 0,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.481806775407779
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.06173049697772434,
+            "P-value": 0.9382695030222756
+          }
+        },
+        "Little Penguins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 8,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.25024437927663734
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.914908484286605,
+            "P-value": 0.0850915157133949
+          }
+        },
+        "Long-nosed fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 32,
+            "Matching Diet Links": 10,
+            "Only in Human": 13,
+            "Only in AI": 4,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.3482781026640675
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": 0.7789142620632954,
+            "P-value": 0.00792682124142767
+          }
+        },
+        "Mackerels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.33933298544990154,
+            "P-value": 0.6606670145500986
+          }
+        },
+        "Macroalgae": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Meiobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": -0.027874564459930615
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Mesozooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9661016949152542,
+            "Kappa": 0.7814814814814813
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9415130835240084,
+            "P-value": 0.05848691647599158
+          }
+        },
+        "Microzooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5645756457564571
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.014272855638494487,
+            "P-value": 0.9909133093596098
+          }
+        },
+        "Migratory mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 5,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.5755395683453238
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.6270930344975225,
+            "P-value": 0.2575191214469902
+          }
+        },
+        "Non-migrating mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 5,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.47671840354767203
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.3646230630991212,
+            "P-value": 0.5462501296898861
+          }
+        },
+        "Octopus shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 10,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.2780867630700782
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.7243307837671433,
+            "P-value": 0.4842977181170914
+          }
+        },
+        "Offshore pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 35,
+            "Matching Diet Links": 10,
+            "Only in Human": 9,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.4247910863509748
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": -0.02815961124607643,
+            "P-value": 0.9384496730537097
+          }
+        },
+        "Offshore pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 39,
+            "Matching Diet Links": 3,
+            "Only in Human": 6,
+            "Only in AI": 11,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.09230769230769223
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9621851506068309,
+            "P-value": 0.17563232939312978
+          }
+        },
+        "Pelagic bacteria": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": -0.023121387283237253
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Redbait": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.499151103565365
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9999827378079881,
+            "P-value": 0.0037406210809697114
+          }
+        },
+        "Rock lobster": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9661016949152542,
+            "Kappa": 0.7330316742081446
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.802955068546966,
+            "P-value": 0.4065197283736609
+          }
+        },
+        "Seagrass": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shags and cormorants": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 6,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.3166023166023164
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.4015214461019936,
+            "P-value": 0.7369630452036918
+          }
+        },
+        "Shearwaters": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 5,
+            "Only in Human": 6,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.36310107948969583
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.28146642993503335,
+            "P-value": 0.6464156321122219
+          }
+        },
+        "Shelf demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 9,
+            "Only in Human": 7,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.464447806354009
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": 0.16600801969343024,
+            "P-value": 0.6694819299750471
+          }
+        },
+        "Shelf filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.22707423580786087
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf large demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 8,
+            "Only in Human": 5,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.37801204819277096
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": -0.3572646939392434,
+            "P-value": 0.38494677682278555
+          }
+        },
+        "Shelf large demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 4,
+            "Only in Human": 9,
+            "Only in AI": 8,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.13757523645743774
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.17798043385280168,
+            "P-value": 0.8220195661471983
+          }
+        },
+        "Shelf large pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 4,
+            "Only in Human": 10,
+            "Only in AI": 9,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.08787632221318142
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.8446305197518309,
+            "P-value": 0.1553694802481691
+          }
+        },
+        "Shelf macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 11,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.254736842105263
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 18,
+            "Matching Diet Links": 13,
+            "Only in Human": 22,
+            "Only in AI": 6,
+            "Agreement Rate": 0.5254237288135594,
+            "Kappa": 0.10991379310344838
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 13,
+            "Correlation": 0.03206339317687144,
+            "P-value": 0.9171829981328677
+          }
+        },
+        "Shelf small demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 10,
+            "Only in Human": 3,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.4921090387374461
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": -0.17510523844866613,
+            "P-value": 0.6284875940318422
+          }
+        },
+        "Shelf small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 3,
+            "Only in Human": 4,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.1951731374606506
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.8491296039098207,
+            "P-value": 0.3542541539867172
+          }
+        },
+        "Skates and rays": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 17,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.06970954356846451
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": -1.0,
+            "P-value": 1.0
+          }
+        },
+        "Slope small demersal invertivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.3986409966024913
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.09801963484340484,
+            "P-value": 0.9019803651565952
+          }
+        },
+        "Slope small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 6,
+            "Only in Human": 2,
+            "Only in AI": 6,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.5222672064777328
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.18925440136584026,
+            "P-value": 0.7195076820143914
+          }
+        },
+        "Small petrels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.2489391796322488
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Small phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Squid & cuttlefish shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 3,
+            "Only in Human": 13,
+            "Only in AI": 2,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.17979610750695096
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.051689816691815244,
+            "P-value": 0.9670785694337904
+          }
+        },
+        "Toothed whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 4,
+            "Only in Human": 2,
+            "Only in AI": 16,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.179289026275116
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9611514087338127,
+            "P-value": 0.03884859126618734
+          }
+        },
+        "Tunas and billfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 7,
+            "Only in Human": 7,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.44387317909168816
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.6090603656161693,
+            "P-value": 0.14660255385746448
+          }
+        },
+        "Western king prawn": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 0,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": -0.07272727272727261
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        }
+      }
+    },
+    "AI_2": {
+      "Overall Statistics": {
+        "Binary Statistics": {
+          "Total Cells": 3481,
+          "Matching Zeros": 2706,
+          "Matching Diet Links": 236,
+          "Only in Human": 195,
+          "Only in AI": 344,
+          "Agreement Rate": 0.8451594369434071,
+          "Kappa": 0.37858452749963506
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 236,
+          "Correlation": 0.3747526168772207,
+          "P-value": 2.7723564586441373e-09
+        }
+      },
+      "Per-predator Statistics": {
+        "Albatross": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 2,
+            "Only in Human": 7,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.16473616473616495
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Anchovy and other small pelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.3789473684210526
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.998110105254078,
+            "P-value": 0.039145545634718566
+          }
+        },
+        "Australian fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 7,
+            "Only in Human": 5,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.4419604471195187
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": -0.16262142603697333,
+            "P-value": 0.7275612641087432
+          }
+        },
+        "Australian sea lion": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 35,
+            "Matching Diet Links": 8,
+            "Only in Human": 15,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.3595658073270012
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.8139846375979205,
+            "P-value": 0.013929745964142306
+          }
+        },
+        "Baleen whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 1,
+            "Only in Human": 1,
+            "Only in AI": 7,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.15412186379928336
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic carnivores (infauna)": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 3,
+            "Only in AI": 0,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic detritivore": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.46363636363636324
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Benthic grazers": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.549618320610687
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Bottlenose dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 5,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.47555555555555573
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.8784129447307725,
+            "P-value": 0.049955272175773044
+          }
+        },
+        "Common dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 5,
+            "Only in Human": 5,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.39795918367346955
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.5945561663146617,
+            "P-value": 0.2903161065377613
+          }
+        },
+        "Crabs & bugs": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 4,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.4215686274509805
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9212699228110373,
+            "P-value": 0.07873007718896274
+          }
+        },
+        "Deep demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 6,
+            "Only in Human": 1,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.37285363859362236
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.4305371069753786,
+            "P-value": 0.3940969923061442
+          }
+        },
+        "Deep filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": -0.03230148048452202
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.2337662337662339
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep squid": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.18663838812301195
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Detritus POM": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gannets": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 8,
+            "Only in Human": 1,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.7116324535679374
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.2512182066871014,
+            "P-value": 0.5484088024603553
+          }
+        },
+        "Garfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 1,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.29761904761904723
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gelatinous zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 5,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.6767123287671231
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.3136113650381464,
+            "P-value": 0.6073431054091974
+          }
+        },
+        "Gulls": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 8,
+            "Only in Human": 7,
+            "Only in AI": 6,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.4058869093725795
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": -0.6053710333180442,
+            "P-value": 0.1117565710978977
+          }
+        },
+        "Import": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 4,
+            "Only in Human": 0,
+            "Only in AI": 10,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.3789473684210526
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.4828114960926256,
+            "P-value": 0.5171885039073745
+          }
+        },
+        "Little Penguins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 3,
+            "Only in Human": 6,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.24447031431897584
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9876040719443034,
+            "P-value": 0.10034235531749201
+          }
+        },
+        "Long-nosed fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 26,
+            "Matching Diet Links": 14,
+            "Only in Human": 9,
+            "Only in AI": 10,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.3283403235470341
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 14,
+            "Correlation": 0.6426135500456874,
+            "P-value": 0.013193677156301055
+          }
+        },
+        "Mackerels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.33933298544990154,
+            "P-value": 0.6606670145500986
+          }
+        },
+        "Macroalgae": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Meiobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": -0.026086956521739393
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Mesozooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.6300940438871472
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.8320740004875226,
+            "P-value": 0.16792599951247755
+          }
+        },
+        "Microzooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5645756457564571
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.08312759957023028,
+            "P-value": 0.9470181874550468
+          }
+        },
+        "Migratory mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 5,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.5755395683453238
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.35679017813531755,
+            "P-value": 0.5555518387654479
+          }
+        },
+        "Non-migrating mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 5,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.47671840354767203
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.3646230630991212,
+            "P-value": 0.5462501296898861
+          }
+        },
+        "Octopus shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 11,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.14682981090100133
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Offshore pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 10,
+            "Only in Human": 9,
+            "Only in AI": 4,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.4579505300353358
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": 0.5613240303316431,
+            "P-value": 0.09134000812098117
+          }
+        },
+        "Offshore pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.2236842105263156
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.2127792992330689,
+            "P-value": 0.7872207007669312
+          }
+        },
+        "Pelagic bacteria": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Redbait": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.499151103565365
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9673565795233167,
+            "P-value": 0.16311033877140213
+          }
+        },
+        "Rock lobster": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.3540145985401462
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": -1.0,
+            "P-value": 1.0
+          }
+        },
+        "Seagrass": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shags and cormorants": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 6,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.3166023166023164
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.4510878570131147,
+            "P-value": 0.7020722091953202
+          }
+        },
+        "Shearwaters": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 6,
+            "Only in Human": 5,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.4062214089661483
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.7550715213228059,
+            "P-value": 0.08263831472209957
+          }
+        },
+        "Shelf demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 10,
+            "Only in Human": 6,
+            "Only in AI": 7,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.45331432644333575
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": -0.4392044637198833,
+            "P-value": 0.20410623324953225
+          }
+        },
+        "Shelf filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.22707423580786087
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf large demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 34,
+            "Matching Diet Links": 9,
+            "Only in Human": 4,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.3534246575342465
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": 0.012522023605908868,
+            "P-value": 0.9744936760332719
+          }
+        },
+        "Shelf large demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 8,
+            "Only in Human": 5,
+            "Only in AI": 10,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.34974283614988977
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.8220697878807931,
+            "P-value": 0.012270363195856804
+          }
+        },
+        "Shelf large pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 35,
+            "Matching Diet Links": 6,
+            "Only in Human": 8,
+            "Only in AI": 10,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.19667170953101365
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.7397352167104375,
+            "P-value": 0.09279175975332639
+          }
+        },
+        "Shelf macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 20,
+            "Matching Diet Links": 12,
+            "Only in Human": 23,
+            "Only in AI": 4,
+            "Agreement Rate": 0.5423728813559322,
+            "Kappa": 0.15669666490206458
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 12,
+            "Correlation": 0.2735828424357947,
+            "P-value": 0.38955276767533487
+          }
+        },
+        "Shelf small demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 8,
+            "Only in Human": 5,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.47192839707078943
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.4477679310376877,
+            "P-value": 0.26590491308984865
+          }
+        },
+        "Shelf small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 4,
+            "Only in AI": 10,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.9184440152434952,
+            "P-value": 0.2588926970356456
+          }
+        },
+        "Skates and rays": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.11588411588411593
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": -1.0,
+            "P-value": 1.0
+          }
+        },
+        "Slope small demersal invertivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.3986409966024913
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.8607481487878704,
+            "P-value": 0.13925185121212946
+          }
+        },
+        "Slope small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 6,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.4506517690875233
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.6739153538592206,
+            "P-value": 0.1421603093892766
+          }
+        },
+        "Small petrels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.2489391796322488
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": -1.0,
+            "P-value": 1.0
+          }
+        },
+        "Small phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Squid & cuttlefish shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 5,
+            "Only in Human": 11,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.35985533453887875
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.7241002863262117,
+            "P-value": 0.16657742656118046
+          }
+        },
+        "Toothed whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 4,
+            "Only in Human": 2,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.25316455696202517
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.7150683917912373,
+            "P-value": 0.28493160820876273
+          }
+        },
+        "Tunas and billfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 8,
+            "Only in Human": 6,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.47192839707078943
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.5626692681116972,
+            "P-value": 0.14651980709463205
+          }
+        },
+        "Western king prawn": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 0,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": -0.07272727272727261
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        }
+      }
+    },
+    "AI_3": {
+      "Overall Statistics": {
+        "Binary Statistics": {
+          "Total Cells": 3481,
+          "Matching Zeros": 2696,
+          "Matching Diet Links": 234,
+          "Only in Human": 197,
+          "Only in AI": 354,
+          "Agreement Rate": 0.8417121516805516,
+          "Kappa": 0.3691274792511093
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 234,
+          "Correlation": 0.38676732732478436,
+          "P-value": 9.083395280058439e-10
+        }
+      },
+      "Per-predator Statistics": {
+        "Albatross": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 7,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.2790224032586556
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.37606886633184894,
+            "P-value": 0.623931133668151
+          }
+        },
+        "Anchovy and other small pelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.3789473684210526
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.998110105254078,
+            "P-value": 0.039145545634718566
+          }
+        },
+        "Australian fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 4,
+            "Only in Human": 8,
+            "Only in AI": 7,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.19030192131747473
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.7505961907753805,
+            "P-value": 0.24940380922461935
+          }
+        },
+        "Australian sea lion": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 11,
+            "Only in Human": 12,
+            "Only in AI": 0,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.5279999999999999
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 11,
+            "Correlation": -0.037636914489298186,
+            "P-value": 0.9125180402309445
+          }
+        },
+        "Baleen whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.32626427406198993
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic carnivores (infauna)": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 3,
+            "Only in AI": 0,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic detritivore": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.46363636363636324
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Benthic grazers": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.549618320610687
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Bottlenose dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 5,
+            "Only in Human": 4,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.36559139784946243
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.5478053580321549,
+            "P-value": 0.33916584890991974
+          }
+        },
+        "Common dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 9,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.576217079010375
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": -0.4565866467296556,
+            "P-value": 0.21666583709926396
+          }
+        },
+        "Crabs & bugs": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 4,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.4215686274509805
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.43807948081593584,
+            "P-value": 0.5619205191840642
+          }
+        },
+        "Deep demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 6,
+            "Only in Human": 1,
+            "Only in AI": 14,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.3259710586443261
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.5022587489919258,
+            "P-value": 0.30996273960634885
+          }
+        },
+        "Deep filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": -0.03250000000000035
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.21482889733840305
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep squid": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 14,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Detritus POM": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gannets": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 8,
+            "Only in Human": 1,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.7116324535679374
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.2512182066871014,
+            "P-value": 0.5484088024603553
+          }
+        },
+        "Garfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 1,
+            "Only in Human": 2,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.19909502262443474
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gelatinous zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 5,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.7408491947291364
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.2484169452838776,
+            "P-value": 0.6869896574043316
+          }
+        },
+        "Gulls": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 5,
+            "Only in Human": 10,
+            "Only in AI": 7,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.18653690186536906
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.6396365998545834,
+            "P-value": 0.24516016381767083
+          }
+        },
+        "Import": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 4,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.4433962264150944
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.1305187774037187,
+            "P-value": 0.8694812225962814
+          }
+        },
+        "Little Penguins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.31030818278427236
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9143779735969344,
+            "P-value": 0.0856220264030656
+          }
+        },
+        "Long-nosed fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 32,
+            "Matching Diet Links": 8,
+            "Only in Human": 15,
+            "Only in AI": 4,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.25908790482485117
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.7510838532428716,
+            "P-value": 0.03171695603564091
+          }
+        },
+        "Mackerels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.33933298544990154,
+            "P-value": 0.6606670145500986
+          }
+        },
+        "Macroalgae": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Meiobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": -0.026086956521739393
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Mesozooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.6994906621392192
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.965733574987387,
+            "P-value": 0.03426642501261301
+          }
+        },
+        "Microzooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5645756457564571
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.040902557777705725,
+            "P-value": 0.973953356776791
+          }
+        },
+        "Migratory mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 49,
+            "Matching Diet Links": 5,
+            "Only in Human": 0,
+            "Only in AI": 5,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.624203821656051
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.8407062397915616,
+            "P-value": 0.0744685407401054
+          }
+        },
+        "Non-migrating mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.37051406401551906
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.48536210095105414,
+            "P-value": 0.40722054984538786
+          }
+        },
+        "Octopus shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.3186113844179086,
+            "P-value": 0.7935670214160548
+          }
+        },
+        "Offshore pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 39,
+            "Matching Diet Links": 9,
+            "Only in Human": 10,
+            "Only in AI": 1,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.5123966942148762
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": 0.28261560100720806,
+            "P-value": 0.461217119726578
+          }
+        },
+        "Offshore pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 5,
+            "Only in Human": 4,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.2312703583061888
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.483225070394221,
+            "P-value": 0.40960112491723955
+          }
+        },
+        "Pelagic bacteria": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 57,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.658959537572255
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Redbait": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 2,
+            "Only in Human": 4,
+            "Only in AI": 2,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.3468634686346865
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Rock lobster": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 5,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.5091514143094843
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.7857142857142858,
+            "P-value": 0.4245912300193131
+          }
+        },
+        "Seagrass": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shags and cormorants": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 2,
+            "Only in Human": 4,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.19178082191780813
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Shearwaters": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 6,
+            "Only in Human": 5,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.44128787878787873
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.5439265220882682,
+            "P-value": 0.2645721961340569
+          }
+        },
+        "Shelf demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 6,
+            "Only in Human": 10,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.28686543110394835
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": -0.3539892267020358,
+            "P-value": 0.49119506690866427
+          }
+        },
+        "Shelf filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.22707423580786087
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf large demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 32,
+            "Matching Diet Links": 9,
+            "Only in Human": 4,
+            "Only in AI": 14,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.3040629095674968
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": -0.09918321486921018,
+            "P-value": 0.7995946829859429
+          }
+        },
+        "Shelf large demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 31,
+            "Matching Diet Links": 10,
+            "Only in Human": 3,
+            "Only in AI": 15,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.3329145728643217
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": 0.9413133888914648,
+            "P-value": 4.832993157604471e-05
+          }
+        },
+        "Shelf large pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 4,
+            "Only in Human": 10,
+            "Only in AI": 9,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.08787632221318142
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9268303968055286,
+            "P-value": 0.0731696031944713
+          }
+        },
+        "Shelf macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 10,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.2780867630700782
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 19,
+            "Matching Diet Links": 19,
+            "Only in Human": 16,
+            "Only in AI": 5,
+            "Agreement Rate": 0.6440677966101694,
+            "Kappa": 0.31204886174347574
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 19,
+            "Correlation": 0.40582120688482676,
+            "P-value": 0.08472034223673632
+          }
+        },
+        "Shelf small demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 8,
+            "Only in Human": 5,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.5066889632107024
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.596003762949122,
+            "P-value": 0.1189321128217096
+          }
+        },
+        "Shelf small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 3,
+            "Only in Human": 4,
+            "Only in AI": 8,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.22026431718061654
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.8131458292457913,
+            "P-value": 0.39550626552674784
+          }
+        },
+        "Skates and rays": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 17,
+            "Agreement Rate": 0.6779661016949152,
+            "Kappa": 0.06970954356846451
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Slope small demersal invertivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.8687490443068241,
+            "P-value": 0.1312509556931758
+          }
+        },
+        "Slope small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 6,
+            "Only in Human": 2,
+            "Only in AI": 7,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.4849660523763335
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.6739153538592204,
+            "P-value": 0.14216030938927676
+          }
+        },
+        "Small petrels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.2489391796322488
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Small phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Squid & cuttlefish shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 5,
+            "Only in Human": 11,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.35985533453887875
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.4869131205595102,
+            "P-value": 0.4054947903925788
+          }
+        },
+        "Toothed whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 11,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.18379446640316205
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.7583142703270431,
+            "P-value": 0.452046530938678
+          }
+        },
+        "Tunas and billfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 5,
+            "Only in Human": 9,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.2728873239436618
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.8270712882875212,
+            "P-value": 0.08404959835380395
+          }
+        },
+        "Western king prawn": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 0,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": -0.07272727272727261
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        }
+      }
+    },
+    "AI_4": {
+      "Overall Statistics": {
+        "Binary Statistics": {
+          "Total Cells": 3481,
+          "Matching Zeros": 2707,
+          "Matching Diet Links": 225,
+          "Only in Human": 206,
+          "Only in AI": 343,
+          "Agreement Rate": 0.8422866992243608,
+          "Kappa": 0.36039791117717024
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 225,
+          "Correlation": 0.4298094549296032,
+          "P-value": 1.5690321964349564e-11
+        }
+      },
+      "Per-predator Statistics": {
+        "Albatross": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 7,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.2790224032586556
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.4064377818595438,
+            "P-value": 0.5935622181404563
+          }
+        },
+        "Anchovy and other small pelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5693430656934303
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.984058477169603,
+            "P-value": 0.11382526238936538
+          }
+        },
+        "Australian fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 9,
+            "Only in Human": 3,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.5347003154574133
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": 0.2013652666038299,
+            "P-value": 0.6033916071246327
+          }
+        },
+        "Australian sea lion": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 35,
+            "Matching Diet Links": 9,
+            "Only in Human": 14,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.4048419636852724
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": 0.46522506988663914,
+            "P-value": 0.2069790434677853
+          }
+        },
+        "Baleen whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.32626427406198993
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic carnivores (infauna)": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 3,
+            "Only in AI": 0,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic detritivore": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.46363636363636324
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Benthic grazers": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.4732142857142854
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Bottlenose dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 4,
+            "Only in Human": 5,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.31030818278427236
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.9720664724941592,
+            "P-value": 0.02793352750584077
+          }
+        },
+        "Common dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 7,
+            "Only in Human": 3,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.4806338028169014
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": -0.02480060246685154,
+            "P-value": 0.9579101364985722
+          }
+        },
+        "Crabs & bugs": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 4,
+            "Only in Human": 4,
+            "Only in AI": 8,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.28340080971659903
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.08872360154701331,
+            "P-value": 0.9112763984529866
+          }
+        },
+        "Deep demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 6,
+            "Only in Human": 1,
+            "Only in AI": 7,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.527054108216433
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.4300714124982241,
+            "P-value": 0.39466619079856385
+          }
+        },
+        "Deep filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": -0.03250000000000035
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep squid": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 14,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Detritus POM": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gannets": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 7,
+            "Only in Human": 2,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.6865037194473964
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.3549252994194674,
+            "P-value": 0.4346833700744614
+          }
+        },
+        "Garfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 1,
+            "Only in Human": 2,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.24164524421593797
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gelatinous zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 5,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.7408491947291364
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.2484169452838776,
+            "P-value": 0.6869896574043316
+          }
+        },
+        "Gulls": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 6,
+            "Only in Human": 9,
+            "Only in AI": 7,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.2519809825673533
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": -0.13830193596370485,
+            "P-value": 0.7938697760421677
+          }
+        },
+        "Import": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 4,
+            "Only in Human": 0,
+            "Only in AI": 10,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.3789473684210526
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.06307723736165319,
+            "P-value": 0.9369227626383467
+          }
+        },
+        "Little Penguins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 2,
+            "Only in Human": 7,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.16473616473616495
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Long-nosed fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 30,
+            "Matching Diet Links": 7,
+            "Only in Human": 16,
+            "Only in AI": 6,
+            "Agreement Rate": 0.6271186440677966,
+            "Kappa": 0.14941022280471825
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.8903257927738114,
+            "P-value": 0.0072062510517037
+          }
+        },
+        "Mackerels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.33933298544990154,
+            "P-value": 0.6606670145500986
+          }
+        },
+        "Macroalgae": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Meiobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": -0.026086956521739393
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Mesozooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.5705967976710334
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9447635747454709,
+            "P-value": 0.05523642525452921
+          }
+        },
+        "Microzooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.6395112016293282
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.0932167127690317,
+            "P-value": 0.9405701167892013
+          }
+        },
+        "Migratory mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 5,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.5755395683453238
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.6270930344975225,
+            "P-value": 0.2575191214469902
+          }
+        },
+        "Non-migrating mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.40283400809716596
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.48695978221762104,
+            "P-value": 0.4054428981941389
+          }
+        },
+        "Octopus shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.952342066844487,
+            "P-value": 0.19733439655733312
+          }
+        },
+        "Offshore pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 11,
+            "Only in Human": 8,
+            "Only in AI": 4,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.5069637883008355
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 11,
+            "Correlation": 0.6152954655825554,
+            "P-value": 0.04390405161036158
+          }
+        },
+        "Offshore pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 2,
+            "Only in Human": 7,
+            "Only in AI": 10,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.019550342130987122
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Pelagic bacteria": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 57,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9661016949152542,
+            "Kappa": -0.017241379310345
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Redbait": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.499151103565365
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9061477523900313,
+            "P-value": 0.27801875148429633
+          }
+        },
+        "Rock lobster": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.6424242424242427
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.8386278693775345,
+            "P-value": 0.36671657332092306
+          }
+        },
+        "Seagrass": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shags and cormorants": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 2,
+            "Only in Human": 4,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.19178082191780813
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Shearwaters": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 7,
+            "Only in Human": 4,
+            "Only in AI": 5,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.5141811527904847
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": -0.4038543297409022,
+            "P-value": 0.36891031011002445
+          }
+        },
+        "Shelf demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 32,
+            "Matching Diet Links": 10,
+            "Only in Human": 6,
+            "Only in AI": 11,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.3362011912640635
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": 0.14225742734018856,
+            "P-value": 0.695033347824064
+          }
+        },
+        "Shelf filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.1980582524271843
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf large demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 34,
+            "Matching Diet Links": 9,
+            "Only in Human": 4,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7288135593220338,
+            "Kappa": 0.3534246575342465
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": -0.17724928885748645,
+            "P-value": 0.6482312725004221
+          }
+        },
+        "Shelf large demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 3,
+            "Only in Human": 10,
+            "Only in AI": 8,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.06017699115044243
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.023448669494847682,
+            "P-value": 0.9850707450334943
+          }
+        },
+        "Shelf large pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 34,
+            "Matching Diet Links": 4,
+            "Only in Human": 10,
+            "Only in AI": 11,
+            "Agreement Rate": 0.6440677966101694,
+            "Kappa": 0.040278853601858844
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.8647392130225088,
+            "P-value": 0.13526078697749133
+          }
+        },
+        "Shelf macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.33375156838143005
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 20,
+            "Matching Diet Links": 18,
+            "Only in Human": 17,
+            "Only in AI": 4,
+            "Agreement Rate": 0.6440677966101694,
+            "Kappa": 0.3203510696653867
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 18,
+            "Correlation": 0.7239596329344224,
+            "P-value": 0.0006815856180799097
+          }
+        },
+        "Shelf small demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 39,
+            "Matching Diet Links": 9,
+            "Only in Human": 4,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.498841698841699
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": -0.1448410738403397,
+            "P-value": 0.7100421176724457
+          }
+        },
+        "Shelf small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 4,
+            "Only in AI": 10,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.8954046404468414,
+            "P-value": 0.2937727558501198
+          }
+        },
+        "Skates and rays": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 12,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.13052631578947343
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Slope small demersal invertivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.3669527896995709
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9714956334464356,
+            "P-value": 0.028504366553564253
+          }
+        },
+        "Slope small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 6,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.4506517690875233
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.6739153538592206,
+            "P-value": 0.1421603093892766
+          }
+        },
+        "Small petrels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.2489391796322488
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Small phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Squid & cuttlefish shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 0,
+            "Only in Human": 16,
+            "Only in AI": 1,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": -0.03295571575695154
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Toothed whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 4,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.35729847494553374
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9436526825942108,
+            "P-value": 0.056347317405789354
+          }
+        },
+        "Tunas and billfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 6,
+            "Only in Human": 8,
+            "Only in AI": 3,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.4126696832579187
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.44248483866898325,
+            "P-value": 0.3795904219365398
+          }
+        },
+        "Western king prawn": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 0,
+            "Only in Human": 4,
+            "Only in AI": 3,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": -0.06169665809768705
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        }
+      }
+    },
+    "AI_5": {
+      "Overall Statistics": {
+        "Binary Statistics": {
+          "Total Cells": 3481,
+          "Matching Zeros": 2711,
+          "Matching Diet Links": 226,
+          "Only in Human": 205,
+          "Only in AI": 339,
+          "Agreement Rate": 0.843723068083884,
+          "Kappa": 0.3645520908066522
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 226,
+          "Correlation": 0.309525976151013,
+          "P-value": 2.091020094068989e-06
+        }
+      },
+      "Per-predator Statistics": {
+        "Albatross": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 6,
+            "Only in Human": 3,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.3821989528795811
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": -0.12949226954225562,
+            "P-value": 0.8068472749231612
+          }
+        },
+        "Anchovy and other small pelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.3789473684210526
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.998110105254078,
+            "P-value": 0.039145545634718566
+          }
+        },
+        "Australian fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 5,
+            "Only in Human": 7,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.3308128544423439
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.3922506010471739,
+            "P-value": 0.5136912422701017
+          }
+        },
+        "Australian sea lion": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 34,
+            "Matching Diet Links": 8,
+            "Only in Human": 15,
+            "Only in AI": 2,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.32548755884330866
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": -0.3591102591639416,
+            "P-value": 0.38231731852014106
+          }
+        },
+        "Baleen whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.3655913978494627
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic carnivores (infauna)": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 3,
+            "Only in AI": 0,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Benthic detritivore": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.46363636363636324
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Benthic grazers": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.4732142857142854
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Bottlenose dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 3,
+            "Only in Human": 6,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": 0.24447031431897584
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.8913142956256715,
+            "P-value": 0.29956813211696004
+          }
+        },
+        "Common dolphins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 5,
+            "Only in Human": 5,
+            "Only in AI": 8,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.300820419325433
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.6344125387068007,
+            "P-value": 0.2502873983673655
+          }
+        },
+        "Crabs & bugs": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 45,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 6,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.43809523809523787
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.636128479147765,
+            "P-value": 0.248600097921778
+          }
+        },
+        "Deep demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 39,
+            "Matching Diet Links": 6,
+            "Only in Human": 1,
+            "Only in AI": 13,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.3485804416403785
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.3897212246971291,
+            "P-value": 0.44501410582179046
+          }
+        },
+        "Deep filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 10,
+            "Agreement Rate": 0.8135593220338984,
+            "Kappa": -0.0317965023847374
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 8,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.33375156838143005
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Deep squid": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 2,
+            "Only in Human": 0,
+            "Only in AI": 14,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.17234468937875738
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Detritus POM": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gannets": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 7,
+            "Only in Human": 2,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.639511201629328
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 7,
+            "Correlation": 0.8824591218388641,
+            "P-value": 0.008531326057366659
+          }
+        },
+        "Garfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 53,
+            "Matching Diet Links": 1,
+            "Only in Human": 2,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.24164524421593797
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Gelatinous zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 5,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.6767123287671231
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": -0.25096197982432106,
+            "P-value": 0.6838518575178602
+          }
+        },
+        "Gulls": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 6,
+            "Only in Human": 9,
+            "Only in AI": 8,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.22308288148721916
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.9108271905142338,
+            "P-value": 0.011573143202165386
+          }
+        },
+        "Import": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Large zooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 4,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.4433962264150944
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.26327072149978215,
+            "P-value": 0.736729278500218
+          }
+        },
+        "Little Penguins": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 2,
+            "Only in Human": 7,
+            "Only in AI": 8,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.05951115834218936
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Long-nosed fur seal": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 31,
+            "Matching Diet Links": 8,
+            "Only in Human": 15,
+            "Only in AI": 5,
+            "Agreement Rate": 0.6610169491525424,
+            "Kappa": 0.22673656618610755
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.8873366002916571,
+            "P-value": 0.0032798224489669495
+          }
+        },
+        "Mackerels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8813559322033898,
+            "Kappa": 0.4738853503184713
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.33933298544990154,
+            "P-value": 0.6606670145500986
+          }
+        },
+        "Macroalgae": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 59,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 0,
+            "Agreement Rate": 1.0,
+            "Kappa": 1.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Meiobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 55,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": -0.026086956521739393
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Mesozooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 4,
+            "Only in Human": 1,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.5705967976710334
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": 0.9447635747454709,
+            "P-value": 0.05523642525452921
+          }
+        },
+        "Microzooplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 3,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5645756457564571
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.08312759957023028,
+            "P-value": 0.9470181874550468
+          }
+        },
+        "Migratory mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 48,
+            "Matching Diet Links": 5,
+            "Only in Human": 0,
+            "Only in AI": 6,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.5755395683453238
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.22464074957748395,
+            "P-value": 0.7164026659695578
+          }
+        },
+        "Non-migrating mesopelagics": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 5,
+            "Only in Human": 3,
+            "Only in AI": 7,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.40283400809716596
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 5,
+            "Correlation": 0.5907534083376467,
+            "P-value": 0.2942159782136238
+          }
+        },
+        "Octopus shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.724330783767143,
+            "P-value": 0.4842977181170918
+          }
+        },
+        "Offshore pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 40,
+            "Matching Diet Links": 10,
+            "Only in Human": 9,
+            "Only in AI": 0,
+            "Agreement Rate": 0.847457627118644,
+            "Kappa": 0.601051840721262
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 10,
+            "Correlation": 0.6104691800921415,
+            "P-value": 0.060860018323406775
+          }
+        },
+        "Offshore pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 3,
+            "Only in Human": 6,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.13489736070381222
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.21843476149501873,
+            "P-value": 0.8598098263447972
+          }
+        },
+        "Pelagic bacteria": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 56,
+            "Matching Diet Links": 0,
+            "Only in Human": 1,
+            "Only in AI": 2,
+            "Agreement Rate": 0.9491525423728814,
+            "Kappa": -0.023121387283237253
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Redbait": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 2,
+            "Only in Human": 4,
+            "Only in AI": 2,
+            "Agreement Rate": 0.8983050847457628,
+            "Kappa": 0.3468634686346865
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Rock lobster": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 52,
+            "Matching Diet Links": 3,
+            "Only in Human": 0,
+            "Only in AI": 4,
+            "Agreement Rate": 0.9322033898305084,
+            "Kappa": 0.5693430656934303
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.7857142857142856,
+            "P-value": 0.4245912300193133
+          }
+        },
+        "Seagrass": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 58,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 1,
+            "Agreement Rate": 0.9830508474576272,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shags and cormorants": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 2,
+            "Only in Human": 4,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.11940298507462681
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Shearwaters": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 8,
+            "Only in Human": 3,
+            "Only in AI": 5,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.5823008849557523
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": -0.39565321303814094,
+            "P-value": 0.3319345526401532
+          }
+        },
+        "Shelf demersal sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 38,
+            "Matching Diet Links": 6,
+            "Only in Human": 10,
+            "Only in AI": 5,
+            "Agreement Rate": 0.7457627118644068,
+            "Kappa": 0.28686543110394835
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.06507251839252814,
+            "P-value": 0.9025289950094555
+          }
+        },
+        "Shelf filter feeders": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 50,
+            "Matching Diet Links": 1,
+            "Only in Human": 0,
+            "Only in AI": 8,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": 0.17482517482517523
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 1,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf large demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 9,
+            "Only in Human": 4,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.4364437913299045
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 9,
+            "Correlation": -0.3184893901794489,
+            "P-value": 0.4035504302609811
+          }
+        },
+        "Shelf large demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 37,
+            "Matching Diet Links": 4,
+            "Only in Human": 9,
+            "Only in AI": 9,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.1120401337792644
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.7346582040290062,
+            "P-value": 0.26534179597099383
+          }
+        },
+        "Shelf large pelagic piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 36,
+            "Matching Diet Links": 6,
+            "Only in Human": 8,
+            "Only in AI": 9,
+            "Agreement Rate": 0.711864406779661,
+            "Kappa": 0.22308288148721916
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.870737148851014,
+            "P-value": 0.02398340799365606
+          }
+        },
+        "Shelf macrozoobenthos": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.30424528301886794
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Shelf pelagic sharks": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 20,
+            "Matching Diet Links": 21,
+            "Only in Human": 14,
+            "Only in AI": 4,
+            "Agreement Rate": 0.6949152542372882,
+            "Kappa": 0.40670391061452515
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 21,
+            "Correlation": 0.5859053018519704,
+            "P-value": 0.0052550144378203925
+          }
+        },
+        "Shelf small demersal omnivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 8,
+            "Only in Human": 5,
+            "Only in AI": 5,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.5066889632107024
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.0225741826984224,
+            "P-value": 0.9576877848194338
+          }
+        },
+        "Shelf small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 4,
+            "Only in Human": 3,
+            "Only in AI": 9,
+            "Agreement Rate": 0.7966101694915254,
+            "Kappa": 0.29058116232464926
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 4,
+            "Correlation": -0.11081938968380359,
+            "P-value": 0.8891806103161963
+          }
+        },
+        "Skates and rays": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 44,
+            "Matching Diet Links": 2,
+            "Only in Human": 2,
+            "Only in AI": 11,
+            "Agreement Rate": 0.7796610169491526,
+            "Kappa": 0.14682981090100133
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Slope small demersal invertivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 46,
+            "Matching Diet Links": 3,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.29256594724220614
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.9999560565917645,
+            "P-value": 0.005968202908756396
+          }
+        },
+        "Slope small demersal piscivores": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 43,
+            "Matching Diet Links": 6,
+            "Only in Human": 2,
+            "Only in AI": 8,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.4506517690875233
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 6,
+            "Correlation": 0.6757883299818155,
+            "P-value": 0.14063034627664545
+          }
+        },
+        "Small petrels": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 47,
+            "Matching Diet Links": 2,
+            "Only in Human": 1,
+            "Only in AI": 9,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.22368421052631562
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 2,
+            "Correlation": 1.0,
+            "P-value": 1.0
+          }
+        },
+        "Small phytoplankton": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 54,
+            "Matching Diet Links": 0,
+            "Only in Human": 0,
+            "Only in AI": 5,
+            "Agreement Rate": 0.9152542372881356,
+            "Kappa": 0.0
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        },
+        "Squid & cuttlefish shelf": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 13,
+            "Only in AI": 1,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.21482889733840305
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": -0.9874237426221043,
+            "P-value": 0.10107110927556893
+          }
+        },
+        "Toothed whales": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 42,
+            "Matching Diet Links": 3,
+            "Only in Human": 3,
+            "Only in AI": 11,
+            "Agreement Rate": 0.7627118644067796,
+            "Kappa": 0.18379446640316205
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 3,
+            "Correlation": 0.7231036377486413,
+            "P-value": 0.4854297709262676
+          }
+        },
+        "Tunas and billfish": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 41,
+            "Matching Diet Links": 8,
+            "Only in Human": 6,
+            "Only in AI": 4,
+            "Agreement Rate": 0.8305084745762712,
+            "Kappa": 0.5075125208681136
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 8,
+            "Correlation": 0.6319424897712498,
+            "P-value": 0.09277298965024935
+          }
+        },
+        "Western king prawn": {
+          "Binary Statistics": {
+            "Total Prey": 59,
+            "Matching Zeros": 51,
+            "Matching Diet Links": 0,
+            "Only in Human": 4,
+            "Only in AI": 4,
+            "Agreement Rate": 0.864406779661017,
+            "Kappa": -0.07272727272727261
+          },
+          "Non-zero Statistics": {
+            "Number of Common Links": 0,
+            "Correlation": NaN,
+            "P-value": NaN
+          }
+        }
+      }
+    }
+  },
+  "Mean Matrix": {
+    "Overall Statistics": {
+      "Binary Statistics": {
+        "Total Cells": 3481,
+        "Matching Zeros": 2545,
+        "Matching Diet Links": 296,
+        "Only in Human": 135,
+        "Only in AI": 505,
+        "Agreement Rate": 0.8161447859810399,
+        "Kappa": 0.3808339331819584
+      },
+      "Non-zero Statistics": {
+        "Number of Common Links": 296,
+        "Correlation": 0.3846276465537337,
+        "P-value": 7.136969211027472e-12
+      }
+    },
+    "Per-predator Statistics": {
+      "Albatross": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 39,
+          "Matching Diet Links": 6,
+          "Only in Human": 3,
+          "Only in AI": 11,
+          "Agreement Rate": 0.7627118644067796,
+          "Kappa": 0.32736156351791523
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 6,
+          "Correlation": -0.0804428571268657,
+          "P-value": 0.8795959893162387
+        }
+      },
+      "Anchovy and other small pelagics": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 48,
+          "Matching Diet Links": 3,
+          "Only in Human": 0,
+          "Only in AI": 8,
+          "Agreement Rate": 0.864406779661017,
+          "Kappa": 0.3789473684210526
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": -0.9961602486074559,
+          "P-value": 0.055806622254591
+        }
+      },
+      "Australian fur seal": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 37,
+          "Matching Diet Links": 10,
+          "Only in Human": 2,
+          "Only in AI": 10,
+          "Agreement Rate": 0.7966101694915254,
+          "Kappa": 0.4971590909090909
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 10,
+          "Correlation": -0.11611453424718794,
+          "P-value": 0.7493964258554762
+        }
+      },
+      "Australian sea lion": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 34,
+          "Matching Diet Links": 12,
+          "Only in Human": 11,
+          "Only in AI": 2,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.5016244314489928
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 12,
+          "Correlation": -0.18308048263465346,
+          "P-value": 0.5689882239346274
+        }
+      },
+      "Baleen whales": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 49,
+          "Matching Diet Links": 2,
+          "Only in Human": 0,
+          "Only in AI": 8,
+          "Agreement Rate": 0.864406779661017,
+          "Kappa": 0.29341317365269476
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Benthic carnivores (infauna)": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 56,
+          "Matching Diet Links": 0,
+          "Only in Human": 3,
+          "Only in AI": 0,
+          "Agreement Rate": 0.9491525423728814,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Benthic detritivore": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 53,
+          "Matching Diet Links": 2,
+          "Only in Human": 2,
+          "Only in AI": 2,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.46363636363636324
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": 1.0,
+          "P-value": 1.0
+        }
+      },
+      "Benthic grazers": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 53,
+          "Matching Diet Links": 2,
+          "Only in Human": 0,
+          "Only in AI": 4,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.4732142857142854
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": 1.0,
+          "P-value": 1.0
+        }
+      },
+      "Bottlenose dolphins": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 39,
+          "Matching Diet Links": 8,
+          "Only in Human": 1,
+          "Only in AI": 11,
+          "Agreement Rate": 0.7966101694915254,
+          "Kappa": 0.4595419847328244
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 8,
+          "Correlation": 0.12400021657658172,
+          "P-value": 0.7698718927167462
+        }
+      },
+      "Common dolphins": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 39,
+          "Matching Diet Links": 9,
+          "Only in Human": 1,
+          "Only in AI": 10,
+          "Agreement Rate": 0.8135593220338984,
+          "Kappa": 0.5123966942148762
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 9,
+          "Correlation": -0.23168883308460259,
+          "P-value": 0.5486143329278809
+        }
+      },
+      "Crabs & bugs": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 41,
+          "Matching Diet Links": 5,
+          "Only in Human": 3,
+          "Only in AI": 10,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.3133393017009849
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.8173541143379892,
+          "P-value": 0.09109139880398312
+        }
+      },
+      "Deep demersal sharks": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 36,
+          "Matching Diet Links": 6,
+          "Only in Human": 1,
+          "Only in AI": 16,
+          "Agreement Rate": 0.711864406779661,
+          "Kappa": 0.28510334996436204
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 6,
+          "Correlation": 0.45184681577954017,
+          "P-value": 0.36835555201497217
+        }
+      },
+      "Deep filter feeders": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 45,
+          "Matching Diet Links": 0,
+          "Only in Human": 1,
+          "Only in AI": 13,
+          "Agreement Rate": 0.7627118644067796,
+          "Kappa": -0.03250000000000035
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Deep macrozoobenthos": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 42,
+          "Matching Diet Links": 3,
+          "Only in Human": 1,
+          "Only in AI": 13,
+          "Agreement Rate": 0.7627118644067796,
+          "Kappa": 0.21482889733840305
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Deep squid": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 41,
+          "Matching Diet Links": 2,
+          "Only in Human": 0,
+          "Only in AI": 16,
+          "Agreement Rate": 0.7288135593220338,
+          "Kappa": 0.1480144404332128
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": 1.0,
+          "P-value": 1.0
+        }
+      },
+      "Detritus POM": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 59,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 0,
+          "Agreement Rate": 1.0,
+          "Kappa": 1.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Gannets": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 44,
+          "Matching Diet Links": 8,
+          "Only in Human": 1,
+          "Only in AI": 6,
+          "Agreement Rate": 0.8813559322033898,
+          "Kappa": 0.6262443438914026
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 8,
+          "Correlation": 0.7396709818551446,
+          "P-value": 0.035943647684182525
+        }
+      },
+      "Garfish": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 49,
+          "Matching Diet Links": 1,
+          "Only in Human": 2,
+          "Only in AI": 7,
+          "Agreement Rate": 0.847457627118644,
+          "Kappa": 0.11647254575707146
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 1,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Gelatinous zooplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 50,
+          "Matching Diet Links": 5,
+          "Only in Human": 1,
+          "Only in AI": 3,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.6767123287671231
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": -0.2669228449677922,
+          "P-value": 0.6642232196852076
+        }
+      },
+      "Gulls": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 31,
+          "Matching Diet Links": 10,
+          "Only in Human": 5,
+          "Only in AI": 13,
+          "Agreement Rate": 0.6949152542372882,
+          "Kappa": 0.3157216494845361
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 10,
+          "Correlation": -0.03002950636773389,
+          "P-value": 0.9343696597200053
+        }
+      },
+      "Import": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 58,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 1,
+          "Agreement Rate": 0.9830508474576272,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Large phytoplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 55,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 4,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Large zooplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 45,
+          "Matching Diet Links": 4,
+          "Only in Human": 0,
+          "Only in AI": 10,
+          "Agreement Rate": 0.8305084745762712,
+          "Kappa": 0.3789473684210526
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 4,
+          "Correlation": -0.21221275837627818,
+          "P-value": 0.7877872416237217
+        }
+      },
+      "Little Penguins": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 40,
+          "Matching Diet Links": 4,
+          "Only in Human": 5,
+          "Only in AI": 10,
+          "Agreement Rate": 0.7457627118644068,
+          "Kappa": 0.19909502262443438
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 4,
+          "Correlation": 0.9636228694477584,
+          "P-value": 0.036377130552241566
+        }
+      },
+      "Long-nosed fur seal": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 25,
+          "Matching Diet Links": 14,
+          "Only in Human": 9,
+          "Only in AI": 11,
+          "Agreement Rate": 0.6610169491525424,
+          "Kappa": 0.29845422116527953
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 14,
+          "Correlation": 0.6110216835806193,
+          "P-value": 0.02026676407616179
+        }
+      },
+      "Mackerels": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 48,
+          "Matching Diet Links": 4,
+          "Only in Human": 1,
+          "Only in AI": 6,
+          "Agreement Rate": 0.8813559322033898,
+          "Kappa": 0.4738853503184713
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 4,
+          "Correlation": -0.33933298544990154,
+          "P-value": 0.6606670145500986
+        }
+      },
+      "Macroalgae": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 54,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 5,
+          "Agreement Rate": 0.9152542372881356,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Meiobenthos": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 54,
+          "Matching Diet Links": 0,
+          "Only in Human": 1,
+          "Only in AI": 4,
+          "Agreement Rate": 0.9152542372881356,
+          "Kappa": -0.027874564459930615
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Mesozooplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 50,
+          "Matching Diet Links": 4,
+          "Only in Human": 1,
+          "Only in AI": 4,
+          "Agreement Rate": 0.9152542372881356,
+          "Kappa": 0.5705967976710334
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 4,
+          "Correlation": 0.93217769586467,
+          "P-value": 0.06782230413532986
+        }
+      },
+      "Microzooplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 52,
+          "Matching Diet Links": 3,
+          "Only in Human": 1,
+          "Only in AI": 3,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.5645756457564571
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": 0.0607340219470659,
+          "P-value": 0.9613117114602295
+        }
+      },
+      "Migratory mesopelagics": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 47,
+          "Matching Diet Links": 5,
+          "Only in Human": 0,
+          "Only in AI": 7,
+          "Agreement Rate": 0.8813559322033898,
+          "Kappa": 0.5322763306908266
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.5525482017435654,
+          "P-value": 0.33412318940849317
+        }
+      },
+      "Non-migrating mesopelagics": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 42,
+          "Matching Diet Links": 5,
+          "Only in Human": 3,
+          "Only in AI": 9,
+          "Agreement Rate": 0.7966101694915254,
+          "Kappa": 0.3407821229050279
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.48904591238207457,
+          "P-value": 0.403124505285221
+        }
+      },
+      "Octopus shelf": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 43,
+          "Matching Diet Links": 3,
+          "Only in Human": 1,
+          "Only in AI": 12,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.2337662337662339
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": 0.42710075164133854,
+          "P-value": 0.7190699248163259
+        }
+      },
+      "Offshore pelagic piscivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 32,
+          "Matching Diet Links": 12,
+          "Only in Human": 7,
+          "Only in AI": 8,
+          "Agreement Rate": 0.7457627118644068,
+          "Kappa": 0.42569759896171316
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 12,
+          "Correlation": 0.5521778255928097,
+          "P-value": 0.0626663081652067
+        }
+      },
+      "Offshore pelagic sharks": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 37,
+          "Matching Diet Links": 5,
+          "Only in Human": 4,
+          "Only in AI": 13,
+          "Agreement Rate": 0.711864406779661,
+          "Kappa": 0.2096138691883373
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.5690935811785867,
+          "P-value": 0.31668209720377516
+        }
+      },
+      "Pelagic bacteria": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 56,
+          "Matching Diet Links": 1,
+          "Only in Human": 0,
+          "Only in AI": 2,
+          "Agreement Rate": 0.9661016949152542,
+          "Kappa": 0.4869565217391303
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 1,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Redbait": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 51,
+          "Matching Diet Links": 4,
+          "Only in Human": 2,
+          "Only in AI": 2,
+          "Agreement Rate": 0.9322033898305084,
+          "Kappa": 0.6289308176100628
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 4,
+          "Correlation": 0.9550825978257577,
+          "P-value": 0.04491740217424223
+        }
+      },
+      "Rock lobster": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 49,
+          "Matching Diet Links": 3,
+          "Only in Human": 0,
+          "Only in AI": 7,
+          "Agreement Rate": 0.8813559322033898,
+          "Kappa": 0.41584158415841577
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": -0.7826911322795198,
+          "P-value": 0.4276929151558705
+        }
+      },
+      "Seagrass": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 58,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 1,
+          "Agreement Rate": 0.9830508474576272,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Shags and cormorants": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 42,
+          "Matching Diet Links": 3,
+          "Only in Human": 3,
+          "Only in AI": 11,
+          "Agreement Rate": 0.7627118644067796,
+          "Kappa": 0.18379446640316205
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": -0.5458870848681385,
+          "P-value": 0.6323855025301041
+        }
+      },
+      "Shearwaters": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 39,
+          "Matching Diet Links": 9,
+          "Only in Human": 2,
+          "Only in AI": 9,
+          "Agreement Rate": 0.8135593220338984,
+          "Kappa": 0.5064638783269962
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 9,
+          "Correlation": -0.3860913250638916,
+          "P-value": 0.30473068741274467
+        }
+      },
+      "Shelf demersal sharks": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 32,
+          "Matching Diet Links": 10,
+          "Only in Human": 6,
+          "Only in AI": 11,
+          "Agreement Rate": 0.711864406779661,
+          "Kappa": 0.3362011912640635
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 10,
+          "Correlation": -0.32999687540937567,
+          "P-value": 0.3517386862009717
+        }
+      },
+      "Shelf filter feeders": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 50,
+          "Matching Diet Links": 1,
+          "Only in Human": 0,
+          "Only in AI": 8,
+          "Agreement Rate": 0.864406779661017,
+          "Kappa": 0.17482517482517523
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 1,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Shelf large demersal omnivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 32,
+          "Matching Diet Links": 9,
+          "Only in Human": 4,
+          "Only in AI": 14,
+          "Agreement Rate": 0.6949152542372882,
+          "Kappa": 0.3040629095674968
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 9,
+          "Correlation": -0.12006850725569887,
+          "P-value": 0.7583179856573209
+        }
+      },
+      "Shelf large demersal piscivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 27,
+          "Matching Diet Links": 11,
+          "Only in Human": 2,
+          "Only in AI": 19,
+          "Agreement Rate": 0.6440677966101694,
+          "Kappa": 0.294820717131474
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 11,
+          "Correlation": 0.682258686725907,
+          "P-value": 0.020728114930603347
+        }
+      },
+      "Shelf large pelagic piscivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 30,
+          "Matching Diet Links": 8,
+          "Only in Human": 6,
+          "Only in AI": 15,
+          "Agreement Rate": 0.6440677966101694,
+          "Kappa": 0.1949317738791421
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 8,
+          "Correlation": 0.8006133167851132,
+          "P-value": 0.016971370005773218
+        }
+      },
+      "Shelf macrozoobenthos": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 43,
+          "Matching Diet Links": 3,
+          "Only in Human": 1,
+          "Only in AI": 12,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.2337662337662339
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 3,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Shelf pelagic sharks": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 18,
+          "Matching Diet Links": 25,
+          "Only in Human": 10,
+          "Only in AI": 6,
+          "Agreement Rate": 0.7288135593220338,
+          "Kappa": 0.4524361948955915
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 25,
+          "Correlation": 0.5003391966999746,
+          "P-value": 0.01086002959125853
+        }
+      },
+      "Shelf small demersal omnivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 35,
+          "Matching Diet Links": 11,
+          "Only in Human": 2,
+          "Only in AI": 11,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.48626925653047565
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 11,
+          "Correlation": 0.48626182035799026,
+          "P-value": 0.12936960855711438
+        }
+      },
+      "Shelf small demersal piscivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 38,
+          "Matching Diet Links": 6,
+          "Only in Human": 1,
+          "Only in AI": 14,
+          "Agreement Rate": 0.7457627118644068,
+          "Kappa": 0.3259710586443261
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 6,
+          "Correlation": -0.5574466134034957,
+          "P-value": 0.25044243513381087
+        }
+      },
+      "Skates and rays": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 38,
+          "Matching Diet Links": 2,
+          "Only in Human": 2,
+          "Only in AI": 17,
+          "Agreement Rate": 0.6779661016949152,
+          "Kappa": 0.06970954356846451
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": -1.0,
+          "P-value": 1.0
+        }
+      },
+      "Slope small demersal invertivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 42,
+          "Matching Diet Links": 5,
+          "Only in Human": 0,
+          "Only in AI": 12,
+          "Agreement Rate": 0.7966101694915254,
+          "Kappa": 0.37234042553191493
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.2121166230960408,
+          "P-value": 0.7319638907829109
+        }
+      },
+      "Slope small demersal piscivores": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 42,
+          "Matching Diet Links": 6,
+          "Only in Human": 2,
+          "Only in AI": 9,
+          "Agreement Rate": 0.8135593220338984,
+          "Kappa": 0.4189794091316027
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 6,
+          "Correlation": 0.654790630027746,
+          "P-value": 0.15818504809393172
+        }
+      },
+      "Small petrels": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 44,
+          "Matching Diet Links": 2,
+          "Only in Human": 1,
+          "Only in AI": 12,
+          "Agreement Rate": 0.7796610169491526,
+          "Kappa": 0.1653971708378673
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 2,
+          "Correlation": 1.0,
+          "P-value": 1.0
+        }
+      },
+      "Small phytoplankton": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 54,
+          "Matching Diet Links": 0,
+          "Only in Human": 0,
+          "Only in AI": 5,
+          "Agreement Rate": 0.9152542372881356,
+          "Kappa": 0.0
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      },
+      "Squid & cuttlefish shelf": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 41,
+          "Matching Diet Links": 7,
+          "Only in Human": 9,
+          "Only in AI": 2,
+          "Agreement Rate": 0.8135593220338984,
+          "Kappa": 0.45324347093513073
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 7,
+          "Correlation": 0.10606672834372723,
+          "P-value": 0.820946694137013
+        }
+      },
+      "Toothed whales": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 32,
+          "Matching Diet Links": 5,
+          "Only in Human": 1,
+          "Only in AI": 21,
+          "Agreement Rate": 0.6271186440677966,
+          "Kappa": 0.1763959390862943
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 5,
+          "Correlation": 0.8324654904981349,
+          "P-value": 0.08021649898094574
+        }
+      },
+      "Tunas and billfish": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 35,
+          "Matching Diet Links": 8,
+          "Only in Human": 6,
+          "Only in AI": 10,
+          "Agreement Rate": 0.7288135593220338,
+          "Kappa": 0.3179190751445086
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 8,
+          "Correlation": 0.6196893585140576,
+          "P-value": 0.10127588518548984
+        }
+      },
+      "Western king prawn": {
+        "Binary Statistics": {
+          "Total Prey": 59,
+          "Matching Zeros": 50,
+          "Matching Diet Links": 0,
+          "Only in Human": 4,
+          "Only in AI": 5,
+          "Agreement Rate": 0.847457627118644,
+          "Kappa": -0.08146639511201634
+        },
+        "Non-zero Statistics": {
+          "Number of Common Links": 0,
+          "Correlation": NaN,
+          "P-value": NaN
+        }
+      }
+    }
+  }
+}
