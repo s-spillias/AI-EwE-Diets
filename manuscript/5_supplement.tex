@@ -37,10 +37,14 @@
 Our data harvesting system employs DuckDB for efficient querying of PARQUET files, enabling complex joins and aggregations without full memory loading. For species matching across databases, we use structured SQL queries that join on concatenated genus and species names:
 
 \begin{verbatim}
-SELECT * FROM sealifebase_df
-WHERE SpecCode = {spec_code}
-AND PreyStage LIKE '%adult%'
-AND PredatorStage LIKE '%adult%'
+SELECT 
+    SpecCode, PreySpecCode, AlphaCode, 
+    Foodgroup, Foodname, PreyStage, PredatorStage, FoodI, FoodII, FoodIII, 
+    Commoness, CommonessII, PreyTroph, PreySeTroph
+FROM sealifebase_df
+WHERE SpecCode IN ({','.join(map(str, valid_codes))})
+AND (PreyStage LIKE '%adult%' OR PreyStage LIKE '%juv%')
+AND (PredatorStage LIKE '%adult%' OR PredatorStage LIKE '%juv%')
 \end{verbatim}
 
 When combining interaction data from GLOBI with diet information, we implement a comprehensive interaction mapping system that creates bidirectional records:
@@ -91,7 +95,7 @@ The final JSON output maintains a consistent structure across all species entrie
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=\textwidth]{figures/group_stability_heatmap.png}
-    \caption{Heatmap showing the stability of functional group classifications across regions. Each cell displays the Jaccard similarity score (ranging from 0.975 to 1.000) between consecutive framework iterations, where 1.000 indicates perfect consistency in species assignments. Darker red colors represent higher stability (scores near 1.000), while lighter colors indicate more variable classifications (scores closer to 0.975). Most functional groups show high stability (>0.99) across all regions, with occasional variations in groups like benthic grazers and deposit feeders, particularly in the Northern Territory region.}
+    \caption{Heatmap showing the stability of functional group classifications across regions. Each cell displays the Jaccard similarity score (ranging from 0.975 to 1.000) between consecutive framework iterations, where 1.000 indicates perfect consistency in species assignments. Yellow colors represent higher stability (scores near 1.000), while darker purple colors indicate more variable classifications (scores closer to 0.975). Most functional groups show high stability (>0.99) across all regions, with occasional variations in groups like benthic grazers and deposit feeders, particularly in the Northern Territory region. White indicates groups that were not assigned by the AI system for that region.}
     \label{fig:stability_heatmap_supp}
 \end{figure}
 

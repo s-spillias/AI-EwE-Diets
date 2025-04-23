@@ -1,89 +1,0 @@
-Page,Type,Comment,Highlighted Text,Context,Author
-2,Highlight,,parameterizing EwE,,bos043
-2,Highlight,you say little about this,"literature-derived information,",,bos043
-2,Highlight,this may be a little optimistic :),to understand,,bos043
-2,FreeText,"synthesise information on
-?",,,Default User
-2,FreeText,Let’s say Northern Australia as the Gulf of Carpentaria is technically Queensland,,,Default User
-3,Highlight,,four sequential steps:,,str191
-3,Text,is step 2  and 3 connected?,,data 1). data for frame- Ocean these The the In- 2024) biological into to (Figure species temporal automates Biodiversity queries,str191
-3,Text,Ecobase repository is not included in the diagram,,"al., (Colléter et data 2010) phase integrates comes within de publications, repository feeding ned These queries OR (Froese provide data",str191
-3,Caret,includes?,,,bos043
-3,Highlight,specific to EwE right?,existing ecosystem models.,,bos043
-3,Highlight,do we need to specify where these sources are selected from? and how data from these sources interact from info from the databases?,"existing ecosystem models. Additional data comes from systematic literature searches of 105 regional sheries reports and peer-reviewed publications, using standardized search terms 106",,bos043
-3,Highlight,"you generated the database at the beginning, correct?","teristic storage and retrieval. The database maintains embedding vectors derived from 110 ecological descriptions, life history traits, and habitat preferences. Analysis of these vec- 111",,bos043
-3,Highlight,are these included in the embedding vectors? or this info is added to the vectors? i guess the former but it is not clear.,"tors, combined with ecological rules regarding size classes, feeding guilds, and habitat 112 use, determines functional group assignments. Trophic level estimates from FishBase and 113",,bos043
-3,Text,"sorry i am being picky. how does the validation happen? does the LLM carry out the validation, or does the the user do this after the groups are provided?",,"quantitative the from validate interaction extracted assignments. merges ecological with regarding 2014). Each are FishBase rules Trophic al., based 2010)",bos043
-3,Highlight,"is the quality assignment and subsequent weighted average carried out by the LLM (and thus includes ecological knowledge acquired at the previous step)? or is it done 'algorithmically' (and thus in principle by a simple specific numerical routine external to the process)? i guess the former, but just checking","Diet matrix construction implements weighted averaging for prey proportions. Weights 120 derive from data quality metrics including sample size, study recency, and geographical 121 relevance. In cases of sparse direct diet data, the framework estimates trophic interac- 122",,bos043
-3,Highlight,does this apply to this specific work?,"Parameter estimation prioritizes values from comparable ecosystems and species groups 125 in Ecobase (Colléter et al., 2015). Empirical relationships from literature provide esti- 126",,bos043
-4,Text,"where does ""Generic Grouping Template""come from? Is it pre-defined and supplied to Claude?",,"across func- approaches. The (functional validation collection, stages development. analytical data and model systematic Highlighted biological sources undergo ecosystem data",str191
-4,FreeText,Does the colouring have a meaning? Key needed?,,,Default User
-5,Highlight,can we assume the reader knows what these are?,joins and aggregations,,bos043
-5,Highlight,maybe this needs more description?,"mates where direct parameters are unavailable. The framework validates all estimates 127 against biological constraints and ecological theory, identifying anomalies for expert re- 128 view. 129",,bos043
-5,FreeText,"Good thought, though I thought they handled different taxa (fish/chondricthyans vs all other marine life)",,,Default User
-6,Highlight,How?,"tion ?? of the supplementary material). For geographic regions, we analyze oceanographic 199 conditions, habitat types, and ecological characteristics to inform group de nitions. 200",,bos043
-6,Highlight,"does this option use no template at all? if so, see questions below","templates from existing EcoBase models, generating region-speci c groups through AI 197 analysis of geographic characteristics, or applying a prede ned template (provided in Sec- 198",,bos043
-7,Highlight,,"Only consider the adult phase of the organisms, larvae and juveniles will be organized separately",,str191
-7,Text,should trophic level be included as well?,,They similar of groups or of approximately than predators. func- ecological have species and an rather i.e. to trophic or,str191
-7,Text,"is it a good place to specify how they are organized? i.e. larvae included as part of plankton group, juveniles are included in size based groups?",,"phase of group if adult the you nite group share taxon the similar organisms, de are that a separately taxa]",str191
-7,Text,is it a case when a taxon is a higher level taxonomic unit like family or order?,,"if you group group taxa] description): are (name: of of nite phase the con that taxa with organisms, groups de",str191
-7,Highlight,i guess this is a variable. maybe explain when it is defined below?,[rank],,bos043
-7,Highlight,"following on Joanna's question, should this be included above? if not, why?","If a taxon contains members with di erent feeding strategies or trophic levels, assign it to `RESOLVE'",,bos043
-7,Highlight,"what happens if we use option 'generating region-specific groups through AI analysis of geographic characteristics' at line 197, so there is no template to start from?","If all members of a taxon share similar ecological roles, assign to an ap- propriate group",,bos043
-7,Caret,taxonomic?,,,bos043
-8,Highlight,,"memory loading. For each species, we extract food items using speci c codes that link to 226 standardized diet categories. 227",,str191
-8,Text,"in FishBase food items are reported for predator stages i.e. larvae, juveniles, adults. Species groups/ predators include only adults. Do the food items include only items listed under “adults”. (See an example for one of the tuna species https://www.fishbase.se/TrophicEco/FoodItemsList.php?vstockcode=161&genus=Thunnus&species=thynnus)",,"species, enabling records each we query SeaLifeBase (Poelen We database gathers DuckDB, extract e categories. database comprehensive For with (eats,",str191
-8,Caret,coloring,,,bos043
-8,Highlight,"if we have 'reliable' diet data for each species, then we could test/compare graph coloring algorithm to the AI grouping","We supplement database records with interaction data from the Global Biotic In- 228 teractions (GLOBI) database (Poelen et al., 2014). Our GLOBI processing di erenti- 229",,bos043
-8,Highlight,is this still at species level?,following information about the diet composition,,bos043
-9,Highlight,i wonder how claude understands 'approximately 100%',approximately,,bos043
-9,Highlight,i am not sure what this means,The matrix assembly stage processes the AI's standardized diet descriptions through 244 automated parsing. We convert percentage strings to decimal values and implement a 245,,bos043
-9,Highlight,"i am not sure you can validate AND ensure at the same time. isn't either you validate or you ensure? maybe i am missing something here",validation ensures,,bos043
-9,Highlight,how do we do this?,"prey items match de ned functional groups, and mass-balance requirements are main- 247 tained. 248",,bos043
-10,Highlight,has anyone been able to check that there are no hallucinations here?,"The system maintains comprehensive logging of parameter assignments. This includes 279 search queries and results, parameter validation checks, AI reasoning and decisions, source 280 model references, and data quality assessments. 281",,bos043
-10,Highlight,you mean model parameters?,research,,bos043
-10,Highlight,"as for phase 1, you may want to refresh the memory on what phase 2 and 3 are",phase two.,,bos043
-10,Highlight,how?,"Next, we apply empirical relationships where available.",,bos043
-10,FreeText,Useful if have a gap in another parameter and need to use EE to force estimation of he other parameter in EwE but typically you let this be the unknown to be solved for (as it is in effect a made up property not directly observable),,,Default User
-10,FreeText,Australia,,,Default User
-10,FreeText,"wide shelves, islands, extensive mangroves,",,,Default User
-11,Highlight,have you checked whether this is an established measure (and if so provide a reference) or if there are other measures people use in the literature?,Consistency Score,,bos043
-11,Highlight,"as far as i understand, there is no meaningful ordering in the iterations, right? there are just random, is it correct?if so, someone may wonder why you choose consecutive pairs for comparison, rather than checking all comparisons. for both consistency and stability we may come up with information theoretical measures, if needed.",consecutive,,bos043
-11,FreeText,and where there is the possibility that the model boundary spans a strong ecological break (east/west of Tasmania) in at least some species groups,,,Default User
-11,FreeText,Not to state the obvious but is there any test/ check (either in the process or by a human after the fact) that the species has ended up in the right group? ie guarding against being consistently wrong?,,,Default User
-12,Text,"would it be useful to breakdown number of species into categories of fish species, marine invertebrates, phytoplankton, zooplankton, bacteria?",,"and pelagic Northern the regions, systems. coastal Territory's in processing evaluated tralian environments, our 350 351 349 We 348 Processing",str191
-12,Highlight,,"We evaluated our framework through ve independent runs across three distinct Aus- 347 tralian regions, processing a total of 41,085 species. The framework handled 11,362 species 348",,str191
-12,Highlight,"maybe you could introduce what you plan to do with CV, so the reader understands why you describe it?","ing inconsistent prediction across iterations. For elements where µij = 0, we set CVij = 0 333 to avoid unde ned values. 334",,bos043
-12,Highlight,i think this paragraph need more explanation about why these tests were chosen and what they aim to show. i am struggling to follow the result sections below as a result,"We conducted statistical analyses to evaluate framework performance across regions. We 336 assessed group consistency using chi-square tests and coe cients of variation, examining 337 the stability of species assignments across iterations. We analyzed regional di erences in 338 group characteristics using one-way ANOVA with Cohen's f e ect size calculations. We 339 evaluated trophic level patterns using Kruskal-Wallis tests to identify signi cant di er- 340 ences in trophic structure. We quanti ed diet matrix reliability through pairwise Spear- 341 man correlations between iterations, focusing on signi cant interactions (>0.05 propor- 342 tion). 343 Also touch on it in discussion - even if passing these tests was considered desirable,",,bos043
-12,FreeText,Why this value? And how sensitive is it to this threshold ( oils we run it with lower values)? A link that is much less than this in EwE (eg. <0.p1% for instance) can still be a major pressure on a less common group,,,Default User
-12,FreeText,"Also touch on it in discussion - even if passing these tests was considered desirable, would one that failed these tests still be an ok starting point for building a model (as a human we often have to start with really rubbery stuff). More important that you get something” good enough”  to be a reliable pie ce of info than have to be perfect and.thus end up with nothing considered suitable",,,Default User
-12,FreeText,Australia,,,Default User
-13,Highlight,you mean from the templates? or from AI initial choice?,63 potential functional groups,,bos043
-13,Highlight,i understood what consistency across region is and why it matters only at the second pass,indicated consistency across regions (p > 0.85).,,bos043
-13,Highlight,we need to say something on whether these values are good,"measurements were: South East Inshore (mean = 0.002, SD = 0.004), Northern Territory 372 (mean = 0.004, SD = 0.012), and South East O shore (mean = 0.019, SD = 0.052). 373",,bos043
-13,Highlight,"either i don't understand this sentence, or i don't understand how it relates to this work",ANOVA revealed signi cant regional di erences in group sizes 374,,bos043
-13,FreeText,Australia,,,Default User
-13,FreeText,Needs more explanation earlier I think,,,Default User
-14,Highlight,would a log plot on Y axis help here?,"Figure 3: Multi-panel analysis of framework performance across regions. (A) Box plots of functional group sizes (0-3000 species), showing similar median sizes but varying distri- butions across regions, with outliers indicating some very large groups. (B) Violin plots",,bos043
-14,Highlight,a bit hard to read. i wonder whether it is helpful.,"butions across regions, with outliers indicating some very large groups. (B) Violin plots of species classi cation consistency (0.4-1.0), where wider sections indicate more species",,bos043
-14,Highlight,i wonder whether this coudl be moved to an appendix,Figure 3:,,bos043
-14,Highlight,"i am not sure what we are trying to measure with this correlation test (see my comment above in Methods), but is it possible that these negative correlations are due to the fact that diet coefficients need to sum to 1?","of signi cant interactions (>0.05 proportion) revealed moderate negative correlations be- 394 tween iterations in both the Northern Territory (mean r = -0.671, 95% CI [-0.698, -0.645]) 395",,bos043
-15,Highlight,yellow?,Darker red colors,,bos043
-15,Highlight,darker?,lighter colors,,bos043
-15,Highlight,what is species pattern?,Pattern,,bos043
-17,FreeText,Plot of diet consistency or magnitude? Caption currently unclear.,,,Default User
-18,Text,is there a need for a paragraph on expert review and where in the framework expert review is included. Perhaps it can be explicitly shown in Figure 1?,,"Consistency demersal robust performance the shallow diverse sh highest human I across exhibited do particularly marine showed three distinct variability,",str191
-18,Highlight,"i wonder whether there are 2 points to make here1) this is not an AI step, strictly speaking2) for regions we are likely to work often, in principle the data could be harvested once and stored locally. We have discussed briefly the pros and cons of doing this","ability. Data harvesting and diet collection emerge as the primary computational bottle- 422 necks, particularly evident in the South East Inshore region's extended processing times. 423",,bos043
-18,Highlight,"this is very high number indeed. have we checked that this reflects actual correct assignments: that is, following tyhe rest of teh paragraph, can we say something on whether these assignments are ecologically valid and are not consistent mistakes?",(98.8-99.6%),,bos043
-18,Highlight,see my comment above,The moderate negative correlations between iterations initially appear concerning.,,bos043
-18,Highlight,"i think this sentence could go in the abstractsame applies to ""The framework's ability to capture this fundamental ecological pattern450 suggests it successfully incorporates biological realism into its classification decisions."" below",The observed trophic level patterns provide compelling evidence for the framework's 445 ecological validity. The consistent classi cation of higher trophic level species re ects the 446,,bos043
-18,FreeText,I do think we need to mention the human steps too.,,,Default User
-19,FreeText,for Northern Australia,,,Default User
-19,FreeText,this,,,Default User
-19,FreeText,Also less data in the north (especially per sub-system) than in the southeast,,,Default User
-20,Highlight,"I by no means suggest we do this now, but EwE used to use the ‘pedigree’ as a measure of parameterisation quality. In principle, we could ask LLM to tell us where each data come from, check for hallucination, and compute the ‘pedigree’.",The framework's explicit quanti cation of uncertainty in species classi cations researchers and,,bos043
-20,FreeText,Modelers,,,Default User
-20,FreeText,researchers and,,,Default User
-20,FreeText,I really like the pedigree point!,,,Default User
-20,FreeText,resource,,,Default User
-20,FreeText,and conservation,,,Default User

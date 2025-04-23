@@ -40,8 +40,8 @@ def get_food_items_for_speccodes(sealifebase_df, spec_codes):
         Commoness, CommonessII, PreyTroph, PreySeTroph
     FROM sealifebase_df
     WHERE SpecCode IN ({','.join(map(str, valid_codes))})
-    AND PreyStage LIKE '%adult%'
-    AND PredatorStage LIKE '%adult%'
+    AND (PreyStage LIKE '%adult%' OR PreyStage LIKE '%juv%')
+    AND (PredatorStage LIKE '%adult%' OR PredatorStage LIKE '%juv%')
     """
     try:
         result = duckdb.query(query).df()

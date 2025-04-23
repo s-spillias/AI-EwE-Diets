@@ -93,11 +93,12 @@ def analyze_group_consistency(iteration_dirs):
         if num_iterations < 2:
             continue
         
-        # Calculate Jaccard similarities
+        # Calculate Jaccard similarities for all combinations of iterations
         similarities = []
-        for i in range(num_iterations - 1):
-            jaccard = len(member_sets[i] & member_sets[i+1]) / len(member_sets[i] | member_sets[i+1])
-            similarities.append(jaccard)
+        for i in range(num_iterations):
+            for j in range(i+1, num_iterations):
+                jaccard = len(member_sets[i] & member_sets[j]) / len(member_sets[i] | member_sets[j])
+                similarities.append(jaccard)
         
         # Calculate group size statistics
         sizes = group_sizes[group]

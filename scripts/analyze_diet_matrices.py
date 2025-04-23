@@ -593,8 +593,8 @@ def plot_simplified_comparison(matrix1, matrix2, output_path):
         column_stats.append(stats)
     
     # Create horizontal stacked bar plot
-    categories = ['Present in both', 'Absent in both', 'Only in AI', 'Only in Human']
-    category_colors = ['#cbacdb', '#F5F5F5', '#9ad6ae', '#f9ba7b']
+    categories = ['Only in AI', 'Only in Human', 'Present in both', 'Absent in both']
+    category_colors = ['#9ad6ae', '#f9ba7b', '#cbacdb', '#F5F5F5']
     # Reverse the order of groups for y-axis
     ordered_common_groups = ordered_common_groups[::-1]
     y = np.arange(len(ordered_common_groups))

@@ -43,7 +43,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 226,
           "Correlation": 0.3015051201549662,
-          "P-value": 3.92458265478822e-06
+          "P-value": 3.924582654788213e-06
         }
       },
       "Per-predator Statistics": {
@@ -60,7 +60,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.254777994273903,
-            "P-value": 0.8359952147612145
+            "P-value": 0.8359952147612146
           }
         },
         "Anchovy and other small pelagics": {
@@ -76,7 +76,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.9960717378752935,
-            "P-value": 0.0564465784087435
+            "P-value": 0.05644657840874351
           }
         },
         "Australian fur seal": {
@@ -92,7 +92,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.005457608416651915,
-            "P-value": 0.9907350141748268
+            "P-value": 0.990735014174827
           }
         },
         "Australian sea lion": {
@@ -108,7 +108,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.3217415953830549,
-            "P-value": 0.43707402056585265
+            "P-value": 0.4370740205658527
           }
         },
         "Baleen whales": {
@@ -188,7 +188,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": -0.5021391633925292,
-            "P-value": 0.2508162804924507
+            "P-value": 0.25081628049245075
           }
         },
         "Common dolphins": {
@@ -204,7 +204,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": -0.19174590320220106,
-            "P-value": 0.6491915126345531
+            "P-value": 0.649191512634553
           }
         },
         "Crabs & bugs": {
@@ -236,7 +236,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.43479576265257935,
-            "P-value": 0.38890485051643614
+            "P-value": 0.3889048505164362
           }
         },
         "Deep filter feeders": {
@@ -316,7 +316,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.415107072043048,
-            "P-value": 0.3544045504518631
+            "P-value": 0.35440455045186303
           }
         },
         "Garfish": {
@@ -348,7 +348,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.2788013283191797,
-            "P-value": 0.6496730786976057
+            "P-value": 0.6496730786976052
           }
         },
         "Gulls": {
@@ -444,7 +444,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": 0.7789142620632954,
-            "P-value": 0.00792682124142767
+            "P-value": 0.007926821241427672
           }
         },
         "Mackerels": {
@@ -524,7 +524,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": 0.014272855638494487,
-            "P-value": 0.9909133093596098
+            "P-value": 0.9909133093596096
           }
         },
         "Migratory mesopelagics": {
@@ -540,7 +540,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.6270930344975225,
-            "P-value": 0.2575191214469902
+            "P-value": 0.25751912144699013
           }
         },
         "Non-migrating mesopelagics": {
@@ -556,7 +556,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.3646230630991212,
-            "P-value": 0.5462501296898861
+            "P-value": 0.5462501296898856
           }
         },
         "Octopus shelf": {
@@ -588,7 +588,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": -0.02815961124607643,
-            "P-value": 0.9384496730537097
+            "P-value": 0.9384496730537096
           }
         },
         "Offshore pelagic sharks": {
@@ -684,7 +684,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.4015214461019936,
-            "P-value": 0.7369630452036918
+            "P-value": 0.7369630452036917
           }
         },
         "Shearwaters": {
@@ -700,7 +700,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.28146642993503335,
-            "P-value": 0.6464156321122219
+            "P-value": 0.6464156321122211
           }
         },
         "Shelf demersal sharks": {
@@ -716,7 +716,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": 0.16600801969343024,
-            "P-value": 0.6694819299750471
+            "P-value": 0.6694819299750467
           }
         },
         "Shelf filter feeders": {
@@ -812,7 +812,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 13,
             "Correlation": 0.03206339317687144,
-            "P-value": 0.9171829981328677
+            "P-value": 0.917182998132868
           }
         },
         "Shelf small demersal omnivores": {
@@ -892,7 +892,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.18925440136584026,
-            "P-value": 0.7195076820143914
+            "P-value": 0.7195076820143915
           }
         },
         "Small petrels": {
@@ -972,7 +972,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.6090603656161693,
-            "P-value": 0.14660255385746448
+            "P-value": 0.14660255385746437
           }
         },
         "Western king prawn": {
@@ -1007,7 +1007,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 236,
           "Correlation": 0.3747526168772207,
-          "P-value": 2.7723564586441373e-09
+          "P-value": 2.7723564586441543e-09
         }
       },
       "Per-predator Statistics": {
@@ -1040,7 +1040,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.998110105254078,
-            "P-value": 0.039145545634718566
+            "P-value": 0.03914554563471857
           }
         },
         "Australian fur seal": {
@@ -1056,7 +1056,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": -0.16262142603697333,
-            "P-value": 0.7275612641087432
+            "P-value": 0.7275612641087433
           }
         },
         "Australian sea lion": {
@@ -1072,7 +1072,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.8139846375979205,
-            "P-value": 0.013929745964142306
+            "P-value": 0.013929745964142305
           }
         },
         "Baleen whales": {
@@ -1152,7 +1152,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.8784129447307725,
-            "P-value": 0.049955272175773044
+            "P-value": 0.049955272175773
           }
         },
         "Common dolphins": {
@@ -1168,7 +1168,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.5945561663146617,
-            "P-value": 0.2903161065377613
+            "P-value": 0.2903161065377611
           }
         },
         "Crabs & bugs": {
@@ -1200,7 +1200,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.4305371069753786,
-            "P-value": 0.3940969923061442
+            "P-value": 0.39409699230614426
           }
         },
         "Deep filter feeders": {
@@ -1280,7 +1280,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.2512182066871014,
-            "P-value": 0.5484088024603553
+            "P-value": 0.5484088024603554
           }
         },
         "Garfish": {
@@ -1312,7 +1312,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.3136113650381464,
-            "P-value": 0.6073431054091974
+            "P-value": 0.6073431054091972
           }
         },
         "Gulls": {
@@ -1328,7 +1328,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": -0.6053710333180442,
-            "P-value": 0.1117565710978977
+            "P-value": 0.11175657109789772
           }
         },
         "Import": {
@@ -1408,7 +1408,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 14,
             "Correlation": 0.6426135500456874,
-            "P-value": 0.013193677156301055
+            "P-value": 0.013193677156301051
           }
         },
         "Mackerels": {
@@ -1504,7 +1504,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.35679017813531755,
-            "P-value": 0.5555518387654479
+            "P-value": 0.5555518387654473
           }
         },
         "Non-migrating mesopelagics": {
@@ -1520,7 +1520,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.3646230630991212,
-            "P-value": 0.5462501296898861
+            "P-value": 0.5462501296898856
           }
         },
         "Octopus shelf": {
@@ -1680,7 +1680,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": -0.4392044637198833,
-            "P-value": 0.20410623324953225
+            "P-value": 0.2041062332495323
           }
         },
         "Shelf filter feeders": {
@@ -1712,7 +1712,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": 0.012522023605908868,
-            "P-value": 0.9744936760332719
+            "P-value": 0.974493676033272
           }
         },
         "Shelf large demersal piscivores": {
@@ -1728,7 +1728,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.8220697878807931,
-            "P-value": 0.012270363195856804
+            "P-value": 0.012270363195856808
           }
         },
         "Shelf large pelagic piscivores": {
@@ -1744,7 +1744,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.7397352167104375,
-            "P-value": 0.09279175975332639
+            "P-value": 0.0927917597533264
           }
         },
         "Shelf macrozoobenthos": {
@@ -1776,7 +1776,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 12,
             "Correlation": 0.2735828424357947,
-            "P-value": 0.38955276767533487
+            "P-value": 0.389552767675335
           }
         },
         "Shelf small demersal omnivores": {
@@ -1792,7 +1792,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.4477679310376877,
-            "P-value": 0.26590491308984865
+            "P-value": 0.2659049130898487
           }
         },
         "Shelf small demersal piscivores": {
@@ -1904,7 +1904,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.7241002863262117,
-            "P-value": 0.16657742656118046
+            "P-value": 0.16657742656118027
           }
         },
         "Toothed whales": {
@@ -1936,7 +1936,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.5626692681116972,
-            "P-value": 0.14651980709463205
+            "P-value": 0.14651980709463208
           }
         },
         "Western king prawn": {
@@ -1971,7 +1971,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 234,
           "Correlation": 0.38676732732478436,
-          "P-value": 9.083395280058439e-10
+          "P-value": 9.083395280058349e-10
         }
       },
       "Per-predator Statistics": {
@@ -2004,7 +2004,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.998110105254078,
-            "P-value": 0.039145545634718566
+            "P-value": 0.03914554563471857
           }
         },
         "Australian fur seal": {
@@ -2036,7 +2036,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 11,
             "Correlation": -0.037636914489298186,
-            "P-value": 0.9125180402309445
+            "P-value": 0.9125180402309452
           }
         },
         "Baleen whales": {
@@ -2116,7 +2116,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.5478053580321549,
-            "P-value": 0.33916584890991974
+            "P-value": 0.33916584890991947
           }
         },
         "Common dolphins": {
@@ -2132,7 +2132,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": -0.4565866467296556,
-            "P-value": 0.21666583709926396
+            "P-value": 0.21666583709926399
           }
         },
         "Crabs & bugs": {
@@ -2244,7 +2244,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.2512182066871014,
-            "P-value": 0.5484088024603553
+            "P-value": 0.5484088024603554
           }
         },
         "Garfish": {
@@ -2276,7 +2276,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.2484169452838776,
-            "P-value": 0.6869896574043316
+            "P-value": 0.6869896574043309
           }
         },
         "Gulls": {
@@ -2292,7 +2292,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.6396365998545834,
-            "P-value": 0.24516016381767083
+            "P-value": 0.24516016381767053
           }
         },
         "Import": {
@@ -2468,7 +2468,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.8407062397915616,
-            "P-value": 0.0744685407401054
+            "P-value": 0.07446854074010534
           }
         },
         "Non-migrating mesopelagics": {
@@ -2484,7 +2484,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.48536210095105414,
-            "P-value": 0.40722054984538786
+            "P-value": 0.4072205498453874
           }
         },
         "Octopus shelf": {
@@ -2500,7 +2500,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.3186113844179086,
-            "P-value": 0.7935670214160548
+            "P-value": 0.793567021416055
           }
         },
         "Offshore pelagic piscivores": {
@@ -2516,7 +2516,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": 0.28261560100720806,
-            "P-value": 0.461217119726578
+            "P-value": 0.4612171197265776
           }
         },
         "Offshore pelagic sharks": {
@@ -2532,7 +2532,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.483225070394221,
-            "P-value": 0.40960112491723955
+            "P-value": 0.40960112491723905
           }
         },
         "Pelagic bacteria": {
@@ -2628,7 +2628,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.5439265220882682,
-            "P-value": 0.2645721961340569
+            "P-value": 0.26457219613405697
           }
         },
         "Shelf demersal sharks": {
@@ -2676,7 +2676,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": -0.09918321486921018,
-            "P-value": 0.7995946829859429
+            "P-value": 0.7995946829859428
           }
         },
         "Shelf large demersal piscivores": {
@@ -2692,7 +2692,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": 0.9413133888914648,
-            "P-value": 4.832993157604471e-05
+            "P-value": 4.832993157604472e-05
           }
         },
         "Shelf large pelagic piscivores": {
@@ -2740,7 +2740,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 19,
             "Correlation": 0.40582120688482676,
-            "P-value": 0.08472034223673632
+            "P-value": 0.08472034223673633
           }
         },
         "Shelf small demersal omnivores": {
@@ -2756,7 +2756,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.596003762949122,
-            "P-value": 0.1189321128217096
+            "P-value": 0.11893211282170961
           }
         },
         "Shelf small demersal piscivores": {
@@ -2868,7 +2868,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.4869131205595102,
-            "P-value": 0.4054947903925788
+            "P-value": 0.4054947903925785
           }
         },
         "Toothed whales": {
@@ -2884,7 +2884,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": 0.7583142703270431,
-            "P-value": 0.452046530938678
+            "P-value": 0.45204653093867797
           }
         },
         "Tunas and billfish": {
@@ -2900,7 +2900,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.8270712882875212,
-            "P-value": 0.08404959835380395
+            "P-value": 0.0840495983538039
           }
         },
         "Western king prawn": {
@@ -2935,7 +2935,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 225,
           "Correlation": 0.4298094549296032,
-          "P-value": 1.5690321964349564e-11
+          "P-value": 1.5690321964349874e-11
         }
       },
       "Per-predator Statistics": {
@@ -2984,7 +2984,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": 0.2013652666038299,
-            "P-value": 0.6033916071246327
+            "P-value": 0.6033916071246326
           }
         },
         "Australian sea lion": {
@@ -3000,7 +3000,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": 0.46522506988663914,
-            "P-value": 0.2069790434677853
+            "P-value": 0.20697904346778537
           }
         },
         "Baleen whales": {
@@ -3096,7 +3096,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": -0.02480060246685154,
-            "P-value": 0.9579101364985722
+            "P-value": 0.9579101364985719
           }
         },
         "Crabs & bugs": {
@@ -3208,7 +3208,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.3549252994194674,
-            "P-value": 0.4346833700744614
+            "P-value": 0.43468337007446134
           }
         },
         "Garfish": {
@@ -3240,7 +3240,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.2484169452838776,
-            "P-value": 0.6869896574043316
+            "P-value": 0.6869896574043309
           }
         },
         "Gulls": {
@@ -3256,7 +3256,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": -0.13830193596370485,
-            "P-value": 0.7938697760421677
+            "P-value": 0.7938697760421676
           }
         },
         "Import": {
@@ -3336,7 +3336,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.8903257927738114,
-            "P-value": 0.0072062510517037
+            "P-value": 0.007206251051703698
           }
         },
         "Mackerels": {
@@ -3416,7 +3416,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": 0.0932167127690317,
-            "P-value": 0.9405701167892013
+            "P-value": 0.9405701167892012
           }
         },
         "Migratory mesopelagics": {
@@ -3432,7 +3432,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.6270930344975225,
-            "P-value": 0.2575191214469902
+            "P-value": 0.25751912144699013
           }
         },
         "Non-migrating mesopelagics": {
@@ -3448,7 +3448,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.48695978221762104,
-            "P-value": 0.4054428981941389
+            "P-value": 0.4054428981941386
           }
         },
         "Octopus shelf": {
@@ -3464,7 +3464,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": 0.952342066844487,
-            "P-value": 0.19733439655733312
+            "P-value": 0.1973343965573331
           }
         },
         "Offshore pelagic piscivores": {
@@ -3544,7 +3544,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.8386278693775345,
-            "P-value": 0.36671657332092306
+            "P-value": 0.3667165733209231
           }
         },
         "Seagrass": {
@@ -3592,7 +3592,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": -0.4038543297409022,
-            "P-value": 0.36891031011002445
+            "P-value": 0.36891031011002456
           }
         },
         "Shelf demersal sharks": {
@@ -3608,7 +3608,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": 0.14225742734018856,
-            "P-value": 0.695033347824064
+            "P-value": 0.6950333478240641
           }
         },
         "Shelf filter feeders": {
@@ -3640,7 +3640,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": -0.17724928885748645,
-            "P-value": 0.6482312725004221
+            "P-value": 0.648231272500422
           }
         },
         "Shelf large demersal piscivores": {
@@ -3656,7 +3656,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.023448669494847682,
-            "P-value": 0.9850707450334943
+            "P-value": 0.9850707450334942
           }
         },
         "Shelf large pelagic piscivores": {
@@ -3704,7 +3704,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 18,
             "Correlation": 0.7239596329344224,
-            "P-value": 0.0006815856180799097
+            "P-value": 0.0006815856180799095
           }
         },
         "Shelf small demersal omnivores": {
@@ -3720,7 +3720,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": -0.1448410738403397,
-            "P-value": 0.7100421176724457
+            "P-value": 0.7100421176724456
           }
         },
         "Shelf small demersal piscivores": {
@@ -3899,7 +3899,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 226,
           "Correlation": 0.309525976151013,
-          "P-value": 2.091020094068989e-06
+          "P-value": 2.091020094069005e-06
         }
       },
       "Per-predator Statistics": {
@@ -3916,7 +3916,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": -0.12949226954225562,
-            "P-value": 0.8068472749231612
+            "P-value": 0.8068472749231613
           }
         },
         "Anchovy and other small pelagics": {
@@ -3932,7 +3932,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.998110105254078,
-            "P-value": 0.039145545634718566
+            "P-value": 0.03914554563471857
           }
         },
         "Australian fur seal": {
@@ -3948,7 +3948,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.3922506010471739,
-            "P-value": 0.5136912422701017
+            "P-value": 0.513691242270101
           }
         },
         "Australian sea lion": {
@@ -3964,7 +3964,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": -0.3591102591639416,
-            "P-value": 0.38231731852014106
+            "P-value": 0.38231731852014117
           }
         },
         "Baleen whales": {
@@ -4060,7 +4060,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.6344125387068007,
-            "P-value": 0.2502873983673655
+            "P-value": 0.2502873983673652
           }
         },
         "Crabs & bugs": {
@@ -4076,7 +4076,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.636128479147765,
-            "P-value": 0.248600097921778
+            "P-value": 0.24860009792177776
           }
         },
         "Deep demersal sharks": {
@@ -4092,7 +4092,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.3897212246971291,
-            "P-value": 0.44501410582179046
+            "P-value": 0.4450141058217904
           }
         },
         "Deep filter feeders": {
@@ -4172,7 +4172,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 7,
             "Correlation": 0.8824591218388641,
-            "P-value": 0.008531326057366659
+            "P-value": 0.008531326057366648
           }
         },
         "Garfish": {
@@ -4204,7 +4204,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": -0.25096197982432106,
-            "P-value": 0.6838518575178602
+            "P-value": 0.6838518575178593
           }
         },
         "Gulls": {
@@ -4220,7 +4220,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.9108271905142338,
-            "P-value": 0.011573143202165386
+            "P-value": 0.01157314320216539
           }
         },
         "Import": {
@@ -4300,7 +4300,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.8873366002916571,
-            "P-value": 0.0032798224489669495
+            "P-value": 0.00327982244896695
           }
         },
         "Mackerels": {
@@ -4396,7 +4396,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.22464074957748395,
-            "P-value": 0.7164026659695578
+            "P-value": 0.7164026659695568
           }
         },
         "Non-migrating mesopelagics": {
@@ -4412,7 +4412,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 5,
             "Correlation": 0.5907534083376467,
-            "P-value": 0.2942159782136238
+            "P-value": 0.29421597821362355
           }
         },
         "Octopus shelf": {
@@ -4428,7 +4428,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 3,
             "Correlation": -0.724330783767143,
-            "P-value": 0.4842977181170918
+            "P-value": 0.48429771811709177
           }
         },
         "Offshore pelagic piscivores": {
@@ -4444,7 +4444,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 10,
             "Correlation": 0.6104691800921415,
-            "P-value": 0.060860018323406775
+            "P-value": 0.06086001832340676
           }
         },
         "Offshore pelagic sharks": {
@@ -4556,7 +4556,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": -0.39565321303814094,
-            "P-value": 0.3319345526401532
+            "P-value": 0.3319345526401531
           }
         },
         "Shelf demersal sharks": {
@@ -4572,7 +4572,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.06507251839252814,
-            "P-value": 0.9025289950094555
+            "P-value": 0.9025289950094554
           }
         },
         "Shelf filter feeders": {
@@ -4604,7 +4604,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 9,
             "Correlation": -0.3184893901794489,
-            "P-value": 0.4035504302609811
+            "P-value": 0.4035504302609813
           }
         },
         "Shelf large demersal piscivores": {
@@ -4636,7 +4636,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 6,
             "Correlation": 0.870737148851014,
-            "P-value": 0.02398340799365606
+            "P-value": 0.023983407993656062
           }
         },
         "Shelf macrozoobenthos": {
@@ -4668,7 +4668,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 21,
             "Correlation": 0.5859053018519704,
-            "P-value": 0.0052550144378203925
+            "P-value": 0.005255014437820392
           }
         },
         "Shelf small demersal omnivores": {
@@ -4684,7 +4684,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.0225741826984224,
-            "P-value": 0.9576877848194338
+            "P-value": 0.9576877848194337
           }
         },
         "Shelf small demersal piscivores": {
@@ -4828,7 +4828,7 @@
           "Non-zero Statistics": {
             "Number of Common Links": 8,
             "Correlation": 0.6319424897712498,
-            "P-value": 0.09277298965024935
+            "P-value": 0.09277298965024934
           }
         },
         "Western king prawn": {
@@ -4864,7 +4864,7 @@
       "Non-zero Statistics": {
         "Number of Common Links": 296,
         "Correlation": 0.3846276465537337,
-        "P-value": 7.136969211027472e-12
+        "P-value": 7.13696921102749e-12
       }
     },
     "Per-predator Statistics": {
@@ -4881,7 +4881,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 6,
           "Correlation": -0.0804428571268657,
-          "P-value": 0.8795959893162387
+          "P-value": 0.8795959893162388
         }
       },
       "Anchovy and other small pelagics": {
@@ -4897,7 +4897,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 3,
           "Correlation": -0.9961602486074559,
-          "P-value": 0.055806622254591
+          "P-value": 0.055806622254590994
         }
       },
       "Australian fur seal": {
@@ -4913,7 +4913,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 10,
           "Correlation": -0.11611453424718794,
-          "P-value": 0.7493964258554762
+          "P-value": 0.749396425855476
         }
       },
       "Australian sea lion": {
@@ -4929,7 +4929,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 12,
           "Correlation": -0.18308048263465346,
-          "P-value": 0.5689882239346274
+          "P-value": 0.5689882239346273
         }
       },
       "Baleen whales": {
@@ -5009,7 +5009,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 8,
           "Correlation": 0.12400021657658172,
-          "P-value": 0.7698718927167462
+          "P-value": 0.7698718927167463
         }
       },
       "Common dolphins": {
@@ -5025,7 +5025,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 9,
           "Correlation": -0.23168883308460259,
-          "P-value": 0.5486143329278809
+          "P-value": 0.5486143329278805
         }
       },
       "Crabs & bugs": {
@@ -5041,7 +5041,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.8173541143379892,
-          "P-value": 0.09109139880398312
+          "P-value": 0.0910913988039831
         }
       },
       "Deep demersal sharks": {
@@ -5137,7 +5137,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 8,
           "Correlation": 0.7396709818551446,
-          "P-value": 0.035943647684182525
+          "P-value": 0.03594364768418253
         }
       },
       "Garfish": {
@@ -5169,7 +5169,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": -0.2669228449677922,
-          "P-value": 0.6642232196852076
+          "P-value": 0.6642232196852068
         }
       },
       "Gulls": {
@@ -5265,7 +5265,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 14,
           "Correlation": 0.6110216835806193,
-          "P-value": 0.02026676407616179
+          "P-value": 0.02026676407616178
         }
       },
       "Mackerels": {
@@ -5361,7 +5361,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.5525482017435654,
-          "P-value": 0.33412318940849317
+          "P-value": 0.3341231894084929
         }
       },
       "Non-migrating mesopelagics": {
@@ -5377,7 +5377,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.48904591238207457,
-          "P-value": 0.403124505285221
+          "P-value": 0.40312450528522076
         }
       },
       "Octopus shelf": {
@@ -5409,7 +5409,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 12,
           "Correlation": 0.5521778255928097,
-          "P-value": 0.0626663081652067
+          "P-value": 0.06266630816520669
         }
       },
       "Offshore pelagic sharks": {
@@ -5425,7 +5425,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.5690935811785867,
-          "P-value": 0.31668209720377516
+          "P-value": 0.3166820972037749
         }
       },
       "Pelagic bacteria": {
@@ -5505,7 +5505,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 3,
           "Correlation": -0.5458870848681385,
-          "P-value": 0.6323855025301041
+          "P-value": 0.6323855025301042
         }
       },
       "Shearwaters": {
@@ -5521,7 +5521,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 9,
           "Correlation": -0.3860913250638916,
-          "P-value": 0.30473068741274467
+          "P-value": 0.30473068741274484
         }
       },
       "Shelf demersal sharks": {
@@ -5537,7 +5537,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 10,
           "Correlation": -0.32999687540937567,
-          "P-value": 0.3517386862009717
+          "P-value": 0.35173868620097165
         }
       },
       "Shelf filter feeders": {
@@ -5569,7 +5569,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 9,
           "Correlation": -0.12006850725569887,
-          "P-value": 0.7583179856573209
+          "P-value": 0.758317985657321
         }
       },
       "Shelf large demersal piscivores": {
@@ -5585,7 +5585,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 11,
           "Correlation": 0.682258686725907,
-          "P-value": 0.020728114930603347
+          "P-value": 0.020728114930603364
         }
       },
       "Shelf large pelagic piscivores": {
@@ -5633,7 +5633,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 25,
           "Correlation": 0.5003391966999746,
-          "P-value": 0.01086002959125853
+          "P-value": 0.010860029591258527
         }
       },
       "Shelf small demersal omnivores": {
@@ -5697,7 +5697,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.2121166230960408,
-          "P-value": 0.7319638907829109
+          "P-value": 0.7319638907829101
         }
       },
       "Slope small demersal piscivores": {
@@ -5761,7 +5761,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 7,
           "Correlation": 0.10606672834372723,
-          "P-value": 0.820946694137013
+          "P-value": 0.8209466941370132
         }
       },
       "Toothed whales": {
@@ -5777,7 +5777,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 5,
           "Correlation": 0.8324654904981349,
-          "P-value": 0.08021649898094574
+          "P-value": 0.0802164989809457
         }
       },
       "Tunas and billfish": {
@@ -5793,7 +5793,7 @@
         "Non-zero Statistics": {
           "Number of Common Links": 8,
           "Correlation": 0.6196893585140576,
-          "P-value": 0.10127588518548984
+          "P-value": 0.10127588518548981
         }
       },
       "Western king prawn": {

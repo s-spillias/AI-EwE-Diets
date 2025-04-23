@@ -1,0 +1,69 @@
+Annotation 1:
+  Page: 3
+  Type: Highlight
+  Highlighted Text: "queries, literature search criteria, and ecological codebase and configuration files reside at [GitHub 3"
+  Comment: "To be added. I assume"
+  Author: lei053
+
+Annotation 2:
+  Page: 4
+  Type: Highlight
+  Highlighted Text: "redundancy using a rank-based approach that retains only the most specific classifi- cation level available. For example, if our dataset contains both Chrysophrys auratus (species-level) and Chrysophrys (genus-level) entries for the same organism, our algo- rithm retains only the species-level entry. Our approach processes taxonomic ranks"
+  Comment: "I don't understand enough about how this exactly works but I guess there is no chance that actually this risks excluding other members of Chrysophrys that might be present but aren't specifically identified?"
+  Author: lei053
+
+Annotation 3:
+  Page: 5
+  Type: Highlight
+  Highlighted Text: "roles as demersal predators, allowing classification into the demersal carnivore func- tional group. This hierarchical approach significantly reduces the number of required classifications, although is vulnerable to misclassifications at higher taxonomic levels if the LLM does not have sufficient ecological capability. The success of this approach"
+  Comment: "Future iterations as you suggest later in 4.4 could use additional materials to improve grouping. RAG could be useful here (I think this is stage 3) to allow provide retrieval of supplemental, species, or higher taxonomic level, specialised information."
+  Author: lei053
+
+Annotation 4:
+  Page: 6
+  Type: Highlight
+  Highlighted Text: "You"
+  Comment: "For future work it would be really interesting to try a whole variety of prompts here and see whether there was much difference in performance"
+  Author: lei053
+
+Annotation 5:
+  Page: 7
+  Type: Highlight
+  Highlighted Text: "Based on the following information about the diet composition of [group], provide a summary of their diet. Include the prey items and their estimated proportions in the diet."
+  Comment: "I'm kind of amazed that LLMs can do this at all. That's just an observation not a criticism of this approach. Perhaps it is quite straightforward for them to provided quantitative estimates if the evidence is relatively easy to interpret this way (for example if the evidence itself includes percentage estimates). For future work, another approach here might be to ask the LLM to broadly catagorise evidence for diet sources and then tally these using a separate procedural / programmatic approach to provide a percentage estimate."
+  Author: lei053
+
+Annotation 6:
+  Page: 12
+  Type: Highlight
+  Highlighted Text: "conducted a detailed comparison using the Great Australian Bight (GAB) ecosystem model developed by Fulton et al. (2018). We obtained the original, unbalanced diet matrix constructed by expert marine ecologists (C. Bulman, personal communication)"
+  Comment: "How unique are diet matrices? Is it common to see broad patterns in the existing literature. Would I be able to find a diet matrix or subsets thereof that are similar to the matrix here? I guess that is kind of the point, yes, there should be such sub matrix information available and the LLM intelligently composes this into an answer for this unique diet matrix?"
+  Author: lei053
+
+Annotation 7:
+  Page: 16
+  Type: Highlight
+  Highlighted Text: "values. This suggests that when the framework correctly identified a trophic interac- tion, it often estimated diet proportions within reasonable bounds of expert values, though with notable variations across different predator-prey combinations. A com-"
+  Comment: "These specific variations could be very useful in searching for and providing supplementary material to improve future diet proportion estimates. Is there a lack of material in existing literature and the LLM is unable to form a reasonable conclusion? Is it that there is something unique in this ecosystem? A really interesting thing to do for future work would be to look at diet proportion error and see if this corresponds to some error in grouping. If so you might be able to ask the LLM for evidence one way or another thus gathering insight into biases or holes in the LLMs training data."
+  Author: lei053
+
+Annotation 8:
+  Page: 19
+  Type: Highlight
+  Highlighted Text: "uncertainty quantification"
+  Comment: "I'm not sure if I missed where this was discussed in detail?"
+  Author: lei053
+
+Annotation 9:
+  Page: 19
+  Type: Highlight
+  Highlighted Text: "while partially reflecting natural ecological flexibility, suggests the need for more nu- anced classification approaches. The identification of additional trophic interactions not present in expert matrices (14.5%) requires careful evaluation - these could repre- sent either over-connection or potentially valid relationships that merit further inves- tigation."
+  Comment: "Where they plausible biologically?"
+  Author: lei053
+
+Annotation 10:
+  Page: 20
+  Type: Highlight
+  Highlighted Text: "preserving the critical role of ecological expertise in model refinement. Fourth, we rely heavily on online databases which are subject to data quality is- sues and biases. Future work should explore how to incorporate local knowledge and expert judgment into the framework to address these limitations. This could involve"
+  Comment: "Your approach maybe able to feedback to improve the overall quality of online databases or identify systematic errors in existing datasources."
+  Author: lei053

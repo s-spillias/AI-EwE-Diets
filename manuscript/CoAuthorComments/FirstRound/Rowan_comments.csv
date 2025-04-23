@@ -1,0 +1,95 @@
+Page,Type,Comment,Highlighted Text,Context,Author
+1,Highlight,And diet matrix generation,,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,lowercase o?,,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,hyphenate,,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,brief parenthetic example?,,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,therefore offering an invaluable tool for expanding and democratising…,,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,"having emerged, or well-established",,,"Trebilco, Rowan (Environment, Hobart)"
+1,Highlight,"could delete marine here to start even broader, then narrow in by saying that EwE is well-established for marine ecosystem modelling",,,"Trebilco, Rowan (Environment, Hobart)"
+1,Text,list regions parenthetically,,,tre163
+2,Highlight,you say little about this,,,bos043
+2,Highlight,this may be a little optimistic :),,,bos043
+2,Highlight,cite geary here too?,,,"Trebilco, Rowan (Environment, Hobart)"
+2,Highlight,constructing and parameterising,,,"Trebilco, Rowan (Environment, Hobart)"
+2,Highlight,"say “extensive literature review, data collation and expert knowledge” here rather than mentioning field data collection? Because the AI tools we’re describing don’t help with alleviating the need for primary (field) data.",,,"Trebilco, Rowan (Environment, Hobart)"
+2,Highlight,be a bit cheeky and self-cite the preprint of your modelling in the singularity paper here.,,,"Trebilco, Rowan (Environment, Hobart)"
+2,Highlight,how about rephrasing this to “… success in both knowledge/evidence synthesis tasks and modelling tasks” … and cite your CBFM papers!,,,"Trebilco, Rowan (Environment, Hobart)"
+2,Highlight,"suggest lower-case i and o for inshore and offshore
+
+Actually, throughout I think that ‘Inshore’ should be changed to ‘shelf’ as much of thi region is out sight of land and in mesophotic depths.",,,"Trebilco, Rowan (Environment, Hobart)"
+3,Text,is step 2  and 3 connected?,,,str191
+3,Text,Ecobase repository is not included in the diagram,,,str191
+3,Caret,includes?,,,bos043
+3,Highlight,specific to EwE right?,,,bos043
+3,Highlight,do we need to specify where these sources are selected from? and how data from these sources interact from info from the databases?,,,bos043
+3,Highlight,"you generated the database at the beginning, correct?",,,bos043
+3,Highlight,are these included in the embedding vectors? or this info is added to the vectors? i guess the former but it is not clear.,,,bos043
+3,Text,"sorry i am being picky. how does the validation happen? does the LLM carry out the validation, or does the the user do this after the groups are provided?",,,bos043
+3,Highlight,"is the quality assignment and subsequent weighted average carried out by the LLM (and thus includes ecological knowledge acquired at the previous step)? or is it done 'algorithmically' (and thus in principle by a simple specific numerical routine external to the process)? i guess the former, but just checking",,,bos043
+3,Highlight,does this apply to this specific work?,,,bos043
+3,Highlight,The framework that we present here,,,"Trebilco, Rowan (Environment, Hobart)"
+3,Highlight,maybe reword to something like: the framework is designed to be ‘modular’ and allow flexibility in the choice of the LLM used; because of its wide availability and strength in scientific applications we use Claude…,,,"Trebilco, Rowan (Environment, Hobart)"
+3,Highlight,e.g. predator-prey size ratios?,,,"Trebilco, Rowan (Environment, Hobart)"
+4,Text,"where does ""Generic Grouping Template""come from? Is it pre-defined and supplied to Claude?",,,str191
+4,Text,highlighted where?,,,tre163
+4,Text,maybe rearrange a little bit so that local files is grouped with the other user inputs then put them all in a box (titled ‘user inputs’),,,tre163
+5,Highlight,can we assume the reader knows what these are?,,,bos043
+5,Highlight,maybe this needs more description?,,,bos043
+5,Text,user-supplied shapefile?,,,tre163
+5,Highlight,"For this section and the following sections that are describing automated steps, maybe change wording away from ‘we’ and keep ‘we’ for describing things that the ‘human team’ does?",,,"Trebilco, Rowan (Environment, Hobart)"
+6,Highlight,How?,,,bos043
+6,Highlight,"does this option use no template at all? if so, see questions below",,,bos043
+7,Text,should trophic level be included as well?,,,str191
+7,Text,"is it a good place to specify how they are organized? i.e. larvae included as part of plankton group, juveniles are included in size based groups?",,,str191
+7,Text,is it a case when a taxon is a higher level taxonomic unit like family or order?,,,str191
+7,Highlight,i guess this is a variable. maybe explain when it is defined below?,,,bos043
+7,Highlight,"following on Joanna's question, should this be included above? if not, why?",,,bos043
+7,Highlight,"what happens if we use option 'generating region-specific groups through AI analysis of geographic characteristics' at line 197, so there is no template to start from?",,,bos043
+7,Caret,taxonomic?,,,bos043
+8,Text,"in FishBase food items are reported for predator stages i.e. larvae, juveniles, adults. Species groups/ predators include only adults. Do the food items include only items listed under “adults”. (See an example for one of the tuna species https://www.fishbase.se/TrophicEco/FoodItemsList.php?vstockcode=161&genus=Thunnus&species=thynnus)",,,str191
+8,Caret,coloring,,,bos043
+8,Highlight,"if we have 'reliable' diet data for each species, then we could test/compare graph coloring algorithm to the AI grouping",,,bos043
+8,Highlight,is this still at species level?,,,bos043
+9,Highlight,i wonder how claude understands 'approximately 100%',,,bos043
+9,Highlight,i am not sure what this means,,,bos043
+9,Highlight,"i am not sure you can validate AND ensure at the same time. isn't either you validate or you ensure? maybe i am missing something here",,,bos043
+9,Highlight,how do we do this?,,,bos043
+10,Highlight,has anyone been able to check that there are no hallucinations here?,,,bos043
+10,Highlight,you mean model parameters?,,,bos043
+10,Highlight,"as for phase 1, you may want to refresh the memory on what phase 2 and 3 are",,,bos043
+10,Highlight,how?,,,bos043
+10,StrikeOut,nearshore,,,"Trebilco, Rowan (Environment, Hobart)"
+10,Highlight,Omit this as part of teh justification given that it had lower species counts than the temperate regions?,,,"Trebilco, Rowan (Environment, Hobart)"
+11,Highlight,have you checked whether this is an established measure (and if so provide a reference) or if there are other measures people use in the literature?,,,bos043
+11,Highlight,"as far as i understand, there is no meaningful ordering in the iterations, right? there are just random, is it correct?if so, someone may wonder why you choose consecutive pairs for comparison, rather than checking all comparisons. for both consistency and stability we may come up with information theoretical measures, if needed.",,,bos043
+11,Text,"As noted in the intro, this should be renamed to SE shelf throughout as much of the region is not inshore (and is in fact out of sight of land)",,South Inshore East South Offshore 140°E East 150°E x 130°E 120°E Territory Northern 110°E Regions 35°S 40°S 30°S 45°S Validation,tre163
+12,Text,"would it be useful to breakdown number of species into categories of fish species, marine invertebrates, phytoplankton, zooplankton, bacteria?",,ωij CVij µij xijk µij = = 0 ωij CVij k=1 µij n i = = 1 xijk n 0,str191
+12,Highlight,"maybe you could introduce what you plan to do with CV, so the reader understands why you describe it?",µij = 0 CVij = 0,,bos043
+12,Highlight,i think this paragraph need more explanation about why these tests were chosen and what they aim to show. i am struggling to follow the result sections below as a result,,,bos043
+12,Text,agree with Jo’s suggestion here,,ωij µij CVij = µij = xijk 0 ωij CVij k=1 µij i n = = 0 1 xijk !,tre163
+13,Highlight,you mean from the templates? or from AI initial choice?,,,bos043
+13,Highlight,i understood what consistency across region is and why it matters only at the second pass,,,bos043
+13,Highlight,we need to say something on whether these values are good,,,bos043
+13,Highlight,"either i don't understand this sentence, or i don't understand how it relates to this work",,,bos043
+13,Text,refer to table 1 in this sentence and consider merging the 2nd and 3rd sentences of the para,,,tre163
+13,Text,The markedly higher data harvest time for SE shelf is a bit unexpected). Can a brief explanation be included somewhere here?,,,tre163
+13,Text,"wil want to reword this to describe key results then refer to corresponding panel (currently it’s the reverse, which is less engaging)",,,tre163
+13,Text,"Likewise here, reword to “Most functional groups had near-perfect stability (as illustrated inthe stability heatmap, figure 4) with a few specific exceptions (explained in Table 2).”",,,tre163
+14,Highlight,would a log plot on Y axis help here?,,,bos043
+14,Highlight,a bit hard to read. i wonder whether it is helpful.,,,bos043
+14,Highlight,i wonder whether this coudl be moved to an appendix,,,bos043
+14,Highlight,"i am not sure what we are trying to measure with this correlation test (see my comment above in Methods), but is it possible that these negative correlations are due to the fact that diet coefficients need to sum to 1?",,,bos043
+14,Text,Potentially present this as a frequency distribution with proportion on y and consistency score on the x axis?,,,tre163
+15,Highlight,yellow?,,,bos043
+15,Highlight,darker?,,,bos043
+15,Highlight,what is species pattern?,,,bos043
+17,Text,suggest reversing the colour ramp here so that the direction is qualitatively the same as Fig4 (with yellow being ‘better’ performance and blue being ‘worse’),,,tre163
+18,Text,is there a need for a paragraph on expert review and where in the framework expert review is included. Perhaps it can be explicitly shown in Figure 1?,,,str191
+18,Highlight,"i wonder whether there are 2 points to make here1) this is not an AI step, strictly speaking2) for regions we are likely to work often, in principle the data could be harvested once and stored locally. We have discussed briefly the pros and cons of doing this",,,bos043
+18,Highlight,"this is very high number indeed. have we checked that this reflects actual correct assignments: that is, following tyhe rest of teh paragraph, can we say something on whether these assignments are ecologically valid and are not consistent mistakes?",,,bos043
+18,Highlight,see my comment above,,,bos043
+18,Highlight,"i think this sentence could go in the abstractsame applies to ""The framework's ability to capture this fundamental ecological pattern450 suggests it successfully incorporates biological realism into its classification decisions."" below",,,bos043
+18,Highlight,good to be explicit about what these totals mean - eg. ‘with between 715 to 788 species bieng classified into this trophic group between runs…’,,,"Trebilco, Rowan (Environment, Hobart)"
+19,Highlight,"Could this also be something about better considered/designed template groupings in the temperate regions, where there’s been more work on diets and ecosystem model dev?",,,"Trebilco, Rowan (Environment, Hobart)"
+19,Text,Can emphasise here that the workflow has been deliberately made “modular” to allow flexibility in choince of LLMs,,,tre163
+20,Highlight,"I by no means suggest we do this now, but EwE used to use the ‘pedigree’ as a measure of parameterisation quality. In principle, we could ask LLM to tell us where each data come from, check for hallucination, and compute the ‘pedigree’.",,,bos043

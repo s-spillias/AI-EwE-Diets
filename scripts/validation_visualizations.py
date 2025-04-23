@@ -131,14 +131,12 @@ def create_group_stability_heatmap(results, output_path):
     
     # Create the heatmap
     fig, ax = plt.subplots(figsize=(15, 8))
-    # Create custom colormap from white to pastel blue
-    colors = ['#ffffff', '#99bfdd']
-    custom_cmap = sns.light_palette('#99bfdd', as_cmap=True)
+    # Use viridis colormap
     
     sns.heatmap(matrix,
                 xticklabels=groups,
                 yticklabels=regions,
-                cmap=custom_cmap,
+                cmap='viridis',
                 annot=False,
                 cbar_kws={'label': 'Jaccard Similarity Index (0-1)'},
                 ax=ax)
@@ -212,19 +210,18 @@ def create_diet_matrices_heatmap(results, output_path):
         # Create mask for empty cells
         mask = (mean_matrix == 0) & (stability_matrix == 0)
         
-        # Create heatmap with custom colormap
-        custom_cmap = sns.light_palette('#99bfdd', as_cmap=True)
+        # Create heatmap with viridis colormap
         
         sns.heatmap(stability_matrix,
                    xticklabels=all_prey,
                    yticklabels=all_predators,  # Show y labels on all plots
-                   cmap=custom_cmap,
+                   cmap='viridis',
                    norm=stability_norm,
                    mask=mask,
                    annot=mean_matrix,
                    fmt='.2f',
                    annot_kws={'size': 4},
-                   cbar_kws={'label': 'Stability Score (1=stable, 0=unstable)'},
+                   cbar_kws={'label': 'Precision Score (1=stable, 0=unstable)'},
                    ax=ax)
         
         # Hide y-axis labels for all but the first plot

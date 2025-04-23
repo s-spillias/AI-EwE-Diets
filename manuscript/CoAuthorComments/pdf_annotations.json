@@ -1,0 +1,232 @@
+[
+  {
+    "page": 3,
+    "type": "Highlight",
+    "rect": [
+      294.1910095214844,
+      759.2922973632812,
+      524.8690185546875,
+      804.7532348632812
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407182551+10'00'",
+    "modification_date": "D:20250407182605+10'00'",
+    "author": "lei053",
+    "content": "To be added. I assume",
+    "highlighted_text": "queries, literature search criteria, and ecological codebase and configuration files reside at [GitHub 3"
+  },
+  {
+    "page": 4,
+    "type": "Highlight",
+    "rect": [
+      70.40789794921875,
+      343.29400634765625,
+      524.8729858398438,
+      387.7660217285156
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407182711+10'00'",
+    "modification_date": "D:20250407182811+10'00'",
+    "author": "lei053",
+    "content": "I don't understand enough about how this exactly works but I guess there is no chance that actually this risks excluding other members of Chrysophrys that might be present but aren't specifically identified?",
+    "highlighted_text": "redundancy using a rank-based approach that retains only the most specific classifi- cation level available. For example, if our dataset contains both Chrysophrys auratus (species-level) and Chrysophrys (genus-level) entries for the same organism, our algo- rithm retains only the species-level entry. Our approach processes taxonomic ranks"
+  },
+  {
+    "page": 5,
+    "type": "Highlight",
+    "rect": [
+      70.40799713134766,
+      588.8800048828125,
+      524.8690185546875,
+      633.3450317382812
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407183223+10'00'",
+    "modification_date": "D:20250407183820+10'00'",
+    "author": "lei053",
+    "content": "Future iterations as you suggest later in 4.4 could use additional materials to improve grouping. RAG could be useful here (I think this is stage 3) to allow provide retrieval of supplemental, species, or higher taxonomic level, specialised information.",
+    "highlighted_text": "roles as demersal predators, allowing classification into the demersal carnivore func- tional group. This hierarchical approach significantly reduces the number of required classifications, although is vulnerable to misclassifications at higher taxonomic levels if the LLM does not have sufficient ecological capability. The success of this approach"
+  },
+  {
+    "page": 6,
+    "type": "Highlight",
+    "rect": [
+      95.31500244140625,
+      80.7349853515625,
+      116.84200286865234,
+      96.30804443359375
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407183922+10'00'",
+    "modification_date": "D:20250407183944+10'00'",
+    "author": "lei053",
+    "content": "For future work it would be really interesting to try a whole variety of prompts here and see whether there was much difference in performance",
+    "highlighted_text": "You"
+  },
+  {
+    "page": 7,
+    "type": "Highlight",
+    "rect": [
+      95.31500244140625,
+      357.3800048828125,
+      499.9590148925781,
+      387.3990173339844
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407184049+10'00'",
+    "modification_date": "D:20250407184322+10'00'",
+    "author": "lei053",
+    "content": "I'm kind of amazed that LLMs can do this at all. That's just an observation not a criticism of this approach. Perhaps it is quite straightforward for them to provided quantitative estimates if the evidence is relatively easy to interpret this way (for example if the evidence itself includes percentage estimates). For future work, another approach here might be to ask the LLM to broadly catagorise evidence for diet sources and then tally these using a separate procedural / programmatic approach to provide a percentage estimate.",
+    "highlighted_text": "Based on the following information about the diet composition of [group], provide a summary of their diet. Include the prey items and their estimated proportions in the diet."
+  },
+  {
+    "page": 12,
+    "type": "Highlight",
+    "rect": [
+      70.40799713134766,
+      122.8370361328125,
+      524.8690185546875,
+      152.85601806640625
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407184535+10'00'",
+    "modification_date": "D:20250407184724+10'00'",
+    "author": "lei053",
+    "content": "How unique are diet matrices? Is it common to see broad patterns in the existing literature. Would I be able to find a diet matrix or subsets thereof that are similar to the matrix here? I guess that is kind of the point, yes, there should be such sub matrix information available and the LLM intelligently composes this into an answer for this unique diet matrix?",
+    "highlighted_text": "conducted a detailed comparison using the Great Australian Bight (GAB) ecosystem model developed by Fulton et al. (2018). We obtained the original, unbalanced diet matrix constructed by expert marine ecologists (C. Bulman, personal communication)"
+  },
+  {
+    "page": 16,
+    "type": "Highlight",
+    "rect": [
+      70.40799713134766,
+      71.09002685546875,
+      524.8690185546875,
+      115.55401611328125
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407184905+10'00'",
+    "modification_date": "D:20250407185118+10'00'",
+    "author": "lei053",
+    "content": "These specific variations could be very useful in searching for and providing supplementary material to improve future diet proportion estimates. Is there a lack of material in existing literature and the LLM is unable to form a reasonable conclusion? Is it that there is something unique in this ecosystem? A really interesting thing to do for future work would be to look at diet proportion error and see if this corresponds to some error in grouping. If so you might be able to ask the LLM for evidence one way or another thus gathering insight into biases or holes in the LLMs training data.",
+    "highlighted_text": "values. This suggests that when the framework correctly identified a trophic interac- tion, it often estimated diet proportions within reasonable bounds of expert values, though with notable variations across different predator-prey combinations. A com-"
+  },
+  {
+    "page": 19,
+    "type": "Highlight",
+    "rect": [
+      308.8869934082031,
+      621.259033203125,
+      447.77899169921875,
+      636.83203125
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407185314+10'00'",
+    "modification_date": "D:20250407185328+10'00'",
+    "author": "lei053",
+    "content": "I'm not sure if I missed where this was discussed in detail?",
+    "highlighted_text": "uncertainty quantification"
+  },
+  {
+    "page": 19,
+    "type": "Highlight",
+    "rect": [
+      70.40799713134766,
+      302.2230224609375,
+      524.8699951171875,
+      361.1330261230469
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407185743+10'00'",
+    "modification_date": "D:20250407185753+10'00'",
+    "author": "lei053",
+    "content": "Where they plausible biologically?",
+    "highlighted_text": "while partially reflecting natural ecological flexibility, suggests the need for more nu- anced classification approaches. The identification of additional trophic interactions not present in expert matrices (14.5%) requires careful evaluation - these could repre- sent either over-connection or potentially valid relationships that merit further inves- tigation."
+  },
+  {
+    "page": 20,
+    "type": "Highlight",
+    "rect": [
+      70.40799713134766,
+      600.3880004882812,
+      524.8690185546875,
+      644.85205078125
+    ],
+    "colors": {
+      "stroke": [
+        0.5882419943809509,
+        0.26274099946022034,
+        0.9882349967956543
+      ],
+      "fill": []
+    },
+    "creation_date": "D:20250407185401+10'00'",
+    "modification_date": "D:20250407185426+10'00'",
+    "author": "lei053",
+    "content": "Your approach maybe able to feedback to improve the overall quality of online databases or identify systematic errors in existing datasources.",
+    "highlighted_text": "preserving the critical role of ecological expertise in model refinement. Fourth, we rely heavily on online databases which are subject to data quality is- sues and biases. Future work should explore how to incorporate local knowledge and expert judgment into the framework to address these limitations. This could involve"
+  }
+]

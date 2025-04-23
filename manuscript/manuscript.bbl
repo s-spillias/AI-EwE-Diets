@@ -5,16 +5,19 @@
 \newblock Claude 3 model card.
 \newblock Technical documentation, Anthropic.
 
+\bibitem[Castro et~al., 2024]{castro2024large}
+Castro, A., Pinto, J., Reino, L., Pipek, P., and Capinha, C. (2024).
+\newblock Large language models overcome the challenges of unstructured text data in ecology.
+\newblock {\em Ecological Informatics}, 82:102742.
+
 \bibitem[Chamberlain, 2020]{robis}
 Chamberlain, S. (2020).
-\newblock {\em {robis}: An {R} Client for the Ocean Biodiversity Information
-  System}.
+\newblock {\em {robis}: An {R} Client for the Ocean Biodiversity Information System}.
 \newblock R package version 0.2.0.
 
 \bibitem[Chen and Xu, 2024]{Chen2024}
 Chen, M. and Xu, Z. (2024).
-\newblock A deep learning classification framework for research methods of
-  marine protected area management.
+\newblock A deep learning classification framework for research methods of marine protected area management.
 \newblock {\em Journal of Environmental Management}.
 
 \bibitem[Christensen and Walters, 2004]{Christensen2004}
@@ -28,24 +31,23 @@ Christensen, V. and Walters, C.~J. (2004).
 \newblock Accessed: 2024.
 
 \bibitem[Coll et~al., 2015]{Coll2015}
-Coll, M., Akoglu, E., Arregu{\'\i}n-S{\'a}nchez, F., Fulton, E.~A., Gascuel,
-  D., Heymans, J.~J., Libralato, S., Mackinson, S., Palomera, I., Piroddi, C.,
-  et~al. (2015).
-\newblock Modelling dynamic ecosystems: venturing beyond boundaries with the
-  {Ecopath} approach.
+Coll, M., Akoglu, E., Arregu{\'\i}n-S{\'a}nchez, F., Fulton, E.~A., Gascuel, D., Heymans, J.~J., Libralato, S., Mackinson, S., Palomera, I., Piroddi, C., et~al. (2015).
+\newblock Modelling dynamic ecosystems: venturing beyond boundaries with the {Ecopath} approach.
 \newblock {\em Reviews in Fish Biology and Fisheries}, 25(2):413--424.
 
 \bibitem[Coll{\'e}ter et~al., 2015]{Colleter2015}
-Coll{\'e}ter, M., Valls, A., Guitton, J., Gascuel, D., Pauly, D., and
-  Christensen, V. (2015).
-\newblock Global overview of the applications of the {Ecopath} with {Ecosim}
-  modeling approach using the {EcoBase} models repository.
+Coll{\'e}ter, M., Valls, A., Guitton, J., Gascuel, D., Pauly, D., and Christensen, V. (2015).
+\newblock Global overview of the applications of the {Ecopath} with {Ecosim} modeling approach using the {EcoBase} models repository.
 \newblock {\em Ecological Modelling}, 302:42--53.
+
+\bibitem[Dorm et~al., 2025]{dorm2025large}
+Dorm, F., Millard, J., Purves, D., Harfoot, M., and Mac~Aodha, O. (2025).
+\newblock Large language models possess some ecological knowledge, but how much?
+\newblock {\em bioRxiv}, pages 2025--02.
 
 \bibitem[Fernandes and D'Mello, 2024]{Fernandes2024}
 Fernandes, S. and D'Mello, A. (2024).
-\newblock Artificial intelligence in the aquaculture industry: Current state,
-  challenges and future directions.
+\newblock Artificial intelligence in the aquaculture industry: Current state, challenges and future directions.
 \newblock {\em Aquaculture}, page 742048.
 
 \bibitem[Froese et~al., 2010]{froese2010fishbase}
@@ -55,52 +57,46 @@ Froese, R., Pauly, D., et~al. (2010).
 \bibitem[Fulton et~al., 2018]{Fulton2018}
 Fulton, E., Bulman, C., Pethybridge, H., and Goldsworthy, S. (2018).
 \newblock Modelling the {Great Australian Bight} ecosystem.
-\newblock {\em Deep Sea Research Part II: Topical Studies in Oceanography},
-  157-158:211--235.
+\newblock {\em Deep Sea Research Part II: Topical Studies in Oceanography}, 157-158:211--235.
 
 \bibitem[Geary et~al., 2020]{Geary2020}
-Geary, W.~L., Bode, M., Doherty, T.~S., Fulton, E.~A., Nimmo, D.~G., Tulloch,
-  A.~I., Tulloch, V.~J., and Ritchie, E.~G. (2020).
+Geary, W.~L., Bode, M., Doherty, T.~S., Fulton, E.~A., Nimmo, D.~G., Tulloch, A.~I., Tulloch, V.~J., and Ritchie, E.~G. (2020).
 \newblock A guide to ecosystem models and their environmental applications.
 \newblock {\em Nature Ecology \& Evolution}, 4:1459--1471.
 
+\bibitem[Goldsworthy et~al., 2013]{goldsworthy2013trophodynamics}
+Goldsworthy, S.~D., Page, B., Rogers, P.~J., Bulman, C., Wiebkin, A., McLeay, L.~J., Einoder, L., Baylis, A.~M., Braley, M., Caines, R., et~al. (2013).
+\newblock Trophodynamics of the eastern great australian bight ecosystem: Ecological change associated with the growth of australia's largest fishery.
+\newblock {\em Ecological Modelling}, 255:38--57.
+
 \bibitem[Grassle and Stocks, 1999]{Grassle1999}
 Grassle, J.~F. and Stocks, K. (1999).
-\newblock A global ocean biogeographic information system ({OBIS}) for the
-  census of marine life.
+\newblock A global ocean biogeographic information system ({OBIS}) for the census of marine life.
 \newblock {\em Oceanography}, 12(3):12--14.
 
 \bibitem[Holden et~al., 2024a]{Holden2024a}
-Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J.,
-  and Chad{\`e}s, I. (2024a).
-\newblock Why shouldn't {I} collect more data? {Reconciling} disagreements
-  between intuition and value of information analyses.
+Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J., and Chad{\`e}s, I. (2024a).
+\newblock Why shouldn't {I} collect more data? {Reconciling} disagreements between intuition and value of information analyses.
 \newblock {\em Methods in Ecology and Evolution}, 15:1580--1592.
 
 \bibitem[Holden et~al., 2024b]{Holden2024b}
-Holden, M.~H., Plag{\'a}nyi, {\'E}.~E., Fulton, E.~A., Campbell, A.~B., Janes,
-  R., Lovett, R.~A., Wickens, M., Adams, M.~P., Botelho, L.~L., Dichmont,
-  C.~M., et~al. (2024b).
-\newblock Cost--benefit analysis of ecosystem modeling to support fisheries
-  management.
+Holden, M.~H., Plag{\'a}nyi, {\'E}.~E., Fulton, E.~A., Campbell, A.~B., Janes, R., Lovett, R.~A., Wickens, M., Adams, M.~P., Botelho, L.~L., Dichmont, C.~M., et~al. (2024b).
+\newblock Cost--benefit analysis of ecosystem modeling to support fisheries management.
 \newblock {\em Journal of Fish Biology}, 104:1667--1674.
 
 \bibitem[Karniadakis et~al., 2021]{Karniadakis2021}
-Karniadakis, G.~E., Kevrekidis, I.~G., Lu, L., Perdikaris, P., Wang, S., and
-  Yang, L. (2021).
+Karniadakis, G.~E., Kevrekidis, I.~G., Lu, L., Perdikaris, P., Wang, S., and Yang, L. (2021).
 \newblock Physics-informed machine learning.
 \newblock {\em Nature Reviews Physics}, 3(6):422--440.
 
 \bibitem[Keck et~al., 2025]{keck2025extracting}
 Keck, F., Broadbent, H., and Altermatt, F. (2025).
-\newblock Extracting massive ecological data on state and interactions of
-  species using large language models.
+\newblock Extracting massive ecological data on state and interactions of species using large language models.
 \newblock {\em bioRxiv}, pages 2025--01.
 
 \bibitem[Kommineni et~al., 2024]{Kommineni2024}
 Kommineni, V.~K., K{\"o}nig-Ries, B., and Samuel, S. (2024).
-\newblock Harnessing multiple {LLMs} for information retrieval: A case study on
-  deep learning methodologies in biodiversity publications.
+\newblock Harnessing multiple {LLMs} for information retrieval: A case study on deep learning methodologies in biodiversity publications.
 \newblock {\em arXiv preprint arXiv:2411.09269}.
 
 \bibitem[Lapeyrolerie et~al., 2022]{Lapeyrolerie2022}
@@ -110,52 +106,50 @@ Lapeyrolerie, M., Chapman, M.~S., Norman, K.~E., and Boettiger, C. (2022).
 
 \bibitem[Li et~al., 2024]{Li2024}
 Li, H., Liu, J., Wang, Z., Luo, S., Jia, X., and Yao, H. (2024).
-\newblock Lite: Modeling environmental ecosystems with multimodal large
-  language models.
+\newblock Lite: Modeling environmental ecosystems with multimodal large language models.
 \newblock {\em Conference on Language Models (COLM)}.
+
+\bibitem[Nugraha et~al., 2024]{nugraha2024traditional}
+Nugraha, F.~S., Saputra, I., Triana, H., Wahyudi, M., Radiyah, U., Prasetyo, A., Faisal, M., Siregar, J., et~al. (2024).
+\newblock From traditional to innovation: Large language models in fisheries data extraction.
+\newblock In {\em 2024 International Conference on Information Technology Research and Innovation (ICITRI)}, pages 305--310. IEEE.
 
 \bibitem[Poelen et~al., 2014]{Poelen2014}
 Poelen, J.~H., Simons, J.~D., and Mungall, C.~J. (2014).
-\newblock Global biotic interactions: An open infrastructure to share and
-  analyze species-interaction datasets.
+\newblock Global biotic interactions: An open infrastructure to share and analyze species-interaction datasets.
 \newblock {\em Ecological Informatics}, 24:148--159.
 
 \bibitem[Spillias et~al., 2024a]{spillias2024evaluating}
-Spillias, S., Ollerhead, K., Andreotta, M., Annand-Jones, R., Boschetti, F.,
-  Duggan, J., Karcher, D., Paris, C., Shellock, R., and Trebilco, R. (2024a).
-\newblock Evaluating generative ai to extract qualitative data from
-  peer-reviewed documents.
+Spillias, S., Ollerhead, K., Andreotta, M., Annand-Jones, R., Boschetti, F., Duggan, J., Karcher, D., Paris, C., Shellock, R., and Trebilco, R. (2024a).
+\newblock Evaluating generative ai to extract qualitative data from peer-reviewed documents.
 
 \bibitem[Spillias et~al., 2024b]{spilliasfuture}
-Spillias, S., Trebilco, R., Adams, M.~P., Boschetti, F., Constable, A.,
-  Dunstan, P., Ferrier, S., Porobic, J., Grimberg, E., Grigg, N., et~al.
-  (2024b).
+Spillias, S., Trebilco, R., Adams, M.~P., Boschetti, F., Constable, A., Dunstan, P., Ferrier, S., Porobic, J., Grimberg, E., Grigg, N., et~al. (2024b).
 \newblock The future of artificial intelligence in ecosystem modelling.
 \newblock {\em SSRN preprint}.
 
 \bibitem[Spillias et~al., 2024c]{spillias2024human}
-Spillias, S., Tuohy, P., Andreotta, M., Annand-Jones, R., Boschetti, F.,
-  Cvitanovic, C., Duggan, J., Fulton, E.~A., Karcher, D.~B., Paris, C., et~al.
-  (2024c).
+Spillias, S., Tuohy, P., Andreotta, M., Annand-Jones, R., Boschetti, F., Cvitanovic, C., Duggan, J., Fulton, E.~A., Karcher, D.~B., Paris, C., et~al. (2024c).
 \newblock Human-ai collaboration to identify literature for evidence synthesis.
 \newblock {\em Cell Reports Sustainability}, 1(7).
 
+\bibitem[Tanhua et~al., 2019]{tanhua2019ocean}
+Tanhua, T., Pouliquen, S., Hausman, J., O’brien, K., Bricher, P., De~Bruin, T., Buck, J.~J., Burger, E.~F., Carval, T., Casey, K.~S., et~al. (2019).
+\newblock Ocean fair data services.
+\newblock {\em Frontiers in Marine Science}, 6:440.
+
 \bibitem[Tuia et~al., 2022]{Tuia2022}
-Tuia, D., Kellenberger, B., Beery, S., Costelloe, B.~R., Zuffi, S., Risse, B.,
-  Mathis, A., Mathis, M.~W., van Langevelde, F., Burghardt, T., et~al. (2022).
+Tuia, D., Kellenberger, B., Beery, S., Costelloe, B.~R., Zuffi, S., Risse, B., Mathis, A., Mathis, M.~W., van Langevelde, F., Burghardt, T., et~al. (2022).
 \newblock Perspectives in machine learning for wildlife conservation.
 \newblock {\em Nature Communications}, 13:1--15.
 
 \bibitem[Villasante et~al., 2016]{Villasante2016}
-Villasante, S., Arregu{\'\i}n-S{\'a}nchez, F., Heymans, J.~J., Libralato, S.,
-  Piroddi, C., Christensen, V., and Coll, M. (2016).
-\newblock Modelling complex systems of multiple species for ecosystem based
-  management.
+Villasante, S., Arregu{\'\i}n-S{\'a}nchez, F., Heymans, J.~J., Libralato, S., Piroddi, C., Christensen, V., and Coll, M. (2016).
+\newblock Modelling complex systems of multiple species for ecosystem based management.
 \newblock {\em Ecological Modelling}, 326:68--76.
 
 \bibitem[Zheng et~al., 2023]{Zheng2023}
-Zheng, Z., Zhang, J., Vu, T.~A., Diao, S., Tim, Y. H.~W., and Yeung, S.~K.
-  (2023).
+Zheng, Z., Zhang, J., Vu, T.~A., Diao, S., Tim, Y. H.~W., and Yeung, S.~K. (2023).
 \newblock {MarineGPT}: Unlocking secrets of ocean to the public.
 \newblock {\em arXiv preprint arXiv:2310.13596}.
 

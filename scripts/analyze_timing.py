@@ -43,7 +43,7 @@ def analyze_regional_timing():
     validation_dirs = []
     species_counts = {}
     
-    for region in ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']:
+    for region in ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore', 'GAB']:
         base_dir = models_dir / region
         region_species_counts = []
         
@@ -62,7 +62,9 @@ def analyze_regional_timing():
     timing_data = []
     
     for region_dir in validation_dirs:
-        region_name = str(region_dir).split("\\")[-2]  # Get the parent directory name which contains the full region name
+        # Extract region name from path, handling both Windows and Unix-style paths
+        path_parts = str(region_dir).replace('\\', '/').split('/')
+        region_name = path_parts[-2] if len(path_parts) >= 2 else str(region_dir)
         timing = get_region_timing_data(region_dir)
         
         if timing:
@@ -137,7 +139,7 @@ def generate_timing_table(df, region_stats, species_counts):
     )
     
     # Add a row for each region in a specific order
-    region_order = ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore']
+    region_order = ['v2_NorthernTerritory', 'v2_SouthEastInshore', 'v2_SouthEastOffshore', 'GAB']
     for region in region_order:
         if region in region_means.index:
             species_count = species_counts.get(region, 0)
@@ -153,6 +155,8 @@ def generate_timing_table(df, region_stats, species_counts):
                 display_name = 'South East Shelf'
             elif display_name == 'SouthEastOffshore':
                 display_name = 'South East Offshore'
+            elif display_name == 'GAB':
+                display_name = 'Great Australian Bight'
             
             row = (
                 f"{display_name} & "
