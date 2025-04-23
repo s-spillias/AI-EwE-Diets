@@ -7,7 +7,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+chroma/
 MODELS/
+!MODELS/*/05_diet_matrix.csv
+!MODELS/*/*/05_diet_matrix.csv
+!MODELS/*/*/*/05_diet_matrix.csv
 corpus.pdf_1.npy
 corpus.pdf
 TippingPoints/
@@ -16,12 +20,15 @@ References/
 tests/
 MODELS/AI_CHOICE
 MODELS/Saleh_Bay
-manuscript/CoAuthoComments
-manuscript/References
+manuscript/CoAuthorComments
+manuscript/reference
 manuscript/results
 tests/
 SW_Atlantis_Diets_of_Functional_Groups/
 storage_chroma_*/
+Validation/
+scripts/test_*
+*saleh*
 
 *.synctex.gz
 *.aux
