@@ -1,6 +1,5 @@
 # EwE with AI
 
-
 This repository contains tools for automating the creation of Ecopath with Ecosim (EwE) models using AI and various data sources.
 
 ## Introduction to Ecopath with Ecosim (EwE)
@@ -194,24 +193,45 @@ The project includes validation scripts to assess the consistency and reliabilit
 
 ### Running Validation Iterations
 
-To run validation for a specific study area, use:
+The validation process has been split into two steps:
+
+#### Step 1: Initial Setup
+
+First, run the initial steps to set up the base model:
 
 ```bash
-python 01_run_validation_iterations.py <base_name> <shapefile.zip> "<research_focus>" [num_iterations] [num_processes] [grouping_template] [coverage_threshold]
+python 01a_run_initial_steps.py <base_name> <geojson_path> "<research_focus>" [grouping_template] [template_file] [--force_grouping]
 ```
 
 Parameters:
 - `base_name`: Name for the validation run (e.g., "hobart_test")
-- `shapefile.zip`: Path to your zipped shapefile containing all related files (.shp, .shx, .dbf, etc.)
+- `geojson_path`: Path to your GeoJSON file or zipped shapefile
 - `research_focus`: Description of your research focus (in quotes)
-- `num_iterations`: Number of validation iterations to run (default: 5)
-- `num_processes`: Number of parallel processes to use (default: 3)
 - `grouping_template`: Template to use for grouping (options: default, upload, ecobase, geojson)
-- `coverage_threshold`: Value between 0 and 1 to filter species by occurrence coverage (default: 1.0)
+- `template_file`: Path to custom template file (when using upload template)
+- `--force_grouping`: Optional flag to force grouping without adding new groups
 
 Example:
 ```bash
-python 01_run_validation_iterations.py hobart_test study_area.zip "Marine ecosystem dynamics in Hobart" 4 4 geojson
+python 01a_run_initial_steps.py hobart_test study_area.geojson "Marine ecosystem dynamics in Hobart" default
+```
+
+#### Step 2: Run Validation Iterations
+
+After the initial setup is complete, run multiple iterations for validation:
+
+```bash
+python 01b_run_validation_iterations.py <base_name> [num_iterations] [num_processes]
+```
+
+Parameters:
+- `base_name`: Name for the validation run (same as used in step 1)
+- `num_iterations`: Number of validation iterations to run (default: 5)
+- `num_processes`: Number of parallel processes to use (default: 3)
+
+Example:
+```bash
+python 01b_run_validation_iterations.py hobart_test 4 4
 ```
 
 ### Analyzing Validation Results
@@ -219,7 +239,7 @@ python 01_run_validation_iterations.py hobart_test study_area.zip "Marine ecosys
 After running the validation iterations, analyze the results using:
 
 ```bash
-python 02_analyze_validation_results.py <base_name>
+python 02_analyze_validation_results.py
 ```
 
 This will generate a comprehensive validation report including:
@@ -241,7 +261,7 @@ This will generate a comprehensive validation report including:
 
 ### Validation Outputs
 
-The validation process creates the following outputs in the `Validation/<base_name>/` directory:
+The validation process creates the following outputs in the `MODELS/<base_name>/` directory:
 
 1. Reports Directory:
    - `species_variability_rankings.csv`: Rankings of species by assignment variability
@@ -292,6 +312,7 @@ The validation process creates the following outputs in the `Validation/<base_na
   - `04_gather_diet_data.py` - Diet data collection
   - `05_construct_diet_matrix.py` - Diet matrix construction
   - `06_ewe_params.py` - EwE parameter estimation
+  - `07_compile_excel.py` - Excel compilation
 
 ## Model Processing Steps
 
@@ -363,7 +384,7 @@ Key features:
 
 This script is essential for creating the initial species list for the ecosystem model, ensuring a comprehensive and accurate representation of the biodiversity in the selected area.
 
-### 02_harvest_sealifebase_data.py
+### 02_download_data.py
 
 This Python script is responsible for collecting detailed information about the species identified in the previous step. It gathers data from multiple sources to create a comprehensive profile for each species. The script performs the following tasks:
 
@@ -480,4 +501,37 @@ Key features:
 - Provides detailed logging of the estimation process.
 - Saves both the final estimates and the supporting data used to make those estimates.
 
-This script is crucial for completing the EwE model by providing reasonable estimates for all required parameters. The AI-assisted approach helps ensure that parameter values are biologically reasonable and consistent with existing knowledge about similar species and ecosystems.
+
+
+### 01a_run_initial_steps.py and 01b_run_validation_iterations.py
+
+These scripts are used for validation of the EwE model creation process:
+
+1. `01a_run_initial_steps.py` sets up the base model by:
+   - Creating the necessary directory structure
+   - Configuring AI settings
+   - Running steps 1-2 of the model workflow (species identification and data collection)
+   - Preparing the environment for validation iterations
+
+2. `01b_run_validation_iterations.py` runs multiple iterations of the model creation process by:
+   - Creating copies of the base model
+   - Running steps 3-7 for each iteration in parallel
+   - Tracking the progress and success of each iteration
+   - Saving metadata about the validation run
+
+### 02_analyze_validation_results.py
+
+This script analyzes the results of the validation iterations to assess the consistency and reliability of the AI-generated models. It performs the following tasks:
+
+1. Analyzes species grouping consistency across iterations
+2. Evaluates the stability of functional groups
+3. Examines the consistency of diet matrices
+4. Generates visualizations and reports of the findings
+5. Creates supplementary tables for manuscript inclusion
+
+Key features:
+- Calculates consistency scores for species assignments
+- Computes Jaccard similarity for group stability
+- Analyzes diet interaction stability
+- Generates heatmaps and other visualizations
+- Creates comprehensive validation reports

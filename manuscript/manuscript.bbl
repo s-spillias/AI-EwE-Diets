@@ -5,10 +5,20 @@
 \newblock Claude 3 model card.
 \newblock Technical documentation, Anthropic.
 
+\bibitem[Boschetti et~al., 2018]{boschetti2018decision}
+Boschetti, F., Hughes, M., Jones, C., and Lozano-Montes, H. (2018).
+\newblock On decision makers’ perceptions of what an ecological computer model is, what it does, and its impact on limiting model acceptance.
+\newblock {\em Sustainability}, 10(8):2767.
+
 \bibitem[Castro et~al., 2024]{castro2024large}
 Castro, A., Pinto, J., Reino, L., Pipek, P., and Capinha, C. (2024).
 \newblock Large language models overcome the challenges of unstructured text data in ecology.
 \newblock {\em Ecological Informatics}, 82:102742.
+
+\bibitem[Chakravorty et~al., 2024]{chakravorty2024systematic}
+Chakravorty, D., Armelloni, E.~N., and de~la Puente, S. (2024).
+\newblock A systematic review on the use of food web models for addressing the social and economic consequences of fisheries policies and environmental change.
+\newblock {\em Frontiers in Marine Science}, 11:1489984.
 
 \bibitem[Chamberlain, 2020]{robis}
 Chamberlain, S. (2020).
@@ -74,6 +84,16 @@ Grassle, J.~F. and Stocks, K. (1999).
 \newblock A global ocean biogeographic information system ({OBIS}) for the census of marine life.
 \newblock {\em Oceanography}, 12(3):12--14.
 
+\bibitem[Heymans et~al., 2016]{heymans2016best}
+Heymans, J.~J., Coll, M., Link, J.~S., Mackinson, S., Steenbeek, J., Walters, C., and Christensen, V. (2016).
+\newblock Best practice in ecopath with ecosim food-web models for ecosystem-based management.
+\newblock {\em Ecological modelling}, 331:173--184.
+
+\bibitem[Hill et~al., 2007]{hill2007model}
+Hill, S.~L., Watters, G.~M., Punt, A.~E., McAllister, M.~K., Qu{\'e}r{\'e}, C.~L., and Turner, J. (2007).
+\newblock Model uncertainty in the ecosystem approach to fisheries.
+\newblock {\em Fish and Fisheries}, 8(4):315--336.
+
 \bibitem[Holden et~al., 2024a]{Holden2024a}
 Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J., and Chad{\`e}s, I. (2024a).
 \newblock Why shouldn't {I} collect more data? {Reconciling} disagreements between intuition and value of information analyses.
@@ -83,6 +103,11 @@ Holden, M.~H., Akinlotan, M.~D., Binley, A.~D., Cho, F.~H., Helmstedt, K.~J., an
 Holden, M.~H., Plag{\'a}nyi, {\'E}.~E., Fulton, E.~A., Campbell, A.~B., Janes, R., Lovett, R.~A., Wickens, M., Adams, M.~P., Botelho, L.~L., Dichmont, C.~M., et~al. (2024b).
 \newblock Cost--benefit analysis of ecosystem modeling to support fisheries management.
 \newblock {\em Journal of Fish Biology}, 104:1667--1674.
+
+\bibitem[Jakeman et~al., 2024]{jakeman2024towards}
+Jakeman, A.~J., Elsawah, S., Wang, H.-H., Hamilton, S.~H., Melsen, L., and Grimm, V. (2024).
+\newblock Towards normalizing good practice across the whole modeling cycle: its instrumentation and future research topics.
+\newblock {\em Socio-Environmental Systems Modelling}, 6:18755--18755.
 
 \bibitem[Karniadakis et~al., 2021]{Karniadakis2021}
 Karniadakis, G.~E., Kevrekidis, I.~G., Lu, L., Perdikaris, P., Wang, S., and Yang, L. (2021).
@@ -109,6 +134,21 @@ Li, H., Liu, J., Wang, Z., Luo, S., Jia, X., and Yao, H. (2024).
 \newblock Lite: Modeling environmental ecosystems with multimodal large language models.
 \newblock {\em Conference on Language Models (COLM)}.
 
+\bibitem[Link, 2010]{link2010adding}
+Link, J.~S. (2010).
+\newblock Adding rigor to ecological network models by evaluating a set of pre-balance diagnostics: a plea for prebal.
+\newblock {\em Ecological modelling}, 221(12):1580--1591.
+
+\bibitem[Link et~al., 2012]{link2012dealing}
+Link, J.~S., Ihde, T., Harvey, C., Gaichas, S.~K., Field, J., Brodziak, J., Townsend, H., and Peterman, R. (2012).
+\newblock Dealing with uncertainty in ecosystem models: the paradox of use for living marine resource management.
+\newblock {\em Progress in Oceanography}, 102:102--114.
+
+\bibitem[Noleto~Filho et~al., 2024]{Noleto2024}
+Noleto~Filho, E.~M., Keppeler, F.~W., Reis-Filho, J.~A., Giarrizzo, T., Keenlyside, N., Carvalho, A.~R., Coll, M., Steenbeek, J.~G., and Angelini, R. (2024).
+\newblock Foodwebai: Creating and augmenting food webs with natural language models.
+\newblock {\em Preprint}.
+
 \bibitem[Nugraha et~al., 2024]{nugraha2024traditional}
 Nugraha, F.~S., Saputra, I., Triana, H., Wahyudi, M., Radiyah, U., Prasetyo, A., Faisal, M., Siregar, J., et~al. (2024).
 \newblock From traditional to innovation: Large language models in fisheries data extraction.
@@ -119,9 +159,20 @@ Poelen, J.~H., Simons, J.~D., and Mungall, C.~J. (2014).
 \newblock Global biotic interactions: An open infrastructure to share and analyze species-interaction datasets.
 \newblock {\em Ecological Informatics}, 24:148--159.
 
+\bibitem[Sahu et~al., 2024]{sahu4946942taxobot}
+Sahu, N., Baburajan, R., and Saravanane, N. (2024).
+\newblock Taxobot: A chatbot for the taxonomy of marine organisms.
+\newblock {\em Available at SSRN 4946942}.
+
+\bibitem[Schuwirth et~al., 2019]{schuwirth2019make}
+Schuwirth, N., Borgwardt, F., Domisch, S., Friedrichs, M., Kattwinkel, M., Kneis, D., Kuemmerlen, M., Langhans, S.~D., Mart{\'\i}nez-L{\'o}pez, J., and Vermeiren, P. (2019).
+\newblock How to make ecological models useful for environmental management.
+\newblock {\em Ecological Modelling}, 411:108784.
+
 \bibitem[Spillias et~al., 2024a]{spillias2024evaluating}
 Spillias, S., Ollerhead, K., Andreotta, M., Annand-Jones, R., Boschetti, F., Duggan, J., Karcher, D., Paris, C., Shellock, R., and Trebilco, R. (2024a).
 \newblock Evaluating generative ai to extract qualitative data from peer-reviewed documents.
+\newblock {\em Environmental Evidence}.
 
 \bibitem[Spillias et~al., 2024b]{spilliasfuture}
 Spillias, S., Trebilco, R., Adams, M.~P., Boschetti, F., Constable, A., Dunstan, P., Ferrier, S., Porobic, J., Grimberg, E., Grigg, N., et~al. (2024b).
@@ -147,6 +198,11 @@ Tuia, D., Kellenberger, B., Beery, S., Costelloe, B.~R., Zuffi, S., Risse, B., M
 Villasante, S., Arregu{\'\i}n-S{\'a}nchez, F., Heymans, J.~J., Libralato, S., Piroddi, C., Christensen, V., and Coll, M. (2016).
 \newblock Modelling complex systems of multiple species for ecosystem based management.
 \newblock {\em Ecological Modelling}, 326:68--76.
+
+\bibitem[Weiskopf et~al., 2022]{weiskopf2022increasing}
+Weiskopf, S.~R., Harm{\'a}{\v{c}}kov{\'a}, Z.~V., Johnson, C.~G., Londo{\~n}o-Murcia, M.~C., Miller, B.~W., Myers, B.~J., Pereira, L., Arce-Plata, M.~I., Blanchard, J.~L., Ferrier, S., et~al. (2022).
+\newblock Increasing the uptake of ecological model results in policy decisions to improve biodiversity outcomes.
+\newblock {\em Environmental Modelling \& Software}, 149:105318.
 
 \bibitem[Zheng et~al., 2023]{Zheng2023}
 Zheng, Z., Zhang, J., Vu, T.~A., Diao, S., Tim, Y. H.~W., and Yeung, S.~K. (2023).

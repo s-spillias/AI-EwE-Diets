@@ -37,7 +37,7 @@ p <- ggplot() +
   # Add title
   labs(title = "", x = '', y = '') +
   # Add region labels at the very top
-  annotate("text", x = 131, y = -17, label = "Northern Territory", color = "#cc6000", fontface = "bold") +
+  annotate("text", x = 131, y = -17, label = "Northern Australia", color = "#cc6000", fontface = "bold") +
   annotate("text", x = 144, y = -36, label = "South East\nShelf", color = "#1a5c8c", fontface = "bold") +
   annotate("text", x = 152.2, y = -43, label = "South East\nOffshore", color = "#1e8449", fontface = "bold") +
   annotate("text", x = 122, y = -31, label = "Great Australian\nBight*", color = "#8e44ad", fontface = "bold") +
