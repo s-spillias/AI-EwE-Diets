@@ -1,0 +1,33 @@
+# Cover Letter
+
+[Your Address]  
+[City, State ZIP]  
+[Email]  
+[Date]
+
+**Professor Aaron Ellison**  
+Senior Editor-in-Chief  
+Methods in Ecology and Evolution
+
+Dear Professor Ellison,
+
+We are pleased to submit our manuscript entitled "**Automated Diet Matrix Construction for Marine Ecosystem Models Using Generative AI**" for consideration for publication in Methods in Ecology and Evolution.
+
+Our manuscript presents a novel methodological framework that leverages Large Language Models (LLMs) to automate the construction of diet matrices for Ecopath with Ecosim (EwE) ecosystem models. This addresses a significant bottleneck in ecological modeling, as the traditional approach to constructing these matrices is time-consuming and resource-intensive, often requiring months of expert time. Our framework reduces this process to hours while maintaining ecological validity.
+
+We believe this manuscript is particularly suitable for Methods in Ecology and Evolution due to several key aspects of our work. Our framework represents a significant methodological innovation in how ecological models can be constructed, introducing a systematic approach to automating a previously manual process through the application of generative AI. The method we describe has immediate practical utility for ecologists and ecosystem modelers, potentially accelerating research in ecosystem-based fisheries management and other fields that rely on food web models. We provide rigorous validation of our approach across four distinct marine ecosystems, demonstrating both reproducibility (>99.7% consistency in species grouping decisions) and ecological accuracy (92.6% of taxonomic assignments being at least partially correct). Additionally, the work bridges computational methods and ecological modeling, aligning with MEE's focus on innovative methodological approaches that advance ecological research.
+
+Our key findings demonstrate that AI-driven approaches can generate ecologically meaningful components for ecosystem models while dramatically reducing development time. The framework shows strong performance in identifying trophic interactions and estimating diet proportions, with clear pathways for further refinement.
+
+We confirm that this manuscript is not currently under consideration elsewhere, and all authors have approved the submission. We have no conflicts of interest to declare.
+
+Thank you for considering our manuscript. We look forward to your response.
+
+Sincerely,
+
+**Scott Spillias**  
+Corresponding Author  
+CSIRO Environment
+
+On behalf of all co-authors:  
+Beth Fulton, Fabio Boschetti, Cathy Bulman, Joanna Strzelecki, and Rowan Trebilco

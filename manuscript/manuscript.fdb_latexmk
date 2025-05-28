@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex manuscript"] 1747613797.19248 "manuscript.aux" "manuscript.bbl" "manuscript" 1747616898.76773 0
+["bibtex manuscript"] 1747613797.19248 "manuscript.aux" "manuscript.bbl" "manuscript" 1747877937.51992 0
   "./references.bib" 1747202001.20617 21202 b3a9bc3cbf3713f1dcd2083798387a22 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "manuscript.aux" 1747616898.45386 23674 ef0cafc7a1a9429713bb462d4af05f79 "pdflatex"
+  "manuscript.aux" 1747877937.31653 23674 ef0cafc7a1a9429713bb462d4af05f79 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1747616890.75639 "/home/spi085/Documents/_Projects/EWE-FRESHER/manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1747616898.7679 0
+["pdflatex"] 1747877932.70931 "/home/spi085/Documents/_Projects/EWE-FRESHER/manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1747877937.52004 0
   "/etc/texmf/web2c/texmf.cnf" 1742794268.74189 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/spi085/Documents/_Projects/EWE-FRESHER/manuscript/manuscript.tex" 1747612590.48183 5578 3e894fa119a2f9280480bd448372d236 ""
+  "/home/spi085/Documents/_Projects/EWE-FRESHER/manuscript/manuscript.tex" 1747877932.53146 5641 95d9c42b940b45c7baefb82aa394ac3f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1136768653 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -203,7 +203,7 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1742794282.99407 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1742794347 8215175 354ff2896416c753455109b1f463b8cb ""
   "1_introduction.tex" 1746404244.19689 3324 222114b9460abc9b29a8c5f5ef718e38 ""
-  "2_1_framework_overview.tex" 1747616890.50374 2663 707b9e4b27031cfd0ac1b4433e344bbf ""
+  "2_1_framework_overview.tex" 1747635950.05203 2657 5533998c1fce67411e7349597da873a3 ""
   "2_2_species_identification_method.tex" 1744866657.52243 1978 0ead5f53f7b81acc3b46b11d8e699bf8 ""
   "2_3_data_harvesting_method.tex" 1744867686.32465 2242 fa2a5348aa1aef055f454d1bb150a359 ""
   "2_4_species_grouping_method.tex" 1747194125.86291 6106 cbc978492aa826a58d8a202baf22a64c ""
@@ -222,10 +222,10 @@
   "figures/regional_group_analysis.png" 1745296233.61735 279102 56010190953bdd6f661ad61c573d77bd ""
   "figures/stability_score_distribution.png" 1745296238.2494 324505 baf64096ecc4abe96dfa28225f0c9901 ""
   "figures/validation_regions.pdf" 1745808041.33513 802875 ed8a61376c97efe3f674f5299392af56 ""
-  "manuscript.aux" 1747616898.45386 23674 ef0cafc7a1a9429713bb462d4af05f79 "pdflatex"
+  "manuscript.aux" 1747877937.31653 23674 ef0cafc7a1a9429713bb462d4af05f79 "pdflatex"
   "manuscript.bbl" 1747613797.31814 12043 f558db91a76de3a073a7fffb92c7bbc7 "bibtex manuscript"
-  "manuscript.out" 1747616898.45586 5622 9d826eee494c70e039c011877fb755e2 "pdflatex"
-  "manuscript.tex" 1747612590.48183 5578 3e894fa119a2f9280480bd448372d236 ""
+  "manuscript.out" 1747877937.31853 5622 9d826eee494c70e039c011877fb755e2 "pdflatex"
+  "manuscript.tex" 1747877932.53146 5641 95d9c42b940b45c7baefb82aa394ac3f ""
   "results/group_accuracy/results/annotations_by_functional_group.png" 1746408720.56791 535390 03cba530bf1a7db6088f37d8dbab603d ""
   "results/timing_analysis.tex" 1742226026 807 ca1d85d7d469f51401df11c4e24228c1 ""
   "results/timing_table.tex" 1745807930.71617 772 821e01222c8c7e7dfaf9840ca880c86b ""

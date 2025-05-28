@@ -1,0 +1,37 @@
+\subsubsection{Diet Matrix Construction}
+
+After the framework has assigned species to groups, the species-level diet and ecological information collected in Stage 2 is re-assigned to the new functional groups. The diet matrix construction involves two LLM-driven steps. First, the framework assembles text data from various sources (RAG search results, diet data, and GLOBI interaction data) into a structured profile for each group. This profile is passed to the LLM to generate an initial diet composition summary. The following prompt guides this first LLM analysis:
+
+\begin{prompt}
+Based on the following information about the diet composition of [group], provide a summary of their diet. Include the prey items and their estimated proportions in the diet.
+
+Available functional groups and their details:
+[List of groups with descriptions and top species]
+
+Here is the diet data for [group]:
+[Combined data including RAG search results, compressed food categories, and GLOBI interactions]
+
+Format your response as a list, with each item on a new line in the following format:
+
+Prey Item: Percentage
+
+For example:
+\begin{verbatim}
+Small fish: 40%
+Zooplankton: 30%
+Algae: 20%
+Detritus: 10%
+\end{verbatim}
+
+If exact percentages are not available, estimate percentages based on the information you have been provided.
+Ensure that all percentages add up to approximately 100\%.
+Consider the RAG search results, compressed food categories, and GLOBI data when creating your summary.
+Pay special attention to the GLOBI interaction counts, which indicate frequency of observed feeding relationships.
+Note that some species may feed on juvenile or larval forms of other species, which are often classified in different functional groups than the adults.
+\end{prompt}
+
+Sometimes these responses contain functional groups that are not included in the list of accepted groups or do not add up to 100\%. Therefore, the initial diet summaries are passed to a second LLM step that standardizes the proportions and maps any yet undefined group to the already-defined functional groups. This second step converts the approximate summaries into a structured diet matrix, with prey items as rows and predators as columns. Each cell contains the proportion of the predator's diet comprised of that prey item. The diet matrix is then output as a CSV file for use in Ecopath with Ecosim models. 
+
+When prey items do not exactly match functional group names, we employ a hierarchical matching system. The system first attempts exact matches, then falls back to case-insensitive partial matching using species names. For example, if the AI returns a prey item "snapper" that doesn't exactly match any functional group, the system would match it to a functional group containing ``snapper'' in its name such as ``Pink Snapper''.
+
+This process is the second target of validation in this study and is evaluated in Section~\ref{supp:2}. The complete codebase and configuration files are available at [GitHub repository URL].
