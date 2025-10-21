@@ -6,6 +6,10 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{titlesec}          % For section formatting
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{}    % Remove section numbering
+\titleformat{\subsection}{\normalfont\large\bfseries}{}{0em}{} % Remove subsection numbering
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{}{0em}{} % Remove subsubsection numbering
 % Configure hyperref (must be loaded last)
 \usepackage{hyperref}
 \usepackage{longtable}
@@ -40,7 +44,7 @@
 
 
 
-\title{AI-Driven Knowledge Synthesis for Ecological Model Parameterization}
+\title{AI-Driven Knowledge Synthesis for Food Web Construction}
 
 \author{Scott Spillias\textsuperscript{1,2}\thanks{Corresponding author: scott.spillias@csiro.au} \and
 Elizabeth A. Fulton\textsuperscript{1,2} \and
@@ -74,20 +78,27 @@ Large Language Models
 \maketitle
 \affiliations
 
+\section*{Significance Statement}
+This study introduces an AI-driven framework for automated species grouping and food web construction for ecosystem models, addressing a critical bottleneck in model development. The framework demonstrates high reproducibility in species grouping decisions and food web construction, with strong ecological alignment when validated against expert-derived food webs. These findings demonstrate the framework's potential to generate reproducible, ecologically meaningful food webs while significantly reducing development time.
+
 \begin{abstract}
 This study introduces a novel Large Language Model (LLM) driven framework for automated species grouping and food web construction for ecosystem models, addressing a critical bottleneck in model development. The framework (i) retrieves a marine species list from an area; (ii) uses LLMs to classify them into functional groups; and (iii) synthesises trophic interactions from diverse data sources including global biodiversity databases, species interaction repositories, and unstructured user-provided text. We evaluate the framework across four large Australian marine regions to assess both consistency and ecological accuracy of the resulting functional groups and trophic interactions. The framework demonstrates high reproducibility in species grouping decisions (>99.7\% consistency) and food web construction, with 51-59\% of predator-prey interactions showing consistent trophic proportions across multiple runs. Validation against expert-derived food webs for the Great Australian Bight ecosystem reveals strong ecological alignment and accuracy, with 92.6\% of taxonomic assignments being at least partially correct (>75\% fully correct), and correctly identifying 85\% of trophic interactions, while estimating interaction strengths within 0.2 of expert values for 80\% of interactions. These findings demonstrate the framework's potential to generate reproducible, ecologically meaningful food webs for ecosystem model development while significantly reducing development time.
 \end{abstract}
 
-\input{1_introduction}
-\input{2_methods}
-\input{3_results}
-\input{4_discussion}
+
+
+\input{introduction}
+
+\input{results}
+\input{discussion}
+
+\input{methods}
 
 \section*{Acknowledgements}
 SS was funded by a CSIRO R+ Postdoctoral Fellowship. This project was partially funded by the `Futures of Seafood' project.
 
 \section*{Data Availability}
-The complete codebase, including all scripts, configuration files, and analysis tools, is available at https://github.com/s-spillias/AI-EwE-Diets. The validation framework, including reference group definitions and classification rules, is documented in the project repository to ensure reproducibility.
+The complete codebase, including all scripts, configuration files, and analysis tools, is available at \url{https://github.com/s-spillias/AI-EwE-Diets}. The validation framework, including reference group definitions and classification rules, is documented in the project repository to ensure reproducibility.
 
 \section*{Author Contributions}
 SS: Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Resources, Data Curation, Writing - Original Draft, Writing - Review \& Editing, Visualization, Project administration. BF: Validation, Writing - Review \& Editing, Supervision, Funding acquisition. FB: Methodology, Software, Validation, Writing - Review \& Editing, Supervision. CB: Investigation, Data Curation, Validation, Writing - Review \& Editing. JS: Conceptualization, Validation, Investigation, Writing - Review \& Editing. RT: Methodology, Software, Validation, Investigation, Writing - Review \& Editing, Supervision, Funding acquisition.
@@ -99,8 +110,6 @@ Generative AI tools, specifically Claude Sonnet 3.5, were utilized in the prepar
 \bibliography{references}
 
 \clearpage
-\input{5_supplement}
+\input{supplement}
 
-\end{document}
-\end{document}
 \end{document}

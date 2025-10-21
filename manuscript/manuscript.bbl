@@ -5,6 +5,11 @@
 \newblock Claude 3 model card.
 \newblock Technical documentation, Anthropic.
 
+\bibitem[Audzijonyte et~al., 2019]{audzijonyte2019atlantis}
+Audzijonyte, A., Pethybridge, H., Porobic, J., Gorton, R., Kaplan, I., and Fulton, E.~A. (2019).
+\newblock Atlantis: A spatially explicit end-to-end marine ecosystem model with dynamically integrated physics, ecology and socio-economic modules.
+\newblock {\em Methods in Ecology and Evolution}, 10(10):1814--1819.
+
 \bibitem[Boschetti et~al., 2018]{boschetti2018decision}
 Boschetti, F., Hughes, M., Jones, C., and Lozano-Montes, H. (2018).
 \newblock On decision makers’ perceptions of what an ecological computer model is, what it does, and its impact on limiting model acceptance.

@@ -572,11 +572,15 @@ def plot_simplified_comparison(matrix1, matrix2, output_path):
     presence_comparison[(binary1.values == 0) & (binary2.values == 1)] = -1  # Only in AI
     
     # Create the plot with two subplots side by side
-    fig = plt.figure(figsize=(15, 8))
-    gs = plt.GridSpec(1, 2, width_ratios=[1.5, 1])
+    fig = plt.figure(figsize=(12, 8))
+    gs = plt.GridSpec(1, 2, width_ratios=[1.5, 1], wspace=0.2)  # Small space between plots
+
     ax1 = fig.add_subplot(gs[0])
     ax2 = fig.add_subplot(gs[1])
-    
+    ax1.grid(False)
+    ax2.grid(False)
+
+        
     ax1.text(-0.1, 1.05, 'a', transform=ax1.transAxes, fontsize=16, fontweight='bold')
     ax2.text(-0.1, 1.05, 'b', transform=ax2.transAxes, fontsize=16, fontweight='bold')
     
@@ -592,26 +596,40 @@ def plot_simplified_comparison(matrix1, matrix2, output_path):
         }
         column_stats.append(stats)
     
+    # Debug: Print stats for toothed whales
+    if 'Toothed whales' in ordered_common_groups:
+        tw_idx = ordered_common_groups.index('Toothed whales')
+        print(f"DEBUG - Toothed whales stats: {column_stats[tw_idx]}")
+    
     # Create horizontal stacked bar plot
     categories = ['Only in AI', 'Only in Human', 'Present in both', 'Absent in both']
     category_colors = ['#9ad6ae', '#f9ba7b', '#cbacdb', '#F5F5F5']
     # Reverse the order of groups for y-axis
-    ordered_common_groups = ordered_common_groups[::-1]
-    y = np.arange(len(ordered_common_groups))
-    left = np.zeros(len(ordered_common_groups))
+    ordered_common_groups_reversed = ordered_common_groups[::-1]
+    y = np.arange(len(ordered_common_groups_reversed))
+    left = np.zeros(len(ordered_common_groups_reversed))
     height = 0.9
     
+    # Create a mapping from reversed index to original index
+    reverse_mapping = {i: len(ordered_common_groups) - 1 - i for i in range(len(ordered_common_groups))}
+    
     for i, category in enumerate(categories):
-        values = [stats[category] for stats in column_stats]
+        values = []
+        for j in range(len(ordered_common_groups_reversed)):
+            # Get the original index
+            orig_idx = reverse_mapping[j]
+            values.append(column_stats[orig_idx][category])
+        
         ax1.barh(y, values, height, left=left, color=category_colors[i], label=category)
         left += values
     
     # Configure stacked bar plot
     ax1.set_yticks(y)
-    ax1.set_yticklabels(ordered_common_groups)
+    ax1.set_yticklabels(ordered_common_groups_reversed)
     ax1.set_xlabel('Proportion')
     ax1.set_xlim(0, 1)
-    ax1.legend(bbox_to_anchor=(0, 1.02), loc='lower left', ncol=4)
+    # Move legend to bottom of the figure
+    ax1.legend(bbox_to_anchor=(0.5, -0.15), loc='upper center', ncol=4)
     ax1.tick_params(axis='both', labelsize=8)
     
     # Create histogram of differences where both matrices have data
@@ -619,13 +637,13 @@ def plot_simplified_comparison(matrix1, matrix2, output_path):
     differences = np.abs(m1.values[common_mask] - m2.values[common_mask])
     
     # Plot histogram
-    ax2.hist(differences, bins=20, color='#cbacdb', alpha=0.7)
+    ax2.hist(differences, bins=20, color='#9467BD', alpha=0.7)
     ax2.set_xlabel('Absolute Difference in Diet Proportions')
     ax2.set_ylabel('Frequency')
     ax2.tick_params(axis='both', labelsize=8)
     
-    plt.tight_layout()
-    plt.savefig(output_path, bbox_inches='tight', dpi=300)
+    # Save figure with higher DPI
+    plt.savefig(output_path, bbox_inches='tight', dpi=600, pad_inches=0.1)
     plt.close()
     
     return {
