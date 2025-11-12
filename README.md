@@ -31,8 +31,6 @@ pip install -r requirements.txt
 3. Create a `.env` file with API keys:
 ```
 OPENAI_API_KEY=your_openai_api_key
-SEALIFEBASE_API_KEY=your_sealifebase_api_key
-GLOBI_API_KEY=your_globi_api_key
 ```
 
 ## Usage
