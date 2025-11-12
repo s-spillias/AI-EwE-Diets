@@ -29,7 +29,7 @@ import logging
 import time
 import pathlib
 from typing import Dict, Tuple, Optional, List
-
+import tempfile
 import duckdb
 
 # Optional deps (existing in your script)
@@ -115,6 +115,72 @@ def _download_parquet(url: str, dest: pathlib.Path) -> pathlib.Path:
                 f.write(chunk)
     return dest
 
+import pandas as pd
+import numpy as np
+import datetime
+
+def to_jsonable(obj):
+    """
+    Recursively convert objects to JSON-serializable Python types.
+    Handles pandas/numpy types, datetimes, and nested containers.
+    """
+    # Simple types already JSONable
+    if obj is None or isinstance(obj, (str, bool, int, float)):
+        # Handle nan (float('nan')) explicitly
+        if isinstance(obj, float) and (np.isnan(obj)):
+            return None
+        return obj
+
+    # pandas NA / numpy NaN
+    if obj is pd.NA or (isinstance(obj, float) and np.isnan(obj)):
+        return None
+
+    # pandas Timestamp
+    if isinstance(obj, pd.Timestamp):
+        return obj.isoformat()
+
+    # numpy datetime64
+    if isinstance(obj, np.datetime64):
+        # Convert to Python datetime, then ISO
+        dt = pd.to_datetime(obj).to_pydatetime()
+        return dt.isoformat()
+
+    # Python datetime / date
+    if isinstance(obj, (datetime.datetime, datetime.date)):
+        return obj.isoformat()
+
+    # numpy scalar numbers
+    if isinstance(obj, (np.integer,)):
+        return int(obj)
+    if isinstance(obj, (np.floating,)):
+        val = float(obj)
+        if np.isnan(val):
+            return None
+        return val
+
+    # numpy bool_
+    if isinstance(obj, (np.bool_)):
+        return bool(obj)
+
+    # pandas Series/Index: convert to list
+    if isinstance(obj, (pd.Series, pd.Index)):
+        return [to_jsonable(v) for v in obj.tolist()]
+
+    # pandas DataFrame: convert to list-of-dicts
+    if isinstance(obj, pd.DataFrame):
+        return [ { k: to_jsonable(v) for k, v in row.items() }
+                 for row in obj.to_dict(orient="records") ]
+
+    # dict: recurse
+    if isinstance(obj, dict):
+        return { k: to_jsonable(v) for k, v in obj.items() }
+
+    # list/tuple/set: recurse
+    if isinstance(obj, (list, tuple, set)):
+        return [to_jsonable(v) for v in obj]
+
+    # Fallback: string
+
 # -----------------------------
 # DuckDB helpers
 # -----------------------------
@@ -166,6 +232,17 @@ def _fetch_table(key: str, limit: Optional[int] = None) -> Optional[pd.DataFrame
 # -----------------------------
 # Original helper functions (unchanged where possible)
 # -----------------------------
+
+def _build_name_index(df):
+    """
+    Create case-insensitive, whitespace-trimmed map from 'Genus Species' -> index.
+    """
+    if df is None or df.empty or "Genus" not in df.columns or "Species" not in df.columns:
+        return {}
+    key = (df["Genus"].astype(str).str.strip().str.lower() + " " +
+           df["Species"].astype(str).str.strip().str.lower())
+    return dict(zip(key, df.index))
+
 
 def _standardize_species_columns(df: pd.DataFrame, label: str = "") -> pd.DataFrame:
     """
@@ -237,31 +314,94 @@ def load_fishbase_fooditems_data():
     return df
 
 def get_food_items_for_speccodes(fooditems_df, spec_codes):
-    """Batch filter food items for SpecCodes using DuckDB SQL (life-stage filters retained)."""
+    """
+    Filter diet items for a list of species codes.
+    - Dynamically detect the correct 'SpecCode' column (e.g., DietSpeccode, DietSpeccodeSLB, SpecCode).
+    - If PreyStage/PredatorStage columns exist, apply adult/juv filters; otherwise skip.
+    - Works for both SeaLifeBase and FishBase diet snapshots with varying schemas.
+    """
+    import duckdb
+    import pandas as pd
+    import numpy as np
+
     if fooditems_df is None or fooditems_df.empty or not spec_codes:
         return pd.DataFrame()
 
-    valid_codes = [int(code) for code in spec_codes if code not in ("Unknown", None) and pd.notna(code)]
+    # Normalize spec_codes to integers
+    valid_codes = []
+    for code in spec_codes:
+        if code in ("Unknown", None) or pd.isna(code):
+            continue
+        try:
+            valid_codes.append(int(code))
+        except Exception:
+            # Some codes might be strings; try best effort
+            try:
+                valid_codes.append(int(float(code)))
+            except Exception:
+                pass
+
     if not valid_codes:
         return pd.DataFrame()
 
-    duckdb.register("fooditems_df", fooditems_df)
-    query = f"""
-        SELECT
-            SpecCode, PreySpecCode, AlphaCode,
-            Foodgroup, Foodname, PreyStage, PredatorStage,
-            FoodI, FoodII, FoodIII,
-            Commoness, CommonessII, PreyTroph, PreySeTroph
-        FROM fooditems_df
-        WHERE SpecCode IN ({','.join(map(str, valid_codes))})
-          AND (PreyStage LIKE '%adult%' OR PreyStage LIKE '%juv%')
-          AND (PredatorStage LIKE '%adult%' OR PredatorStage LIKE '%juv%')
-    """
+    # Lowercase column set to probe schema
+    cols_lower = {c.lower(): c for c in fooditems_df.columns}
+
+    # 1) Detect the "SpecCode" column used in this diet table
+    # Common variants seen across snapshots:
+    speccode_candidates = [
+        "speccode",          # canonical
+        "dietspeccode",      # seen in FB diet_items parquet
+        "dietspeccodeslb",   # seen in SLB diet_items parquet
+        "speciescode",       # possible alias
+        "spec_code"          # possible alias
+    ]
+    spec_col = None
+    for cand in speccode_candidates:
+        if cand in cols_lower:
+            spec_col = cols_lower[cand]
+            break
+
+    if spec_col is None:
+        # If no specCol is found, we can't filter by codes reliably; return empty
+        print("[WARN] No SpecCode-like column found in diet table; available columns:", list(fooditems_df.columns))
+        return pd.DataFrame()
+
+    # 2) Detect life-stage columns (optional filters)
+    prey_col = cols_lower.get("preystage", None)
+    predator_col = cols_lower.get("predatorstage", None)
+
+    # 3) Build a DuckDB query if possible
     try:
-        return duckdb.sql(query).df()
+        duckdb.register("fooditems_df", fooditems_df)
+        code_list = ",".join(map(str, valid_codes))
+
+        base_select = f"""
+            SELECT *
+            FROM fooditems_df
+            WHERE "{spec_col}" IN ({code_list})
+        """
+
+        stage_filter = ""
+        if prey_col is not None:
+            stage_filter += f""" AND ("{prey_col}" LIKE '%adult%' OR "{prey_col}" LIKE '%juv%')"""
+        if predator_col is not None:
+            stage_filter += f""" AND ("{predator_col}" LIKE '%adult%' OR "{predator_col}" LIKE '%juv%')"""
+
+        query = base_select + stage_filter
+
+        result = duckdb.sql(query).df()
+        return result
+
     except Exception as e:
         print(f"Error querying food items for SpecCodes: {str(e)}")
-        return pd.DataFrame()
+        # 4) Fallback: filter in pandas without stage filters
+        try:
+            return fooditems_df[fooditems_df[spec_col].isin(valid_codes)].copy()
+        except Exception as e2:
+            print(f"Pandas fallback also failed: {e2}")
+            return pd.DataFrame()
+
 
 # File I/O helpers (unchanged)
 def load_json_with_lock(file_path, max_retries=5, retry_delay=1):
@@ -283,25 +423,47 @@ def load_json_with_lock(file_path, max_retries=5, retry_delay=1):
             time.sleep(retry_delay)
     return None
 
+
+
 def save_json_with_lock(data, file_path, max_retries=5, retry_delay=1):
+    """
+    Atomically write JSON:
+    - Convert all nested values to JSON-serializable types.
+    - Write to a temporary file next to the target.
+    - fsync, then atomic os.replace.
+    """
+    dir_path = os.path.dirname(file_path) or "."
+    os.makedirs(dir_path, exist_ok=True)
+
+    # Convert the entire object to JSONable types
+    safe_data = to_jsonable(data)
+
     retries = 0
     while retries < max_retries:
         try:
-            os.makedirs(os.path.dirname(file_path), exist_ok=True)
-            with open(file_path, 'w', encoding='utf-8') as f:
+            fd, tmp_path = tempfile.mkstemp(dir=dir_path, prefix=".tmp_", suffix=".json")
+            try:
+                with os.fdopen(fd, "w", encoding="utf-8") as tmpf:
+                    json.dump(safe_data, tmpf, indent=2, ensure_ascii=False)
+                    tmpf.flush()
+                    os.fsync(tmpf.fileno())
+                os.replace(tmp_path, file_path)
+                return True
+            except Exception as e:
+                logging.error(f"Error writing JSON: {str(e)}")
                 try:
-                    json.dump(data, f, indent=2, ensure_ascii=False)
-                    return True
-                except Exception as e:
-                    logging.error(f"Error writing JSON: {str(e)}")
-                    return False
-        except IOError as e:
+                    os.remove(tmp_path)
+                except OSError:
+                    pass
+                return False
+        except OSError as e:
             retries += 1
             if retries == max_retries:
                 logging.error(f"Failed to save {file_path} after {max_retries} attempts: {str(e)}")
                 return False
+            import time
             time.sleep(retry_delay)
-    return False
+
 
 # Species list loader (unchanged)
 def load_species_list(file_path):
@@ -448,7 +610,7 @@ def get_globi_data_for_species(species_names, batch_size=10):
             response = requests.get(url)
             if response.status_code == 200:
                 if len(response.text.strip().split('\n')) <= 1:
-                    logging.info(f"No interaction data for {species_name} (header only)")
+                    # logging.info(f"No interaction data for {species_name} (header only)")Z
                     return species_name, {'interactions': [], 'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}}
                 try:
                     df = pd.read_csv(StringIO(response.text))
@@ -548,12 +710,31 @@ def is_species_complete(species_data):
     has_globi = 'GLOBI' in diet
     return has_taxonomy and has_db and has_globi
 
+def _diet_row_code(drow):
+    """
+    Return the species code from a diet row regardless of the column name.
+    Tries common variants and returns None if not found.
+    """
+    for key in ("SpecCode", "DietSpeccode", "DietSpeccodeSLB", "SpeciesCode", "Spec_Code"):
+        if key in drow:
+            val = drow.get(key)
+            if val is not None and not (isinstance(val, float) and np.isnan(val)):
+                try:
+                    return int(val)
+                except Exception:
+                    try:
+                        return int(float(val))
+                    except Exception:
+                        return val
+
 # -----------------------------
 # Core processing (fixed SLB batch query)
 # -----------------------------
 
 def get_species_info(species_df, sealifebase_df, fishbase_df,
                      sealifebase_fooditems_df, fishbase_fooditems_df, output_file):
+    import numpy as np
+
     logging.info("Processing species in batches")
     print("\nProcessing Species Info:")
     print("SeaLifeBase DataFrame shape:", sealifebase_df.shape)
@@ -562,30 +743,59 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
     species_data = {}
     if os.path.exists(output_file):
         species_data = load_json_with_lock(output_file) or {}
-        print(f"\nLoaded existing data for {len(species_data)} species")
+    print(f"\nLoaded existing data for {len(species_data)} species")
 
-    unprocessed_species = []
-    for idx, row in species_df.iterrows():
-        species_name = row['scientificName']
-        if pd.isna(species_name) or (species_name in species_data and is_species_complete(species_data[species_name])):
+    # Standardize minimal keys for matching
+    sealifebase_df = _standardize_species_columns(sealifebase_df, "SeaLifeBase species (pre-merge)")
+    fishbase_df    = _standardize_species_columns(fishbase_df,    "FishBase species (pre-merge)")
+
+    # Build normalized full-name columns
+    def make_full_name(df):
+        if df is None or df.empty:
+            return df
+        if "Genus" in df.columns and "Species" in df.columns:
+            df["_Genus_norm"]   = df["Genus"].astype(str).str.strip()
+            df["_Species_norm"] = df["Species"].astype(str).str.strip()
+            df["_full_name"]    = (df["_Genus_norm"] + " " + df["_Species_norm"]).str.strip()
+        else:
+            df["_full_name"] = pd.Series(dtype=str)
+        return df
+
+    slb_map_ci = _build_name_index(sealifebase_df)
+    fb_map_ci  = _build_name_index(fishbase_df)
+
+    sealifebase_df = make_full_name(sealifebase_df)
+    fishbase_df    = make_full_name(fishbase_df)
+
+    # Index maps
+    slb_map = {}
+    if sealifebase_df is not None and not sealifebase_df.empty and "_full_name" in sealifebase_df.columns:
+        slb_map = {k: v for k, v in zip(sealifebase_df["_full_name"], sealifebase_df.index)}
+    fb_map = {}
+    if fishbase_df is not None and not fishbase_df.empty and "_full_name" in fishbase_df.columns:
+        fb_map = {k: v for k, v in zip(fishbase_df["_full_name"], fishbase_df.index)}
+
+    # Batch over species
+    unprocessed = []
+    for _, row in species_df.iterrows():
+        name = row["scientificName"]
+        if pd.isna(name) or (name in species_data and is_species_complete(species_data[name])):
             continue
-        unprocessed_species.append((species_name, row))
+        unprocessed.append((name, row))
 
-    if not unprocessed_species:
+    if not unprocessed:
         logging.info("All species already processed")
         return None, None, species_data
 
     BATCH_SIZE = 50
-    total_batches = (len(unprocessed_species) + BATCH_SIZE - 1) // BATCH_SIZE
+    total_batches = (len(unprocessed) + BATCH_SIZE - 1) // BATCH_SIZE
 
     for batch_idx in range(total_batches):
-        start_idx = batch_idx * BATCH_SIZE
-        end_idx   = min((batch_idx + 1) * BATCH_SIZE, len(unprocessed_species))
-        batch     = unprocessed_species[start_idx:end_idx]
+        start = batch_idx * BATCH_SIZE
+        end   = min((batch_idx + 1) * BATCH_SIZE, len(unprocessed))
+        batch = unprocessed[start:end]
 
-        genus_species_pairs = []
-        spec_codes = []
-
+        # Ensure containers + taxonomy
         for species_name, row in batch:
             if species_name not in species_data:
                 species_data[species_name] = {
@@ -593,7 +803,6 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
                     'ecology': {'SeaLifeBase': {}, 'FishBase': {}, 'WoRMS': {}},
                     'diet': {'SeaLifeBase': [], 'FishBase': [], 'GLOBI': {'raw_data': None}}
                 }
-
             species_data[species_name]['taxonomy'].update({
                 'Kingdom': row.get('kingdom'),
                 'Phylum':  row.get('phylum'),
@@ -603,67 +812,84 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
                 'Genus':   row.get('genus')
             })
 
-            parts = species_name.split()
+        # Build genus/species pairs
+        genus_species_pairs = []
+        for species_name, _ in batch:
+            parts = str(species_name).split()
             if len(parts) == 2:
-                genus_species_pairs.append((parts[0], parts[1]))
+                genus_species_pairs.append((parts[0].strip(), parts[1].strip()))
 
-        # ✅ FIXED: use pandas merge instead of DuckDB over an unregistered DataFrame
-        # Make sure the species tables have the expected columns before merging
-        sealifebase_df = _standardize_species_columns(sealifebase_df, "SeaLifeBase species (pre-merge)")
-        fishbase_df    = _standardize_species_columns(fishbase_df,    "FishBase species (pre-merge)")
+        # Accumulate SpecCodes separately for SLB and FB
+        slb_spec_codes = []
+        fb_spec_codes  = []
 
-        if genus_species_pairs and not sealifebase_df.empty:
-            pairs_df = pd.DataFrame(genus_species_pairs, columns=['Genus', 'Species'])
-            slb_results = sealifebase_df.merge(pairs_df, on=['Genus', 'Species'], how='inner')
-
-
-            # Process SLB results
-            for _, slb_row in slb_results.iterrows():
-                species_name = f"{slb_row.get('Genus', '')} {slb_row.get('Species', '')}".strip()
-                # Only process species in our input batch
-                if species_name not in [name for name, _ in batch]:
-                    continue
-                if not pd.isna(slb_row.get('SpecCode')):
-                    spec_codes.append(slb_row.get('SpecCode'))
-
-                ecology_data = {
-                    'habitat': {
-                        'Fresh':        slb_row.get('Fresh'),
-                        'Brack':        slb_row.get('Brack'),
-                        'Saltwater':    slb_row.get('Saltwater'),
-                        'Land':         slb_row.get('Land'),
-                        'DemersPelag':  slb_row.get('DemersPelag')
-                    },
-                    'depth': {
-                        'DepthRangeShallow': slb_row.get('DepthRangeShallow'),
-                        'DepthRangeDeep':    slb_row.get('DepthRangeDeep')
-                    },
-                    'characteristics': {
-                        'Length':     slb_row.get('Length'),
-                        'LTypeMaxM':  slb_row.get('LTypeMaxM'),
-                        'Importance': slb_row.get('Importance'),
-                        'Comments':   slb_row.get('Comments')
-                    },
-                    'specCode': slb_row.get('SpecCode'),
-                    'author':   slb_row.get('Author'),
-                    'commonName': slb_row.get('FBname'),
-                    'source': 'SeaLifeBase'
+        # SeaLifeBase ecology capture
+        for genus, species in genus_species_pairs:
+            full = f"{genus} {species}"
+            if full in slb_map:
+                slb_row  = sealifebase_df.loc[slb_map[full]]
+                slb_dict = clean_dict(slb_row.to_dict())
+                spec_code = slb_dict.get('SpecCode')
+                if spec_code is not None and pd.notna(spec_code):
+                    if isinstance(spec_code, (np.generic,)):
+                        try: spec_code = int(spec_code)
+                        except Exception: pass
+                    slb_spec_codes.append(spec_code)
+                species_key = full
+                species_data[species_key]['ecology']['SeaLifeBase'] = {
+                    'Genus': genus,
+                    'Species': species,
+                    'SpecCode': slb_dict.get('SpecCode'),
+                    'source': 'SeaLifeBase',
+                    'attributes': slb_dict  # ALL columns preserved
                 }
-                species_data[species_name]['ecology']['SeaLifeBase'] = ecology_data
 
-        # Diet items (batch)
-        if spec_codes and not sealifebase_fooditems_df.empty:
-            diet_items = get_food_items_for_speccodes(sealifebase_fooditems_df, spec_codes)
-            if not diet_items.empty:
-                for _, diet_row in diet_items.iterrows():
-                    spec_code = diet_row['SpecCode']
+        # FishBase ecology capture
+        for genus, species in genus_species_pairs:
+            full = f"{genus} {species}"
+            if full in fb_map:
+                fb_row  = fishbase_df.loc[fb_map[full]]
+                fb_dict = clean_dict(fb_row.to_dict())
+                spec_code = fb_dict.get('SpecCode')
+                if spec_code is not None and pd.notna(spec_code):
+                    if isinstance(spec_code, (np.generic,)):
+                        try: spec_code = int(spec_code)
+                        except Exception: pass
+                    fb_spec_codes.append(spec_code)
+                species_key = full
+                species_data[species_key]['ecology']['FishBase'] = {
+                    'Genus': genus,
+                    'Species': species,
+                    'SpecCode': fb_dict.get('SpecCode'),
+                    'source': 'FishBase',
+                    'attributes': fb_dict  # ALL columns preserved
+                }
+
+        # --- Diet: SLB ---
+        if slb_spec_codes and sealifebase_fooditems_df is not None and not sealifebase_fooditems_df.empty:
+            slb_diet = get_food_items_for_speccodes(sealifebase_fooditems_df, slb_spec_codes)
+            if not slb_diet.empty:
+                for _, drow in slb_diet.iterrows():
+                    code = _diet_row_code(drow)
                     for species_name in species_data:
-                        if species_data[species_name].get('ecology', {}).get('SeaLifeBase', {}).get('specCode') == spec_code:
-                            if 'SeaLifeBase' not in species_data[species_name]['diet']:
-                                species_data[species_name]['diet']['SeaLifeBase'] = []
-                            species_data[species_name]['diet']['SeaLifeBase'].append(diet_row.to_dict())
+                        slb_ec = species_data[species_name].get('ecology', {}).get('SeaLifeBase', {})
+                        if slb_ec.get('SpecCode') == code:
+                            species_data[species_name]['diet'].setdefault('SeaLifeBase', [])
+                            species_data[species_name]['diet']['SeaLifeBase'].append(clean_dict(drow.to_dict()))
 
-        # GLOBI batch
+        # --- Diet: FB ---
+        if fb_spec_codes and fishbase_fooditems_df is not None and not fishbase_fooditems_df.empty:
+            fb_diet = get_food_items_for_speccodes(fishbase_fooditems_df, fb_spec_codes)
+            if not fb_diet.empty:
+                for _, drow in fb_diet.iterrows():
+                    code = _diet_row_code(drow)
+                    for species_name in species_data:
+                        fb_ec = species_data[species_name].get('ecology', {}).get('FishBase', {})
+                        if fb_ec.get('SpecCode') == code:
+                            species_data[species_name]['diet'].setdefault('FishBase', [])
+                            species_data[species_name]['diet']['FishBase'].append(clean_dict(drow.to_dict()))
+
+        # GLOBI (unchanged)
         species_names = [name for name, _ in batch]
         globi_results = get_globi_data_for_species(species_names)
         for species_name, globi_data in globi_results.items():
@@ -677,11 +903,13 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
                     'metadata': {'total_interactions': 0, 'unique_prey': 0, 'data_sources': 0}
                 }
 
-        # Save batch
+        # Save batch atomically
         save_json_with_lock(species_data, output_file)
         logging.info(f"Completed batch {batch_idx + 1}/{total_batches}")
 
     return None, None, species_data
+
+
 
 def save_species_data(species_df, sealifebase_info, fishbase_info, worms_data, species_data, output_file):
     logging.info("Processing species data...")
@@ -690,90 +918,56 @@ def save_species_data(species_df, sealifebase_info, fishbase_info, worms_data, s
     total_species = len(species_df)
     processed = 0
     skipped = 0
-
     progress_bar = tqdm(total=total_species, desc=f"Processing species data (0/{total_species})")
 
     for _, row in species_df.iterrows():
         species_name = row['scientificName']
         if pd.isna(species_name):
-            continue
-        if species_name in species_data and is_species_complete(species_data[species_name]):
-            skipped += 1
-            progress_bar.set_description(f"Processing species data ({processed}/{total_species}, {skipped} skipped)")
             progress_bar.update(1)
             continue
 
-        parts = species_name.split()
-        if len(parts) == 2:
-            genus, species = parts
-            slb_rows = sealifebase_info[(sealifebase_info['Genus'] == genus) & (sealifebase_info['Species'] == species)]
-            fb_rows  = fishbase_info[(fishbase_info['Genus'] == genus) & (fishbase_info['Species'] == species)]
-
-            slb_row = slb_rows.iloc[0] if not slb_rows.empty else None
-            fb_row  = fb_rows.iloc[0] if not fb_rows.empty else None
+        # Merge taxonomy (always safe to refresh)
+        current = species_data.get(species_name, {})
+        taxonomy = clean_dict({
+            'Kingdom': row.get('kingdom'),
+            'Phylum': row.get('phylum'),
+            'Class': row.get('class'),
+            'Order': row.get('order'),
+            'Family': row.get('family'),
+            'Genus': row.get('genus')
+        })
+        if not current:
+            current = {'taxonomy': taxonomy, 'ecology': {}, 'diet': {}}
         else:
-            slb_row = None
-            fb_row  = None
+            current['taxonomy'] = taxonomy
 
-        sealifebase_data = get_database_data(slb_row, 'SeaLifeBase') if slb_row is not None else None
-        fishbase_data    = get_database_data(fb_row,  'FishBase')    if fb_row is not None else None
-        worms_info       = worms_data.get(species_name, None)
+        # Preserve ecology from batch stage; if missing, create empty shells
+        ecology = current.get('ecology', {})
+        if 'SeaLifeBase' not in ecology:
+            ecology['SeaLifeBase'] = {}
+        if 'FishBase' not in ecology:
+            ecology['FishBase'] = {}
+        if 'WoRMS' not in ecology:
+            ecology['WoRMS'] = clean_dict(worms_data.get(species_name, {})) if worms_data else {}
 
-        current_data = species_data.get(species_name, {})
+        # Diet: preserve whatever was already built
+        diet = current.get('diet', {'SeaLifeBase': [], 'FishBase': [], 'GLOBI': {'raw_data': None}})
 
-        species_info = {
-            'taxonomy': clean_dict({
-                'Kingdom': row.get('kingdom'),
-                'Phylum':  row.get('phylum'),
-                'Class':   row.get('class'),
-                'Order':   row.get('order'),
-                'Family':  row.get('family'),
-                'Genus':   row.get('genus')
-            }),
-            'ecology': {
-                'SeaLifeBase': clean_dict({
-                    'habitat': {
-                        'Fresh':        sealifebase_data.get('Fresh') if sealifebase_data else None,
-                        'Brack':        sealifebase_data.get('Brack') if sealifebase_data else None,
-                        'Saltwater':    sealifebase_data.get('Saltwater') if sealifebase_data else None,
-                        'Land':         sealifebase_data.get('Land') if sealifebase_data else None,
-                        'DemersPelag':  sealifebase_data.get('DemersPelag') if sealifebase_data else None
-                    },
-                    'depth': {
-                        'DepthRangeShallow': sealifebase_data.get('DepthRangeShallow') if sealifebase_data else None,
-                        'DepthRangeDeep':    sealifebase_data.get('DepthRangeDeep') if sealifebase_data else None
-                    },
-                    'characteristics': {
-                        'Length':     sealifebase_data.get('Length') if sealifebase_data else None,
-                        'LTypeMaxM':  sealifebase_data.get('LTypeMaxM') if sealifebase_data else None,
-                        'Importance': sealifebase_data.get('Importance') if sealifebase_data else None,
-                        'Comments':   sealifebase_data.get('Comments') if sealifebase_data else None
-                    }
-                }) if sealifebase_data else {},
-                'FishBase': clean_dict({
-                    'habitat': {},
-                    'depth':   {},
-                    'characteristics': {}
-                }) if fishbase_data else {},
-                'WoRMS': clean_dict(worms_info) if worms_info else {}
-            },
-            'diet': current_data.get('diet', {
-                'SeaLifeBase': [],
-                'FishBase':    [],
-                'GLOBI':       {'raw_data': None}
-            })
-        }
+        # Store back
+        species_data[species_name] = convert_int32({
+            'taxonomy': taxonomy,
+            'ecology': ecology,
+            'diet': diet
+        })
 
-        if species_info:
-            species_data[species_name] = convert_int32(species_info)
         processed += 1
-
         save_json_with_lock(species_data, output_file)
         progress_bar.set_description(f"Processing species data ({processed}/{total_species}, {skipped} skipped)")
         progress_bar.update(1)
 
     progress_bar.close()
     logging.info(f"All species data saved to {output_file}")
+
 
 # -----------------------------
 # Entry point
