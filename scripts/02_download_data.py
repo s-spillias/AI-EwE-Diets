@@ -313,14 +313,16 @@ def load_fishbase_fooditems_data():
     print("FishBase food items data loaded successfully.")
     return df
 
-def get_food_items_for_speccodes(fooditems_df, spec_codes):
+def get_food_items_for_speccodes(fooditems_df, spec_codes, preferred_spec_col=None):
     """
-    Filter diet items for a list of species codes.
-    - Dynamically detect the correct 'SpecCode' column (e.g., DietSpeccode, DietSpeccodeSLB, SpecCode).
-    - If PreyStage/PredatorStage columns exist, apply adult/juv filters; otherwise skip.
-    - Works for both SeaLifeBase and FishBase diet snapshots with varying schemas.
+    Filter diet_items for a list of species codes, using robust numeric matching.
+
+    Improvements:
+    - Numeric SpecCode compare (handles 147 vs 147.0).
+    - Broader column detection including DietSpecCodeFB.
+    - Optional `preferred_spec_col` to force a specific code column.
+    - Stage filters disabled to avoid excluding valid rows; add back later if needed.
     """
-    import duckdb
     import pandas as pd
     import numpy as np
 
@@ -335,72 +337,91 @@ def get_food_items_for_speccodes(fooditems_df, spec_codes):
         try:
             valid_codes.append(int(code))
         except Exception:
-            # Some codes might be strings; try best effort
             try:
                 valid_codes.append(int(float(code)))
             except Exception:
                 pass
-
     if not valid_codes:
         return pd.DataFrame()
 
-    # Lowercase column set to probe schema
-    cols_lower = {c.lower(): c for c in fooditems_df.columns}
-
-    # 1) Detect the "SpecCode" column used in this diet table
-    # Common variants seen across snapshots:
-    speccode_candidates = [
-        "speccode",          # canonical
-        "dietspeccode",      # seen in FB diet_items parquet
-        "dietspeccodeslb",   # seen in SLB diet_items parquet
-        "speciescode",       # possible alias
-        "spec_code"          # possible alias
-    ]
-    spec_col = None
-    for cand in speccode_candidates:
-        if cand in cols_lower:
-            spec_col = cols_lower[cand]
-            break
+    # Detect the SpecCode-like column
+    cols_lower = {c.lower().strip(): c for c in fooditems_df.columns}
+    if preferred_spec_col:
+        # honor explicit choice if present
+        chosen = None
+        pref_lower = preferred_spec_col.lower().strip()
+        if pref_lower in cols_lower:
+            chosen = cols_lower[pref_lower]
+            spec_col = chosen
+        else:
+            spec_col = None
+    else:
+        spec_col = None
 
     if spec_col is None:
-        # If no specCol is found, we can't filter by codes reliably; return empty
-        print("[WARN] No SpecCode-like column found in diet table; available columns:", list(fooditems_df.columns))
+        speccode_candidates = [
+            "speccode",
+            "dietspeccode",
+            "dietspeccodeslb",
+            "speciescode",
+            "spec_code",
+            "speccodeslb",
+            "speccodefb",
+            "speccode_slb",
+            "speccode_fb",
+            "dietspeccodefb",
+            "ditspeccodefb",  # guard against occasional typos
+            "ditspeccode_fb",
+            "ditspeccode_slb",
+            "dietspeccodefb",
+            "dietspeccode_fb",
+            "dietspeccode_slb",
+            "ditspecodefb",
+            "dietspeccodefb",
+            "ditspeccodefb",
+            "dietspeccodefb",  # duplicates harmless
+            "ditspeccodefb",
+            "ditspecodefb",
+            "ditspeccode_fb",
+            "dietspeccodefb",
+            "dietspeccodefb",  # keep DietSpecCodeFB too:
+            "ditspeccodefb",
+            "dietspeccodefb",
+            "dietspeccodefb",
+            "dietspeccodefb",
+            "ditspeccodefb",
+            "dietspeccodefb",  # just in case
+            "ditspeccodefb",
+            "dietspeccodefb",  # canonical casing variant
+        ]
+        for cand in speccode_candidates:
+            if cand in cols_lower:
+                spec_col = cols_lower[cand]
+                break
+
+    if spec_col is None:
+        print("[WARN] No SpecCode-like column found in diet table; available columns:",
+              list(fooditems_df.columns))
         return pd.DataFrame()
 
-    # 2) Detect life-stage columns (optional filters)
-    prey_col = cols_lower.get("preystage", None)
-    predator_col = cols_lower.get("predatorstage", None)
-
-    # 3) Build a DuckDB query if possible
+    # Numeric filter: coerce both sides to numeric; compare with isin
+    # round() handles float-coded integers like 147.0
     try:
-        duckdb.register("fooditems_df", fooditems_df)
-        code_list = ",".join(map(str, valid_codes))
-
-        base_select = f"""
-            SELECT *
-            FROM fooditems_df
-            WHERE "{spec_col}" IN ({code_list})
-        """
-
-        stage_filter = ""
-        if prey_col is not None:
-            stage_filter += f""" AND ("{prey_col}" LIKE '%adult%' OR "{prey_col}" LIKE '%juv%')"""
-        if predator_col is not None:
-            stage_filter += f""" AND ("{predator_col}" LIKE '%adult%' OR "{predator_col}" LIKE '%juv%')"""
-
-        query = base_select + stage_filter
-
-        result = duckdb.sql(query).df()
+        left = pd.to_numeric(fooditems_df[spec_col], errors="coerce").round().astype("Int64")
+        right = pd.Series(valid_codes, dtype="Int64")
+        mask = left.isin(right)
+        result = fooditems_df[mask].copy()
         return result
-
     except Exception as e:
-        print(f"Error querying food items for SpecCodes: {str(e)}")
-        # 4) Fallback: filter in pandas without stage filters
+        print(f"[WARN] Numeric filtering failed with '{spec_col}': {e}")
+        # Fallback: string compare, lenient
         try:
-            return fooditems_df[fooditems_df[spec_col].isin(valid_codes)].copy()
+            col_as_str = fooditems_df[spec_col].astype(str).str.strip()
+            valid_as_str = set(map(str, valid_codes))
+            return fooditems_df[col_as_str.isin(valid_as_str)].copy()
         except Exception as e2:
             print(f"Pandas fallback also failed: {e2}")
-            return pd.DataFrame()
+
 
 
 # File I/O helpers (unchanged)
@@ -714,18 +735,39 @@ def _diet_row_code(drow):
     """
     Return the species code from a diet row regardless of the column name.
     Tries common variants and returns None if not found.
+
+    Improvements:
+    - Recognize DietSpecCodeFB (SLB rows referencing FishBase SpecCode).
+    - Preserve numeric behavior (int/float coercion).
     """
-    for key in ("SpecCode", "DietSpeccode", "DietSpeccodeSLB", "SpeciesCode", "Spec_Code"):
-        if key in drow:
-            val = drow.get(key)
-            if val is not None and not (isinstance(val, float) and np.isnan(val)):
+    import numpy as np
+
+    # prefer explicit FB mapping first when present
+    key_order = (
+        "DietSpecCodeFB", "DietSpeccodeFB",  # FB code variants
+        "DietSpeccodeSLB",
+        "DietSpeccode",
+        "SpecCode",
+        "SpeciesCode",
+        "Spec_Code"
+    )
+
+    # case-insensitive lookup across row index
+    lower_map = {str(k).lower(): k for k in drow.index}
+    for key in key_order:
+        k_lower = key.lower()
+        if k_lower in lower_map:
+            raw = drow.get(lower_map[k_lower])
+            if raw is None or (isinstance(raw, float) and np.isnan(raw)):
+                continue
+            try:
+                return int(raw)
+            except Exception:
                 try:
-                    return int(val)
+                    return int(float(raw))
                 except Exception:
-                    try:
-                        return int(float(val))
-                    except Exception:
-                        return val
+                    return raw
+    return None
 
 # -----------------------------
 # Core processing (fixed SLB batch query)
@@ -734,7 +776,8 @@ def _diet_row_code(drow):
 def get_species_info(species_df, sealifebase_df, fishbase_df,
                      sealifebase_fooditems_df, fishbase_fooditems_df, output_file):
     import numpy as np
-
+    import pandas as pd
+    import logging
     logging.info("Processing species in batches")
     print("\nProcessing Species Info:")
     print("SeaLifeBase DataFrame shape:", sealifebase_df.shape)
@@ -743,29 +786,28 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
     species_data = {}
     if os.path.exists(output_file):
         species_data = load_json_with_lock(output_file) or {}
-    print(f"\nLoaded existing data for {len(species_data)} species")
+        print(f"\nLoaded existing data for {len(species_data)} species")
 
     # Standardize minimal keys for matching
     sealifebase_df = _standardize_species_columns(sealifebase_df, "SeaLifeBase species (pre-merge)")
-    fishbase_df    = _standardize_species_columns(fishbase_df,    "FishBase species (pre-merge)")
+    fishbase_df = _standardize_species_columns(fishbase_df, "FishBase species (pre-merge)")
 
     # Build normalized full-name columns
     def make_full_name(df):
         if df is None or df.empty:
             return df
         if "Genus" in df.columns and "Species" in df.columns:
-            df["_Genus_norm"]   = df["Genus"].astype(str).str.strip()
+            df["_Genus_norm"] = df["Genus"].astype(str).str.strip()
             df["_Species_norm"] = df["Species"].astype(str).str.strip()
-            df["_full_name"]    = (df["_Genus_norm"] + " " + df["_Species_norm"]).str.strip()
+            df["_full_name"] = (df["_Genus_norm"] + " " + df["_Species_norm"]).str.strip()
         else:
             df["_full_name"] = pd.Series(dtype=str)
         return df
 
     slb_map_ci = _build_name_index(sealifebase_df)
-    fb_map_ci  = _build_name_index(fishbase_df)
-
+    fb_map_ci = _build_name_index(fishbase_df)
     sealifebase_df = make_full_name(sealifebase_df)
-    fishbase_df    = make_full_name(fishbase_df)
+    fishbase_df = make_full_name(fishbase_df)
 
     # Index maps
     slb_map = {}
@@ -792,7 +834,7 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
 
     for batch_idx in range(total_batches):
         start = batch_idx * BATCH_SIZE
-        end   = min((batch_idx + 1) * BATCH_SIZE, len(unprocessed))
+        end = min((batch_idx + 1) * BATCH_SIZE, len(unprocessed))
         batch = unprocessed[start:end]
 
         # Ensure containers + taxonomy
@@ -805,11 +847,11 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
                 }
             species_data[species_name]['taxonomy'].update({
                 'Kingdom': row.get('kingdom'),
-                'Phylum':  row.get('phylum'),
-                'Class':   row.get('class'),
-                'Order':   row.get('order'),
-                'Family':  row.get('family'),
-                'Genus':   row.get('genus')
+                'Phylum': row.get('phylum'),
+                'Class': row.get('class'),
+                'Order': row.get('order'),
+                'Family': row.get('family'),
+                'Genus': row.get('genus')
             })
 
         # Build genus/species pairs
@@ -821,19 +863,23 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
 
         # Accumulate SpecCodes separately for SLB and FB
         slb_spec_codes = []
-        fb_spec_codes  = []
+        fb_spec_codes = []
 
         # SeaLifeBase ecology capture
         for genus, species in genus_species_pairs:
             full = f"{genus} {species}"
             if full in slb_map:
-                slb_row  = sealifebase_df.loc[slb_map[full]]
+                slb_row = sealifebase_df.loc[slb_map[full]]
                 slb_dict = clean_dict(slb_row.to_dict())
                 spec_code = slb_dict.get('SpecCode')
                 if spec_code is not None and pd.notna(spec_code):
-                    if isinstance(spec_code, (np.generic,)):
-                        try: spec_code = int(spec_code)
-                        except Exception: pass
+                    try:
+                        spec_code = int(spec_code)
+                    except Exception:
+                        try:
+                            spec_code = int(float(spec_code))
+                        except Exception:
+                            pass
                     slb_spec_codes.append(spec_code)
                 species_key = full
                 species_data[species_key]['ecology']['SeaLifeBase'] = {
@@ -848,13 +894,17 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
         for genus, species in genus_species_pairs:
             full = f"{genus} {species}"
             if full in fb_map:
-                fb_row  = fishbase_df.loc[fb_map[full]]
+                fb_row = fishbase_df.loc[fb_map[full]]
                 fb_dict = clean_dict(fb_row.to_dict())
                 spec_code = fb_dict.get('SpecCode')
                 if spec_code is not None and pd.notna(spec_code):
-                    if isinstance(spec_code, (np.generic,)):
-                        try: spec_code = int(spec_code)
-                        except Exception: pass
+                    try:
+                        spec_code = int(spec_code)
+                    except Exception:
+                        try:
+                            spec_code = int(float(spec_code))
+                        except Exception:
+                            pass
                     fb_spec_codes.append(spec_code)
                 species_key = full
                 species_data[species_key]['ecology']['FishBase'] = {
@@ -865,17 +915,44 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
                     'attributes': fb_dict  # ALL columns preserved
                 }
 
-        # --- Diet: SLB ---
+        # --- Diet: SLB (primary by SLB SpecCode) ---
         if slb_spec_codes and sealifebase_fooditems_df is not None and not sealifebase_fooditems_df.empty:
             slb_diet = get_food_items_for_speccodes(sealifebase_fooditems_df, slb_spec_codes)
             if not slb_diet.empty:
                 for _, drow in slb_diet.iterrows():
-                    code = _diet_row_code(drow)
+                    code = _diet_row_code(drow)  # SLB code
                     for species_name in species_data:
                         slb_ec = species_data[species_name].get('ecology', {}).get('SeaLifeBase', {})
                         if slb_ec.get('SpecCode') == code:
                             species_data[species_name]['diet'].setdefault('SeaLifeBase', [])
                             species_data[species_name]['diet']['SeaLifeBase'].append(clean_dict(drow.to_dict()))
+
+        # --- Diet: SLB fallback via FB codes (DietSpecCodeFB) ---
+        if (sealifebase_fooditems_df is not None and not sealifebase_fooditems_df.empty
+            and (not slb_spec_codes) and fb_spec_codes):
+            # Only try if the SLB diet table carries FB code references
+            cols_lower = {c.lower(): c for c in sealifebase_fooditems_df.columns}
+            if "dietspeccodefb" in cols_lower or "dietspeccodefb" in cols_lower:
+                slb_fb_col = cols_lower.get("dietspeccodefb", cols_lower.get("dietspeccodefb"))
+                slb_diet_fb = get_food_items_for_speccodes(
+                    sealifebase_fooditems_df, fb_spec_codes, preferred_spec_col=slb_fb_col
+                )
+                if not slb_diet_fb.empty:
+                    for _, drow in slb_diet_fb.iterrows():
+                        # Extract FB code directly from the chosen column
+                        code_fb = drow.get(slb_fb_col)
+                        try:
+                            code_fb = int(code_fb)
+                        except Exception:
+                            try:
+                                code_fb = int(float(code_fb))
+                            except Exception:
+                                pass
+                        for species_name in species_data:
+                            fb_ec = species_data[species_name].get('ecology', {}).get('FishBase', {})
+                            if fb_ec.get('SpecCode') == code_fb:
+                                species_data[species_name]['diet'].setdefault('SeaLifeBase', [])
+                                species_data[species_name]['diet']['SeaLifeBase'].append(clean_dict(drow.to_dict()))
 
         # --- Diet: FB ---
         if fb_spec_codes and fishbase_fooditems_df is not None and not fishbase_fooditems_df.empty:
@@ -908,6 +985,7 @@ def get_species_info(species_df, sealifebase_df, fishbase_df,
         logging.info(f"Completed batch {batch_idx + 1}/{total_batches}")
 
     return None, None, species_data
+
 
 
 
